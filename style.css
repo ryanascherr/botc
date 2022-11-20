@@ -105,6 +105,7 @@ header {
     justify-content: center;
     align-items: center;
     padding: 10px;
+    position: relative;
 }
 
 .token {
@@ -130,8 +131,8 @@ header {
     /* text-align: center; */
 }
 
-.ability {
-    /* font-weight: bold; */
+.ability h3 {
+    text-align: center;
 }
 
 .tips li {
@@ -184,3 +185,14 @@ select {
     padding: 5px;
     font-size: 20px;
 }
+
+.div-vertical{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    min-width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+    letter-spacing: 8px;
+  }
