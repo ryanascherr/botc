@@ -921,7 +921,8 @@ function populateCharacters() {
     // });
     characters.forEach(character => {
         if (character.script == "tb") {
-            $(".tb-characters").append(`<div class="character ${character.group}" data-name="${character.name}">${character.name}</div>`);
+            // $(".tb-characters").append(`<div class="character ${character.group}" data-name="${character.name}">${character.name}</div>`);
+            $(".tb-select").append(`<option value="${character.name}">${character.name}</option>`);
         } else if (character.script == "bmr") {
             $(".bmr-characters").append(`<div class="character ${character.group}" data-name="${character.name}">${character.name}</div>`);
         } else if (character.script == "sv") {
@@ -932,7 +933,7 @@ function populateCharacters() {
     })
 }
 
-$("select").change(function(){
+$(".script-select").change(function(){
     script = $('select').val();
     $(".list").addClass("hidden");
     $(".list").removeClass("flex");
@@ -941,6 +942,41 @@ $("select").change(function(){
     // populateCharacters();
     $(".script").removeClass("selected");
     $(this).addClass("selected");
+ });
+
+ $(".tb-select").change(function(){
+    // script = $('select').val();
+    $(".flavor").removeClass("hidden");
+    $(".examples-container").removeClass("hidden");
+    $(".bluffing").removeClass("hidden");
+    // let ability;
+    let name = $(".tb-select").val();
+    // console.log(name);
+    // $(".bluffing h2").html(`Bluffing as the ${name} &#8595;`);
+    characters.forEach(character => {
+        if (character.name == name) {
+            ability = character.ability;
+            intro = character.intro;
+            flavor = character.flavor;
+            examples = character.examples;
+            tips = character.tips;
+        }
+    });
+    name = name.toLowerCase();
+    name = name.split(" ");
+    if (name[1]) {
+        name = name[0] + "-" + name[1];
+        name = name.replace("'",'');
+    }
+    $(".token").attr("src",`./img/${name}.png`);
+    $(".intro").html(`${intro}`);
+    $(".ability").html(`<h2>Character Text</h2><p>${ability}</p><hr>`);
+    $(".flavor").html(`${flavor}`);
+    $(".examples").html(`${examples}`);
+    $(".tips").html(`${tips}`);
+    // $(".info-container").empty();
+    // $(".info-container").append(`<img class="token" src="./img/${name}.png">
+    // <p>${ability}</p>`);
  });
 
 $(".script").click(function() {
