@@ -694,7 +694,7 @@ let characters = [
         name: "Lycanthrope",
         intro: "The Lycanthrope roams the night, killing the innocent, whilst the Demon cowers indoors.",
         ability: '"Each night*, choose an alive player. If good, they die, but they are the only player that can die tonight."',
-        flavor: 'Beneath the thin veneer of civilisation lies a howling madness."',
+        flavor: '"Beneath the thin veneer of civilisation lies a howling madness."',
         group: "townsfolk",
         script: "exp"
     },
@@ -920,15 +920,19 @@ function populateCharacters() {
     //     }
     // });
     characters.forEach(character => {
+        // $(".tb-select").empty();
         if (character.script == "tb") {
             // $(".tb-characters").append(`<div class="character ${character.group}" data-name="${character.name}">${character.name}</div>`);
             $(".tb-select").append(`<option value="${character.name}">${character.name}</option>`);
         } else if (character.script == "bmr") {
-            $(".bmr-characters").append(`<div class="character ${character.group}" data-name="${character.name}">${character.name}</div>`);
+            // $(".bmr-characters").append(`<div class="character ${character.group}" data-name="${character.name}">${character.name}</div>`);
+            $(".bmr-select").append(`<option value="${character.name}">${character.name}</option>`);
         } else if (character.script == "sv") {
-            $(".sv-characters").append(`<div class="character ${character.group}" data-name="${character.name}">${character.name}</div>`);
+            // $(".sv-characters").append(`<div class="character ${character.group}" data-name="${character.name}">${character.name}</div>`);
+            $(".sv-select").append(`<option value="${character.name}">${character.name}</option>`);
         } else if (character.script == "exp") {
-            $(".exp-characters").append(`<div class="character ${character.group}" data-name="${character.name}">${character.name}</div>`)
+            // $(".exp-characters").append(`<div class="character ${character.group}" data-name="${character.name}">${character.name}</div>`)
+            $(".exp-select").append(`<option value="${character.name}">${character.name}</option>`);
         }
     })
 }
@@ -936,21 +940,22 @@ function populateCharacters() {
 $(".script-select").change(function(){
     script = $('select').val();
     $(".list").addClass("hidden");
-    $(".list").removeClass("flex");
-    $(`.list.${script}-characters`).addClass("flex");
-    $(`.list.${script}-characters`).removeClass("hidden");
+    // $(".list").removeClass("flex");
+    // $(`.list.${script}-characters`).addClass("flex");
+    $(`.list.${script}-select`).removeClass("hidden");
     // populateCharacters();
-    $(".script").removeClass("selected");
-    $(this).addClass("selected");
+    // $(".script").removeClass("selected");
+    // $(this).addClass("selected");
  });
 
- $(".tb-select").change(function(){
+ $(".characters select").change(function(e){
     // script = $('select').val();
     $(".flavor").removeClass("hidden");
     $(".examples-container").removeClass("hidden");
     $(".bluffing").removeClass("hidden");
     // let ability;
-    let name = $(".tb-select").val();
+    // let name = $(".tb-select").val();
+    let name = $(this).val();
     // console.log(name);
     // $(".bluffing h2").html(`Bluffing as the ${name} &#8595;`);
     characters.forEach(character => {

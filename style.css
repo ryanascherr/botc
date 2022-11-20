@@ -112,9 +112,9 @@ header {
     transition: all .25s;
 }
 
-.token:hover {
+/* .token:hover {
     transform: scale(1.1);
-}
+} */
 
 .intro {
     margin-bottom: 0;
@@ -182,5 +182,5 @@ select {
     width: 90%;
     text-align: center;
     padding: 5px;
-    
+    font-size: 20px;
 }
