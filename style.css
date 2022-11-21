@@ -2,6 +2,11 @@ body {
     margin: 0;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+}
+
 h1 {
     text-align: center;
 }
@@ -104,8 +109,9 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     position: relative;
+    max-width: 800px;
 }
 
 .token {
@@ -181,6 +187,7 @@ header {
 
 select {
     width: 90%;
+    max-width: 800px;
     text-align: center;
     padding: 5px;
     font-size: 20px;
@@ -195,4 +202,45 @@ select {
     left: 10px;
     margin: 0;
     letter-spacing: 8px;
-  }
+}
+
+.img-flavor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (min-width: 500px){
+    .img-flavor-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .speech-bubble {
+        width: 45%;
+        margin-left: 30px;
+        position: relative;
+        background: #E7DAC7;
+        border-radius: .4em;
+    }
+    .speech-bubble:after {
+        content: '';
+	    position: absolute;
+	    left: 0;
+	    top: 50%;
+	    width: 0;
+	    height: 0;
+	    border: 20px solid transparent;
+	    border-right-color: #E7DAC7;
+	    border-left: 0;
+	    margin-top: -20px;
+	    margin-left: -20px;
+    }
+    .img-flavor-container {
+        margin-bottom: 30px;
+    }
+}
+
+.welcome {
+    font-family: sans-serif;
+    text-align: center;
+}

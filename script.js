@@ -118,7 +118,7 @@ let characters = [
         name: "Drunk",
         intro: "The Drunk player thinks that they are a Townsfolk, and has no idea that they are actually the Drunk.",
         ability: '"You do not know you are the Drunk. You think you are a Townsfolk character, but you are not."',
-        flavor: '"This is all perfectly <burp> logical. I know that Miss Dearheart is a Fortune Teller. Mrs Dearheart swears that Jenkins here is her Butler. It\'s simple <hic> deduction."',
+        flavor: '"This is all perfectly [burp] logical. I know that Miss Dearheart is a Fortune Teller. Mrs Dearheart swears that Jenkins here is her Butler. It\'s simple [hic] deduction."',
         group: "Outsider",
         script: "tb"
     },
@@ -984,12 +984,12 @@ $(".script-select").change(function(){
     $(".flavor").html(`${flavor}`);
     $(".group").html(`${group}`);
     if (group == "Townsfolk" || group == "Outsider") {
-        $(".group").css({'color':'#0391c6'});
+        $(".group").css({'color':'#0154A7'});
     } else {
         $(".group").css({'color':'#9A1117'});
     }
     $(".intro").html(`${intro}`);
-    $(".ability").html(`<h2>Character Text</h2><p>${ability}</p><hr>`);
+    $(".ability").html(`<h3>Character Text:</h3><p>${ability}</p><hr>`);
     $(".examples").html(`${examples}`);
     $(".tips").html(`${tips}`);
     // $(".info-container").empty();
@@ -1009,6 +1009,7 @@ $(".script").click(function() {
 })
 
 $(".character").click(function() {
+    $(".welcome").remove();
     $(".flavor").removeClass("hidden");
     $(".examples-container").removeClass("hidden");
     $(".bluffing").removeClass("hidden");
