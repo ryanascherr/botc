@@ -4,8 +4,9 @@ let characters = [
         intro: "The Washerwoman learns that a particular Townsfolk character is in play, but not exactly which player it is.",
         ability: '"You start knowing that 1 of 2 players is a particular Townsfolk."',
         flavor: '"Bloodstains on a dinner jacket? No, this is cooking sherry. How careless."',
-        examples: "<p>Evin is the Chef, and Amy is the Ravenkeeper. The Washerwoman learns that either Evin or Amy is the Chef.</p><p>Julian is the Imp, and Alex is the Virgin. The Washerwoman learns that either Julian or Alex is the Virgin.</p><p>Marianna is the Spy, and Sarah is the Scarlet Woman. The Washerwoman learns that one of them is the Ravenkeeper. (This happens because the Spy is registering as a Townsfolk—in this case, the Ravenkeeper)</p>",
-        tips: "<ul><li>The Washerwoman is deceptively powerful. Even though you don't gain information on the evil players, you can confirm the identity of a good player. This player should be your focus for the game, because if they have great information, then you have that information too. If they have a useful ability that they choose to use, you can help them use it wisely.</li><li>When the Washerwoman is poisoned or is actually the Drunk, they will often get information that is easy to figure out is incorrect—at least compared to other characters. While the Chef has no clue as to whether their '1' is incorrect, if both of the players the Storyteller pointed at tell you they're a different character to the one the Storyteller showed you, it is likely that you are the Drunk or poisoned. You can use this information to your team's advantage: if you know you are the Drunk, you know nobody else is; if you think you were poisoned on the first night, nobody else could have been. Furthermore, if your information seems like it's correct, it probably is, because of how easy it is to tell when it's wrong.</li><li>You know that of the two players you are shown, one must be the Townsfolk you are shown. Importantly, this means that you know that the person you see is not the Drunk.</li><li>To find out which of the two players is the Townsfolk, either ask the group publicly or have a private conversation with each player individually. It is usually best to reveal what you know before the Townsfolk in question says who they are so they trust you more.</li><li>If you share your information on the first day, and speak up quickly, the good team has some solid information to begin with. This is particularly useful if you confirm another information-receiving Townsfolk like the Empath or the Fortune Teller.     </li><li>Waiting until the final day - or at least very late in the game - to share your information with the group can also be very useful. If you can keep the Townsfolk that you know alive until the final day, then you know one player who is not the Imp! This can either make the Demon player obvious to you, or at least reduce the possible Demon players down to 1 in 2 instead of 1 in 3.</li><li>Talk to the Townsfolk player that you know, and secretly let them know that you know who they are. This way, you can hopefully form an alliance, and can come to each other's defence if either of you are nominated for execution, whilst avoiding telling the group (and therefore the evil team) who the other is. This is particularly useful if you learn a character that the Demon really wants to attack, like the Fortune Teller, or even a character that the Demon wants to avoid attacking at all costs, like the Ravenkeeper or the Soldier.</li><li>After talking to the Townsfolk that you know in private, and confirming who they are, you can tell the group that they are a different character than they actually are. This strategy is useful if you want to protect a powerful Townsfolk from characters like the Poisoner, or to trick evil players into attacking a Townsfolk that has already used their ability, such as the Chef.</li><li>You can claim to be a more powerful character than you actually are. You start with all the information you're going to get, so if the Demon kills you, they aren't killing the Slayer or the Fortune Teller. You may also want to consider nominating a Virgin, and confirming yourself, the Virgin, and the Townsfolk you were shown all to be good.</li><li>Sometimes the Storyteller will point to evil players as possible Townsfolk to you. If you think this might be the case, don't say directly which Townsfolk you know to be in play. You might instead state a false Townsfolk character to try and trick evil players into admitting to being a character that you didn't learn, or you can tempt good players into revealing their Townsfolk character to you before you reveal what you know to them. This allows you to trust them more... but they may trust you less!</li><li>If the 'wrong' player the Storyteller pointed to is an evil player, telling them the Townsfolk you saw may alert the Imp to the presence of the character you saw. If you saw the Empath, for example, telling the Demon that may cause the Empath to be killed in the night.</li><li>The two of you can reveal your characters publicly to the group, without having a private conversation beforehand. This goes a long way towards proving publicly that you are both telling the truth.</li><li>Publicly reveal which character is in play, but not which player it is. This way, the evil team gets little information, but the Townsfolk in question will trust you, and will look more trustworthy when they reveal who they are to the group.</li><li>You could claim to be the Washerwoman and point to a player you suspect is evil, stating that they are the Townsfolk you learned about. An opportunistic evil player may pounce on an opportunity to appear good, and claim that they are, in fact, the Townsfolk you learned about, thus outing them to you as, at the very least, a liar.</li><li>Beware of the Spy! They may register as a Townsfolk character to you. That player who you think is the Investigator may not be the Investigator after all...</li><li>Remember that while the Spy is likely to know that you've seen them as a Townsfolk, they won't know which Townsfolk you've seen them as.</li></ul>",
+        examples: "<p style='margin-top: 0;'>Evin is the Chef, and Amy is the Ravenkeeper. The Washerwoman learns that either Evin or Amy is the Chef.</p><p>Julian is the Imp, and Alex is the Virgin. The Washerwoman learns that either Julian or Alex is the Virgin.</p><p>Marianna is the Spy, and Sarah is the Scarlet Woman. The Washerwoman learns that one of them is the Ravenkeeper. (This happens because the Spy is registering as a Townsfolk—in this case, the Ravenkeeper)</p>",
+        tips: "<ul style='margin-top: 0;'><li>The Washerwoman is deceptively powerful. Even though you don't gain information on the evil players, you can confirm the identity of a good player. This player should be your focus for the game, because if they have great information, then you have that information too. If they have a useful ability that they choose to use, you can help them use it wisely.</li><li>When the Washerwoman is poisoned or is actually the Drunk, they will often get information that is easy to figure out is incorrect—at least compared to other characters. While the Chef has no clue as to whether their '1' is incorrect, if both of the players the Storyteller pointed at tell you they're a different character to the one the Storyteller showed you, it is likely that you are the Drunk or poisoned. You can use this information to your team's advantage: if you know you are the Drunk, you know nobody else is; if you think you were poisoned on the first night, nobody else could have been. Furthermore, if your information seems like it's correct, it probably is, because of how easy it is to tell when it's wrong.</li><li>You know that of the two players you are shown, one must be the Townsfolk you are shown. Importantly, this means that you know that the person you see is not the Drunk.</li><li>To find out which of the two players is the Townsfolk, either ask the group publicly or have a private conversation with each player individually. It is usually best to reveal what you know before the Townsfolk in question says who they are so they trust you more.</li><li>If you share your information on the first day, and speak up quickly, the good team has some solid information to begin with. This is particularly useful if you confirm another information-receiving Townsfolk like the Empath or the Fortune Teller.</li><li>Waiting until the final day - or at least very late in the game - to share your information with the group can also be very useful. If you can keep the Townsfolk that you know alive until the final day, then you know one player who is not the Imp! This can either make the Demon player obvious to you, or at least reduce the possible Demon players down to 1 in 2 instead of 1 in 3.</li><li>Talk to the Townsfolk player that you know, and secretly let them know that you know who they are. This way, you can hopefully form an alliance, and can come to each other's defence if either of you are nominated for execution, whilst avoiding telling the group (and therefore the evil team) who the other is. This is particularly useful if you learn a character that the Demon really wants to attack, like the Fortune Teller, or even a character that the Demon wants to avoid attacking at all costs, like the Ravenkeeper or the Soldier.</li><li>After talking to the Townsfolk that you know in private, and confirming who they are, you can tell the group that they are a different character than they actually are. This strategy is useful if you want to protect a powerful Townsfolk from characters like the Poisoner, or to trick evil players into attacking a Townsfolk that has already used their ability, such as the Chef.</li><li>You can claim to be a more powerful character than you actually are. You start with all the information you're going to get, so if the Demon kills you, they aren't killing the Slayer or the Fortune Teller. You may also want to consider nominating a Virgin, and confirming yourself, the Virgin, and the Townsfolk you were shown all to be good.</li><li>Sometimes the Storyteller will point to evil players as possible Townsfolk to you. If you think this might be the case, don't say directly which Townsfolk you know to be in play. You might instead state a false Townsfolk character to try and trick evil players into admitting to being a character that you didn't learn, or you can tempt good players into revealing their Townsfolk character to you before you reveal what you know to them. This allows you to trust them more... but they may trust you less!</li><li>If the 'wrong' player the Storyteller pointed to is an evil player, telling them the Townsfolk you saw may alert the Imp to the presence of the character you saw. If you saw the Empath, for example, telling the Demon that may cause the Empath to be killed in the night.</li><li>The two of you can reveal your characters publicly to the group, without having a private conversation beforehand. This goes a long way towards proving publicly that you are both telling the truth.</li><li>Publicly reveal which character is in play, but not which player it is. This way, the evil team gets little information, but the Townsfolk in question will trust you, and will look more trustworthy when they reveal who they are to the group.</li><li>You could claim to be the Washerwoman and point to a player you suspect is evil, stating that they are the Townsfolk you learned about. An opportunistic evil player may pounce on an opportunity to appear good, and claim that they are, in fact, the Townsfolk you learned about, thus outing them to you as, at the very least, a liar.</li><li>Beware of the Spy! They may register as a Townsfolk character to you. That player who you think is the Investigator may not be the Investigator after all...</li><li>Remember that while the Spy is likely to know that you've seen them as a Townsfolk, they won't know which Townsfolk you've seen them as.</li></ul>",
+        bluffing: "When bluffing as the Washerwoman, there are a few things you should keep in mind:<ul><li>You would have received your information on night one, and so should have it from that point onward. You will have been shown two players and one Townsfolk token.</li><li>Claim to be the Washerwoman and point to at least one evil player. Then, name the Townsfolk character (preferably one that you suspect/know is not in play). If that evil player is clever, they may realize that you are trying to make them look good, and claim to be that Townsfolk. For example, if you point to the Imp and a random good player, and say that one of them is the Monk, then the Imp may claim to be the Monk, which makes you both look good.</li><li>If a good player claims to be a particular Townsfolk character, you can claim to be the Washerwoman, and confirm that they are who they say they are. This can help them to trust you, and lead them astray with their own information.</li><li>Immediately upon awakening, tell the group that a particular Townsfolk is in play. Cross your fingers and hope that you are correct! If you are, great. If not, an evil player may bluff as the Townsfolk you claimed is in play.</li><li>The Washerwoman can be a difficult bluff, because sometimes the Townsfolk you say is in play, isn't. If this happens, you can always claim to be the Drunk or poisoned. Another option is to claim that Washerwoman was a bluff, and that you are actually a character that is more powerful later in the game such as a Slayer or an Undertaker, and that you were trying to look like a character that has already used their ability so that the Demon would not attack you.</li><li>If you are the Spy or have access to a Spy, they can be invaluable in providing you accurate information to back up your story.</li></ul>",
         group: "Townsfolk",
         script: "tb"
     },
@@ -14,7 +15,7 @@ let characters = [
         intro: "The Librarian learns that a particular Outsider character is in play, but not exactly which player it is.",
         ability: '"You start knowing that 1 of 2 players is a particular Outsider."',
         flavor: '"Certainly Madam, under normal circumstances, you may borrow the Codex Malificarium from the library vaults. However, you do not seem to be a member."',
-        examples: "<p>Benjamin is the Saint, and Filip is the Baron. The Librarian learns that either Benjamin or Filip is the Saint.</p><p>There are no Outsiders in this game. The Librarian learns a '0'.</p><p>Abdallah is the Drunk, who thinks they are the Monk, and Douglas is the Undertaker. The Librarian learns that either Abdallah or Douglas is the Drunk. (This happens because the Librarian learns the true character. The Drunk is Abdallah's true character, not the Monk.)</p>",
+        examples: "<p style='margin-top: 0;'>Benjamin is the Saint, and Filip is the Baron. The Librarian learns that either Benjamin or Filip is the Saint.</p><p>There are no Outsiders in this game. The Librarian learns a '0'.</p><p>Abdallah is the Drunk, who thinks they are the Monk, and Douglas is the Undertaker. The Librarian learns that either Abdallah or Douglas is the Drunk. (This happens because the Librarian learns the true character. The Drunk is Abdallah's true character, not the Monk.)</p>",
         group: "Townsfolk",
         script: "tb"
     },
@@ -23,6 +24,7 @@ let characters = [
         intro: "The Investigator learns that a particular Minion character is in play, but not exactly which player it is.",
         ability: '"You start knowing that 1 of 2 players is a particular Minion."',
         flavor: '"It is a fine night for a stroll, wouldn\'t you say, Mister Morozov? Or should I say... BARON Morozov?"',
+        examples: "<p>Amy is the Baron, and Julian is the Mayor. The Investigator learns that either Amy or Julian is the Baron.</p><p>Angelus is the Spy, and Lewis is the Poisoner. The Investigator learns that either Angelus or Lewis is the Spy.</p><p>Brianna is the Recluse, and Marianna is the Imp. The Investigator learns that either Brianna or Marianna is the Poisoner. (This happens because the Recluse is registering as a Minion—in this case, the Poisoner.)</p>",
         group: "Townsfolk",
         script: "tb"
     },
@@ -31,6 +33,7 @@ let characters = [
         intro: "The Chef knows if evil players are sitting next to each other.",
         ability: '"You start knowing how many pairs of evil players there are."',
         flavor: '"This evening\'s reservations seem odd. Never before has Mrs Mayweather kept company with that scamp from Hudson lane. Yet, tonight, they have a table for two. Strange."',
+        examples: "<p>No evil players are sitting next to each other. The Chef learns a '0'.</p><p>The Imp is sitting next to the Baron. Across the circle, the Poisoner is sitting next to the Scarlet Woman. The Chef learns a '2'.</p><p>An evil Scapegoat is sitting between the Imp and a Minion. Across the circle, two other Minions are sitting next to each other. The Chef learns a '3'.</p>",
         group: "Townsfolk",
         script: "tb"
     },
@@ -913,25 +916,14 @@ let script = "tb";
 populateCharacters();
 
 function populateCharacters() {
-    //$(".characters").empty();
-    // characters.forEach(character => {
-    //     if (character.script == script) {
-    //         $(".characters").append(`<div class="character ${character.group}" data-name="${character.name}">${character.name}</div>`);
-    //     }
-    // });
     characters.forEach(character => {
-        // $(".tb-select").empty();
         if (character.script == "tb") {
-            // $(".tb-characters").append(`<div class="character ${character.group}" data-name="${character.name}">${character.name}</div>`);
             $(".tb-select").append(`<option value="${character.name}">${character.name}</option>`);
         } else if (character.script == "bmr") {
-            // $(".bmr-characters").append(`<div class="character ${character.group}" data-name="${character.name}">${character.name}</div>`);
             $(".bmr-select").append(`<option value="${character.name}">${character.name}</option>`);
         } else if (character.script == "sv") {
-            // $(".sv-characters").append(`<div class="character ${character.group}" data-name="${character.name}">${character.name}</div>`);
             $(".sv-select").append(`<option value="${character.name}">${character.name}</option>`);
         } else if (character.script == "exp") {
-            // $(".exp-characters").append(`<div class="character ${character.group}" data-name="${character.name}">${character.name}</div>`)
             $(".exp-select").append(`<option value="${character.name}">${character.name}</option>`);
         }
     })
@@ -940,24 +932,22 @@ function populateCharacters() {
 $(".script-select").change(function(){
     script = $('select').val();
     $(".list").addClass("hidden");
-    // $(".list").removeClass("flex");
-    // $(`.list.${script}-characters`).addClass("flex");
     $(`.list.${script}-select`).removeClass("hidden");
-    // populateCharacters();
-    // $(".script").removeClass("selected");
-    // $(this).addClass("selected");
  });
 
- $(".characters select").change(function(e){
-    // script = $('select').val();
+ $(".characters select").change(function(){
     $(".flavor").removeClass("hidden");
     $(".examples-container").removeClass("hidden");
-    $(".bluffing").removeClass("hidden");
-    // let ability;
-    // let name = $(".tb-select").val();
+    $(".tips-container").removeClass("hidden");
+    $(".bluffing-container").removeClass("hidden");
+    $(".examples").slideUp(0);
+    $(".tips").slideUp(0);
+    $(".bluffing").slideUp(0);
     let name = $(this).val();
-    // console.log(name);
-    // $(".bluffing h2").html(`Bluffing as the ${name} &#8595;`);
+    if (name == "select") {
+        return;
+    }
+    $(".bluff-name").html(name);
     characters.forEach(character => {
         if (character.name == name) {
             ability = character.ability;
@@ -965,15 +955,10 @@ $(".script-select").change(function(){
             flavor = character.flavor;
             examples = character.examples;
             tips = character.tips;
+            bluffing = character.bluffing;
             group = character.group;
         }
     });
-    // capitalizeFirstLetter(group);
-    // function capitalizeFirstLetter(group) {
-    //     return group.charAt(0).toUpperCase() + string.slice(1);
-    //     console.log(group);
-    //   }
-    // group = group.charAt(0).toUpperCase() + string.slice(1);
     name = name.toLowerCase();
     name = name.split(" ");
     if (name[1]) {
@@ -992,10 +977,8 @@ $(".script-select").change(function(){
     $(".ability").html(`<h3>Character Text:</h3><p>${ability}</p><hr>`);
     $(".examples").html(`${examples}`);
     $(".tips").html(`${tips}`);
-    // $(".info-container").empty();
-    // $(".info-container").append(`<img class="token" src="./img/${name}.png">
-    // <p>${ability}</p>`);
- });
+    $(".bluffing").html(`${bluffing}`);
+   });
 
 $(".script").click(function() {
     script = $(this).attr("data-script");
@@ -1003,57 +986,71 @@ $(".script").click(function() {
     $(".list").removeClass("flex");
     $(`.list.${script}-characters`).addClass("flex");
     $(`.list.${script}-characters`).removeClass("hidden");
-    // populateCharacters();
     $(".script").removeClass("selected");
     $(this).addClass("selected");
 })
 
-$(".character").click(function() {
-    $(".flavor").removeClass("hidden");
-    $(".examples-container").removeClass("hidden");
-    $(".bluffing").removeClass("hidden");
-    // let ability;
-    let name = $(this).attr("data-name");
-    // console.log(name);
-    // $(".bluffing h2").html(`Bluffing as the ${name} &#8595;`);
-    characters.forEach(character => {
-        if (character.name == name) {
-            ability = character.ability;
-            intro = character.intro;
-            flavor = character.flavor;
-            examples = character.examples;
-            tips = character.tips;
-        }
-    });
-    name = name.toLowerCase();
-    name = name.split(" ");
-    if (name[1]) {
-        name = name[0] + "-" + name[1];
-        name = name.replace("'",'');
-    }
-    $('.token').css({'opacity':'0'});
-//     setTimeout(function(){
-//         $(".token").attr("src",`./img/${name}.png`);
-//    }, 250); //Time before execution
-    // $(".token").attr("src",`./img/${name}.png`);
-    $(".intro").html(`${intro}`);
-    $(".ability").html(`<h3>Character Text</h3><p>${ability}</p><hr>`);
-    $(".flavor").html(`${flavor}`);
-    $(".examples").html(`${examples}`);
-    $(".tips").html(`${tips}`);
-    // $(".info-container").empty();
-    // $(".info-container").append(`<img class="token" src="./img/${name}.png">
-    // <p>${ability}</p>`);
-})
+// $(".character").click(function() {
+//     $(".flavor").removeClass("hidden");
+//     $(".examples-container").removeClass("hidden");
+//     $(".tips-2-container").removeClass("hidden");
+//     // $(".bluffing-container").removeClass("hidden");
+//     let name = $(this).attr("data-name");
+//     characters.forEach(character => {
+//         if (character.name == name) {
+//             ability = character.ability;
+//             intro = character.intro;
+//             flavor = character.flavor;
+//             examples = character.examples;
+//             tips = character.tips;
+//         }
+//     });
+//     name = name.toLowerCase();
+//     name = name.split(" ");
+//     if (name[1]) {
+//         name = name[0] + "-" + name[1];
+//         name = name.replace("'",'');
+//     }
+//     $('.token').css({'opacity':'0'});
+//     $(".intro").html(`${intro}`);
+//     $(".ability").html(`<h3>Character Text</h3><p>${ability}</p><hr>`);
+//     $(".flavor").html(`${flavor}`);
+//     $(".examples").html(`${examples}`);
+//     $(".tips").html(`${tips}`);
+// })
 
+let examplesCollapsed = true;
 $(".examples-container").click(function() {
+    if (examplesCollapsed) {
+        $(".examples-arrow").html("&#8593;");
+    }
+    if (!examplesCollapsed) {
+        $(".examples-arrow").html("&#8595;");
+    }
     $(".examples").slideToggle();
+    examplesCollapsed = !examplesCollapsed;
 })
 
+let tipsCollapsed = true;
 $(".tips-container").click(function() {
+    if (tipsCollapsed) {
+        $(".tips-arrow").html("&#8593;");
+    }
+    if (!tipsCollapsed) {
+        $(".tips-arrow").html("&#8595;");
+    }
     $(".tips").slideToggle();
+    tipsCollapsed = !tipsCollapsed;
 })
 
+let bluffingCollapsed = true;
 $(".bluffing-container").click(function() {
+    if (bluffingCollapsed) {
+        $(".bluffing-arrow").html("&#8593;");
+    }
+    if (!bluffingCollapsed) {
+        $(".bluffing-arrow").html("&#8595;");
+    }
     $(".bluffing").slideToggle();
+    bluffingCollapsed = !bluffingCollapsed;
 })
