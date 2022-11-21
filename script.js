@@ -1009,7 +1009,6 @@ $(".script").click(function() {
 })
 
 $(".character").click(function() {
-    $(".welcome").remove();
     $(".flavor").removeClass("hidden");
     $(".examples-container").removeClass("hidden");
     $(".bluffing").removeClass("hidden");
