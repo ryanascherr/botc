@@ -910,6 +910,134 @@ let characters = [
         flavor: '"Larga vida a la revolución! Mi revolucion!"',
         group: "Demon",
         script: "exp"
+    },
+    {
+        name: "Scapegoat",
+        intro: "The Scapegoat is executed instead of an ally.",
+        ability: '"If a player of your alignment is executed, you might be executed instead."',
+        flavor: '"Good evening! Thank you for inviting me to the ball. I\'m not from around here, but you sure seem like a friendly bunch, by golly. I\'m sure we\'ll get along just dandy. What\'s all that rope for?"',
+        group: "Traveller",
+        script: "traveller"
+    },
+    {
+        name: "Gunslinger",
+        intro: "The Gunslinger kills players who vote.",
+        ability: '"Each day, after the 1st vote has been tallied, you may choose a player that voted: they die."',
+        flavor: '"It\'s time someone took matters into their own hands. That someone... is me."',
+        group: "Traveller",
+        script: "traveller"
+    },
+    {
+        name: "Beggar",
+        intro: "The Beggar can not vote unless someone gives them a token to use, but they learn if the player that does so is good or evil.",
+        ability: '"You must use a vote token to vote. If a dead player gives you theirs, you learn their alignment. You are sober and healthy."',
+        flavor: '"Alms for the poor, good Sir? Spare a coin, Madam? Thank you. God bless! You\'re a right kind soul and no mistake! I\'ll have some swanky nosh tonight, I will!"',
+        group: "Traveller",
+        script: "traveller"
+    },
+    {
+        name: "Bureaucrat",
+        intro: "The Bureaucrat gives extra votes to a player of their choice.",
+        ability: '"Each night, choose a player (not yourself): their vote counts as 3 votes tomorrow."',
+        flavor: '"Sign here please. And here. And here. Aaaaaaaaand here. This should all be sorted and tallied by the end of the day, assuming everyone\'s signatures are legible. We haven\'t had a mix-up in the paperwork for ages. Yesterday noon, if memory serves..."',
+        group: "Traveller",
+        script: "traveller"
+    },
+    {
+        name: "Thief",
+        intro: "The Thief steals votes from a player, making their vote count negatively.",
+        ability: '"Each night, choose a player (not yourself): their vote counts negatively tomorrow."',
+        flavor: '"I aint done nuffink. I weren\'t even in dat alley last night! It weren\'t me what stole Mayor Bruno\'s briefcase wiv all dem fancy dockoments innit. Besides, it was too \'eavy to carry far."',
+        group: "Traveller",
+        script: "traveller"
+    },
+    {
+        name: "Apprentice",
+        intro: "The Apprentice has either a Townsfolk or a Minion ability.",
+        ability: '"On your 1st night, you gain a Townsfolk ability (if good) or a Minion ability (if evil)."',
+        flavor: '"For years have I traveled, studying the ways of The Craft. Which craft, you ask? Simply that of the simple folk. Nothing to worry about. Not yet."',
+        group: "Traveller",
+        script: "traveller"
+    },
+    {
+        name: "Matron",
+        intro: "The Matron chooses which players sit where.",
+        ability: '"Each day, you may choose up to 3 sets of 2 players to swap seats. Players may not leave their seats to talk in private."',
+        flavor: '"Miss Featherbottom, be quiet. Master Rutherford, a teacup needs just the four fingers, please. I know you are a father of nine, but age, or lack there-of as the case may be, is never an excuse for poor manners."',
+        group: "Traveller",
+        script: "traveller"
+    },
+    {
+        name: "Voudon",
+        intro: "The Voudon gives the voting power to the dead instead of the living.",
+        ability: '"Only you & the dead can vote. They don\'t need a vote token to do so. A 50% majority isn\'t required."',
+        flavor: '"Bien venu. Sit down. Breathe deep. Enter the land of the dead. See with their eyes. Speak with their voice. Yon sel lang se janm ase."',
+        group: "Traveller",
+        script: "traveller"
+    },
+    {
+        name: "Judge",
+        intro: "The Judge can determine if an execution succeeds or not, regardless of who voted.",
+        ability: '"Once per game, if another player nominated, you may choose to force the current execution to pass or fail."',
+        flavor: '"I find the defendant guilty of the crimes of murder, fraud, arson, larceny, impersonating an officer of the law, practicing medicine without a license, slander, regicide, and littering."',
+        group: "Traveller",
+        script: "traveller"
+    },
+    {
+        name: "Bishop",
+        intro: "The Bishop prevents players from nominating at all. Instead, the Storyteller does all nominating.",
+        ability: '"Only the Storyteller can nominate. At least 1 opposing player must be nominated each day."',
+        flavor: '"In nomine Patris, et Filii, et Spiritus Sancti… Nos mos Dei. Deus vult de nobis."',
+        group: "Traveller",
+        script: "traveller"
+    },
+    {
+        name: "Butcher",
+        intro: "The Butcher allows a second execution to occur per day.",
+        ability: '"Each day, after the 1st execution, you may nominate again."',
+        flavor: '"It tastes like chicken. More please."',
+        group: "Traveller",
+        script: "traveller"
+    },
+    {
+        name: "Bone Collector",
+        intro: "The Bone Collector temporarily gives dead players their ability back.",
+        ability: '"Once per game, at night*, choose a dead player: they regain their ability until dusk."',
+        flavor: '"I collect many things. Hair. Teeth. Clothes. Fragments of poems. The dreams of lost lovers. My secret arts are not for you to know but my fee is a mere pittance. Bring me the blood of a noblewoman who died of heartbreak under a full moon, and you shall have your answers."',
+        group: "Traveller",
+        script: "traveller"
+    },
+    {
+        name: "Harlot",
+        intro: "The Harlot learns the character of whoever agrees to reveal it, but at great risk for them both.",
+        ability: '"Each night*, choose a living player: if they agree, you learn their character, but you both might die."',
+        flavor: '"Enchanté, Sailor. You look like you need someone to really listen to your troubles. I\'m a good listener. Very, very good."',
+        group: "Traveller",
+        script: "traveller"
+    },
+    {
+        name: "Barista",
+        intro: "The Barista either makes people sober & healthy, or allows them to act twice as much as normal.",
+        ability: '"Each night, until dusk, 1) a player becomes sober, healthy & gets true info, or 2) their ability works twice. They learn which."',
+        flavor: '"There really is no cause to worry because when you think about it we are all capable and qualified and smart enough to grab the bull by the horns and sit down and figure this out like the reasonable adults we are by the way would you like another cup it really is the most amazing beverage they say it is from the east but anyway where were we ah yes going for a jog and really nutting out this demon business which we can do with just a little teensy mental boost and some logical thinking for example Senior Hu here is a regular customer and therefore quite trustworthy and would anyone like another cup?"',
+        group: "Traveller",
+        script: "traveller"
+    },
+    {
+        name: "Deviant",
+        intro: "The Deviant can avoid being Exiled - as long as the Deviant player has been amusing today.",
+        ability: '"If you were funny today, you can not be exiled."',
+        flavor: '"Twas the lady\'s quip, forsooth."',
+        group: "Traveller",
+        script: "traveller"
+    },
+    {
+        name: "Gangster",
+        intro: "The Gangster lets their neighbours kill each other.",
+        ability: '"Once per day, you may choose to kill a living neighbor, if your other living neighbor agrees."',
+        flavor: '"I like your shoes. It would be such a shame if you had a little accident, and they got ruined. Now that you mention it, I like your cufflinks too."',
+        group: "Traveller",
+        script: "traveller"
     }
 ];
 
@@ -927,6 +1055,8 @@ function populateCharacters() {
             $(".sv-select").append(`<option value="${character.name}">${character.name}</option>`);
         } else if (character.script == "exp") {
             $(".exp-select").append(`<option value="${character.name}">${character.name}</option>`);
+        } else if (character.script == "traveller") {
+            $(".traveller-select").append(`<option value="${character.name}">${character.name}</option>`);
         }
     })
 }
@@ -938,6 +1068,7 @@ $(".script-select").change(function(){
  });
 
  $(".characters select").change(function(){
+    $(".welcome").remove();
     $(".flavor").removeClass("hidden");
     $(".examples-container").removeClass("hidden");
     $(".tips-container").removeClass("hidden");
@@ -972,8 +1103,12 @@ $(".script-select").change(function(){
     $(".group").html(`${group}`);
     if (group == "Townsfolk" || group == "Outsider") {
         $(".group").css({'color':'#0154A7'});
-    } else {
+    } else if (group == "Minion" || group == "Demon") {
         $(".group").css({'color':'#9A1117'});
+    } else if (group == "Traveller") {
+        $(".group").css({'color':'#2F214B'});
+    } else {
+        $(".group").css({'color':'gold'});
     }
     $(".intro").html(`${intro}`);
     $(".ability").html(`<h3>Character Text:</h3><p>${ability}</p><hr>`);
