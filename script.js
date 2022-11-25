@@ -67,7 +67,7 @@ let characters = [
         name: "Monk",
         intro: "The Monk protects other players from the Demon.",
         ability: '"Each night*, choose a player (not yourself): they are safe from the Demon tonight."',
-        flavor: '" \'Tis an ill and deathly wind that blows tonight. Come, my brother, take shelter in the abbey while the storm rages. By my word, or by my life, you will be safe."',
+        flavor: '"\'Tis an ill and deathly wind that blows tonight. Come, my brother, take shelter in the abbey while the storm rages. By my word, or by my life, you will be safe."',
         group: "Townsfolk",
         script: "tb"
     },
@@ -1038,12 +1038,156 @@ let characters = [
         flavor: '"I like your shoes. It would be such a shame if you had a little accident, and they got ruined. Now that you mention it, I like your cufflinks too."',
         group: "Traveller",
         script: "traveller"
-    }
+    },
+    {
+        name: "Doomsayer",
+        intro: "The Doomsayer speeds up large games that are going too slowly.",
+        ability: '"If 4 or more players live, each living player may publicly choose (once per game) that a player of their own alignment dies."',
+        flavor: '"And on the Seventh Day, there shall be a great flood and a pestilence upon the People of the Village of the Ravens! The dead shall rise and the living shall repent! O Woe! O Unholy day! Only by great sacrifice shall they prevail! So sayeth the Sages of Nostros and so sayeth I."',
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Angel",
+        intro: "Use the Angel to help new players have fun when there are one or two new players in a group of veterans.",
+        ability: '"Something bad might happen to whoever is most responsible for the death of a new player."',
+        flavor: '"Let those who are without sin dare to raise their hand to my chosen, for I shall strike such fools down with the fury and righteousness of a thousand storms."',
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Buddhist",
+        intro: "Use the Buddhist to help new players have fun when there are one or two veterans in a group of new players.",
+        ability: '"For the first 2 minutes of each day, veteran players may not talk."',
+        flavor: '"You throw thorns. Falling in my silence, they become flowers."',
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Hell's Librarian",
+        intro: "Hell's Librarian allows a softly-spoken Storyteller to be heard when needed.",
+        ability: '"Something bad might happen to whoever talks when the Storyteller has asked for silence."',
+        flavor: '"Shhhhhh. Please be quiet. It is best not to disturb the Librarian. I\'ve heard it has a temper."',
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Revolutionary",
+        intro: "The Revolutionary helps disadvantaged players participate.",
+        ability: '"2 neighboring players are known to be the same alignment. Once per game, 1 of them registers falsely."',
+        flavor: '"United we feigned.<br><br>Divided, we stalled."',
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Fiddler",
+        intro: "The Fiddler decides a winner if the game must end due to time constraints, or to a stalemate. Evil wins on ties.",
+        ability: '"Once per game, the Demon secretly chooses an opposing player: all players choose which of these 2 players win."',
+        flavor: '"I\'ll wager mi lyef ye cannae best me in a fiddle contest, ye boss-eyed snook! We\'ll go out on the lash, get the pub jammers an\' have a right craic. I\'ll be layin\' ma boots into ya come mornin\' ye rumbly muppet."',
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Toymaker",
+        intro: "The Toymaker makes Teensyville games (5 to 6 player games) longer and more exciting.",
+        ability: '"The Demon may choose not to attack & must do this at least once per game. Evil players get normal starting info."',
+        flavor: '"It buzzes! It walks down stairs! It keeps you warm at night! It tastes like sugar! The kiddies love it! Introducing... the brand new...Warm\'o-buzzy-wuzzy-walk\'a\'bot-thingy-contraption! Fun for all ages!"',
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Storm Catcher",
+        intro: "The Storm Catcher allows the Storyteller to build a game focused on a particular good character.",
+        ability: '"Name a good character. If in play, they can only die by execution, but evil players learn which player it is."',
+        flavor: '"At dawn, the temple\'s long shadow creeps to the fountain. At dusk, the obelisk blocks the red glare, cooling warm water under the archway. All lines converge here. A storm is coming, and this, this pebbled and lush and holy place between the apple trees, is the eye."',
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Fibbin",
+        intro: "The Fibbin adds misinformation to a game that has no possibility of misinformation. (For Script games only)",
+        ability: '"Once per game, 1 good player might get incorrect information."',
+        flavor: '"Tee-hee-hee.<br><br>Tee. Hee. Hee."',
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Duchess",
+        intro: "The Duchess adds information to a game that has little information for the good players to go on. (For Script games only)",
+        ability: '"Each day, 3 players may choose to visit you. At night*, each visitor learns how many visitors are evil, but 1 gets false info."',
+        flavor: '"We shall entertain between the hours of 6 and 7 precisely. Tea at 6:15. Scones at 6:45. Do not be late. Formal wear applies, as always."',
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Sentinel",
+        intro: "Add the Sentinel to your script to keep the number of Outsiders in play mysterious. (For Script games only.)",
+        ability: '"There might be 1 extra or 1 fewer Outsider in play."',
+        flavor: '"Name, please.<br><br>Papers, please.<br><br>Weapons, please."',
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Spirit Of Ivory",
+        intro: "The Spirit of Ivory prevents games from containing too many evil characters. (For Script games only)",
+        ability: '"There can\'t be more than 1 extra evil player."',
+        flavor: '"The Wasteland calls. Bones rise to flesh, then fall to dust. The great spirit grows. The great spirit watches. The great spirit guides. The human listens, or the human is no more."',
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Djinn",
+        intro: "Add the Djinn to all games with a jinx icon on the script. The Djinn resolves jinxes by creating a unique rule. (For Script games only.)",
+        ability: '"Use the Djinn\'s special rule. All players know what it is."',
+        flavor: 'نحن لسنا هنا.<br><br> انت لست حقيقي<br><br>. كل شيء هو وهم.<br><br> أسئلتك هي جبل نار في يوم صافٍ.',
+        group: "Fabled",
+        script: "fabled"
+    },
 ];
 
-let script = "tb";
-
 populateCharacters();
+
+setInterval(function(){ 
+    runIntroAnimation();
+}, 5000);
+
+setInitialImage();
+
+function setInitialImage() {
+    let length = characters.length;
+    let randomNumber = Math.floor(Math.random() * length + 1);
+    let name = characters[randomNumber].name;
+    name = name.toLowerCase();
+    name = name.split(" ");
+    if (name[2]) {
+        name = name[0] + "-" + name[1] + "-" + name[2];
+        name = name.replace("'",'');
+    } else if (name[1]) {
+        name = name[0] + "-" + name[1];
+        name = name.replace("'",'');
+    }
+    $(".intro-img").attr("src",`./img/${name}.png`);
+}
+
+function runIntroAnimation() {
+    let length = characters.length;
+    let randomNumber = Math.floor(Math.random() * length + 1);
+    let name = characters[randomNumber].name;
+    name = name.toLowerCase();
+    name = name.split(" ");
+    if (name[2]) {
+        name = name[0] + "-" + name[1] + "-" + name[2];
+        name = name.replace("'",'');
+    } else if (name[1]) {
+        name = name[0] + "-" + name[1];
+        name = name.replace("'",'');
+    }
+    $(".intro-img").css("opacity","0");
+    setTimeout(function(){ 
+        $(".intro-img").attr("src",`./img/${name}.png`);
+    $(".intro-img").css("opacity","100%");
+    }, 1000);
+}
 
 function populateCharacters() {
     characters.forEach(character => {
@@ -1057,6 +1201,8 @@ function populateCharacters() {
             $(".exp-select").append(`<option value="${character.name}">${character.name}</option>`);
         } else if (character.script == "traveller") {
             $(".traveller-select").append(`<option value="${character.name}">${character.name}</option>`);
+        } else if (character.script == "fabled") {
+            $(".fabled-select").append(`<option value="${character.name}">${character.name}</option>`);
         }
     })
 }
@@ -1094,7 +1240,10 @@ $(".script-select").change(function(){
     });
     name = name.toLowerCase();
     name = name.split(" ");
-    if (name[1]) {
+    if (name[2]) {
+        name = name[0] + "-" + name[1] + "-" + name[2];
+        name = name.replace("'",'');
+    } else if (name[1]) {
         name = name[0] + "-" + name[1];
         name = name.replace("'",'');
     }
