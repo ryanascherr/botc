@@ -1145,6 +1145,90 @@ let characters = [
     },
 ];
 
+populateAll();
+
+function populateAll() {
+    $(".all").append(`<h1 id="trouble-brewing" style="color:darkred;">Trouble Brewing</h1>`);
+    $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>`);
+    $(".all").append(`<div class="tb-townsfolk group-container" style="border: 2px solid #0365AB"></div>`);
+    $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Outsiders</h2>`);
+    $(".all").append(`<div class="tb-outsiders group-container" style="border: 2px solid #0365AB"></div>`);
+    $(".all").append(`<h2 style="background-color:darkred; color: white;">Minions</h2>`);
+    $(".all").append(`<div class="tb-minions group-container" style="border: 2px solid darkred"></div>`);
+    $(".all").append(`<h2 style="background-color:darkred; color: white;">Demons</h2>`);
+    $(".all").append(`<div class="tb-demons group-container" style="border: 2px solid darkred"></div>`);
+
+    $(".all").append(`<h1 id="bad-moon-rising" style="color:#78380D;">Bad Moon Rising</h1>`);
+    $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>`);
+    $(".all").append(`<div class="bmr-townsfolk group-container" style="border: 2px solid #0365AB"></div>`);
+    $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Outsiders</h2>`);
+    $(".all").append(`<div class="bmr-outsiders group-container" style="border: 2px solid #0365AB"></div>`);
+    $(".all").append(`<h2 style="background-color:darkred; color: white;">Minions</h2>`);
+    $(".all").append(`<div class="bmr-minions group-container" style="border: 2px solid darkred"></div>`);
+    $(".all").append(`<h2 style="background-color:darkred; color: white;">Demons</h2>`);
+    $(".all").append(`<div class="bmr-demons group-container" style="border: 2px solid darkred"></div>`);
+
+    $(".all").append(`<h1 id="sects-violets" style="color:darkred;">Sects & Violets</h1>`);
+    $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>`);
+    $(".all").append(`<div class="sv-townsfolk group-container" style="border: 2px solid #0365AB"></div>`);
+    $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Outsiders</h2>`);
+    $(".all").append(`<div class="sv-outsiders group-container" style="border: 2px solid #0365AB"></div>`);
+    $(".all").append(`<h2 style="background-color:darkred; color: white;">Minions</h2>`);
+    $(".all").append(`<div class="sv-minions group-container" style="border: 2px solid darkred"></div>`);
+    $(".all").append(`<h2 style="background-color:darkred; color: white;">Demons</h2>`);
+    $(".all").append(`<div class="sv-demons group-container" style="border: 2px solid darkred"></div>`);
+    
+    characters.forEach(character => {
+        let name = character.name;
+        name = name.toLowerCase();
+        name = name.split(" ");
+    if (name[2]) {
+        name = name[0] + "-" + name[1] + "-" + name[2];
+        name = name.replace("'",'');
+    } else if (name[1]) {
+        name = name[0] + "-" + name[1];
+        name = name.replace("'",'');
+    }
+    if (character.script == "tb") {
+        if (character.group == "Townsfolk") {
+            $(".tb-townsfolk").append(`<img class="token" src="./img/${name}.png">`);
+        } else if (character.group == "Outsider") {
+            $(".tb-outsiders").append(`<img class="token" src="./img/${name}.png">`);
+        } else if (character.group == "Minion") {
+            $(".tb-minions").append(`<img class="token" src="./img/${name}.png">`)
+        } else if (character.group == "Demon") {
+            $(".tb-demons").append(`<img class="token" src="./img/${name}.png">`);
+        }
+    }
+
+    if (character.script == "bmr") {
+        if (character.group == "Townsfolk") {
+            $(".bmr-townsfolk").append(`<img class="token" src="./img/${name}.png">`);
+        } else if (character.group == "Outsider") {
+            $(".bmr-outsiders").append(`<img class="token" src="./img/${name}.png">`);
+        } else if (character.group == "Minion") {
+            $(".bmr-minions").append(`<img class="token" src="./img/${name}.png">`)
+        } else if (character.group == "Demon") {
+            $(".bmr-demons").append(`<img class="token" src="./img/${name}.png">`);
+        }
+    }
+
+    if (character.script == "sv") {
+        if (character.group == "Townsfolk") {
+            $(".sv-townsfolk").append(`<img class="token" src="./img/${name}.png">`);
+        } else if (character.group == "Outsider") {
+            $(".sv-outsiders").append(`<img class="token" src="./img/${name}.png">`);
+        } else if (character.group == "Minion") {
+            $(".sv-minions").append(`<img class="token" src="./img/${name}.png">`)
+        } else if (character.group == "Demon") {
+            $(".sv-demons").append(`<img class="token" src="./img/${name}.png">`);
+        }
+    }
+    
+    // $(".all-tokens").append(`<img class="token" src="./img/${name}.png">`);
+    })
+}
+
 populateCharacters();
 
 setInterval(function(){ 
