@@ -22,7 +22,7 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 1000px;
     padding: 15px;
 }
 
@@ -39,7 +39,8 @@ header {
 
 .all .token:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    /* transform: rotate(10deg); */
+    /* transform: scale(1.1); */
 }
 
 body {
@@ -138,8 +139,8 @@ ul {
 }
 
 .token, .intro-img {
-    max-width: 200px;
-    transition: all 1s;
+    max-width: 150px;
+    transition: all .35s;
 }
 
 /* .token:hover {
@@ -148,6 +149,10 @@ ul {
 
 .intro {
     margin-bottom: 0;
+}
+
+.intro, .ability {
+    text-align: center;
 }
 
 .flavor {
@@ -175,6 +180,13 @@ li {
     border-radius: 10px;
     width: 100%;
     max-width: 800px;
+}
+
+.dropdown-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .examples-arrow, .tips-arrow, .bluffing-arrow {
@@ -271,7 +283,7 @@ select {
 
 @media only screen and (max-width: 723px){
     .token {
-        max-width: 150px;
+        max-width: 125px;
     }
 }
 
@@ -288,3 +300,42 @@ select {
         margin: 5px;
     }
 }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 1000px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

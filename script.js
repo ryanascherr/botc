@@ -1179,8 +1179,8 @@ function populateAll() {
     $(".all").append(`<div class="sv-demons group-container" style="border: 2px solid darkred"></div>`);
     
     characters.forEach(character => {
-        let name = character.name;
-        name = name.toLowerCase();
+        let originalName = character.name;
+        let name = originalName.toLowerCase();
         name = name.split(" ");
     if (name[2]) {
         name = name[0] + "-" + name[1] + "-" + name[2];
@@ -1191,13 +1191,13 @@ function populateAll() {
     }
     if (character.script == "tb") {
         if (character.group == "Townsfolk") {
-            $(".tb-townsfolk").append(`<img class="token" src="./img/${name}.png">`);
+            $(".tb-townsfolk").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
         } else if (character.group == "Outsider") {
-            $(".tb-outsiders").append(`<img class="token" src="./img/${name}.png">`);
+            $(".tb-outsiders").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
         } else if (character.group == "Minion") {
-            $(".tb-minions").append(`<img class="token" src="./img/${name}.png">`)
+            $(".tb-minions").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`)
         } else if (character.group == "Demon") {
-            $(".tb-demons").append(`<img class="token" src="./img/${name}.png">`);
+            $(".tb-demons").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
         }
     }
 
@@ -1229,11 +1229,11 @@ function populateAll() {
     })
 }
 
-populateCharacters();
+// populateCharacters();
 
-setInterval(function(){ 
-    runIntroAnimation();
-}, 5000);
+// setInterval(function(){ 
+//     runIntroAnimation();
+// }, 5000);
 
 setInitialImage();
 
@@ -1273,99 +1273,44 @@ function runIntroAnimation() {
     }, 1000);
 }
 
-function populateCharacters() {
-    characters.forEach(character => {
-        if (character.script == "tb") {
-            $(".tb-select").append(`<option value="${character.name}">${character.name}</option>`);
-        } else if (character.script == "bmr") {
-            $(".bmr-select").append(`<option value="${character.name}">${character.name}</option>`);
-        } else if (character.script == "sv") {
-            $(".sv-select").append(`<option value="${character.name}">${character.name}</option>`);
-        } else if (character.script == "exp") {
-            $(".exp-select").append(`<option value="${character.name}">${character.name}</option>`);
-        } else if (character.script == "traveller") {
-            $(".traveller-select").append(`<option value="${character.name}">${character.name}</option>`);
-        } else if (character.script == "fabled") {
-            $(".fabled-select").append(`<option value="${character.name}">${character.name}</option>`);
-        }
-    })
-}
+// function populateCharacters() {
+//     characters.forEach(character => {
+//         if (character.script == "tb") {
+//             $(".tb-select").append(`<option value="${character.name}">${character.name}</option>`);
+//         } else if (character.script == "bmr") {
+//             $(".bmr-select").append(`<option value="${character.name}">${character.name}</option>`);
+//         } else if (character.script == "sv") {
+//             $(".sv-select").append(`<option value="${character.name}">${character.name}</option>`);
+//         } else if (character.script == "exp") {
+//             $(".exp-select").append(`<option value="${character.name}">${character.name}</option>`);
+//         } else if (character.script == "traveller") {
+//             $(".traveller-select").append(`<option value="${character.name}">${character.name}</option>`);
+//         } else if (character.script == "fabled") {
+//             $(".fabled-select").append(`<option value="${character.name}">${character.name}</option>`);
+//         }
+//     })
+// }
 
-$(".script-select").change(function(){
-    script = $('select').val();
-    $(".list").addClass("hidden");
-    $(`.list.${script}-select`).removeClass("hidden");
- });
+// $(".script-select").change(function(){
+//     script = $('select').val();
+//     $(".list").addClass("hidden");
+//     $(`.list.${script}-select`).removeClass("hidden");
+//  });
 
- $(".characters select").change(function(){
-    $(".welcome").remove();
-    $(".flavor").removeClass("hidden");
-    $(".examples-container").removeClass("hidden");
-    $(".tips-container").removeClass("hidden");
-    $(".bluffing-container").removeClass("hidden");
-    $(".examples").slideUp(0);
-    $(".tips").slideUp(0);
-    $(".bluffing").slideUp(0);
-    let name = $(this).val();
-    if (name == "select") {
-        return;
-    }
-    $(".bluff-name").html(name);
-    characters.forEach(character => {
-        if (character.name == name) {
-            ability = character.ability;
-            intro = character.intro;
-            flavor = character.flavor;
-            examples = character.examples;
-            tips = character.tips;
-            bluffing = character.bluffing;
-            group = character.group;
-        }
-    });
-    name = name.toLowerCase();
-    name = name.split(" ");
-    if (name[2]) {
-        name = name[0] + "-" + name[1] + "-" + name[2];
-        name = name.replace("'",'');
-    } else if (name[1]) {
-        name = name[0] + "-" + name[1];
-        name = name.replace("'",'');
-    }
-    $(".token").attr("src",`./img/${name}.png`);
-    $(".flavor").html(`${flavor}`);
-    $(".group").html(`${group}`);
-    if (group == "Townsfolk" || group == "Outsider") {
-        $(".group").css({'color':'#0154A7'});
-    } else if (group == "Minion" || group == "Demon") {
-        $(".group").css({'color':'#9A1117'});
-    } else if (group == "Traveller") {
-        $(".group").css({'color':'#2F214B'});
-    } else {
-        $(".group").css({'color':'gold'});
-    }
-    $(".intro").html(`${intro}`);
-    $(".ability").html(`<h3>Character Text:</h3><p>${ability}</p><hr>`);
-    $(".examples").html(`${examples}`);
-    $(".tips").html(`${tips}`);
-    $(".bluffing").html(`${bluffing}`);
-   });
-
-$(".script").click(function() {
-    script = $(this).attr("data-script");
-    $(".list").addClass("hidden");
-    $(".list").removeClass("flex");
-    $(`.list.${script}-characters`).addClass("flex");
-    $(`.list.${script}-characters`).removeClass("hidden");
-    $(".script").removeClass("selected");
-    $(this).addClass("selected");
-})
-
-// $(".character").click(function() {
+//  $(".characters select").change(function(){
+//     $(".welcome").remove();
 //     $(".flavor").removeClass("hidden");
 //     $(".examples-container").removeClass("hidden");
-//     $(".tips-2-container").removeClass("hidden");
-//     // $(".bluffing-container").removeClass("hidden");
-//     let name = $(this).attr("data-name");
+//     $(".tips-container").removeClass("hidden");
+//     $(".bluffing-container").removeClass("hidden");
+//     $(".examples").slideUp(0);
+//     $(".tips").slideUp(0);
+//     $(".bluffing").slideUp(0);
+//     let name = $(this).val();
+//     if (name == "select") {
+//         return;
+//     }
+//     $(".bluff-name").html(name);
 //     characters.forEach(character => {
 //         if (character.name == name) {
 //             ability = character.ability;
@@ -1373,21 +1318,85 @@ $(".script").click(function() {
 //             flavor = character.flavor;
 //             examples = character.examples;
 //             tips = character.tips;
+//             bluffing = character.bluffing;
+//             group = character.group;
 //         }
 //     });
 //     name = name.toLowerCase();
 //     name = name.split(" ");
-//     if (name[1]) {
+//     if (name[2]) {
+//         name = name[0] + "-" + name[1] + "-" + name[2];
+//         name = name.replace("'",'');
+//     } else if (name[1]) {
 //         name = name[0] + "-" + name[1];
 //         name = name.replace("'",'');
 //     }
-//     $('.token').css({'opacity':'0'});
-//     $(".intro").html(`${intro}`);
-//     $(".ability").html(`<h3>Character Text</h3><p>${ability}</p><hr>`);
+//     $(".token").attr("src",`./img/${name}.png`);
 //     $(".flavor").html(`${flavor}`);
+//     $(".group").html(`${group}`);
+//     if (group == "Townsfolk" || group == "Outsider") {
+//         $(".group").css({'color':'#0154A7'});
+//     } else if (group == "Minion" || group == "Demon") {
+//         $(".group").css({'color':'#9A1117'});
+//     } else if (group == "Traveller") {
+//         $(".group").css({'color':'#2F214B'});
+//     } else {
+//         $(".group").css({'color':'gold'});
+//     }
+//     $(".intro").html(`${intro}`);
+//     $(".ability").html(`<h3>Character Text:</h3><p>${ability}</p><hr>`);
 //     $(".examples").html(`${examples}`);
 //     $(".tips").html(`${tips}`);
+//     $(".bluffing").html(`${bluffing}`);
+//    });
+
+// $(".script").click(function() {
+//     script = $(this).attr("data-script");
+//     $(".list").addClass("hidden");
+//     $(".list").removeClass("flex");
+//     $(`.list.${script}-characters`).addClass("flex");
+//     $(`.list.${script}-characters`).removeClass("hidden");
+//     $(".script").removeClass("selected");
+//     $(this).addClass("selected");
 // })
+
+$(".token").click(function() {
+    $(".flavor").removeClass("hidden");
+    $(".examples-container").removeClass("hidden");
+    $(".tips-2-container").removeClass("hidden");
+    let ability;
+    let intro;
+    let flavor;
+    let examples;
+    let tips;
+    // $(".bluffing-container").removeClass("hidden");
+    let name = $(this).attr("data-name");
+    console.log(name);
+    characters.forEach(character => {
+        if (character.name == name) {
+            console.log(character);
+            console.log(character.ability);
+            ability = character.ability;
+            intro = character.intro;
+            flavor = character.flavor;
+            examples = character.examples;
+            tips = character.tips;
+        }
+    });
+    name = name.toLowerCase();
+    name = name.split(" ");
+    if (name[1]) {
+        name = name[0] + "-" + name[1];
+        name = name.replace("'",'');
+    }
+    // $('.token').css({'opacity':'0'});
+    $(".img-flavor-container .token").attr("src",`./img/${name}.png`);
+    $(".intro").html(`${intro}`);
+    $(".ability").html(`<h3>Character Text</h3><p>${ability}</p><hr>`);
+    $(".flavor").html(`${flavor}`);
+    $(".examples").html(`${examples}`);
+    $(".tips").html(`${tips}`);
+})
 
 let examplesCollapsed = true;
 $(".examples-container").click(function() {
@@ -1424,3 +1433,33 @@ $(".bluffing-container").click(function() {
     $(".bluffing").slideToggle();
     bluffingCollapsed = !bluffingCollapsed;
 })
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+let btn = $(".token");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+$('.token').click(function(){
+	modal.style.display = "block";
+});
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
