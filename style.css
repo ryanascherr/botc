@@ -1,37 +1,36 @@
-main {
-    background-color: #DCDCDC;
-}
-
-.ability-container h2 {
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.intro-container ul {
-    margin-bottom: 0;
-}
-
-.intro-container li {
-    margin-bottom: 10px;
-}
-
-.intro-container li:last-child {
-    margin-bottom: 0;
-}
-
-.examples:first-child {
-    margin-top: 0;
-}
+/* START GLOBAL */
 
 html {
     scroll-behavior: smooth;
 }
 
+h1, h2, h3 {
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}
+
 header {
     position: sticky;
     top: 0;
+    background: #2F214B;
+    padding: 15px;
 }
+
+main {
+    display: flex;
+    justify-content: center;
+    background-color: #DCDCDC;
+}
+
+ul {
+    padding-left: 15px;
+}
+
+/* END GLOBAL */
+/* START NAV */
 
 .nav-bar {
     display: flex;
@@ -46,23 +45,55 @@ header {
     padding: 5px;
 }
 
-.group-container {
+/* END NAV */
+/* START MODAL */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 7.5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+max-width: 1000px;
+}
+  
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* END MODAL */
+/* START MODAL CONTENT */
+
+.img-flavor-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    padding: 15px;
-}
-
-.all {
-    margin-bottom: 50px;
-}
-
-.all h2 {
-    text-align: center;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding: 30px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .token {
@@ -71,164 +102,9 @@ header {
     border-radius: 50%;
 }
 
-.all .token:hover {
-    cursor: pointer;
-    /* transform: rotate(10deg); */
-    /* transform: scale(1.1); */
-}
-
-body {
-    margin: 0;
-}
-
-h2, h3 {
-    text-align: center;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-}
-
-h1 {
-    text-align: center;
-}
-
-header {
-    background: #2F214B;
-    padding: 15px;
-}
-
-.hidden {
-    display: none;
-}
-
-ul {
-    padding-left: 15px;
-}
-
-.script-container {
-    padding-bottom: 15px;
-}
-
-.script-container, .characters {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.script {
-    min-width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin-right: 10px;
-    color: white;
-    border-radius: 10px;
-    background: darkred;
-    transition: all .35s;
-    border: 2px solid darkred;
-}
-
-.script:hover {
-    cursor: pointer;
-    background: white;
-    color: darkred;
-}
-
-.selected {
-    background: white;
-    color: darkred;
-    border: 2px solid darkred;
-    transform: scale(.9);
-}
-
-
-/* .characters {
-    background: darkgray;
-    padding: 10px;
-    color: white;
-} */
-
-.character {
-    padding: 10px;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 150px;
-    border-radius: 10px;
-}
-
-.info-container {
-    /* display: none; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* padding: 20px; */
-    position: relative;
-    /* max-width: 800px; */
-}
-
-.token, .intro-img {
+.token {
     max-width: 150px;
     transition: all .35s;
-}
-
-/* .token:hover {
-    transform: scale(1.1);
-} */
-
-.intro {
-    /* margin-bottom: 0; */
-}
-
-.intro p, .ability p {
-    text-align: center;
-}
-
-.flavor {
-    font-style: italic;
-    background-color: #E7DAC7;
-    /* border: 2px solid black; */
-    border-radius: 10px;
-    padding: 15px;
-    margin-top: 30px;
-    /* text-align: center; */
-}
-
-.ability h3 {
-    text-align: center;
-}
-
-li {
-    /* margin-bottom: 10px; */
-}
-
-.examples-container, .tips-container, .bluffing-container {
-    /* padding: 10px;
-    margin: 10px;
-    border: 2px solid black;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 800px; */
-}
-
-.dropdown-parent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.examples-arrow, .tips-arrow, .bluffing-arrow {
-    margin-left: 10px;
-}
-
-.examples-container:hover, .tips-container:hover, .bluffing-container:hover {
-    cursor: pointer;
 }
 
 .speech-bubble {
@@ -251,34 +127,76 @@ li {
 	margin-top: -20px;
 }
 
-.flex {
-    display: flex;
+.flavor {
+    font-style: italic;
+    background-color: #E7DAC7;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 30px;
 }
 
-select {
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    padding: 5px;
-    font-size: 20px;
-}
-
-.div-vertical{
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    min-width: 20px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    margin: 0;
-    letter-spacing: 8px;
-}
-
-.img-flavor-container {
+.info-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    position: relative;
 }
+
+.ability-container h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.intro-container ul {
+    margin-bottom: 0;
+}
+
+.intro-container li {
+    margin-bottom: 10px;
+}
+
+.intro-container li:last-child {
+    margin-bottom: 0;
+}
+
+.intro p, .ability p {
+    text-align: center;
+}
+
+.examples:first-child {
+    margin-top: 0;
+}
+
+/* END MODAL CONTENT */
+/* START OTHER */
+
+.all {
+    margin-bottom: 50px;
+}
+
+.all h2 {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 30px;
+}
+
+.all .token:hover {
+    cursor: pointer;
+}
+
+.group-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    padding: 15px;
+}
+
+/* END OTHER */
+/* START MEDIA QUERIES */
 
 @media only screen and (min-width: 500px){
     .img-flavor-container {
@@ -305,14 +223,6 @@ select {
 	    margin-top: -20px;
 	    margin-left: -20px;
     }
-    .img-flavor-container {
-        /* margin-bottom: 30px; */
-    }
-}
-
-.welcome {
-    font-family: sans-serif;
-    text-align: center;
 }
 
 @media only screen and (max-width: 723px){
@@ -340,42 +250,3 @@ select {
         flex-wrap: wrap;
     }
 }
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 7.5% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 1000px;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
