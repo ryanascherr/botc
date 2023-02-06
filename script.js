@@ -1,23 +1,21 @@
 let characters = [
     {
         name: "Washerwoman",
-        intro: "The Washerwoman learns that a particular Townsfolk character is in play, but not exactly which player it is.",
-        ability: '"You start knowing that 1 of 2 players is a particular Townsfolk."',
+        intro: "<p>The Washerwoman learns that a specific Townsfolk character is in play, but not who is playing them.</p><ul><li>During the first night, the Washerwoman is woken, shown two players, and learns the character of one of them.</li><li>They learn this only once and then learn nothing more.</li></ul>",
+        ability: 'You start knowing that 1 of 2 players is a particular Townsfolk.',
         flavor: '"Bloodstains on a dinner jacket? No, this is cooking sherry. How careless."',
-        examples: "<p style='margin-top: 0;'>Evin is the Chef, and Amy is the Ravenkeeper. The Washerwoman learns that either Evin or Amy is the Chef.</p><p>Julian is the Imp, and Alex is the Virgin. The Washerwoman learns that either Julian or Alex is the Virgin.</p><p>Marianna is the Spy, and Sarah is the Scarlet Woman. The Washerwoman learns that one of them is the Ravenkeeper. (This happens because the Spy is registering as a Townsfolk—in this case, the Ravenkeeper)</p>",
-        tips: "<ul style='margin-top: 0;'><li>The Washerwoman is deceptively powerful. Even though you don't gain information on the evil players, you can confirm the identity of a good player. This player should be your focus for the game, because if they have great information, then you have that information too. If they have a useful ability that they choose to use, you can help them use it wisely.</li><li>When the Washerwoman is poisoned or is actually the Drunk, they will often get information that is easy to figure out is incorrect—at least compared to other characters. While the Chef has no clue as to whether their '1' is incorrect, if both of the players the Storyteller pointed at tell you they're a different character to the one the Storyteller showed you, it is likely that you are the Drunk or poisoned. You can use this information to your team's advantage: if you know you are the Drunk, you know nobody else is; if you think you were poisoned on the first night, nobody else could have been. Furthermore, if your information seems like it's correct, it probably is, because of how easy it is to tell when it's wrong.</li><li>You know that of the two players you are shown, one must be the Townsfolk you are shown. Importantly, this means that you know that the person you see is not the Drunk.</li><li>To find out which of the two players is the Townsfolk, either ask the group publicly or have a private conversation with each player individually. It is usually best to reveal what you know before the Townsfolk in question says who they are so they trust you more.</li><li>If you share your information on the first day, and speak up quickly, the good team has some solid information to begin with. This is particularly useful if you confirm another information-receiving Townsfolk like the Empath or the Fortune Teller.</li><li>Waiting until the final day - or at least very late in the game - to share your information with the group can also be very useful. If you can keep the Townsfolk that you know alive until the final day, then you know one player who is not the Imp! This can either make the Demon player obvious to you, or at least reduce the possible Demon players down to 1 in 2 instead of 1 in 3.</li><li>Talk to the Townsfolk player that you know, and secretly let them know that you know who they are. This way, you can hopefully form an alliance, and can come to each other's defence if either of you are nominated for execution, whilst avoiding telling the group (and therefore the evil team) who the other is. This is particularly useful if you learn a character that the Demon really wants to attack, like the Fortune Teller, or even a character that the Demon wants to avoid attacking at all costs, like the Ravenkeeper or the Soldier.</li><li>After talking to the Townsfolk that you know in private, and confirming who they are, you can tell the group that they are a different character than they actually are. This strategy is useful if you want to protect a powerful Townsfolk from characters like the Poisoner, or to trick evil players into attacking a Townsfolk that has already used their ability, such as the Chef.</li><li>You can claim to be a more powerful character than you actually are. You start with all the information you're going to get, so if the Demon kills you, they aren't killing the Slayer or the Fortune Teller. You may also want to consider nominating a Virgin, and confirming yourself, the Virgin, and the Townsfolk you were shown all to be good.</li><li>Sometimes the Storyteller will point to evil players as possible Townsfolk to you. If you think this might be the case, don't say directly which Townsfolk you know to be in play. You might instead state a false Townsfolk character to try and trick evil players into admitting to being a character that you didn't learn, or you can tempt good players into revealing their Townsfolk character to you before you reveal what you know to them. This allows you to trust them more... but they may trust you less!</li><li>If the 'wrong' player the Storyteller pointed to is an evil player, telling them the Townsfolk you saw may alert the Imp to the presence of the character you saw. If you saw the Empath, for example, telling the Demon that may cause the Empath to be killed in the night.</li><li>The two of you can reveal your characters publicly to the group, without having a private conversation beforehand. This goes a long way towards proving publicly that you are both telling the truth.</li><li>Publicly reveal which character is in play, but not which player it is. This way, the evil team gets little information, but the Townsfolk in question will trust you, and will look more trustworthy when they reveal who they are to the group.</li><li>You could claim to be the Washerwoman and point to a player you suspect is evil, stating that they are the Townsfolk you learned about. An opportunistic evil player may pounce on an opportunity to appear good, and claim that they are, in fact, the Townsfolk you learned about, thus outing them to you as, at the very least, a liar.</li><li>Beware of the Spy! They may register as a Townsfolk character to you. That player who you think is the Investigator may not be the Investigator after all...</li><li>Remember that while the Spy is likely to know that you've seen them as a Townsfolk, they won't know which Townsfolk you've seen them as.</li></ul>",
-        bluffing: "When bluffing as the Washerwoman, there are a few things you should keep in mind:<ul><li>You would have received your information on night one, and so should have it from that point onward. You will have been shown two players and one Townsfolk token.</li><li>Claim to be the Washerwoman and point to at least one evil player. Then, name the Townsfolk character (preferably one that you suspect/know is not in play). If that evil player is clever, they may realize that you are trying to make them look good, and claim to be that Townsfolk. For example, if you point to the Imp and a random good player, and say that one of them is the Monk, then the Imp may claim to be the Monk, which makes you both look good.</li><li>If a good player claims to be a particular Townsfolk character, you can claim to be the Washerwoman, and confirm that they are who they say they are. This can help them to trust you, and lead them astray with their own information.</li><li>Immediately upon awakening, tell the group that a particular Townsfolk is in play. Cross your fingers and hope that you are correct! If you are, great. If not, an evil player may bluff as the Townsfolk you claimed is in play.</li><li>The Washerwoman can be a difficult bluff, because sometimes the Townsfolk you say is in play, isn't. If this happens, you can always claim to be the Drunk or poisoned. Another option is to claim that Washerwoman was a bluff, and that you are actually a character that is more powerful later in the game such as a Slayer or an Undertaker, and that you were trying to look like a character that has already used their ability so that the Demon would not attack you.</li><li>If you are the Spy or have access to a Spy, they can be invaluable in providing you accurate information to back up your story.</li></ul>",
+        examples: "<p>Evin is the Chef, and Amy is the Ravenkeeper. The Washerwoman learns that either Evin or Amy is the Chef.</p><p>Julian is the Imp, and Alex is the Virgin. The Washerwoman learns that either Julian or Alex is the Virgin.</p><p>Marianna is the Spy, and Sarah is the Scarlet Woman. The Washerwoman learns that one of them is the Ravenkeeper. (This happens because the Spy is registering as a Townsfolk—in this case, the Ravenkeeper)</p>",
+        howToRun: `<p>While preparing the first night, put the Washerwoman's <strong>TOWNSFOLK</strong> reminder token by any Townsfolk character token, and put the Washerwoman's <strong>WRONG</strong> reminder token by any other character token.</p><p>During the first night, wake the Washerwoman and point to the players marked <strong>TOWNSFOLK</strong> and <strong>WRONG</strong>. Show the character token marked <strong>TOWNSFOLK</strong> to the Washerwoman. Put the Washerwoman to sleep. Remove the Washerwoman's reminder tokens when convenient.</p>`,
         group: "Townsfolk",
         script: "tb"
     },
     {
         name: "Librarian",
-        intro: "The Librarian learns that a particular Outsider character is in play, but not exactly which player it is.",
-        ability: '"You start knowing that 1 of 2 players is a particular Outsider."',
+        intro: "<p>The Librarian learns that a particular Outsider character is in play, but not who is playing them.</p><ul><li>During the first night, the Librarian learns that one of two players is a specific Outsider.</li><li>They learn this only once and then learn nothing more.</li><li>The Drunk is an Outsider. If the Librarian learns that one of two players is the Drunk, they do not learn the Townsfolk that the Drunk's player thinks they are.</li></ul>",
+        ability: 'You start knowing that 1 of 2 players is a particular Outsider. (Or that zero are in play.)',
         flavor: '"Certainly Madam, under normal circumstances, you may borrow the Codex Malificarium from the library vaults. However, you do not seem to be a member."',
         examples: "<p style='margin-top: 0;'>Benjamin is the Saint, and Filip is the Baron. The Librarian learns that either Benjamin or Filip is the Saint.</p><p>There are no Outsiders in this game. The Librarian learns a '0'.</p><p>Abdallah is the Drunk, who thinks they are the Monk, and Douglas is the Undertaker. The Librarian learns that either Abdallah or Douglas is the Drunk. (This happens because the Librarian learns the true character. The Drunk is Abdallah's true character, not the Monk.)</p>",
-        tips: "<ul><li>It is vital to figure out early which of the two players is the one you have information about. The player that you know is good even if they are an Outsider - while their ability may be detrimental to the good team, they are a guaranteed good vote and also one player who you know for sure is definitely not the Demon.</li><li>If you get a 0, this information is super powerful if you aren't the Drunk or poisoned, as then you know for sure there are no Outsiders in the game. This means there is no Baron in play, and any Outsider claims are probably evil players bluffing. You can also try to encourage Outsider bluffs by lying about your information and claiming there is at least one Outsider in play; a Minion or Demon may jump on that to back up their bluff.</li><li>You learn your information on the first night of the game. Revealing what you know early can help confirm a player as good, which might in turn confirm other information from Townsfolk like the Empath or the Ravenkeeper.</li><li>If you do not reveal your information until late in the game and the player you are confirming is still alive, then you can reveal them on the final day or close to it, taking them out of contention as a potential Demon and reducing the number of players for the good team to deliberate on from 3 to 2.</li><li>Because you get all of your information at the start of the game, you might find it useful to confim it by nominating a Virgin. Alternatively, you might want to claim to be something more powerful to incite the demon into attacking you rather than the Undertaker or the Monk.</li><li>Characters like the Saint would rather die at night than by execution. Since Outsiders are generally not targets a Demon will want to kill, you can try to bait the Imp into attacking them during the night. Perhaps you could imply that they are a powerful Townsfolk, or else you can make it known that they are confirmed not to be the Demon, meaning the real Demon will have to kill them in the night or have only 1 other person who might be the demon at the end of the game. In either case, the Imp attacking an Outsider means they aren't attacking an Empath or a Fortune Teller.</li><li>If you see that your two shown players are the Drunk, it is a good idea to communicate this early, especially if they think they are actually a character who receives information. Knowing that their information may be wrong is information in itself.</li><li>Alternatively, you can deliberately give false information about who the Drunk is - the Demon is less likely to attack a player they think is the Drunk, which means that you can protect players who are sober and getting information while getting the Imp to target the actual Drunk instead.</li><li>If you see two players as the Drunk, remember that you might be the real drunk!</li><li>Giving away your information freely will mean that the other player can trust you, but not that you can necessarily trust them - it is always possible they are an evil player simply agreeing with you to shore up their own bluff. In turn, asking the player to reveal to you means you can trust them, but not that they can trust you. Try to find a middle ground where it's reasonable that both of you knew the information. For example, you could share a small list of characters they could potentially be, and get them to pick from the list who they are.</li></ul>",
-        bluffing: "When bluffing as the Librarian, there are a few things you should keep in mind:<ul><li>You would have received your information on night one, and so should have it from that point onward. You will have been shown two players and one Outsider token.</li><li>You can use your information to back up a fellow evil player and make them look good. This lends credibility to their claim (especially if they are claiming to be a Saint or Recluse) and allows you to work with them directly as you are both 'good players' who know each other.</li><li>You can also use your information to back up a good player. A Saint who is having trouble being believed, or a Butler looking for someone to trust will appreciate a Librarian confirming them, and will be more willing to trust and vote with you.</li><li>Naming two good players as the Drunk can cause them to doubt their information, or undermine powerful characters like the Mayor. The Drunk is a very safe option, since the people that you pick will not be able to confirm your information (at least for a while).</li><li>You can also name one of your fellow evil players as a potential Drunk. This means that if they mess up their bluff (e.g. giving information that doesn't make sense, dying as the Soldier) that's fine - they're obviously just the Drunk!</li><li>As a show of confidence, immediately reveal which Outsider is 'in play' very early in the game, but don't name your 'players'. This can lead to a good player confirming your information, or it can allow an evil player to jump in and bluff if you are wrong.</li><li>If you are the Spy or have access to a Spy, they can be invaluable in providing you accurate information to back up your story.</li></ul>",
+        howToRun: `<p>While preparing the first night, put the Librarian's <strong>OUTSIDER</strong> reminder token by any Outsider character token, and put the Librarian's <strong>WRONG</strong> reminder token by any other character token.</p><p>During the first night, wake the Librarian and point to the players marked <strong>OUTSIDER</strong> and <strong>WRONG</strong>. Show the character token marked <strong>OUTSIDER</strong> to the Librarian. Put the Librarian to sleep. Remove the Librarian's reminder tokens when convenient.</p>`,
         group: "Townsfolk",
         script: "tb"
     },
@@ -544,7 +542,7 @@ let characters = [
         script: "sv"
     },
     {
-        name: "Pit Hag",
+        name: "Pit-Hag",
         intro: "The Pit-Hag changes players into different characters.",
         ability: '"Each night*, choose a player & a character they become (if not in play). If a Demon is made, deaths tonight are arbitrary."',
         flavor: '"Round about the cauldron go; In the poison\'d entrails throw; Toad, that under cold stone; Days and nights has thirty-one; Sweated venom sleeping got; Boil thou first in the charmed pot."',
@@ -917,7 +915,7 @@ let characters = [
         ability: '"If a player of your alignment is executed, you might be executed instead."',
         flavor: '"Good evening! Thank you for inviting me to the ball. I\'m not from around here, but you sure seem like a friendly bunch, by golly. I\'m sure we\'ll get along just dandy. What\'s all that rope for?"',
         group: "Traveller",
-        script: "traveller"
+        script: "tb"
     },
     {
         name: "Gunslinger",
@@ -925,7 +923,7 @@ let characters = [
         ability: '"Each day, after the 1st vote has been tallied, you may choose a player that voted: they die."',
         flavor: '"It\'s time someone took matters into their own hands. That someone... is me."',
         group: "Traveller",
-        script: "traveller"
+        script: "tb"
     },
     {
         name: "Beggar",
@@ -933,7 +931,7 @@ let characters = [
         ability: '"You must use a vote token to vote. If a dead player gives you theirs, you learn their alignment. You are sober and healthy."',
         flavor: '"Alms for the poor, good Sir? Spare a coin, Madam? Thank you. God bless! You\'re a right kind soul and no mistake! I\'ll have some swanky nosh tonight, I will!"',
         group: "Traveller",
-        script: "traveller"
+        script: "tb"
     },
     {
         name: "Bureaucrat",
@@ -941,7 +939,7 @@ let characters = [
         ability: '"Each night, choose a player (not yourself): their vote counts as 3 votes tomorrow."',
         flavor: '"Sign here please. And here. And here. Aaaaaaaaand here. This should all be sorted and tallied by the end of the day, assuming everyone\'s signatures are legible. We haven\'t had a mix-up in the paperwork for ages. Yesterday noon, if memory serves..."',
         group: "Traveller",
-        script: "traveller"
+        script: "tb"
     },
     {
         name: "Thief",
@@ -949,7 +947,7 @@ let characters = [
         ability: '"Each night, choose a player (not yourself): their vote counts negatively tomorrow."',
         flavor: '"I aint done nuffink. I weren\'t even in dat alley last night! It weren\'t me what stole Mayor Bruno\'s briefcase wiv all dem fancy dockoments innit. Besides, it was too \'eavy to carry far."',
         group: "Traveller",
-        script: "traveller"
+        script: "tb"
     },
     {
         name: "Apprentice",
@@ -957,7 +955,7 @@ let characters = [
         ability: '"On your 1st night, you gain a Townsfolk ability (if good) or a Minion ability (if evil)."',
         flavor: '"For years have I traveled, studying the ways of The Craft. Which craft, you ask? Simply that of the simple folk. Nothing to worry about. Not yet."',
         group: "Traveller",
-        script: "traveller"
+        script: "bmr"
     },
     {
         name: "Matron",
@@ -965,7 +963,7 @@ let characters = [
         ability: '"Each day, you may choose up to 3 sets of 2 players to swap seats. Players may not leave their seats to talk in private."',
         flavor: '"Miss Featherbottom, be quiet. Master Rutherford, a teacup needs just the four fingers, please. I know you are a father of nine, but age, or lack there-of as the case may be, is never an excuse for poor manners."',
         group: "Traveller",
-        script: "traveller"
+        script: "bmr"
     },
     {
         name: "Voudon",
@@ -973,7 +971,7 @@ let characters = [
         ability: '"Only you & the dead can vote. They don\'t need a vote token to do so. A 50% majority isn\'t required."',
         flavor: '"Bien venu. Sit down. Breathe deep. Enter the land of the dead. See with their eyes. Speak with their voice. Yon sel lang se janm ase."',
         group: "Traveller",
-        script: "traveller"
+        script: "bmr"
     },
     {
         name: "Judge",
@@ -981,7 +979,7 @@ let characters = [
         ability: '"Once per game, if another player nominated, you may choose to force the current execution to pass or fail."',
         flavor: '"I find the defendant guilty of the crimes of murder, fraud, arson, larceny, impersonating an officer of the law, practicing medicine without a license, slander, regicide, and littering."',
         group: "Traveller",
-        script: "traveller"
+        script: "bmr"
     },
     {
         name: "Bishop",
@@ -989,7 +987,7 @@ let characters = [
         ability: '"Only the Storyteller can nominate. At least 1 opposing player must be nominated each day."',
         flavor: '"In nomine Patris, et Filii, et Spiritus Sancti… Nos mos Dei. Deus vult de nobis."',
         group: "Traveller",
-        script: "traveller"
+        script: "bmr"
     },
     {
         name: "Butcher",
@@ -997,7 +995,7 @@ let characters = [
         ability: '"Each day, after the 1st execution, you may nominate again."',
         flavor: '"It tastes like chicken. More please."',
         group: "Traveller",
-        script: "traveller"
+        script: "sv"
     },
     {
         name: "Bone Collector",
@@ -1005,7 +1003,7 @@ let characters = [
         ability: '"Once per game, at night*, choose a dead player: they regain their ability until dusk."',
         flavor: '"I collect many things. Hair. Teeth. Clothes. Fragments of poems. The dreams of lost lovers. My secret arts are not for you to know but my fee is a mere pittance. Bring me the blood of a noblewoman who died of heartbreak under a full moon, and you shall have your answers."',
         group: "Traveller",
-        script: "traveller"
+        script: "sv"
     },
     {
         name: "Harlot",
@@ -1013,7 +1011,7 @@ let characters = [
         ability: '"Each night*, choose a living player: if they agree, you learn their character, but you both might die."',
         flavor: '"Enchanté, Sailor. You look like you need someone to really listen to your troubles. I\'m a good listener. Very, very good."',
         group: "Traveller",
-        script: "traveller"
+        script: "sv"
     },
     {
         name: "Barista",
@@ -1021,7 +1019,7 @@ let characters = [
         ability: '"Each night, until dusk, 1) a player becomes sober, healthy & gets true info, or 2) their ability works twice. They learn which."',
         flavor: '"There really is no cause to worry because when you think about it we are all capable and qualified and smart enough to grab the bull by the horns and sit down and figure this out like the reasonable adults we are by the way would you like another cup it really is the most amazing beverage they say it is from the east but anyway where were we ah yes going for a jog and really nutting out this demon business which we can do with just a little teensy mental boost and some logical thinking for example Senior Hu here is a regular customer and therefore quite trustworthy and would anyone like another cup?"',
         group: "Traveller",
-        script: "traveller"
+        script: "sv"
     },
     {
         name: "Deviant",
@@ -1029,7 +1027,7 @@ let characters = [
         ability: '"If you were funny today, you can not be exiled."',
         flavor: '"Twas the lady\'s quip, forsooth."',
         group: "Traveller",
-        script: "traveller"
+        script: "sv"
     },
     {
         name: "Gangster",
@@ -1037,7 +1035,7 @@ let characters = [
         ability: '"Once per day, you may choose to kill a living neighbor, if your other living neighbor agrees."',
         flavor: '"I like your shoes. It would be such a shame if you had a little accident, and they got ruined. Now that you mention it, I like your cufflinks too."',
         group: "Traveller",
-        script: "traveller"
+        script: "exp"
     },
     {
         name: "Doomsayer",
@@ -1148,217 +1146,137 @@ let characters = [
 populateAll();
 
 function populateAll() {
-    $(".all").append(`<h1 id="trouble-brewing" style="color:darkred;">Trouble Brewing</h1>`);
-    $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>`);
-    $(".all").append(`<div class="tb-townsfolk group-container" style="border: 2px solid #0365AB"></div>`);
-    $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Outsiders</h2>`);
-    $(".all").append(`<div class="tb-outsiders group-container" style="border: 2px solid #0365AB"></div>`);
-    $(".all").append(`<h2 style="background-color:darkred; color: white;">Minions</h2>`);
-    $(".all").append(`<div class="tb-minions group-container" style="border: 2px solid darkred"></div>`);
-    $(".all").append(`<h2 style="background-color:darkred; color: white;">Demons</h2>`);
-    $(".all").append(`<div class="tb-demons group-container" style="border: 2px solid darkred"></div>`);
+    // $(".all").append(`<h1 id="trouble-brewing" style="color:darkred;">Trouble Brewing</h1>`);
+    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>`);
+    // $(".all").append(`<div class="tb-townsfolk group-container" style="border: 2px solid #0365AB"></div>`);
+    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Outsiders</h2>`);
+    // $(".all").append(`<div class="tb-outsiders group-container" style="border: 2px solid #0365AB"></div>`);
+    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Minions</h2>`);
+    // $(".all").append(`<div class="tb-minions group-container" style="border: 2px solid darkred"></div>`);
+    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Demons</h2>`);
+    // $(".all").append(`<div class="tb-demons group-container" style="border: 2px solid darkred"></div>`);
 
-    $(".all").append(`<h1 id="bad-moon-rising" style="color:#78380D;">Bad Moon Rising</h1>`);
-    $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>`);
-    $(".all").append(`<div class="bmr-townsfolk group-container" style="border: 2px solid #0365AB"></div>`);
-    $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Outsiders</h2>`);
-    $(".all").append(`<div class="bmr-outsiders group-container" style="border: 2px solid #0365AB"></div>`);
-    $(".all").append(`<h2 style="background-color:darkred; color: white;">Minions</h2>`);
-    $(".all").append(`<div class="bmr-minions group-container" style="border: 2px solid darkred"></div>`);
-    $(".all").append(`<h2 style="background-color:darkred; color: white;">Demons</h2>`);
-    $(".all").append(`<div class="bmr-demons group-container" style="border: 2px solid darkred"></div>`);
+    // $(".all").append(`<h1 id="bad-moon-rising" style="color:#78380D;">Bad Moon Rising</h1>`);
+    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>`);
+    // $(".all").append(`<div class="bmr-townsfolk group-container" style="border: 2px solid #0365AB"></div>`);
+    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Outsiders</h2>`);
+    // $(".all").append(`<div class="bmr-outsiders group-container" style="border: 2px solid #0365AB"></div>`);
+    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Minions</h2>`);
+    // $(".all").append(`<div class="bmr-minions group-container" style="border: 2px solid darkred"></div>`);
+    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Demons</h2>`);
+    // $(".all").append(`<div class="bmr-demons group-container" style="border: 2px solid darkred"></div>`);
 
-    $(".all").append(`<h1 id="sects-violets" style="color:darkred;">Sects & Violets</h1>`);
-    $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>`);
-    $(".all").append(`<div class="sv-townsfolk group-container" style="border: 2px solid #0365AB"></div>`);
-    $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Outsiders</h2>`);
-    $(".all").append(`<div class="sv-outsiders group-container" style="border: 2px solid #0365AB"></div>`);
-    $(".all").append(`<h2 style="background-color:darkred; color: white;">Minions</h2>`);
-    $(".all").append(`<div class="sv-minions group-container" style="border: 2px solid darkred"></div>`);
-    $(".all").append(`<h2 style="background-color:darkred; color: white;">Demons</h2>`);
-    $(".all").append(`<div class="sv-demons group-container" style="border: 2px solid darkred"></div>`);
+    // $(".all").append(`<h1 id="sects-violets" style="color:darkred;">Sects & Violets</h1>`);
+    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>`);
+    // $(".all").append(`<div class="sv-townsfolk group-container" style="border: 2px solid #0365AB"></div>`);
+    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Outsiders</h2>`);
+    // $(".all").append(`<div class="sv-outsiders group-container" style="border: 2px solid #0365AB"></div>`);
+    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Minions</h2>`);
+    // $(".all").append(`<div class="sv-minions group-container" style="border: 2px solid darkred"></div>`);
+    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Demons</h2>`);
+    // $(".all").append(`<div class="sv-demons group-container" style="border: 2px solid darkred"></div>`);
+
+    // $(".all").append(`<h1 id="experimental" style="color:darkred;">Experimental</h1>`);
+    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>`);
+    // $(".all").append(`<div class="exp-townsfolk group-container" style="border: 2px solid #0365AB"></div>`);
+    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Outsiders</h2>`);
+    // $(".all").append(`<div class="exp-outsiders group-container" style="border: 2px solid #0365AB"></div>`);
+    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Minions</h2>`);
+    // $(".all").append(`<div class="exp-minions group-container" style="border: 2px solid darkred"></div>`);
+    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Demons</h2>`);
+    // $(".all").append(`<div class="exp-demons group-container" style="border: 2px solid darkred"></div>`);
+
+    // $(".all").append(`<h1 id="travellers" style="color:darkred;">Travellers</h1>`);
+    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Trouble Brewing</h2>`);
+    // $(".all").append(`<div class="trav-tb group-container" style="border: 2px solid #0365AB"></div>`);
+    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Bad Moon Rising</h2>`);
+    // $(".all").append(`<div class="trav-bmr group-container" style="border: 2px solid #0365AB"></div>`);
+    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Sects & Violets</h2>`);
+    // $(".all").append(`<div class="trav-sv group-container" style="border: 2px solid darkred"></div>`);
+    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Experimental</h2>`);
+    // $(".all").append(`<div class="trav-exp group-container" style="border: 2px solid darkred"></div>`);
+
+    // $(".all").append(`<h1 id="fabled" style="color:darkred;">Fabled</h1>`);
+    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">All</h2>`);
+    // $(".all").append(`<div class="fabled-all group-container" style="border: 2px solid #0365AB"></div>`);
     
     characters.forEach(character => {
         let originalName = character.name;
         let name = originalName.toLowerCase();
         name = name.split(" ");
-    if (name[2]) {
-        name = name[0] + "-" + name[1] + "-" + name[2];
-        name = name.replace("'",'');
-    } else if (name[1]) {
-        name = name[0] + "-" + name[1];
-        name = name.replace("'",'');
-    }
-    if (character.script == "tb") {
-        if (character.group == "Townsfolk") {
-            $(".tb-townsfolk").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
-        } else if (character.group == "Outsider") {
-            $(".tb-outsiders").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
-        } else if (character.group == "Minion") {
-            $(".tb-minions").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`)
-        } else if (character.group == "Demon") {
-            $(".tb-demons").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+        if (name[2]) {
+            name = name[0] + "-" + name[1] + "-" + name[2];
+            name = name.replace("'",'');
+        } else if (name[1]) {
+            name = name[0] + "-" + name[1];
+            name = name.replace("'",'');
         }
-    }
 
-    if (character.script == "bmr") {
-        if (character.group == "Townsfolk") {
-            $(".bmr-townsfolk").append(`<img class="token" src="./img/${name}.png">`);
-        } else if (character.group == "Outsider") {
-            $(".bmr-outsiders").append(`<img class="token" src="./img/${name}.png">`);
-        } else if (character.group == "Minion") {
-            $(".bmr-minions").append(`<img class="token" src="./img/${name}.png">`)
-        } else if (character.group == "Demon") {
-            $(".bmr-demons").append(`<img class="token" src="./img/${name}.png">`);
+        if (character.script == "tb") {
+            if (character.group == "Townsfolk") {
+                $(".tb-townsfolk").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            } else if (character.group == "Outsider") {
+                $(".tb-outsiders").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            } else if (character.group == "Minion") {
+                $(".tb-minions").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`)
+            } else if (character.group == "Demon") {
+                $(".tb-demons").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            }
         }
-    }
 
-    if (character.script == "sv") {
-        if (character.group == "Townsfolk") {
-            $(".sv-townsfolk").append(`<img class="token" src="./img/${name}.png">`);
-        } else if (character.group == "Outsider") {
-            $(".sv-outsiders").append(`<img class="token" src="./img/${name}.png">`);
-        } else if (character.group == "Minion") {
-            $(".sv-minions").append(`<img class="token" src="./img/${name}.png">`)
-        } else if (character.group == "Demon") {
-            $(".sv-demons").append(`<img class="token" src="./img/${name}.png">`);
+        if (character.script == "bmr") {
+            if (character.group == "Townsfolk") {
+                $(".bmr-townsfolk").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            } else if (character.group == "Outsider") {
+                $(".bmr-outsiders").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            } else if (character.group == "Minion") {
+                $(".bmr-minions").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`)
+            } else if (character.group == "Demon") {
+                $(".bmr-demons").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            }
         }
-    }
-    
-    // $(".all-tokens").append(`<img class="token" src="./img/${name}.png">`);
+
+        if (character.script == "sv") {
+            if (character.group == "Townsfolk") {
+                $(".sv-townsfolk").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            } else if (character.group == "Outsider") {
+                $(".sv-outsiders").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            } else if (character.group == "Minion") {
+                $(".sv-minions").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`)
+            } else if (character.group == "Demon") {
+                $(".sv-demons").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            }
+        }
+
+        if (character.script == "exp") {
+            if (character.group == "Townsfolk") {
+                $(".exp-townsfolk").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            } else if (character.group == "Outsider") {
+                $(".exp-outsiders").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            } else if (character.group == "Minion") {
+                $(".exp-minions").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`)
+            } else if (character.group == "Demon") {
+                $(".exp-demons").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            }
+        }
+
+        if (character.group == "Traveller") {
+            if (character.script == "tb") {
+                $(".trav-tb").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            } else if (character.script == "bmr") {
+                $(".trav-bmr").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            } else if (character.script == "sv") {
+                $(".trav-sv").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            } else if (character.script == "exp") {
+                $(".trav-exp").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            }
+        }
+
+        if (character.script == "fabled") {
+            $(".fabled-all").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+        }
     })
 }
-
-// populateCharacters();
-
-// setInterval(function(){ 
-//     runIntroAnimation();
-// }, 5000);
-
-setInitialImage();
-
-function setInitialImage() {
-    let length = characters.length;
-    let randomNumber = Math.floor(Math.random() * length + 1);
-    let name = characters[randomNumber].name;
-    name = name.toLowerCase();
-    name = name.split(" ");
-    if (name[2]) {
-        name = name[0] + "-" + name[1] + "-" + name[2];
-        name = name.replace("'",'');
-    } else if (name[1]) {
-        name = name[0] + "-" + name[1];
-        name = name.replace("'",'');
-    }
-    $(".intro-img").attr("src",`./img/${name}.png`);
-}
-
-function runIntroAnimation() {
-    let length = characters.length;
-    let randomNumber = Math.floor(Math.random() * length + 1);
-    let name = characters[randomNumber].name;
-    name = name.toLowerCase();
-    name = name.split(" ");
-    if (name[2]) {
-        name = name[0] + "-" + name[1] + "-" + name[2];
-        name = name.replace("'",'');
-    } else if (name[1]) {
-        name = name[0] + "-" + name[1];
-        name = name.replace("'",'');
-    }
-    $(".intro-img").css("opacity","0");
-    setTimeout(function(){ 
-        $(".intro-img").attr("src",`./img/${name}.png`);
-    $(".intro-img").css("opacity","100%");
-    }, 1000);
-}
-
-// function populateCharacters() {
-//     characters.forEach(character => {
-//         if (character.script == "tb") {
-//             $(".tb-select").append(`<option value="${character.name}">${character.name}</option>`);
-//         } else if (character.script == "bmr") {
-//             $(".bmr-select").append(`<option value="${character.name}">${character.name}</option>`);
-//         } else if (character.script == "sv") {
-//             $(".sv-select").append(`<option value="${character.name}">${character.name}</option>`);
-//         } else if (character.script == "exp") {
-//             $(".exp-select").append(`<option value="${character.name}">${character.name}</option>`);
-//         } else if (character.script == "traveller") {
-//             $(".traveller-select").append(`<option value="${character.name}">${character.name}</option>`);
-//         } else if (character.script == "fabled") {
-//             $(".fabled-select").append(`<option value="${character.name}">${character.name}</option>`);
-//         }
-//     })
-// }
-
-// $(".script-select").change(function(){
-//     script = $('select').val();
-//     $(".list").addClass("hidden");
-//     $(`.list.${script}-select`).removeClass("hidden");
-//  });
-
-//  $(".characters select").change(function(){
-//     $(".welcome").remove();
-//     $(".flavor").removeClass("hidden");
-//     $(".examples-container").removeClass("hidden");
-//     $(".tips-container").removeClass("hidden");
-//     $(".bluffing-container").removeClass("hidden");
-//     $(".examples").slideUp(0);
-//     $(".tips").slideUp(0);
-//     $(".bluffing").slideUp(0);
-//     let name = $(this).val();
-//     if (name == "select") {
-//         return;
-//     }
-//     $(".bluff-name").html(name);
-//     characters.forEach(character => {
-//         if (character.name == name) {
-//             ability = character.ability;
-//             intro = character.intro;
-//             flavor = character.flavor;
-//             examples = character.examples;
-//             tips = character.tips;
-//             bluffing = character.bluffing;
-//             group = character.group;
-//         }
-//     });
-//     name = name.toLowerCase();
-//     name = name.split(" ");
-//     if (name[2]) {
-//         name = name[0] + "-" + name[1] + "-" + name[2];
-//         name = name.replace("'",'');
-//     } else if (name[1]) {
-//         name = name[0] + "-" + name[1];
-//         name = name.replace("'",'');
-//     }
-//     $(".token").attr("src",`./img/${name}.png`);
-//     $(".flavor").html(`${flavor}`);
-//     $(".group").html(`${group}`);
-//     if (group == "Townsfolk" || group == "Outsider") {
-//         $(".group").css({'color':'#0154A7'});
-//     } else if (group == "Minion" || group == "Demon") {
-//         $(".group").css({'color':'#9A1117'});
-//     } else if (group == "Traveller") {
-//         $(".group").css({'color':'#2F214B'});
-//     } else {
-//         $(".group").css({'color':'gold'});
-//     }
-//     $(".intro").html(`${intro}`);
-//     $(".ability").html(`<h3>Character Text:</h3><p>${ability}</p><hr>`);
-//     $(".examples").html(`${examples}`);
-//     $(".tips").html(`${tips}`);
-//     $(".bluffing").html(`${bluffing}`);
-//    });
-
-// $(".script").click(function() {
-//     script = $(this).attr("data-script");
-//     $(".list").addClass("hidden");
-//     $(".list").removeClass("flex");
-//     $(`.list.${script}-characters`).addClass("flex");
-//     $(`.list.${script}-characters`).removeClass("hidden");
-//     $(".script").removeClass("selected");
-//     $(this).addClass("selected");
-// })
 
 $(".token").click(function() {
     $(".flavor").removeClass("hidden");
@@ -1368,70 +1286,33 @@ $(".token").click(function() {
     let intro;
     let flavor;
     let examples;
-    let tips;
-    // $(".bluffing-container").removeClass("hidden");
-    let name = $(this).attr("data-name");
-    console.log(name);
+    let howToRun;
+    let orignalName = $(this).attr("data-name");
     characters.forEach(character => {
-        if (character.name == name) {
-            console.log(character);
-            console.log(character.ability);
+        if (character.name == orignalName) {
             ability = character.ability;
             intro = character.intro;
             flavor = character.flavor;
             examples = character.examples;
-            tips = character.tips;
+            howToRun = character.howToRun;
         }
     });
-    name = name.toLowerCase();
+    let name = orignalName.toLowerCase();
     name = name.split(" ");
-    if (name[1]) {
+    if (name[2]) {
+        name = name[0] + "-" + name[1] + "-" + name[2];
+        name = name.replace("'",'');
+    } else if (name[1]) {
         name = name[0] + "-" + name[1];
         name = name.replace("'",'');
     }
-    // $('.token').css({'opacity':'0'});
     $(".img-flavor-container .token").attr("src",`./img/${name}.png`);
+    $(".name").html(`${orignalName}`)
     $(".intro").html(`${intro}`);
-    $(".ability").html(`<h3>Character Text</h3><p>${ability}</p><hr>`);
+    $(".ability").html(`${ability}`);
     $(".flavor").html(`${flavor}`);
     $(".examples").html(`${examples}`);
-    $(".tips").html(`${tips}`);
-})
-
-let examplesCollapsed = true;
-$(".examples-container").click(function() {
-    if (examplesCollapsed) {
-        $(".examples-arrow").html("&#8593;");
-    }
-    if (!examplesCollapsed) {
-        $(".examples-arrow").html("&#8595;");
-    }
-    $(".examples").slideToggle();
-    examplesCollapsed = !examplesCollapsed;
-})
-
-let tipsCollapsed = true;
-$(".tips-container").click(function() {
-    if (tipsCollapsed) {
-        $(".tips-arrow").html("&#8593;");
-    }
-    if (!tipsCollapsed) {
-        $(".tips-arrow").html("&#8595;");
-    }
-    $(".tips").slideToggle();
-    tipsCollapsed = !tipsCollapsed;
-})
-
-let bluffingCollapsed = true;
-$(".bluffing-container").click(function() {
-    if (bluffingCollapsed) {
-        $(".bluffing-arrow").html("&#8593;");
-    }
-    if (!bluffingCollapsed) {
-        $(".bluffing-arrow").html("&#8595;");
-    }
-    $(".bluffing").slideToggle();
-    bluffingCollapsed = !bluffingCollapsed;
+    $(".how-to-run").html(`${howToRun}`);
 })
 
 // Get the modal

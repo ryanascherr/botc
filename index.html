@@ -15,11 +15,14 @@
             <a href="#trouble-brewing">Trouble Brewing</a>
             <a href="#bad-moon-rising">Bad Moon Rising</a>
             <a href="#sects-violets">Sects & Violets</a>
+            <a href="#experimental">Experimental</a>
+            <a href="#travellers">Travellers</a>
+            <a href="#fabled">Fabled</a>
         </div>
+    </header>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
-
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -27,87 +30,84 @@
         <img class="token" src="" alt="">
         <p class="flavor speech-bubble"></p>
     </div>
-    <h3 class="group" style="margin: 0;"></h3>
-    <p class="intro"></p>
-    <div class="ability"></div>
-    <div class="dropdown-parent">
-        <div class="examples-container">
-            <h2>Example Gameplay <span class="examples-arrow">&#8595;</span></h2>
-            <div class="examples hidden"></div>
-        </div>
-        <div class="tips-container">
-            <h2>Tips and Tricks <span class="tips-arrow">&#8595;</span></h2>
-            <div class="tips hidden"></div>
-        </div>
-        <div class="bluffing-container">
-            <h2>Bluffing as the <span class="bluff-name"></span><span class="bluffing-arrow">&#8595;</span></h2>
-            <div class="bluffing"></div>
-        </div>
+    <div class="ability-container info-container">
+        <h2 class="name"></h2>
+        <p class="ability" style="text-align: center;"></p>
     </div>
+    <hr>
+    <div class="intro-container info-container">
+        <div class="intro"></div>
+    </div>
+    <h3>Examples</h3>
+    <div class="examples"></div>
+    <h3>How to Run</h3>
+    <div class="how-to-run"></div>
   </div>
-
 </div>
-        <!-- <div class="script-container">
-            <select class="script-select">
-                <option value="tb">Trouble Brewing</option>
-                <option value="bmr">Bad Moon Rising</option>
-                <option value="sv">Sects & Violets</option>
-                <option value="exp">Experimental</option>
-                <option value="traveller">Travellers</option>
-                <option value="fabled">Fabled</option>
-            </select>
-        </div> -->
-        <!-- <div class="characters">
-            <select class="tb-select list">
-                <option value="select">Select a Character</option>
-            </select>
-            <select class="bmr-select list hidden">
-                <option value="select">Select a Character</option>
-            </select>
-            <select class="sv-select list hidden">
-                <option value="select">Select a Character</option>
-            </select>
-            <select class="exp-select list hidden">
-                <option value="select">Select a Character</option>
-            </select>
-            <select class="traveller-select list hidden">
-                <option value="select">Select a Character</option>
-            </select>
-            <select class="fabled-select list hidden">
-                <option value="select">Select a Character</option>
-            </select>
-        </div> -->
-    </header>
+
     <main>
         <div class="all">
-            <div class="all-tokens"></div>
+            <div class="trouble-brewing">
+                <h1 id="trouble-brewing" style="color:darkred;">Trouble Brewing</h1>
+                <h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>
+                <div class="tb-townsfolk group-container" style="border: 2px solid #0365AB"></div>
+                <h2 style="background-color: #0365AB; color: white;">Outsiders</h2>
+                <div class="tb-outsiders group-container" style="border: 2px solid #0365AB"></div>
+                <h2 style="background-color:darkred; color: white;">Minions</h2>
+                <div class="tb-minions group-container" style="border: 2px solid darkred"></div>
+                <h2 style="background-color:darkred; color: white;">Demons</h2>
+                <div class="tb-demons group-container" style="border: 2px solid darkred"></div>
+            </div>
+            <div class="bad-moon-rising">
+                <h1 id="bad-moon-rising" style="color:#78380D;">Bad Moon Rising</h1>
+                <h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>
+                <div class="bmr-townsfolk group-container" style="border: 2px solid #0365AB"></div>
+                <h2 style="background-color: #0365AB; color: white;">Outsiders</h2>
+                <div class="bmr-outsiders group-container" style="border: 2px solid #0365AB"></div>
+                <h2 style="background-color:darkred; color: white;">Minions</h2>
+                <div class="bmr-minions group-container" style="border: 2px solid darkred"></div>
+                <h2 style="background-color:darkred; color: white;">Demons</h2>
+                <div class="bmr-demons group-container" style="border: 2px solid darkred"></div>
+            </div>
+            <div class="sects-violets">
+                <h1 id="sects-violets" style="color:darkred;">Sects & Violets</h1>
+                <h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>
+                <div class="sv-townsfolk group-container" style="border: 2px solid #0365AB"></div>
+                <h2 style="background-color: #0365AB; color: white;">Outsiders</h2>
+                <div class="sv-outsiders group-container" style="border: 2px solid #0365AB"></div>
+                <h2 style="background-color:darkred; color: white;">Minions</h2>
+                <div class="sv-minions group-container" style="border: 2px solid darkred"></div>
+                <h2 style="background-color:darkred; color: white;">Demons</h2>
+                <div class="sv-demons group-container" style="border: 2px solid darkred"></div>
+            </div>
+            <div class="experimental">
+                <h1 id="experimental" style="color:darkred;">Experimental</h1>
+                <h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>
+                <div class="exp-townsfolk group-container" style="border: 2px solid #0365AB"></div>
+                <h2 style="background-color: #0365AB; color: white;">Outsiders</h2>
+                <div class="exp-outsiders group-container" style="border: 2px solid #0365AB"></div>
+                <h2 style="background-color:darkred; color: white;">Minions</h2>
+                <div class="exp-minions group-container" style="border: 2px solid darkred"></div>
+                <h2 style="background-color:darkred; color: white;">Demons</h2>
+                <div class="exp-demons group-container" style="border: 2px solid darkred"></div>
+            </div>
+            <div class="travellers">
+                <h1 id="travellers" style="color:darkred;">Travellers</h1>
+                <h2 style="background-color: #0365AB; color: white;">Trouble Brewing</h2>
+                <div class="trav-tb group-container" style="border: 2px solid #0365AB"></div>
+                <h2 style="background-color: #0365AB; color: white;">Bad Moon Rising</h2>
+                <div class="trav-bmr group-container" style="border: 2px solid #0365AB"></div>
+                <h2 style="background-color:darkred; color: white;">Sects & Violets</h2>
+                <div class="trav-sv group-container" style="border: 2px solid darkred"></div>
+                <h2 style="background-color:darkred; color: white;">Experimental</h2>
+                <div class="trav-exp group-container" style="border: 2px solid darkred"></div>
+            </div>
+            <div class="fabled">
+                <h1 id="fabled" style="color:darkred;">Fabled</h1>
+                <h2 style="background-color: #0365AB; color: white;">All</h2>
+                <div class="fabled-all group-container" style="border: 2px solid #0365AB"></div>
+            </div>
         </div>
-        <!-- <div class="info-container">
-            <div class="welcome">
-                <h2 class=>Welcome to my version of a Blood on the Clocktower Wiki.</h2>
-                <h2>Choose a script and character above to get started!</h2>
-                <img class="intro-img" src="" alt="">
-            </div>
-            <div class="img-flavor-container">
-                <img class="token" src="" alt="">
-                <p class="flavor hidden speech-bubble"></p>
-            </div>
-            <h3 class="group" style="margin: 0;"></h3>
-            <p class="intro"></p>
-            <div class="ability"></div>
-            <div class="examples-container hidden">
-                <h2>Example Gameplay <span class="examples-arrow">&#8595;</span></h2>
-                <div class="examples hidden"></div>
-            </div>
-            <div class="tips-container hidden">
-                <h2>Tips and Tricks <span class="tips-arrow">&#8595;</span></h2>
-                <div class="tips hidden"></div>
-            </div>
-            <div class="bluffing-container hidden">
-                <h2>Bluffing as the <span class="bluff-name"></span><span class="bluffing-arrow">&#8595;</span></h2>
-                <div class="bluffing hidden"></div>
-            </div>
-        </div> -->
     </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="./script.js"></script>
