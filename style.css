@@ -4,6 +4,10 @@ html {
     scroll-behavior: smooth;
 }
 
+h1 {
+    padding-top: 68.5px;
+}
+
 h1, h2, h3 {
     text-align: center;
 }
@@ -187,11 +191,30 @@ max-width: 1000px;
     cursor: pointer;
 }
 
+.inner-script-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.inner-script-nav a {
+    margin: 5px;
+    padding: 5px;
+    color: darkred;
+}
+
 .group-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     max-width: 1000px;
+    padding: 15px;
+}
+
+.callout-box {
+    background: #E7DAC7;
+    border: 2px solid black;
+	border-radius: .4em;
+    font-style: italic;
     padding: 15px;
 }
 
