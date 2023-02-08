@@ -1149,63 +1149,20 @@ let characters = [
     },
 ];
 
+$( document ).ready(function() {
+    $(".special").addClass("spin");
+});
+
+setTimeout( () =>{
+    $(".special").removeClass("spin");
+    $(".special").attr("src", "./img/washerwoman.png");
+    $(".special").addClass("reverse-spin");
+}, 1000);
+
 populateAll();
 
 function populateAll() {
-    // $(".all").append(`<h1 id="trouble-brewing" style="color:darkred;">Trouble Brewing</h1>`);
-    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>`);
-    // $(".all").append(`<div class="tb-townsfolk group-container" style="border: 2px solid #0365AB"></div>`);
-    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Outsiders</h2>`);
-    // $(".all").append(`<div class="tb-outsiders group-container" style="border: 2px solid #0365AB"></div>`);
-    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Minions</h2>`);
-    // $(".all").append(`<div class="tb-minions group-container" style="border: 2px solid darkred"></div>`);
-    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Demons</h2>`);
-    // $(".all").append(`<div class="tb-demons group-container" style="border: 2px solid darkred"></div>`);
 
-    // $(".all").append(`<h1 id="bad-moon-rising" style="color:#78380D;">Bad Moon Rising</h1>`);
-    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>`);
-    // $(".all").append(`<div class="bmr-townsfolk group-container" style="border: 2px solid #0365AB"></div>`);
-    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Outsiders</h2>`);
-    // $(".all").append(`<div class="bmr-outsiders group-container" style="border: 2px solid #0365AB"></div>`);
-    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Minions</h2>`);
-    // $(".all").append(`<div class="bmr-minions group-container" style="border: 2px solid darkred"></div>`);
-    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Demons</h2>`);
-    // $(".all").append(`<div class="bmr-demons group-container" style="border: 2px solid darkred"></div>`);
-
-    // $(".all").append(`<h1 id="sects-violets" style="color:darkred;">Sects & Violets</h1>`);
-    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>`);
-    // $(".all").append(`<div class="sv-townsfolk group-container" style="border: 2px solid #0365AB"></div>`);
-    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Outsiders</h2>`);
-    // $(".all").append(`<div class="sv-outsiders group-container" style="border: 2px solid #0365AB"></div>`);
-    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Minions</h2>`);
-    // $(".all").append(`<div class="sv-minions group-container" style="border: 2px solid darkred"></div>`);
-    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Demons</h2>`);
-    // $(".all").append(`<div class="sv-demons group-container" style="border: 2px solid darkred"></div>`);
-
-    // $(".all").append(`<h1 id="experimental" style="color:darkred;">Experimental</h1>`);
-    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Townsfolk</h2>`);
-    // $(".all").append(`<div class="exp-townsfolk group-container" style="border: 2px solid #0365AB"></div>`);
-    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Outsiders</h2>`);
-    // $(".all").append(`<div class="exp-outsiders group-container" style="border: 2px solid #0365AB"></div>`);
-    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Minions</h2>`);
-    // $(".all").append(`<div class="exp-minions group-container" style="border: 2px solid darkred"></div>`);
-    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Demons</h2>`);
-    // $(".all").append(`<div class="exp-demons group-container" style="border: 2px solid darkred"></div>`);
-
-    // $(".all").append(`<h1 id="travellers" style="color:darkred;">Travellers</h1>`);
-    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Trouble Brewing</h2>`);
-    // $(".all").append(`<div class="trav-tb group-container" style="border: 2px solid #0365AB"></div>`);
-    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">Bad Moon Rising</h2>`);
-    // $(".all").append(`<div class="trav-bmr group-container" style="border: 2px solid #0365AB"></div>`);
-    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Sects & Violets</h2>`);
-    // $(".all").append(`<div class="trav-sv group-container" style="border: 2px solid darkred"></div>`);
-    // $(".all").append(`<h2 style="background-color:darkred; color: white;">Experimental</h2>`);
-    // $(".all").append(`<div class="trav-exp group-container" style="border: 2px solid darkred"></div>`);
-
-    // $(".all").append(`<h1 id="fabled" style="color:darkred;">Fabled</h1>`);
-    // $(".all").append(`<h2 style="background-color: #0365AB; color: white;">All</h2>`);
-    // $(".all").append(`<div class="fabled-all group-container" style="border: 2px solid #0365AB"></div>`);
-    
     characters.forEach(character => {
         let originalName = character.name;
         let name = originalName.toLowerCase();
@@ -1284,10 +1241,10 @@ function populateAll() {
     })
 }
 
-$(".token").click(function() {
-    $(".flavor").removeClass("hidden");
-    $(".examples-container").removeClass("hidden");
-    $(".tips-2-container").removeClass("hidden");
+$(".all .token").click(function() {
+    $(".img-flavor-container .token").removeClass("reverse-spin");
+    $(".img-flavor-container .token").removeClass("spin");
+    $(".flavor").css({'opacity':'0'});
     let ability;
     let intro;
     let flavor;
@@ -1312,7 +1269,20 @@ $(".token").click(function() {
         name = name[0] + "-" + name[1];
         name = name.replace("'",'');
     }
-    $(".img-flavor-container .token").attr("src",`./img/${name}.png`);
+    // $(".img-flavor-container .token").attr("src",`./img/${name}.png`);
+
+    $(".img-flavor-container .token").attr("src",`./img/blank.png`);
+    $(".img-flavor-container .token").addClass("spin");
+    setTimeout( () =>{
+        $(".img-flavor-container .token").removeClass("spin");
+        $(".img-flavor-container .token").attr("src", `./img/${name}.png`);
+        $(".img-flavor-container .token").addClass("reverse-spin");
+    }, 500);
+
+    setTimeout( () => {
+        $(".flavor").css({'opacity':'100%'});
+    }, 1000);
+
     $(".name").html(`${orignalName}`)
     $(".intro").html(`${intro}`);
     $(".ability").html(`${ability}`);
