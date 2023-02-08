@@ -1,5 +1,14 @@
 /* START GLOBAL */
 
+:root {
+    --purple: #2F214B;
+    --good-blue: #0365AB;
+    --bad-red: darkred;
+    --bmr: #78380D;
+    --background-gray: #DCDCDC;
+    --speech-bubble: #E7DAC7;
+  }
+
 html {
     scroll-behavior: smooth;
 }
@@ -19,14 +28,14 @@ body {
 header {
     position: sticky;
     top: 0;
-    background: #2F214B;
+    background: var(--purple);
     padding: 15px;
 }
 
 main {
     display: flex;
     justify-content: center;
-    background-color: #DCDCDC;
+    background-color: var(--background-gray);
 }
 
 ul {
@@ -113,7 +122,7 @@ max-width: 1000px;
 
 .speech-bubble {
 	position: relative;
-	background: #E7DAC7;
+	background: var(--speech-bubble);
 	border-radius: .4em;
 }
 
@@ -125,7 +134,7 @@ max-width: 1000px;
 	width: 0;
 	height: 0;
 	border: 20px solid transparent;
-	border-bottom-color: #E7DAC7;
+	border-bottom-color: var(--speech-bubble);
 	border-top: 0;
 	margin-left: -20px;
 	margin-top: -20px;
@@ -133,7 +142,7 @@ max-width: 1000px;
 
 .flavor {
     font-style: italic;
-    background-color: #E7DAC7;
+    background-color: var(--speech-bubble);
     border-radius: 10px;
     padding: 15px;
     margin-top: 30px;
@@ -191,6 +200,73 @@ max-width: 1000px;
     cursor: pointer;
 }
 
+#trouble-brewing, .trouble-brewing .inner-script-nav a {
+    color: var(--bad-red);
+}
+
+#bad-moon-rising, .bad-moon-rising .inner-script-nav a {
+    color: var(--bmr);
+}
+
+#sects-violets, .sects-violets .inner-script-nav a {
+    color: var(--purple);
+}
+
+.experimental .inner-script-nav a, .travellers .inner-script-nav a {
+    color: black;
+}
+
+#tb-tf, #tb-out, #bmr-tf, #bmr-out, #sv-tf, #sv-out, #exp-tf, #exp-out {
+    background-color: var(--good-blue);
+    color: white;
+}
+
+#tb-min, #tb-dem, #bmr-min, #bmr-dem, #sv-min, #sv-dem, #exp-min, #exp-dem, #trav-tb {
+    background-color: var(--bad-red);
+    color: white;
+}
+
+.tb-townsfolk, .tb-outsiders, .bmr-townsfolk, .bmr-outsiders, .sv-townsfolk, .sv-outsiders, .exp-townsfolk, .exp-outsiders {
+    border: 2px solid var(--good-blue);
+    color: white;
+}
+
+.tb-minions, .tb-demons, .bmr-minions, .bmr-demons, .sv-minions, .sv-demons, .exp-minions, .exp-demons {
+    border: 2px solid var(--bad-red);
+    color: white;
+}
+
+.trav-tb {
+    border: 2px solid var(--bad-red);
+}
+
+#trav-bmr {
+    background-color: var(--bmr);
+    color: white;
+}
+
+.trav-bmr {
+    border: 2px solid var(--bmr);
+}
+
+#trav-sv {
+    background-color: var(--purple);
+    color: white;
+}
+
+.trav-sv {
+    border: 2px solid var(--purple);
+}
+
+#trav-exp, #fabled-all {
+    background-color: black;
+    color: white;
+}
+
+.trav-exp, .fabled-all {
+    border: 2px solid black;
+}
+
 .inner-script-nav {
     display: flex;
     justify-content: center;
@@ -199,7 +275,6 @@ max-width: 1000px;
 .inner-script-nav a {
     margin: 5px;
     padding: 5px;
-    color: darkred;
 }
 
 .group-container {
@@ -211,7 +286,7 @@ max-width: 1000px;
 }
 
 .callout-box {
-    background: #E7DAC7;
+    background: var(--speech-bubble);
     border: 2px solid black;
 	border-radius: .4em;
     font-style: italic;
@@ -268,8 +343,20 @@ max-width: 1000px;
     }
 }
 
+@media only screen and (max-width: 666.9px){
+    h1 {
+        padding-top: 87px;
+    }
+}
+
 @media only screen and (max-width: 536.9px){
     .nav-bar {
         flex-wrap: wrap;
     }
+
+    h1 {
+        padding-top: 107px;
+    }
 }
+
+/* END MEDIA QUERIES */
