@@ -124,6 +124,7 @@ max-width: 1000px;
 	position: relative;
 	background: var(--speech-bubble);
 	border-radius: .4em;
+    color: black;
 }
 
 .speech-bubble:after {
@@ -148,6 +149,10 @@ max-width: 1000px;
     /* margin-top: 30px; */
     opacity: 0;
     transition: .5s all;
+}
+
+.callout-box {
+    color: black;
 }
 
 .info-container {
@@ -348,6 +353,10 @@ max-width: 1000px;
     
     .examples-run-container > div {
         width: 100%;
+    }
+
+    .examples-run-container div:nth-child(2) h3 {
+        margin-top: 0;
     }
 }
 
