@@ -15,7 +15,7 @@ html {
 }
 
 h1 {
-    padding-top: 68.5px;
+    padding-top: 15px;
 }
 
 h1, h2, h3 {
@@ -63,7 +63,16 @@ ul {
 /* END NAV */
 /* START MODAL */
 
+#myModal {
+    overflow-y: none;
+}
+
 /* The Modal (background) */
+.modal-open {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -320,6 +329,7 @@ ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    /* width: 100%; */
     max-width: 1000px;
     padding: 15px;
 }
@@ -397,20 +407,20 @@ ul {
     }
 }
 
-@media only screen and (max-width: 666.9px){
+/* @media only screen and (max-width: 666.9px){
     h1 {
         padding-top: 87px;
     }
-}
+} */
 
 @media only screen and (max-width: 536.9px){
     .nav-bar {
         flex-wrap: wrap;
     }
 
-    h1 {
+    /* h1 {
         padding-top: 107px;
-    }
+    } */
 }
 
 /* END MEDIA QUERIES */

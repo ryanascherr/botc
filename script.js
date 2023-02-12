@@ -519,17 +519,22 @@ let characters = [
     },
     {
         name: "Clockmaker",
-        intro: "The Clockmaker knows the distance from the Demon to it's nearest Minion, either clockwise or anti-clockwise.",
-        ability: '"You start knowing how many steps from the Demon to its nearest Minion."',
+        description: `The Clockmaker learns the distance from the Demon to their nearest Minion.`,
+        intro: "<ul><li>The Clockmaker only learns this on the first night.</li><li>The distance is the number of seated players, starting from the player next to the Demon and ending at the nearest Minion, either clockwise or counterclockwise.</li></ul>",
+        ability: 'You start knowing how many steps from the Demon to its nearest Minion.',
         flavor: '"Do not disturb me. The tick must continue, for the circle is a symbol of life and contains all things - all answers - in it\'s divine machinery. I must work."',
+        examples: `<p>The Fang Gu is sitting next to the Pit-Hag. The Clockmaker learns a "1".</p><p>Clockwise from the No Dashii sit the Dreamer, the Snake Charmer, and then the Evil Twin. Counterclockwise from the No Dashii sit the Mutant, the Sweetheart, the Philosopher, the Sage, and then the Witch. Because the Witch is five steps away from the Demon, and the Evil Twin is three steps away from the Demon, the Clockmaker learns a "3".</p><p>The Fang Gu neighbors two Travellers, one good and one evil. Neighboring one of these Travellers is a Cerenovus. During the first night, the Clockmaker learns a "2" because evil Travellers are not Minions.</p>`,
+        howToRun: `<p>During the first night, wake the Clockmaker. Show fingers <i>(0, 1, 2 etc.)</i> equaling the distance in players from the Demon to the nearest Minion, starting with the player neighboring the Demon closer to that Minion. Put the Clockmaker to sleep.</p>`,
         group: "Townsfolk",
         script: "sv"
     },
     {
         name: "Dreamer",
-        intro: "The Dreamer learns player's characters, but is not sure if their information is entirely correct.",
-        ability: '"Each night, choose a player (not yourself or Travellers): you learn 1 good & 1 evil character, 1 of which is correct."',
+        description: "The Dreamer learns which player is which character, but is never sure.",
+        intro: "<ul><li>Each night, the Dreamer chooses a player and learns two characters—one that the player is, and one that the player isn't.</li><li>The false character token depends on the chosen player's true character type. If the Dreamer chooses a player who is a Townsfolk or Outsider, the false character token is any Minion or Demon. If they choose a player who is a Minion or Demon, the false character token is a Townsfolk or Outsider.</li><li>The Dreamer may not choose themself, and may not choose a Traveller.</li></ul>",
+        ability: 'Each night, choose a player (not yourself or Travellers): you learn 1 good & 1 evil character, 1 of which is correct.',
         flavor: '"I remember the Clockmaker. The sky was red and it was raining fractal triangles. There was a smell of violets and a bubbling sound. A woman with glowing eyes and a scraggly beard was hissing at the sky. Then, I awoke ."',
+        examples: `<p>The Dreamer chooses a player who is the Mutant. The Dreamer learns that this player is either the Mutant or the Cerenovus.</p><p>The Dreamer chooses a player who is the Philosopher that has gained the Flowergirl ability. The Dreamer learns that this player is either the Philosopher or the Vigormortis.</p><p>Today, both the Evil Twin and the Artist claimed to be the Artist. That night, the Dreamer chooses the player who is the Evil Twin. If the Storyteller wanted to help the good team, they could show the Evil Twin and Sweetheart tokens to the Dreamer. But the Storyteller decides to help evil, so they show the Evil Twin and the Artist tokens to the Dreamer.</p><p>The Dreamer chooses a player who is the Vortox. The Dreamer's information must be false because the Vortox is in play, so the Dreamer learns that this player is either the Oracle or the No Dashii.</p>`,
         group: "Townsfolk",
         script: "sv"
     },
@@ -1279,6 +1284,11 @@ let characters = [
     },
 ];
 
+let isModalOpen = false;
+
+let headerHeight = $("header").outerHeight();
+$("html").css({'scroll-padding-top':`${headerHeight}px`});
+
 $( document ).ready(function() {
     $(".special").addClass("spin");
 });
@@ -1307,66 +1317,66 @@ function populateAll() {
 
         if (character.script == "tb") {
             if (character.group == "Townsfolk") {
-                $(".tb-townsfolk").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+                $(".tb-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             } else if (character.group == "Outsider") {
-                $(".tb-outsiders").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+                $(".tb-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             } else if (character.group == "Minion") {
-                $(".tb-minions").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`)
+                $(".tb-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`)
             } else if (character.group == "Demon") {
-                $(".tb-demons").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+                $(".tb-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             }
         }
 
         if (character.script == "bmr") {
             if (character.group == "Townsfolk") {
-                $(".bmr-townsfolk").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+                $(".bmr-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             } else if (character.group == "Outsider") {
-                $(".bmr-outsiders").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+                $(".bmr-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             } else if (character.group == "Minion") {
-                $(".bmr-minions").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`)
+                $(".bmr-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`)
             } else if (character.group == "Demon") {
-                $(".bmr-demons").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+                $(".bmr-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             }
         }
 
         if (character.script == "sv") {
             if (character.group == "Townsfolk") {
-                $(".sv-townsfolk").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+                $(".sv-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             } else if (character.group == "Outsider") {
-                $(".sv-outsiders").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+                $(".sv-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             } else if (character.group == "Minion") {
-                $(".sv-minions").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`)
+                $(".sv-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`)
             } else if (character.group == "Demon") {
-                $(".sv-demons").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+                $(".sv-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             }
         }
 
         if (character.script == "exp") {
             if (character.group == "Townsfolk") {
-                $(".exp-townsfolk").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+                $(".exp-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             } else if (character.group == "Outsider") {
-                $(".exp-outsiders").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+                $(".exp-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             } else if (character.group == "Minion") {
-                $(".exp-minions").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`)
+                $(".exp-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`)
             } else if (character.group == "Demon") {
-                $(".exp-demons").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+                $(".exp-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             }
         }
 
         if (character.group == "Traveller") {
             if (character.script == "tb") {
-                $(".trav-tb").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+                $(".trav-tb").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             } else if (character.script == "bmr") {
-                $(".trav-bmr").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+                $(".trav-bmr").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             } else if (character.script == "sv") {
-                $(".trav-sv").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+                $(".trav-sv").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             } else if (character.script == "exp") {
-                $(".trav-exp").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+                $(".trav-exp").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             }
         }
 
         if (character.script == "fabled") {
-            $(".fabled-all").append(`<img class="token" src="./img/${name}.png" data-name="${originalName}">`);
+            $(".fabled-all").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
         }
     })
 }
@@ -1375,6 +1385,16 @@ $(".all .token").click(function() {
     // $(".img-flavor-container .token").removeClass("reverse-spin");
     // $(".img-flavor-container .token").removeClass("spin");
     // $(".flavor").css({'opacity':'0'});
+
+    //resets modal position
+    setTimeout( () => {
+        let modal = document.querySelector("#myModal");
+        modal.scrollTop = 0;
+    }, 1);
+
+    //stops page scroll
+    $("html").addClass("modal-open");
+
     let ability;
     let intro;
     let flavor;
@@ -1382,6 +1402,7 @@ $(".all .token").click(function() {
     let howToRun;
     let group;
     let orignalName = $(this).attr("data-name");
+    let altName = orignalName;
     characters.forEach(character => {
         if (character.name == orignalName) {
             ability = character.ability;
@@ -1402,6 +1423,7 @@ $(".all .token").click(function() {
         name = name.replace("'",'');
     }
     $(".img-flavor-container .token").attr("src",`./img/${name}.png`);
+    $(".img-flavor-container .token").attr("alt",`The icon for the ${altName} character`);
 
     if (group == "Townsfolk" || group == "Outsider") {
         $(".modal-content h2").css({'color':'#0365AB'});
@@ -1431,7 +1453,7 @@ $(".all .token").click(function() {
     $(".ability").html(`${ability}`);
     $(".flavor").html(`${flavor}`);
     $(".examples").html(`${examples}`);
-    $(".how-to-run").html(`${howToRun}`);
+    $(".how-to-run").html(`${howToRun}`);  
 })
 
 // Get the modal
@@ -1444,22 +1466,36 @@ let btn = $(".token");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+// btn.onclick = function() {
+//   modal.style.display = "block";
+//   isModalOpen = true;
+// }
 
 $('.token').click(function(){
 	modal.style.display = "block";
+    isModalOpen = true;
 });
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
+  $("html").removeClass("modal-open");
+  isModalOpen = false;
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+    $("html").removeClass("modal-open");
+    isModalOpen = false;
   }
 }
+
+$(document).keyup(function(e) {
+    if (e.key === "Escape" && isModalOpen) {
+        modal.style.display = "none";
+        $("html").removeClass("modal-open");
+        isModalOpen = false;
+    }
+});
