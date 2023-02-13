@@ -1344,38 +1344,56 @@ let characters = [
     },
 ];
 
-let isModalOpen = false;
+let isModalOpen;
 
-let headerHeight = $("header").outerHeight();
-$("html").css({'scroll-padding-top':`${headerHeight}px`});
+initialize();
 
-$( document ).ready(function() {
-    $(".special").addClass("spin");
-});
-
-setTimeout( () =>{
-    $(".special").removeClass("spin");
-    $(".special").attr("src", "./img/washerwoman.png");
-    $(".special").addClass("reverse-spin");
-}, 1000);
-
-populateAll();
+function initialize() {
+    let headerHeight = $("header").outerHeight();
+    $("html").css({'scroll-padding-top':`${headerHeight}px`});
+    populateAll();
+    setModal();
+}
 
 function populateAll() {
 
     characters.forEach(character => {
-        let originalName = character.name;
-        let name = originalName.toLowerCase();
-        name = name.split(" ");
-        if (name[2]) {
-            name = name[0] + "-" + name[1] + "-" + name[2];
-            name = name.replace("'",'');
-        } else if (name[1]) {
-            name = name[0] + "-" + name[1];
-            name = name.replace("'",'');
+        let name;
+
+        getName();
+        function getName() {
+            originalName = character.name;
+            name = originalName.toLowerCase();
+            name = name.split(" ");
+            if (name[2]) {
+                name = name[0] + "-" + name[1] + "-" + name[2];
+                name = name.replace("'",'');
+            } else if (name[1]) {
+                name = name[0] + "-" + name[1];
+                name = name.replace("'",'');
+            }
         }
 
         if (character.script == "tb") {
+            populateTB();
+        }
+        if (character.script == "bmr") {
+            populatedBMR();
+        }
+        if (character.script == "sv") {
+            populateSV();
+        }
+        if (character.script == "exp") {
+            populateEXP();
+        }
+        if (character.group == "Traveller") {
+            populateTraveller();
+        }
+        if (character.script == "fabled") {
+            populateFabled();
+        }
+
+        function populateTB() {
             if (character.group == "Townsfolk") {
                 $(".tb-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             } else if (character.group == "Outsider") {
@@ -1387,7 +1405,7 @@ function populateAll() {
             }
         }
 
-        if (character.script == "bmr") {
+        function populatedBMR() {
             if (character.group == "Townsfolk") {
                 $(".bmr-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             } else if (character.group == "Outsider") {
@@ -1399,7 +1417,7 @@ function populateAll() {
             }
         }
 
-        if (character.script == "sv") {
+        function populateSV() {
             if (character.group == "Townsfolk") {
                 $(".sv-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             } else if (character.group == "Outsider") {
@@ -1411,7 +1429,7 @@ function populateAll() {
             }
         }
 
-        if (character.script == "exp") {
+        function populateEXP() {
             if (character.group == "Townsfolk") {
                 $(".exp-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             } else if (character.group == "Outsider") {
@@ -1423,7 +1441,7 @@ function populateAll() {
             }
         }
 
-        if (character.group == "Traveller") {
+        function populateTraveller() {
             if (character.script == "tb") {
                 $(".trav-tb").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
             } else if (character.script == "bmr") {
@@ -1435,26 +1453,58 @@ function populateAll() {
             }
         }
 
-        if (character.script == "fabled") {
+        function populateFabled() {
             $(".fabled-all").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
         }
     })
 }
 
+function setModal() {
+    isModalOpen = false;
+    let modal = document.getElementById("myModal");
+    let span = document.getElementsByClassName("close")[0];
+
+    $('.token').click(function(){
+	    modal.style.display = "block";
+        isModalOpen = true;
+    });
+
+    span.onclick = function() {
+        modal.style.display = "none";
+        $("html").removeClass("modal-open");
+        isModalOpen = false;
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            $("html").removeClass("modal-open");
+            isModalOpen = false;
+        }
+    }
+
+    $(document).keyup(function(e) {
+        if (e.key === "Escape" && isModalOpen) {
+            modal.style.display = "none";
+            $("html").removeClass("modal-open");
+            isModalOpen = false;
+        }
+    });
+}
+
 $(".all .token").click(function() {
-    // $(".img-flavor-container .token").removeClass("reverse-spin");
-    // $(".img-flavor-container .token").removeClass("spin");
-    // $(".flavor").css({'opacity':'0'});
 
-    //resets modal position
-    setTimeout( () => {
-        let modal = document.querySelector("#myModal");
-        modal.scrollTop = 0;
-    }, 1);
+    resetModal();
+    function resetModal() {
+        //resets modal position
+        setTimeout( () => {
+            let modal = document.querySelector("#myModal");
+            modal.scrollTop = 0;
+        }, 1);
 
-    //stops page scroll
-    $("html").addClass("modal-open");
-
+        //stops page scroll
+        $("html").addClass("modal-open");
+    }
     let ability;
     let intro;
     let flavor;
@@ -1463,99 +1513,54 @@ $(".all .token").click(function() {
     let group;
     let orignalName = $(this).attr("data-name");
     let altName = orignalName;
-    characters.forEach(character => {
-        if (character.name == orignalName) {
-            ability = character.ability;
-            intro = character.intro;
-            flavor = character.flavor;
-            examples = character.examples;
-            howToRun = character.howToRun;
-            group = character.group;
+    let name;
+
+    getNameModal();
+    function getNameModal() {
+        characters.forEach(character => {
+            if (character.name == orignalName) {
+                ability = character.ability;
+                intro = character.intro;
+                flavor = character.flavor;
+                examples = character.examples;
+                howToRun = character.howToRun;
+                group = character.group;
+            }
+        });
+        name = orignalName.toLowerCase();
+        name = name.split(" ");
+        if (name[2]) {
+            name = name[0] + "-" + name[1] + "-" + name[2];
+            name = name.replace("'",'');
+        } else if (name[1]) {
+            name = name[0] + "-" + name[1];
+            name = name.replace("'",'');
         }
-    });
-    let name = orignalName.toLowerCase();
-    name = name.split(" ");
-    if (name[2]) {
-        name = name[0] + "-" + name[1] + "-" + name[2];
-        name = name.replace("'",'');
-    } else if (name[1]) {
-        name = name[0] + "-" + name[1];
-        name = name.replace("'",'');
-    }
-    $(".img-flavor-container .token").attr("src",`./img/${name}.png`);
-    $(".img-flavor-container .token").attr("alt",`The icon for the ${altName} character`);
-
-    if (group == "Townsfolk" || group == "Outsider") {
-        $(".modal-content h2").css({'color':'#0365AB'});
-        $(".modal-content h3").css({'color':'#0365AB'});
-    } else if (group == "Minion" || group == "Demon") {
-        $(".modal-content h2").css({'color':'darkred'});
-        $(".modal-content h3").css({'color':'darkred'});
-    } else {
-        $(".modal-content h2").css({'color':'black'});
-        $(".modal-content h3").css({'color':'black'});
     }
 
-    // $(".img-flavor-container .token").attr("src",`./img/blank.png`);
-    // $(".img-flavor-container .token").addClass("spin");
-    // setTimeout( () =>{
-    //     $(".img-flavor-container .token").removeClass("spin");
-    //     $(".img-flavor-container .token").attr("src", `./img/${name}.png`);
-    //     $(".img-flavor-container .token").addClass("reverse-spin");
-    // }, 500);
+    colorText();
+    function colorText() {
+        if (group == "Townsfolk" || group == "Outsider") {
+            $(".modal-content h2").css({'color':'#0365AB'});
+            $(".modal-content h3").css({'color':'#0365AB'});
+        } else if (group == "Minion" || group == "Demon") {
+            $(".modal-content h2").css({'color':'darkred'});
+            $(".modal-content h3").css({'color':'darkred'});
+        } else {
+            $(".modal-content h2").css({'color':'black'});
+            $(".modal-content h3").css({'color':'black'});
+        }
+    }
 
-    // setTimeout( () => {
-    //     $(".flavor").css({'opacity':'100%'});
-    // }, 1000);
-
-    $(".name").html(`${orignalName}`)
-    $(".intro").html(`${intro}`);
-    $(".ability").html(`${ability}`);
-    $(".flavor").html(`${flavor}`);
-    $(".examples").html(`${examples}`);
-    $(".how-to-run").html(`${howToRun}`);  
+    populateModal();
+    function populateModal() {
+        $(".img-flavor-container .token").attr("src",`./img/${name}.png`);
+        $(".img-flavor-container .token").attr("alt",`The icon for the ${altName} character`);
+        $(".name").html(`${orignalName}`)
+        $(".intro").html(`${intro}`);
+        $(".ability").html(`${ability}`);
+        $(".flavor").html(`${flavor}`);
+        $(".examples").html(`${examples}`);
+        $(".how-to-run").html(`${howToRun}`); 
+    } 
 })
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-let btn = $(".token");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-// btn.onclick = function() {
-//   modal.style.display = "block";
-//   isModalOpen = true;
-// }
-
-$('.token').click(function(){
-	modal.style.display = "block";
-    isModalOpen = true;
-});
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-  $("html").removeClass("modal-open");
-  isModalOpen = false;
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-    $("html").removeClass("modal-open");
-    isModalOpen = false;
-  }
-}
-
-$(document).keyup(function(e) {
-    if (e.key === "Escape" && isModalOpen) {
-        modal.style.display = "none";
-        $("html").removeClass("modal-open");
-        isModalOpen = false;
-    }
-});
