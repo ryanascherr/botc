@@ -5,7 +5,7 @@ let characters = [
         intro: "<ul><li>During the first night, the Washerwoman is woken, shown two players, and learns the character of one of them.</li><li>They learn this only once and then learn nothing more.</li></ul>",
         ability: 'You start knowing that 1 of 2 players is a particular Townsfolk.',
         flavor: '"Bloodstains on a dinner jacket? No, this is cooking sherry. How careless."',
-        examples: "<p>Evin is the Chef, and Amy is the Ravenkeeper. The Washerwoman learns that either Evin or Amy is the Chef.</p><p>Julian is the Imp, and Alex is the Virgin. The Washerwoman learns that either Julian or Alex is the Virgin.</p><p>Marianna is the Spy, and Sarah is the Scarlet Woman. The Washerwoman learns that one of them is the Ravenkeeper. (This happens because the Spy is registering as a Townsfolk—in this case, the Ravenkeeper)</p>",
+        examples: "<p>Evin is the Chef, and Amy is the Ravenkeeper. The Washerwoman learns that either Evin or Amy is the Chef.</p><p>Julian is the Imp, and Alex is the Virgin. The Washerwoman learns that either Julian or Alex is the Virgin.</p><p>Marianna is the Spy, and Sarah is the Scarlet Woman. The Washerwoman learns that one of them is the Ravenkeeper. <i>(This happens because the Spy is registering as a Townsfolk—in this case, the Ravenkeeper)</i></p>",
         howToRun: `<p>While preparing the first night, put the Washerwoman's <strong>TOWNSFOLK</strong> reminder token by any Townsfolk character token, and put the Washerwoman's <strong>WRONG</strong> reminder token by any other character token.</p><p>During the first night, wake the Washerwoman and point to the players marked <strong>TOWNSFOLK</strong> and <strong>WRONG</strong>. Show the character token marked <strong>TOWNSFOLK</strong> to the Washerwoman. Put the Washerwoman to sleep. Remove the Washerwoman's reminder tokens when convenient.</p>`,
         group: "Townsfolk",
         script: "tb"
@@ -16,7 +16,7 @@ let characters = [
         intro: "<ul><li>During the first night, the Librarian learns that one of two players is a specific Outsider.</li><li>They learn this only once and then learn nothing more.</li><li>The Drunk is an Outsider. If the Librarian learns that one of two players is the Drunk, they do not learn the Townsfolk that the Drunk's player thinks they are.</li></ul>",
         ability: 'You start knowing that 1 of 2 players is a particular Outsider. (Or that zero are in play.)',
         flavor: '"Certainly Madam, under normal circumstances, you may borrow the Codex Malificarium from the library vaults. However, you do not seem to be a member."',
-        examples: "<p style='margin-top: 0;'>Benjamin is the Saint, and Filip is the Baron. The Librarian learns that either Benjamin or Filip is the Saint.</p><p>There are no Outsiders in this game. The Librarian learns a '0'.</p><p>Abdallah is the Drunk, who thinks they are the Monk, and Douglas is the Undertaker. The Librarian learns that either Abdallah or Douglas is the Drunk. (This happens because the Librarian learns the true character. The Drunk is Abdallah's true character, not the Monk.)</p>",
+        examples: "<p style='margin-top: 0;'>Benjamin is the Saint, and Filip is the Baron. The Librarian learns that either Benjamin or Filip is the Saint.</p><p>There are no Outsiders in this game. The Librarian learns a '0'.</p><p>Abdallah is the Drunk, who thinks they are the Monk, and Douglas is the Undertaker. The Librarian learns that either Abdallah or Douglas is the Drunk. <i>(This happens because the Librarian learns the true character. The Drunk is Abdallah's true character, not the Monk.)</i></p>",
         howToRun: `<p>While preparing the first night, put the Librarian's <strong>OUTSIDER</strong> reminder token by any Outsider character token, and put the Librarian's <strong>WRONG</strong> reminder token by any other character token.</p><p>During the first night, wake the Librarian and point to the players marked <strong>OUTSIDER</strong> and <strong>WRONG</strong>. Show the character token marked <strong>OUTSIDER</strong> to the Librarian. Put the Librarian to sleep. Remove the Librarian's reminder tokens when convenient.</p>`,
         group: "Townsfolk",
         script: "tb"
@@ -27,7 +27,7 @@ let characters = [
         intro: "<ul><li>During the first night, the Investigator learns that one of two players is a specific Minion.</li><li>They learn this only once and then learn nothing more.</li></ul>",
         ability: 'You start knowing that 1 of 2 players is a particular Minion.',
         flavor: '"It is a fine night for a stroll, wouldn\'t you say, Mister Morozov? Or should I say... BARON Morozov?"',
-        examples: "<p>Amy is the Baron, and Julian is the Mayor. The Investigator learns that either Amy or Julian is the Baron.</p><p>Angelus is the Spy, and Lewis is the Poisoner. The Investigator learns that either Angelus or Lewis is the Spy.</p><p>Brianna is the Recluse, and Marianna is the Imp. The Investigator learns that either Brianna or Marianna is the Poisoner. (This happens because the Recluse is registering as a Minion—in this case, the Poisoner.)</p>",
+        examples: "<p>Amy is the Baron, and Julian is the Mayor. The Investigator learns that either Amy or Julian is the Baron.</p><p>Angelus is the Spy, and Lewis is the Poisoner. The Investigator learns that either Angelus or Lewis is the Spy.</p><p>Brianna is the Recluse, and Marianna is the Imp. The Investigator learns that either Brianna or Marianna is the Poisoner. <i>(This happens because the Recluse is registering as a Minion—in this case, the Poisoner.)</i></p>",
         howToRun: `<p>While preparing the first night, put the Investigator's <strong>MINION</strong> reminder token by any Minion character token, and put the Investigator's <strong>WRONG</strong> reminder token by any other character token.</p><p>During the first night, wake the Investigator and point to the players marked <strong>MINION</strong> and <strong>WRONG</strong>. Show the character token marked <strong>MINION</strong> to the Investigator. Put the Investigator to sleep. Remove the Investigator's reminder tokens when convenient.</p>`,
         group: "Townsfolk",
         script: "tb"
@@ -830,16 +830,16 @@ let characters = [
     {
         name: "Balloonist",
         description: "",
-        intro: "The Balloonist knows a Townsfolk, an Outsider, a Minion, and a Demon, but gets them confused.",
-        ability: '"Each night, you learn 1 player of each character type, until there are no more types to learn. [+1 Outsider]"',
+        intro: "",
+        ability: 'Each night, you learn 1 player of each character type, until there are no more types to learn. [+1 Outsider]',
         flavor: '"More heat! Higher! Higher! Più alto! Ahhh... it is so beautiful from up here, don\'t you agree? Can you see the children fishing by the river, under the willow? Can you see the glint of the sun on the circus tent-poles? What\'s this? An old man, alone, passed out in the vineyard? Less heat! Lower! Lower! Vai più in basso!"',
         group: "Townsfolk",
         script: "exp"
     },
     {
         name: "Bounty Hunter",
-        intro: "The Bounty Hunter learns all the evil players. One. Player. At. A. Time.",
-        ability: '"You start knowing 1 evil player. If the player you know dies, you learn another evil player tonight. [1 Townsfolk is evil]"',
+        intro: "",
+        ability: 'You start knowing 1 evil player. If the player you know dies, you learn another evil player tonight. [1 Townsfolk is evil]',
         flavor: '"Alone, I walk these streets, paved with the sick stench of corruption. Its thickness worms its way into my nostrils, unbidden, burning with revulsion. And anticipation. The illness of this wretched place grows each night. And I... I am the cure. "',
         group: "Townsfolk",
         script: "exp"
@@ -868,8 +868,8 @@ let characters = [
     },
     {
         name: "Cult Leader",
-        intro: "The Cult Leader convinces others to join their cult to end the game. But which team will win?",
-        ability: '"Each night, you become the alignment of an alive neighbour. If all good players choose to join your cult, your team wins."',
+        intro: "",
+        ability: 'Each night, you become the alignment of an alive neighbour. If all good players choose to join your cult, your team wins.',
         flavor: '"Thinking themselves wise, they became fools."',
         group: "Townsfolk",
         script: "exp"
@@ -898,8 +898,8 @@ let characters = [
     },
     {
         name: "Fisherman",
-        intro: "The Fisherman knows something that nobody else can know - what should be done.",
-        ability: '"Once per game, during the day, visit the Storyteller for some advice to help your team win."',
+        intro: "",
+        ability: 'Once per game, during the day, visit the Storyteller for some advice to help your team win.',
         flavor: '"This was my favourite part of the river… see how the sunlight makes a rainbow from the monastery to the market? This was the best place for big fish. And the older I get, the bigger they were.”',
         group: "Townsfolk",
         script: "exp"
@@ -961,8 +961,8 @@ let characters = [
     },
     {
         name: "Nightwatchman",
-        intro: "The Nightwatchman is known by one player.",
-        ability: '"Once per game, at night, choose a player: they learn who you are."',
+        intro: "",
+        ability: 'Once per game, at night, choose a player: they learn who you are.',
         flavor: '"The night is cold and lonely, but I have the moon, the stars, the crisp wind and the soft thud of leather boots on cobbled stone for company. Yonder, candlelight flickers behind a murky window..."',
         group: "Townsfolk",
         script: "exp"
@@ -1002,400 +1002,445 @@ let characters = [
     },
     {
         name: "Preacher",
-        intro: "The Preacher removes the Minion abilities of selected players.",
-        ability: '"Each night, choose a player: a Minion, if chosen, learns this. All chosen Minions have no ability."',
+        intro: "",
+        ability: 'Each night, choose a player: a Minion, if chosen, learns this. All chosen Minions have no ability.',
         flavor: '"It is better to be rich and healthy than poor and sick."',
         group: "Townsfolk",
         script: "exp"
     },
     {
         name: "Acrobat",
-        intro: "The Acrobat dies if the people they neighbour are drunk or poisoned.",
-        ability: '"Each night*, if either good living neighbour is drunk or poisoned, you die."',
+        intro: "",
+        ability: 'Each night*, if either good living neighbour is drunk or poisoned, you die.',
         flavor: '"Welcome, one and all, to the greatest show on earth."',
         group: "Outsider",
         script: "exp"
     },
     {
         name: "Damsel",
-        intro: "The Damsel absolutely, positively cannot be found out by the evil team.",
-        ability: '"All Minions know you are in play. If a Minion publicly guesses you (once), your team loses."',
+        description: "The Damsel needs to avoid being found by the Minions.",
+        intro: `<ul><li>If a Minion guesses that you are the Damsel, and does so publicly <i>(so that all players know that they are a Minion)</i>, evil wins.</li><li>No matter how many Minions are in play, they only get one guess, total. If a Minion makes a guess and is wrong, future guesses by this Minion or by other Minions don't count.</li><li>If the Demon pretends to be a Minion making a guess, that doesn't count as a guess. Minions may still make a guess and win.</li><li>Minions may make a guess at any time.</li><li>If the Damsel dies, they are no longer at risk of being guessed by a Minion, since the Damsel loses their ability when dead.</li><li>There may not be a Huntsman in play. But if there is, and the Huntsman chooses the Damsel at night, the Damsel becomes a not-in-play Townsfolk, and is no longer the Damsel. The Damsel learns which Townsfolk and has that Townsfolk ability from then on.</li></ul>`,
+        ability: 'All Minions know you are in play. If a Minion publicly guesses you (once), your team loses.',
         flavor: 'Don\'t touch the hair, honey."',
+        examples: `<p>Marianna is the Damsel. She is bluffing as the Lycanthrope. The Witch guesses that Marianna is the Damsel. Evil wins.</p><p>Doug is the Damsel. The Boomdandy guesses that Julian is the Damsel. Nothing happens, and the game continues. The Goblin guesses that Doug is the Damsel. Nothing happens, and the game continues.</p>`,
+        howToRun: `<p>During the first night, wake each Minion. Show the Damsel token. Put each Minion to sleep.</p><p>At any time during the game, if a Minion publicly guesses which player is the Damsel and is incorrect, mark the Damsel with the <strong>GUESS USED</strong> reminder. Future guesses by Minion players have no effect.</p><p>At any time during the game, if a Minion publicly guesses which player is the Damsel and is correct, the game ends. Declare that the evil team wins.</p>`,
         group: "Outsider",
         script: "exp"
     },
     {
         name: "Golem",
-        intro: "The Golem kills the player they nominate.",
-        ability: '"You may only nominate once per game. When you do, if the nominee is not the Demon, they die."',
+        description: "The Golem kills the player they nominate.",
+        intro: `<ul><li>When the Golem nominates a player, that player immediately dies. The nomination process continues.</li><li>If the Golem nominates the Demon, nothing happens. The Storyteller doesn't confirm or deny that the Golem nominated, and continues with the voting process as normal. The Storyteller may say "nothing happens" if clarity is asked for.</li><li>After the Golem has nominated once, whether or not the nominee dies, the Golem may not nominate again this game. It is the player's responsibility to refrain from nominating, not the Storyteller's. Deliberately nominating when they shouldn't is considered cheating.</li></ul>`,
+        ability: 'You may only nominate once per game. When you do, if the nominee is not the Demon, they die.',
         flavor: '"Golem help? Golem smash! Golem help."',
+        examples: `<p>The Golem nominates the Poppy Grower. The Poppy Grower dies. The Golem may not nominate again this game.</p><p>The Golem nominates the Recluse. The Storyteller decides that the Recluse registers as the Demon. Nothing happens, and the Storyteller begins counting votes for the Recluse to be executed. The Golem may not nominate again this game.</p>`,
+        howToRun: `<p>If the Golem nominates a non-Demon, that player <strong>dies</strong>, then the vote continues as normal. Mark the Golem with the <strong>MAY NOT NOMINATE</strong> reminder.</p><p>If the Golem nominates the Demon, the vote continues as normal. <i>(Do not say why.)</i> Mark the Golem with the <strong>MAY NOT NOMINATE</strong> reminder.</p><p class="callout-box">If the Golem accidentally nominates when they shouldn't, you can either accept or not accept the nomination. It is best to not accept the nomination—as long as you think that this won't confirm that a Golem is in play. To keep things fair, also do this for players bluffing as the Golem, reminding them that the Golem cannot nominate more that once.</p>`,
         group: "Outsider",
         script: "exp"
     },
     {
         name: "Heretic",
-        intro: "The Heretic turns a win into a loss, and a loss into a win.",
-        ability: '"Whoever wins, loses & whoever loses, wins, even if you are dead."',
+        description: "The Heretic turns a win into a loss, and a loss into a win.",
+        intro: `<ul><li>If the game ends due to the good team winning, then all good players lose, and all evil players win.</li><li>If the game ends due to the evil team winning, then all evil players lose, and all good players win.</li><li>This Heretic's ability applies to all victory conditions, including the game ending due to just two players being alive, the Demon dying, or an ability ending the game.</li><li>The Heretic's ability functions even when the Heretic is dead, but not when the Heretic is drunk or poisoned.</li></ul>`,
+        ability: 'Whoever wins, loses & whoever loses, wins, even if you are dead.',
         flavor: '"After the hail has smashed the roof and splintered the glass of the Cathedral windows, it melts again into the earth, like a dying lamb in the desert sun. Such is the parable of the madman."',
+        examples: `<p>On the first day, the Heretic publicly claims to be the Heretic. That night, the Demon kills themselves. Evil wins.</p><p>The Heretic does not reveal their character until the final day, when three players are alive. The Heretic convinces the good team to execute a good player, leaving two players alive, one of which is the Demon. Good wins.</p><p>The Heretic is dead. The Saint is executed. Good wins.</p><p>The Heretic is poisoned. The Assassin kills the Demon. Good wins.</p><p>A Heretic is in play. There are three players alive. The Demon is executed. Evil wins.</p>`,
+        howToRun: `<p>If the game ends and the evil team would have won, declare that the good team wins and the evil team loses.</p><p>If the game ends and the good team would have won, declare that the evil team wins and the good team loses.</p>`,
         group: "Outsider",
         script: "exp"
     },
     {
         name: "Politician",
-        intro: "The Politician changes teams if they are losing.",
-        ability: '"If you were the player most responsible for your team losing, you change alignment & win, even if dead."',
+        intro: "",
+        ability: 'If you were the player most responsible for your team losing, you change alignment & win, even if dead.',
         flavor: '"I\'m glad you asked that question. Truly, I am. But I think the REAL question here is…"',
         group: "Outsider",
         script: "exp"
     },
     {
         name: "Puzzlemaster",
-        intro: "",
-        ability: '"1 player is drunk, even if you die. If you guess (once) who it is, learn the Demon player, but guess wrong & get false info."',
+        description: "The Puzzlemaster tries to figure out who is drunk.",
+        intro: "<ul><li>A player is drunk for the whole game. It will most often be a Townsfolk, but could be an Outsider. This player does not know that they are drunk.</li><li>Once per game, the Puzzlemaster may guess which player it is. They may guess publicly, or privately. Whatever their guess, the Storyteller privately tells the Puzzlemaster the name of one player. If the Puzzlemaster guessed correctly, they learn which player the Demon is. If the Puzzlemaster guessed incorrectly, they learn a different player instead.</li><li>The Puzzlemaster isn't told if they guessed correctly or not.</li><li>Only the player made drunk by the Puzzlemaster counts as a successful guess. Players drunk by other means don't count.</li><li>If the Puzzlemaster dies, the drunk player is still drunk. A dead Puzzlemaster may not make a guess, as they don't have that part of their ability.</li></ul>",
+        ability: '1 player is drunk, even if you die. If you guess (once) who it is, learn the Demon player, but guess wrong & get false info.',
         flavor: '"When one begins to think that some thing is merely some other thing, one is usually on the brink of an error. Patience, patience. Don\'t confuse just and should with is and isn\'t."',
+        examples: `<p>Alex is the Demon. Sarah is the Empath who has been made drunk by the Puzzlemaster and is getting false information. The Puzzlemaster publicly guesses that Sarah is the drunk, and is told "Alex is the Demon" privately by the Storyteller.</p><p>Lewis is the Demon. Ben is dead and is drunk due to the Puzzlemaster. Marianna is alive and drunk due to the Sailor. The Puzzlemaster privately guesses Marianna, and is told "Abdallah is the Demon" privately by the Storyteller.</p>`,
+        howToRun: `<p>While preparing the first night, mark any player with the Puzzlemaster's <strong>DRUNK</strong> reminder. This player is <strong>drunk</strong>.</p><p>At any time during the game, the Puzzlemaster may guess a player, either publicly or by having a private discussion with you. If their guessed player is marked by the Puzzlemaster's <strong>DRUNK</strong> reminder, privately tell the Puzzlemaster which player is the Demon. If their guessed player is not marked by the Puzzlemaster's <strong>DRUNK</strong> reminder, privately tell the Puzzlemaster the name of a non-Demon player. <i>(Do not say if they guessed correctly or not.)</i> Either way, mark the Puzzlemaster with the <strong>GUESS USED</strong> reminder.</p><p class="callout-box">While you can make a Minion or the Demon drunk with the Puzzlemaster ability, only do this if you have an excellent reason in mind. It is almost always best to select a Townsfolk player.</p>`,
         group: "Outsider",
         script: "exp"
     },
     {
         name: "Snitch",
-        intro: "The Snitch accidentally gives information to the evil team.",
-        ability: '"Minions start knowing 3 not-in-play characters."',
+        description: "The Snitch gives information to the evil team.",
+        intro: `<ul><li>The Minions learn three not-in-play characters at the start of the game, just like the Demon does.</li><li>These characters may be the same three that the Demon learns, or different characters.</li><li>Each Minion may learn different characters to each other. Or they may all learn the same three characters.</li></ul>`,
+        ability: 'Minions start knowing 3 not-in-play characters.',
         flavor: '"It was John."',
+        examples: `<p>On the first night, the Demon and their two Minions all learn that the Empath, Innkeeper, and Golem are not in play.</p><p>On the first night, the Demon learns that the Fool, Monk, and Saint are not in play. The Mastermind learns that the Fool, Monk, and Saint are not in play. The Witch learns that the Fool, Flowergirl, and Barber are not in play. The Fearmonger learns that the Noble, Insomniac, and Heretic are not in play.</p><p>On the fourth night, the Pit-Hag creates a Snitch. All Minions learn three not-in-play characters.</p>`,
+        howToRun: `<p>During the first night, wake a Minion. Show the <strong>THESE CHARACTERS ARE NOT IN PLAY</strong> info token, then show three not-in-play character tokens. Put the Minion to sleep. Repeat this process until all Minions have learnt three not-in-play characters.</p>`,
         group: "Outsider",
         script: "exp"
     },
     {
         name: "Boomdandy",
-        intro: "The Boomdandy explodes when executed, killing most other players.",
-        ability: '"If you are executed, all but 3 players die. 1 minute later, the player with the most players pointing at them, dies."',
+        description: "The Boomdandy explodes when executed, killing most other players.",
+        intro: `<ul><li>If the Boomdandy is executed, the Storyteller kills other players, one at a time, until only three are left alive.</li><li>The Demon will be one of the remaining three players <i>(otherwise, the game would be over)</i>.</li><li>The players have one minute to decide who to kill next. There is no further nomination or execution today. Instead, all players point at the player they want to die. When one minute is up, the Storyteller counts the number of fingers pointed at each player. If it is a tie, then night falls <i>(and evil probably wins due to the Demon killing that night)</i>.</li><li>Even dead players who have no vote token may point.</li><li>Players may change who they are pointing at up until the minute ends, at which point their decision is final.</li><li>The Boomdandy only explodes due to an execution. Deaths by other means, such as via a Golem or a Psychopath, don't count. If the Boomdandy is executed but doesn't die <i>(due to a Devil's Advocate etc.)</i>, they still explode.</li><li>If a character can't die, such as the Fool or the Sailor, the Storyteller may rule that four players remain alive after a Boomdandy explosion.</li></ul>`,
+        ability: 'If you are executed, all but 3 players die. 1 minute later, the player with the most players pointing at them, dies.',
         flavor: '"Tick... Tick... Tick... TOCK."',
+        examples: `<p>Amy is the Boomdandy. She is executed. She explodes, killing all players except for the Po, the Widow, and the Fortune Teller. Frantically, all players start pointing at each other, and talking about who should be pointed at. After a minute, the Storyteller calls "Freeze" and the Widow has the most number of fingers pointed at them, and dies. Evil wins.</p>`,
+        howToRun: `<p>If the Boomdandy is executed, declare that the Boomdandy has exploded. Enter the circle, put your hand out towards the Boomdandy, and rotate around the circle. <i>(Similar to running a vote.)</i> When your hand reaches a living player, say "You live" or say "You die" as that player <strong>dies</strong>. When you have completed the circle, three players will be alive, including the Demon. Then, set a timer on a watch or phone for one minute. When the time runs out, ask all players to immediately freeze <i>(to stay still)</i> while you count the number of players who are pointing at each player. The player with the most fingers pointed at them, <strong>dies</strong>. This will end the game, since just two players are alive, so declare which team has won.</p><p class="callout-box">As the timer counts down, you may count the seconds out loud, or remain silent—whatever is more dramatic! If you don't have a timer handy, guessing roughly a minute is fine.</p>`,
         group: "Minion",
         script: "exp"
     },
     {
         name: "Fearmonger",
-        intro: "The Fearmonger creates paranoia about who nominates whom.",
-        ability: '"Each night, choose a player: if you nominate & execute them, their team loses. All players know if you choose a new player."',
+        description: "The Fearmonger creates paranoia about who nominates whom.",
+        intro: `<ul><li>During the first night, when the Fearmonger selects a player, all players learn this.</li><li>During other nights, each time the Fearmonger selects a new player, all players learn this. If the Fearmonger selects the same player as previously, the players learn nothing.</li><li>The players only learn that the Fearmonger has acted, not which player was selected.</li><li>If the Fearmonger nominates their chosen player, and that nomination results in their execution, the chosen player loses, their team loses, and the game ends.</li><li>Only the currently chosen player is susceptible to the Fearmonger's ability. Previously chosen players don't count.</li><li>If the chosen player is executed but does not die, the chosen player's team still loses.</li></ul>`,
+        ability: 'Each night, choose a player: if you nominate & execute them, their team loses. All players know if you choose a new player.',
         flavor: '"Beware of gazing long into the Abyss, lest the Abyss also gaze into you."',
+        examples: `<p>On the first night, the Fearmonger chooses the Butler. All players learn the Fearmonger has chosen a new player. During the day, the Fearmonger nominates the Butler, and the Butler is executed. Evil wins.</p><p>At night, the Fearmonger chooses the Juggler. The Flowergirl nominates the Juggler, and the Juggler is executed. The game continues.</p><p>The Fearmonger chooses the Empath. The next night, the Fearmonger chooses the Soldier. The Fearmonger nominates and executes the Empath. The game continues because the Fearmonger has selected the Soldier, not the Empath.</p><p>The Fearmonger accidentally chooses the Baron, due to the Poppy Grower being in play. The Fearmonger nominates and executes the Baron. Good wins.</p>`,
+        howToRun: `<p>Each night, wake the Fearmonger. They point at any player. Put the Fearmonger to sleep. Mark the chosen player with the <strong>FEAR</strong> reminder. If the Fearmonger chose a player who wasn't already marked with the <strong>FEAR</strong> reminder, declare that "The Fearmonger has chosen a player." <i>(This informs the group that the Fearmonger is alive and has chosen a new player.)</i></p><p>If the Fearmonger nominates the player marked <strong>FEAR</strong>, and that nomination results in their execution, declare that the game is over and which team has won.</p>`,
         group: "Minion",
         script: "exp"
     },
     {
         name: "Goblin",
-        intro: "The Goblin takes revenge if the town knowingly executes them.",
-        ability: '"If you publicly claim to be the Goblin when nominated & are executed that day, your team wins."',
+        intro: "",
+        ability: 'If you publicly claim to be the Goblin when nominated & are executed that day, your team wins.',
         flavor: '"You don\'t want to insult the goblins. You really, really don\'t. On a completely different note… can I have another piece of cake?"',
         group: "Minion",
         script: "exp"
     },
     {
         name: "Marionette",
-        intro: "The Marionette doesn't know that they are a Minion.",
-        ability: '"You think you are a good character, but you are not. The Demon knows who you are. [You neighbor the Demon]"',
+        description: "The Marionette doesn't know that they are a Minion.",
+        intro: `<ul><li>The Marionette draws either a Townsfolk or an Outsider token from the bag, but is secretly the Marionette.</li><li>The Marionette neighbors the Demon. There are no players sitting in between the Marionette and the Demon.</li><li>The Demon knows which player is the Marionette.</li><li>On the first night, the Marionette does not wake to learn the other evil players, and the other Minions do not learn the Marionette.</li><li>The good ability that the Marionette thinks they have, doesn't work, but the Storyteller pretends it does. It is just as if this player is the Drunk.</li><li>The Marionette registers as evil, and as a Minion.</li></ul>`,
+        ability: 'You think you are a good character, but you are not. The Demon knows who you are. [You neighbor the Demon]',
         flavor: '"Words, words. They\'re all we have to go on."',
+        examples: `<p>Marianna is the Marionette, but thinks she is the Undertaker. She wakes each night to learn who died that day, but her information is often wrong. Halfway through the game, the Demon tells her that she is the Marionette.</p><p>Lachlan is the Demon. He tells Sarah that she is the Marionette. Lachlan is lying. There is no Marionette.</p><p>Abdallah is the Demon. Abdallah tells Ben that he is the Marionette. Ben thinks he is the Fortune Teller, but he isn't. Ben doesn't believe Abdallah, and executes him. Good wins.</p>`,
+        howToRun: `<p>While setting up the game, before putting tokens in the bag, remove the Marionette token and add any Townsfolk token.</p><p>If there are three Minions in play, remove another Minion token and add another Townsfolk token. During the first night, swap a good player's character token with a not-in-play Minion character token. Wake this player, show them the <strong>YOU ARE</strong> info token then their Minion character token, then the <strong>YOU ARE</strong> info token then a thumbs down, then put them to sleep. This player is now an evil Minion. <i>(This ensures that only one Minion token is in the bag, so at least one good player will neighbor the Demon.)</i></p><p>During the first night, mark a good player neighboring the Demon with the <strong>IS THE MARIONETTE</strong> reminder. Wake the Demon. Point to the player marked <strong>IS THE MARIONETTE</strong> and show the Marionette character token. Put the Demon to sleep.</p><p></p>`,
         group: "Minion",
         script: "exp"
     },
     {
         name: "Mezepheles",
-        intro: "The Mezepheles offers good players a choice: to turn evil or not.",
-        ability: '"You start knowing a secret word. The 1st good player to say this word becomes evil that night."',
+        description: "The Mezepheles offers good players a choice: to turn evil or not.",
+        intro: `<ul><li>On the first night, the Mezepheles learns a secret word from the Storyteller.</li><li>If a good player says this word, either publicly or privately, they turn evil that night. The Storyteller needs to hear this player actually say the word before turning them evil.</li><li>The Mezepheles does not learn if a player turns evil. The good player learns if they turn evil, but not until that night.</li><li>If the Mezepheles is sober and healthy at night, the good player turns evil even if the Mezepheles was drunk or poisoned when the good player spoke the secret word. If the Mezepheles is drunk or poisoned at night when a player would turn evil, the player stays good—the Mezepheles has "used their ability" and may not turn a player evil later on.</li></ul>`,
+        ability: 'You start knowing a secret word. The 1st good player to say this word becomes evil that night.',
         flavor: '"That which issues from the heart alone, will bend the hearts of others to your own."',
+        examples: `<p>The Mezepheles tells the Barber that the secret word is "Rumplestiltskin". The Barber publicly says, "This reminds me of the fairy tale where the Miller's daughter has to guess Rumplestiltskin's name." The Barber turns evil that night.</p><p>The Mezepheles tells the Mayor the secret word. The Mayor, wanting to stay good, tells the group who the Mezepheles is.</p><p>The Mezepheles privately tells the Snitch the secret word— "Constantinople". The Snitch visits the Storyteller and says "Constantinople" in private. That night, the Courtier makes the Mezepheles drunk. The Snitch stays good.</p>`,
+        howToRun: `<p>While setting up the game, write a single word on a piece of paper or on a phone or other device. During the first night, wake the Mezepheles, show the written word, then put them to sleep.</p><p>The first time you hear a good player say the secret word, mark them with the <strong>TURNS EVIL</strong> reminder.</p><p>Each night, if a player is marked with the <strong>TURNS EVIL</strong> reminder, wake them. Show the <strong>YOU ARE</strong> info token then give a thumbs down. Put them to sleep. Turn their character token upside down. <i>(This shows they are now evil.)</i> <strong>The Mezepheles loses their ability</strong>—mark them with the <strong>NO ABILITY</strong> reminder and remove their night token from the night sheet.</p><p class="callout-box">Choose an unusual word that would never be spoken accidentally. You can even make one up. The fun lies in the Mezepheles taking a risk to secretly convince a good player to turn evil, not in a good player unexpectedly changing teams.</p>`,
         group: "Minion",
         script: "exp"
     },
     {
         name: "Psychopath",
-        intro: "The Psychopath kills in broad daylight.",
-        ability: '"Each day, before nominations, you may publicly choose a player: they die. If executed, you only die if you lose roshambo."',
+        description: "The Psychopath kills in broad daylight.",
+        intro: `<ul><li>During the day, if the Psychopath declares that they are the Psychopath and publicly chooses a player, that player dies. This can only be done once per day, and only before the Storyteller has called for nominations.</li><li>The Psychopath does not need to use this ability if they don't want to.</li><li>The Psychopath can be nominated and voted for normally. If the Psychopath is executed, they might not die. They play Roshambo <i>(Paper-Rock-Scissors)</i> with the player that nominated them. The nominator needs to win for the Psychopath to die. Drawing or losing means the Psychopath lives.</li><li>If the Psychopath is executed, this still counts as the one execution for the day. No more players may be nominated or executed today.</li><li>If the Psychopath dies by other means, such as the Demon attacking them, they do not play Roshambo. They die.</li></ul>`,
+        ability: 'Each day, before nominations, you may publicly choose a player: they die. If executed, you only die if you lose roshambo.',
         flavor: '"Surprise!"',
+        examples: `<p>On the first day, Amy declares that she is the Psychopath, and that she chooses Evin. Evin dies.</p><p>The Psychopath chooses to kill the Sailor. The Sailor is sober, so does not die. The Psychopath may not use their ability again today.</p><p>The Psychopath has been nominated by the Barber, and is executed. In Roshambo, the Barber has rock and the Psychopath has rock, so the Psychopath lives. The next day, the Saint nominates and executes the Psychopath. The Saint has paper and the Psychopath has scissors, so the Psychopath lives. The next day, the Barber nominates and executes the Psychopath again. The Barber has rock and the Psychopath has scissors, so the Psychopath dies.</p>`,
+        howToRun: `<p>Once per day, before you have called for nominations, the Psychopath may publicly choose a player. That player <strong>dies</strong>.</p><p>If the Psychopath is executed, the Psychopath and the nominator play a game of Roshambo. If the Psychopath loses, they <strong>die</strong>. If the Psychopath draws or wins, they live. Either way, the day ends, since there is only one execution per day.</p><p>If the Psychopath is executed due to a self-nomination, then the Psychopath plays Roshambo with you instead.</p>`,
         group: "Minion",
         script: "exp"
     },
     {
         name: "Widow",
-        intro: "The Widow knows all characters and poisons the exact character of their choosing.",
-        ability: '"On your first night, look at the Grimoire & choose a player: they are poisoned. 1 good player knows a Widow is in play."',
+        intro: "",
+        ability: 'On your first night, look at the Grimoire & choose a player: they are poisoned. 1 good player knows a Widow is in play.',
         flavor: '"More wine? Château d\'Ergot \'07 is a very special vintage. My yes, very special indeed."',
         group: "Minion",
         script: "exp"
     },
     {
         name: "Al-Hadikhia",
-        intro: "The Al-Hadikhia puts three players in a dilemma - who will choose to die, so that others can live?",
-        ability: '"Each night*, choose 3 players (all players learn who): each silently chooses to live or die, but if all live, all die."',
+        description: "The Al-Hadikhia puts three players in a dilemma—who will choose to die, so that others can live?",
+        intro: "<ul><li>The Al-Hadikhia chooses three players per night. Everyone learns which three were chosen. Each player makes their choice before the next player is revealed.</li><li>All players must be silent when the Al-Hadikhia acts at night. This period lasts from when the Storyteller first declares that a player has been chosen, until the Storyteller says that it ends.</li><li>At night, the Storyteller asks players out loud if they choose to live. If they nod their head, they live. If they shake their head, they die. Players may be brought back to life this way.</li><li>If all players choose to live, then they all die instead. If a player chose to die but did not die, they count as alive for this calculation.</li></ul>",
+        ability: 'Each night*, choose 3 players (all players learn who): each silently chooses to live or die, but if all live, all die.',
         flavor: '"Alsukut min dhahab."',
+        examples: `<p>The Al-Hadikhia chooses Evin, Lachlan, and Sarah. Evin chooses to die. Lachlan chooses to die. Sarah chooses to live. In the morning, Evin and Lachlan are dead, and Sarah is alive.</p><p>The Al-Hadikhia chooses Alex, Lewis, and Doug, who is dead. Alex chooses life. Lewis chooses life. Doug chooses life, so is now alive. Since all players are now alive, all three players die.</p>`,
+        howToRun: `<p>Each night except the first, wake the Al-Hadikhia. They point at three players. Mark these players with the <strong>1</strong>, <strong>2</strong> and <strong>3</strong> reminders, in the order the Al-Hadikhia chose. Put the Al-Hadikhia to sleep. Wake the player marked <strong>1</strong> and say "The Al-Hadikhia has chosen" then the name of the player, then "Do you choose to live?" They either nod or shake their head. Put them to sleep. If they chose to live, remove their shroud (if any), and if they choose to die, add a shroud. Repeat for players marked <strong>2</strong> then <strong>3</strong>. If all three players are alive (none of them have a shroud) then add a shroud to all three. They <strong>die</strong>. Declare that the time of silence has ended.</p><p>Each dawn, declare which players marked <strong>1</strong>, <strong>2</strong> and <strong>3</strong> are alive and which are dead. Do this even if a player's alive or dead status did not change during the night.</p><p class="callout-box">You may need to remind all players to be silent as the Al-Hadikhia acts. This includes non-verbal noise. This prevents players signaling to others about whether they have chosen to live or die.</p>`,
         group: "Demon",
         script: "exp"
     },
     {
         name: "Legion",
-        intro: "Legion is many Demons.",
-        ability: '"Each night*, a player might die. Executions fail if only evil voted. You register as a Minion too. [Most players are Legion]"',
+        description: "Legion is many Demons.",
+        intro: `<ul><li>The recommended number of good and evil players is the reverse of the normal. For example, for a ten player game, there are roughly seven Legion and three good players.</li><li>The players that are not Legion may be Townsfolk or Outsiders, in any combination.</li><li>If at least one good player voted for the nomination, and that player is "about to die", then the execution happens as normal. If only evil players vote for a nomination, the vote tally for that nominee is zero.</li><li>Each Legion registers as a Minion as well as a Demon.</li><li>The Storyteller chooses which player dies at night.</li><li>If only one good player remains alive, the Storyteller may declare that evil wins, since good cannot win.</li><li>The Storyteller can decide not to give Legion players bluffs.</li></ul>`,
+        ability: 'Each night*, a player might die. Executions fail if only evil voted. You register as a Minion too. [Most players are Legion]',
         flavor: '"We are the chill wind on a winter\'s day. We are the shadow in the moonless night. We are the poison in your tea and the whisper in your ear. We are everywhere."',
+        examples: `<p>The only good players are the Fortune Teller and the Slayer. Six Legion and the Slayer vote to execute the Fortune Teller. The Fortune Teller is executed, and evil wins.</p><p>Four players are alive. Three Legion and no good players vote to execute Julian. Julian is not executed. Alex, who has two votes, one of which was from a good player, is executed instead.</p>`,
+        howToRun: `<p>During the first night, during the Demon Info step, let all Legion players make eye contact. <i>(You may want to point to the non-Legion players so that Legion knows who they are.)</i></p><p>Each night, you may decide that a player <strong>dies</strong>.</p><p>When counting votes, count out loud, as normal. If the vote tally is enough to make a player "about to die" but only evil players voted, declare that the vote tally is zero.</p><p class="callout-box">Most nights, kill a Legion. Killing a good player is usually unfair. Your aim is to get to three players alive—two good players and one Legion player. On the final day, if the players don't execute, kill a good player that night so that evil wins.</p><p class="callout-box">If the players try to force others to vote to "test whether the vote tally is zero", you may instead declare that a zero-tally vote is successful but secretly keep a record of which player is really about to die by marking them with Legion's "About To Die" reminder, then execute them when nominations are over. This keeps Legion games mysterious and challenging.</p>`,
         group: "Demon",
         script: "exp"
     },
     {
         name: "Leviathan",
-        intro: "The Leviathan doesn't kill players, but wins after 5 days have passed.",
-        ability: '"If more than 1 good player is executed, evil wins. All players know you are in play. After day 5, evil wins."',
+        description: "The Leviathan doesn't kill.",
+        intro: `<ul><li>All players know the Leviathan is in play, even if the Leviathan is created mid-game.</li><li>Any number of evil players may be executed, but if more than one good player is executed, evil wins. It doesn't matter which characters were executed, only the alignment of the player at the time they were executed.</li><li>When the fifth day ends and night begins, if the Leviathan is still alive, evil wins.</li><li>All types of execution count, even if the player doesn't die. A player executed due to the Virgin, or due to revealing that they are the Mutant, is still executed. An executed player who lives due to the Pacifist is still executed.</li></ul>`,
+        ability: 'If more than 1 good player is executed, evil wins. All players know you are in play. After day 5, evil wins.',
         flavor: '"To the last, I grapple with thee. From Hell\'s heart, I stab at thee. For hate\'s sake, I spit my last breath at thee"',
+        examples: `<p>The Leviathan is in play. On the first day, the Monk nominates the Virgin, and is executed. On the second day, the Courtier is executed. Evil wins.</p><p>The Leviathan is in play. On the second day, the Scarlet Woman is executed. On the third day, the Poisoner is executed. On the fifth day, the Soldier is executed. Evil wins.</p>`,
+        howToRun: `<p>Immediately after dawn on the first day, declare that the Leviathan is in play. Mark the Leviathan with the <strong>DAY 1</strong> reminder. At the beginning of each following day, mark the Leviathan with <strong>DAY 2</strong>, then <strong>DAY 3</strong>, then <strong>DAY 4</strong>, then <strong>DAY 5</strong> reminders. If a day ends and the Leviathan is marked with the <strong>DAY 5</strong> reminder, declare that evil wins.</p><p>If a good player is executed, mark them with the <strong>GOOD PLAYER EXECUTED</strong> reminder.</p><p>If a good player is executed and a player is already marked with the <strong>GOOD PLAYER EXECUTED</strong> reminder, declare that evil wins.</p><p class="callout-box">For new players, it is helpful to declare that the Leviathan is in play each day, and to say what day it is. On the first day, say "The Leviathan is in play. It is day one." On the second day, say "The Leviathan is in play. It is day two." etc. This helps your players remember what Demon they are facing and avoid accidentally losing by forgetting to count the days.</p>`,
         group: "Demon",
         script: "exp"
     },
     {
         name: "Lil' Monsta",
-        intro: "Lil\' Monsta isn\'t a player, and is instead babysat by a Minion.",
-        ability: '"Each night, Minions choose who babysits Lil\' Monsta\'s token & "is the Demon". A player dies each night*. [+1 Minion]"',
+        intro: "",
+        ability: 'Each night, Minions choose who babysits Lil\' Monsta\'s token & "is the Demon". A player dies each night*. [+1 Minion]',
         flavor: '"Step 1: Be cute. Step 2: World domination. Step 3: Bweakfast."',
         group: "Demon",
         script: "exp"
     },
     {
         name: "Lleech",
-        intro: "The Lleech lives if their host lives, and dies if their host dies.",
-        ability: '"Each night*, choose a player: they die. You start by choosing an alive player: they are poisoned - you die if (& only if) they die."',
-        flavor: '“Tasty, tasty, tasty, tasty, tasty, tasty, tasty, tasty brai- I mean pie! Yes. Tasty pie. That\'s what I meant to say.”',
+        description: "The Lleech lives if their host lives, and dies if their host dies.",
+        intro: `<ul><li>On the first night, the Lleech chooses a player, who is poisoned for the rest of the game.</li><li>If this player is alive, the Lleech cannot die. If the Lleech is executed, the Storyteller tells the group that the player lives, but not why.</li><li>If the player that the Lleech chose dies, the Lleech dies as well. If this means that only one or two players are left alive, good still wins, because the Demon is dead.</li><li>From the second night onwards, players that the Lleech attacks die but are not poisoned.</li><li>If a Lleech is created mid-game, they poison a player that night. They must choose an alive player.</li></ul>`,
+        ability: 'Each night*, choose a player: they die. You start by choosing an alive player: they are poisoned - you die if (& only if) they die.',
+        flavor: '"Tasty, tasty, tasty, tasty, tasty, tasty, tasty, tasty brai- I mean pie! Yes. Tasty pie. That\'s what I meant to say."',
+        examples: `<p>The Lleech poisons the Noble. The Noble learns three good players instead of one evil and two good players. The Lleech is executed, but does not die. The next day, the Noble is executed. The Noble and the Lleech die. Good wins.</p><p>The Lleech poisons the Farmer. The Courtier poisons the Lleech. The Psychopath kills the Farmer, but the Lleech doesn't die because the Lleech has no ability. The Lleech is executed, and dies.</p>`,
+        howToRun: `<p>During the first night, wake the Lleech. They point at any player. That player is <strong>poisoned</strong>—mark them with the <strong>POISONED</strong> reminder. Put the Lleech to sleep.</p><p>Each night except the first, wake the Lleech. They point at any player. That player <strong>dies</strong>—mark them with the <strong>DEAD</strong> reminder. Put the Lleech to sleep.</p><p>If the Lleech would die but the player marked with the Lleech's <strong>POISONED</strong> reminder is alive, the Lleech does not die. If the player marked with the Lleech's <strong>POISONED</strong> reminder <strong>dies</strong>, the Lleech <strong>dies</strong> and the good team wins.</p><p class="callout-box">When giving false information to a good player poisoned by the Lleech, make sure this information seems true. If the good player believes it to be false, they will quickly execute themselves and win the game.</p><p class="callout-box">Optional rule: if the host dies while the Lleech is drunk or poisoned, the Lleech dies too. (This prevents the situation where the good team are unable to win due to the host being dead and the Lleech being alive.)</p>`,
         group: "Demon",
         script: "exp"
     },
     {
         name: "Riot",
-        intro: "Riot kills everybody in a panic.",
-        ability: '"Nominees die, but may nominate again immediately (on day 3, they must). After day 3, evil wins. [All Minions are Riot]"',
+        description: "Riot kills everybody in a panic.",
+        intro: `<ul><li>Each player that is nominated dies immediately. Even though they are dead, they may nominate again today. This may happen multiple times per day.</li><li>The player that was nominated must nominate again immediately or lose their chance to do so. The Storyteller counts down "3... 2... 1..." to let the player know how long they have to nominate, should they wish to. If they don't, no more nominations are allowed today.</li><li>The good team wins if all Riot players are dead. If the last Riot dies and only two players are alive, they do not nominate, and the good team wins.</li><li>On the third day, each nominated player must nominate again. If they do not, the Storyteller will nominate on their behalf, or declare that that player's team loses.</li><li>If just three players are alive when the third day nominations begin, the group chooses which player nominates first. If no one nominates, the day ends and evil wins.</li></ul>`,
+        ability: 'Nominees die, but may nominate again immediately (on day 3, they must). After day 3, evil wins. [All Minions are Riot]',
         flavor: '"Larga vida a la revolución! Mi revolucion!"',
+        examples: `<p>Alex nominates Lewis. Lewis dies and nominates Ben. Ben dies and nominates Marianna. Marianna dies and nominates Lachlan. Lachlan dies and does not nominate. Four players died today.</p><p>On the third day, a Riot player is nominated. They die and nominate the Amnesiac, who dies and nominates the Knight, who dies and nominates a Riot player. The game ends immediately, as all Riot players are dead.</p>`,
+        howToRun: `<p>While setting up the game, before putting the character tokens in the bag, replace all Minion tokens with Riot tokens. During the first night, skip the Minion Info step. During the Demon Info step, wake all Riot players and allow them to make eye contact. Show each Riot player three character bluffs, then put them to sleep.</p><p>Each time a player is nominated, they <strong>die</strong>. Declare that they are dead, and add a shroud immediately. Tell them that they may nominate again. Publicly count down "3... 2... 1..." and if they nominate before their time runs out, repeat this process for the new nominee <i>(they <strong>die</strong>, may nominate etc.)</i> If they do not nominate before their time runs out, the day ends.</p><p>On the third day, nominated players <strong>die</strong> and must nominate again. If the day ends with more than two players alive, evil wins.</p><p class="callout-box">Optional Rule: When Riot is in play, the dead may not be nominated. (This is more fun, and is the original intent of Riot.)</p>`,
         group: "Demon",
         script: "exp"
     },
     {
         name: "Scapegoat",
-        intro: "The Scapegoat is executed instead of an ally.",
-        ability: '"If a player of your alignment is executed, you might be executed instead."',
+        intro: "",
+        ability: 'If a player of your alignment is executed, you might be executed instead.',
         flavor: '"Good evening! Thank you for inviting me to the ball. I\'m not from around here, but you sure seem like a friendly bunch, by golly. I\'m sure we\'ll get along just dandy. What\'s all that rope for?"',
         group: "Traveller",
         script: "tb"
     },
     {
         name: "Gunslinger",
-        intro: "The Gunslinger kills players who vote.",
-        ability: '"Each day, after the 1st vote has been tallied, you may choose a player that voted: they die."',
+        intro: "",
+        ability: 'Each day, after the 1st vote has been tallied, you may choose a player that voted: they die.',
         flavor: '"It\'s time someone took matters into their own hands. That someone... is me."',
         group: "Traveller",
         script: "tb"
     },
     {
         name: "Beggar",
-        intro: "The Beggar can not vote unless someone gives them a token to use, but they learn if the player that does so is good or evil.",
-        ability: '"You must use a vote token to vote. If a dead player gives you theirs, you learn their alignment. You are sober and healthy."',
+        intro: "",
+        ability: 'You must use a vote token to vote. If a dead player gives you theirs, you learn their alignment. You are sober and healthy.',
         flavor: '"Alms for the poor, good Sir? Spare a coin, Madam? Thank you. God bless! You\'re a right kind soul and no mistake! I\'ll have some swanky nosh tonight, I will!"',
         group: "Traveller",
         script: "tb"
     },
     {
         name: "Bureaucrat",
-        intro: "The Bureaucrat gives extra votes to a player of their choice.",
-        ability: '"Each night, choose a player (not yourself): their vote counts as 3 votes tomorrow."',
+        intro: "",
+        ability: 'Each night, choose a player (not yourself): their vote counts as 3 votes tomorrow.',
         flavor: '"Sign here please. And here. And here. Aaaaaaaaand here. This should all be sorted and tallied by the end of the day, assuming everyone\'s signatures are legible. We haven\'t had a mix-up in the paperwork for ages. Yesterday noon, if memory serves..."',
         group: "Traveller",
         script: "tb"
     },
     {
         name: "Thief",
-        intro: "The Thief steals votes from a player, making their vote count negatively.",
-        ability: '"Each night, choose a player (not yourself): their vote counts negatively tomorrow."',
+        intro: "",
+        ability: 'Each night, choose a player (not yourself): their vote counts negatively tomorrow.',
         flavor: '"I aint done nuffink. I weren\'t even in dat alley last night! It weren\'t me what stole Mayor Bruno\'s briefcase wiv all dem fancy dockoments innit. Besides, it was too \'eavy to carry far."',
         group: "Traveller",
         script: "tb"
     },
     {
         name: "Apprentice",
-        intro: "The Apprentice has either a Townsfolk or a Minion ability.",
-        ability: '"On your 1st night, you gain a Townsfolk ability (if good) or a Minion ability (if evil)."',
+        intro: "",
+        ability: 'On your 1st night, you gain a Townsfolk ability (if good) or a Minion ability (if evil).',
         flavor: '"For years have I traveled, studying the ways of The Craft. Which craft, you ask? Simply that of the simple folk. Nothing to worry about. Not yet."',
         group: "Traveller",
         script: "bmr"
     },
     {
         name: "Matron",
-        intro: "The Matron chooses which players sit where.",
-        ability: '"Each day, you may choose up to 3 sets of 2 players to swap seats. Players may not leave their seats to talk in private."',
+        intro: "",
+        ability: 'Each day, you may choose up to 3 sets of 2 players to swap seats. Players may not leave their seats to talk in private.',
         flavor: '"Miss Featherbottom, be quiet. Master Rutherford, a teacup needs just the four fingers, please. I know you are a father of nine, but age, or lack there-of as the case may be, is never an excuse for poor manners."',
         group: "Traveller",
         script: "bmr"
     },
     {
         name: "Voudon",
-        intro: "The Voudon gives the voting power to the dead instead of the living.",
-        ability: '"Only you & the dead can vote. They don\'t need a vote token to do so. A 50% majority isn\'t required."',
+        intro: "",
+        ability: 'Only you & the dead can vote. They don\'t need a vote token to do so. A 50% majority isn\'t required.',
         flavor: '"Bien venu. Sit down. Breathe deep. Enter the land of the dead. See with their eyes. Speak with their voice. Yon sel lang se janm ase."',
         group: "Traveller",
         script: "bmr"
     },
     {
         name: "Judge",
-        intro: "The Judge can determine if an execution succeeds or not, regardless of who voted.",
-        ability: '"Once per game, if another player nominated, you may choose to force the current execution to pass or fail."',
+        intro: "",
+        ability: 'Once per game, if another player nominated, you may choose to force the current execution to pass or fail.',
         flavor: '"I find the defendant guilty of the crimes of murder, fraud, arson, larceny, impersonating an officer of the law, practicing medicine without a license, slander, regicide, and littering."',
         group: "Traveller",
         script: "bmr"
     },
     {
         name: "Bishop",
-        intro: "The Bishop prevents players from nominating at all. Instead, the Storyteller does all nominating.",
-        ability: '"Only the Storyteller can nominate. At least 1 opposing player must be nominated each day."',
+        intro: "",
+        ability: 'Only the Storyteller can nominate. At least 1 opposing player must be nominated each day.',
         flavor: '"In nomine Patris, et Filii, et Spiritus Sancti… Nos mos Dei. Deus vult de nobis."',
         group: "Traveller",
         script: "bmr"
     },
     {
         name: "Butcher",
-        intro: "The Butcher allows a second execution to occur per day.",
-        ability: '"Each day, after the 1st execution, you may nominate again."',
+        intro: "",
+        ability: 'Each day, after the 1st execution, you may nominate again.',
         flavor: '"It tastes like chicken. More please."',
         group: "Traveller",
         script: "sv"
     },
     {
         name: "Bone Collector",
-        intro: "The Bone Collector temporarily gives dead players their ability back.",
-        ability: '"Once per game, at night*, choose a dead player: they regain their ability until dusk."',
+        intro: "",
+        ability: 'Once per game, at night*, choose a dead player: they regain their ability until dusk.',
         flavor: '"I collect many things. Hair. Teeth. Clothes. Fragments of poems. The dreams of lost lovers. My secret arts are not for you to know but my fee is a mere pittance. Bring me the blood of a noblewoman who died of heartbreak under a full moon, and you shall have your answers."',
         group: "Traveller",
         script: "sv"
     },
     {
         name: "Harlot",
-        intro: "The Harlot learns the character of whoever agrees to reveal it, but at great risk for them both.",
-        ability: '"Each night*, choose a living player: if they agree, you learn their character, but you both might die."',
+        intro: "",
+        ability: 'Each night*, choose a living player: if they agree, you learn their character, but you both might die.',
         flavor: '"Enchanté, Sailor. You look like you need someone to really listen to your troubles. I\'m a good listener. Very, very good."',
         group: "Traveller",
         script: "sv"
     },
     {
         name: "Barista",
-        intro: "The Barista either makes people sober & healthy, or allows them to act twice as much as normal.",
-        ability: '"Each night, until dusk, 1) a player becomes sober, healthy & gets true info, or 2) their ability works twice. They learn which."',
+        intro: "",
+        ability: 'Each night, until dusk, 1) a player becomes sober, healthy & gets true info, or 2) their ability works twice. They learn which.',
         flavor: '"There really is no cause to worry because when you think about it we are all capable and qualified and smart enough to grab the bull by the horns and sit down and figure this out like the reasonable adults we are by the way would you like another cup it really is the most amazing beverage they say it is from the east but anyway where were we ah yes going for a jog and really nutting out this demon business which we can do with just a little teensy mental boost and some logical thinking for example Senior Hu here is a regular customer and therefore quite trustworthy and would anyone like another cup?"',
         group: "Traveller",
         script: "sv"
     },
     {
         name: "Deviant",
-        intro: "The Deviant can avoid being Exiled - as long as the Deviant player has been amusing today.",
-        ability: '"If you were funny today, you can not be exiled."',
+        intro: "",
+        ability: 'If you were funny today, you can not be exiled.',
         flavor: '"Twas the lady\'s quip, forsooth."',
         group: "Traveller",
         script: "sv"
     },
     {
         name: "Gangster",
-        intro: "The Gangster lets their neighbours kill each other.",
-        ability: '"Once per day, you may choose to kill a living neighbor, if your other living neighbor agrees."',
+        intro: "",
+        ability: 'Once per day, you may choose to kill a living neighbor, if your other living neighbor agrees.',
         flavor: '"I like your shoes. It would be such a shame if you had a little accident, and they got ruined. Now that you mention it, I like your cufflinks too."',
         group: "Traveller",
         script: "exp"
     },
     {
         name: "Doomsayer",
-        intro: "The Doomsayer speeds up large games that are going too slowly.",
-        ability: '"If 4 or more players live, each living player may publicly choose (once per game) that a player of their own alignment dies."',
+        intro: "",
+        ability: 'If 4 or more players live, each living player may publicly choose (once per game) that a player of their own alignment dies.',
         flavor: '"And on the Seventh Day, there shall be a great flood and a pestilence upon the People of the Village of the Ravens! The dead shall rise and the living shall repent! O Woe! O Unholy day! Only by great sacrifice shall they prevail! So sayeth the Sages of Nostros and so sayeth I."',
         group: "Fabled",
         script: "fabled"
     },
     {
         name: "Angel",
-        intro: "Use the Angel to help new players have fun when there are one or two new players in a group of veterans.",
-        ability: '"Something bad might happen to whoever is most responsible for the death of a new player."',
+        intro: "",
+        ability: 'Something bad might happen to whoever is most responsible for the death of a new player.',
         flavor: '"Let those who are without sin dare to raise their hand to my chosen, for I shall strike such fools down with the fury and righteousness of a thousand storms."',
         group: "Fabled",
         script: "fabled"
     },
     {
         name: "Buddhist",
-        intro: "Use the Buddhist to help new players have fun when there are one or two veterans in a group of new players.",
-        ability: '"For the first 2 minutes of each day, veteran players may not talk."',
+        intro: "",
+        ability: 'For the first 2 minutes of each day, veteran players may not talk.',
         flavor: '"You throw thorns. Falling in my silence, they become flowers."',
         group: "Fabled",
         script: "fabled"
     },
     {
         name: "Hell's Librarian",
-        intro: "Hell's Librarian allows a softly-spoken Storyteller to be heard when needed.",
-        ability: '"Something bad might happen to whoever talks when the Storyteller has asked for silence."',
+        intro: "",
+        ability: 'Something bad might happen to whoever talks when the Storyteller has asked for silence.',
         flavor: '"Shhhhhh. Please be quiet. It is best not to disturb the Librarian. I\'ve heard it has a temper."',
         group: "Fabled",
         script: "fabled"
     },
     {
         name: "Revolutionary",
-        intro: "The Revolutionary helps disadvantaged players participate.",
-        ability: '"2 neighboring players are known to be the same alignment. Once per game, 1 of them registers falsely."',
+        intro: "",
+        ability: '2 neighboring players are known to be the same alignment. Once per game, 1 of them registers falsely.',
         flavor: '"United we feigned.<br><br>Divided, we stalled."',
         group: "Fabled",
         script: "fabled"
     },
     {
         name: "Fiddler",
-        intro: "The Fiddler decides a winner if the game must end due to time constraints, or to a stalemate. Evil wins on ties.",
-        ability: '"Once per game, the Demon secretly chooses an opposing player: all players choose which of these 2 players win."',
+        intro: "",
+        ability: 'Once per game, the Demon secretly chooses an opposing player: all players choose which of these 2 players win.',
         flavor: '"I\'ll wager mi lyef ye cannae best me in a fiddle contest, ye boss-eyed snook! We\'ll go out on the lash, get the pub jammers an\' have a right craic. I\'ll be layin\' ma boots into ya come mornin\' ye rumbly muppet."',
         group: "Fabled",
         script: "fabled"
     },
     {
         name: "Toymaker",
-        intro: "The Toymaker makes Teensyville games (5 to 6 player games) longer and more exciting.",
-        ability: '"The Demon may choose not to attack & must do this at least once per game. Evil players get normal starting info."',
+        intro: "",
+        ability: 'The Demon may choose not to attack & must do this at least once per game. Evil players get normal starting info.',
         flavor: '"It buzzes! It walks down stairs! It keeps you warm at night! It tastes like sugar! The kiddies love it! Introducing... the brand new...Warm\'o-buzzy-wuzzy-walk\'a\'bot-thingy-contraption! Fun for all ages!"',
         group: "Fabled",
         script: "fabled"
     },
     {
         name: "Storm Catcher",
-        intro: "The Storm Catcher allows the Storyteller to build a game focused on a particular good character.",
-        ability: '"Name a good character. If in play, they can only die by execution, but evil players learn which player it is."',
+        intro: "",
+        ability: 'Name a good character. If in play, they can only die by execution, but evil players learn which player it is.',
         flavor: '"At dawn, the temple\'s long shadow creeps to the fountain. At dusk, the obelisk blocks the red glare, cooling warm water under the archway. All lines converge here. A storm is coming, and this, this pebbled and lush and holy place between the apple trees, is the eye."',
         group: "Fabled",
         script: "fabled"
     },
     {
         name: "Fibbin",
-        intro: "The Fibbin adds misinformation to a game that has no possibility of misinformation. (For Script games only)",
-        ability: '"Once per game, 1 good player might get incorrect information."',
+        intro: "",
+        ability: 'Once per game, 1 good player might get incorrect information.',
         flavor: '"Tee-hee-hee.<br><br>Tee. Hee. Hee."',
         group: "Fabled",
         script: "fabled"
     },
     {
         name: "Duchess",
-        intro: "The Duchess adds information to a game that has little information for the good players to go on. (For Script games only)",
-        ability: '"Each day, 3 players may choose to visit you. At night*, each visitor learns how many visitors are evil, but 1 gets false info."',
+        intro: "",
+        ability: 'Each day, 3 players may choose to visit you. At night*, each visitor learns how many visitors are evil, but 1 gets false info.',
         flavor: '"We shall entertain between the hours of 6 and 7 precisely. Tea at 6:15. Scones at 6:45. Do not be late. Formal wear applies, as always."',
         group: "Fabled",
         script: "fabled"
     },
     {
         name: "Sentinel",
-        intro: "Add the Sentinel to your script to keep the number of Outsiders in play mysterious. (For Script games only.)",
-        ability: '"There might be 1 extra or 1 fewer Outsider in play."',
+        intro: "",
+        ability: 'There might be 1 extra or 1 fewer Outsider in play.',
         flavor: '"Name, please.<br><br>Papers, please.<br><br>Weapons, please."',
         group: "Fabled",
         script: "fabled"
     },
     {
         name: "Spirit Of Ivory",
-        intro: "The Spirit of Ivory prevents games from containing too many evil characters. (For Script games only)",
-        ability: '"There can\'t be more than 1 extra evil player."',
+        intro: "",
+        ability: 'There can\'t be more than 1 extra evil player.',
         flavor: '"The Wasteland calls. Bones rise to flesh, then fall to dust. The great spirit grows. The great spirit watches. The great spirit guides. The human listens, or the human is no more."',
         group: "Fabled",
         script: "fabled"
     },
     {
         name: "Djinn",
-        intro: "Add the Djinn to all games with a jinx icon on the script. The Djinn resolves jinxes by creating a unique rule. (For Script games only.)",
-        ability: '"Use the Djinn\'s special rule. All players know what it is."',
+        intro: "",
+        ability: 'Use the Djinn\'s special rule. All players know what it is.',
         flavor: 'نحن لسنا هنا.<br><br> انت لست حقيقي<br><br>. كل شيء هو وهم.<br><br> أسئلتك هي جبل نار في يوم صافٍ.',
         group: "Fabled",
         script: "fabled"
@@ -1614,11 +1659,23 @@ $(".all .token").click(function() {
     function populateModal() {
         $(".img-flavor-container .token").attr("src",`./img/${name}.png`);
         $(".img-flavor-container .token").attr("alt",`The icon for the ${altName} character`);
-        $(".name").html(`${orignalName}`)
-        $(".intro").html(`${intro}`);
+        $(".name").html(`${orignalName}`);
+        if (intro) {
+            $(".intro").html(`${intro}`);
+        } else {
+            $(".intro").html(`Extra info coming soon...`);
+        }
         $(".ability").html(`${ability}`);
         $(".flavor").html(`${flavor}`);
-        $(".examples").html(`${examples}`);
-        $(".how-to-run").html(`${howToRun}`); 
+        if (examples) {
+            $(".examples").html(`${examples}`);
+        } else {
+            $(".examples").html(`Examples coming soon...`);
+        }
+        if (howToRun) {
+            $(".how-to-run").html(`${howToRun}`);
+        } else {
+            $(".how-to-run").html(`How to Run coming soon...`);
+        }
     } 
 })

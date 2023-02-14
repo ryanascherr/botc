@@ -8,7 +8,7 @@
     --background-gray: #C7D4E7;
     /* --background-gray: #DCDCDC; */
     --speech-bubble: #E7DAC7;
-  }
+}
 
 html {
     scroll-behavior: smooth;
@@ -20,6 +20,7 @@ h1 {
 
 h1, h2, h3 {
     text-align: center;
+    font-family: Palatino, serif;
 }
 
 body {
@@ -31,6 +32,7 @@ header {
     top: 0;
     background: var(--purple);
     padding: 15px;
+    z-index: 10;
 }
 
 main {
@@ -58,6 +60,11 @@ ul {
     color: white;
     margin: 5px;
     padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-bar a:hover {
+    text-decoration: none;
 }
 
 /* END NAV */
@@ -65,6 +72,7 @@ ul {
 
 #myModal {
     overflow-y: none;
+    z-index: 20;
 }
 
 /* The Modal (background) */
@@ -106,6 +114,10 @@ ul {
     max-width: 1000px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
+}
+
+.modal-content h1, .modal-content h2, .modal-content h3 {
+    font-family: Arial, Helvetica, sans-serif;
 }
   
 .close {
@@ -226,15 +238,15 @@ ul {
     margin: 5px;
 }
 
-/* .examples-run-container > div:first-child {
-    border-right: 1px solid black;
-} */
-
 /* END MODAL CONTENT */
 /* START OTHER */
 
 .all {
     margin-bottom: 50px;
+}
+
+.all h1, .all h2, .all h3 {
+    padding: 15px;
 }
 
 .all h2 {
@@ -246,6 +258,7 @@ ul {
 
 .all .token:hover {
     cursor: pointer;
+    transform: scale(1.1) rotate(15deg);
 }
 
 #trouble-brewing, .trouble-brewing .inner-script-nav a {
