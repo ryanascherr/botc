@@ -1214,130 +1214,221 @@ let characters = [
         script: "exp"
     },
     {
-        name: "Scapegoat",
-        intro: "",
-        ability: 'If a player of your alignment is executed, you might be executed instead.',
-        flavor: '"Good evening! Thank you for inviting me to the ball. I\'m not from around here, but you sure seem like a friendly bunch, by golly. I\'m sure we\'ll get along just dandy. What\'s all that rope for?"',
-        group: "Traveller",
-        script: "tb"
-    },
-    {
-        name: "Gunslinger",
-        intro: "",
-        ability: 'Each day, after the 1st vote has been tallied, you may choose a player that voted: they die.',
-        flavor: '"It\'s time someone took matters into their own hands. That someone... is me."',
-        group: "Traveller",
-        script: "tb"
-    },
-    {
-        name: "Beggar",
-        intro: "",
-        ability: 'You must use a vote token to vote. If a dead player gives you theirs, you learn their alignment. You are sober and healthy.',
-        flavor: '"Alms for the poor, good Sir? Spare a coin, Madam? Thank you. God bless! You\'re a right kind soul and no mistake! I\'ll have some swanky nosh tonight, I will!"',
+        name: "Thief",
+        description: "The thief steals votes from a player, making their vote count negatively.",
+        intro: `<ul><li>When a player chosen by the Thief votes, the vote tally goes down by one instead of up by one. This happens every time that player votes that day</li><li>The player with the negative vote changes back to having a positive vote immediately if the Thief dies, including if the Thief is exiled, because the Thief loses their ability.</li><li>Exiles are never affected by abilities, so the player with the negative vote can support exiles unaffected by the Thief's ability.</li><li>Since the Storyteller counts the number of votes out loud as they move their hand around the circle, all players will know which player the Thief chose.</li></ul>`,
+        ability: 'Each night, choose a player (not yourself): their vote counts negatively tomorrow.',
+        flavor: '"I aint done nuffink. I weren\'t even in dat alley last night! It weren\'t me what stole Mayor Bruno\'s briefcase wiv all dem fancy dockoments innit. Besides, it was too \'eavy to carry far."',
+        examples: `<p>The Thief chooses Marianna. The next day, while tallying the first vote, the Storyteller counts "1... 2... 3... 2... 3... 4... 5." The nominated player now has five votes for their execution, and the nomination process continues.</p><p>The Thief chooses Abdallah. Abdallah votes for an execution, so the tally of votes is four, instead of the tally of six if Abdallah was not affected by the Thief. Since ten players are alive, the nominee is not executed today. Later that day, the players are considering whether to exile the Gunslinger. Abdallah raises his hand to support the exile, which counts positive.</p><p>The Thief chooses Marianna. The Bureaucrat also chooses Marianna. The next day, Marianna's vote counts as negative three votes.</p>`,
+        howToRun: `<p>Each night, wake the Thief. They point at any player. Mark the chosen player with the Thief's <strong>NEGATIVE VOTE</strong> reminder. Put the Thief to sleep.</p><p>Each time you tally the vote of a player marked <strong>NEGATIVE VOTE</strong>, count it as subtracting one vote instead of adding one vote. <i>(Count this out loud, as normal.)</i></p>`,
         group: "Traveller",
         script: "tb"
     },
     {
         name: "Bureaucrat",
-        intro: "",
+        description: "The Bureaucrat gives extra votes to a player of their choice.",
+        intro: `<ul><li>When a player chosen by the Bureaucrat votes, that vote counts as three votes. This happens every time that player votes that day.</li><li>The player with the triple vote loses it immediately if the Bureaucrat dies, including if the Bureaucrat is exiled, because the Bureaucrat loses their ability.</li><li>Exiles are never affected by abilities, so the player with the triple vote can only support exiles once, not three times.</li><li>Since the Storyteller counts the number of votes out loud as they move their hand around the circle, all players will know which player the Bureaucrat chose.</ul>`,
         ability: 'Each night, choose a player (not yourself): their vote counts as 3 votes tomorrow.',
         flavor: '"Sign here please. And here. And here. Aaaaaaaaand here. This should all be sorted and tallied by the end of the day, assuming everyone\'s signatures are legible. We haven\'t had a mix-up in the paperwork for ages. Yesterday noon, if memory serves..."',
+        examples: `<p>The Bureaucrat chooses Evin. The next day, when the first vote
+        is being tallied, the Storyteller counts "1... 2... 3... 4-5-6... 7." The nominated player now has seven votes for their execution, and the nomination process continues.</p><p>The Bureaucrat chooses Alex. The next day, Alex has a triple vote, which he uses during four nominations.</p><p>The Bureaucrat chooses Doug, who is dead. The next day, Doug uses his vote token to vote, and his vote counts as triple.</p>`,
+        howToRun: `<p>Each night, wake the Bureaucrat. They point at any player.
+        Mark the chosen player with the Bureaucrat's <strong>3 VOTES</strong> reminder. Put the Bureaucrat to sleep.</p><p>Each time you tally the vote of a player marked <strong>3 VOTES</strong>, count it as three votes instead of one. <i>(Count this out loud, as normal.)</i></p>`,
         group: "Traveller",
         script: "tb"
     },
     {
-        name: "Thief",
-        intro: "",
-        ability: 'Each night, choose a player (not yourself): their vote counts negatively tomorrow.',
-        flavor: '"I aint done nuffink. I weren\'t even in dat alley last night! It weren\'t me what stole Mayor Bruno\'s briefcase wiv all dem fancy dockoments innit. Besides, it was too \'eavy to carry far."',
+        name: "Gunslinger",
+        description: "The Gunslinger kills players who vote.",
+        intro: `<ul><li>Each day, after the first vote for execution has been tallied,
+        the Gunslinger may publicly choose a player that just voted
+        to die immediately. The Gunslinger does not have to kill a
+        player—it is entirely up to them. Whether they use their ability
+        or not, the Gunslinger cannot kill any further players that day.</li><li>It is the Gunslinger's responsibility to speak up and let the Storyteller know that they wish to use their ability.</li><li>Since exiles are not affected by character abilities in any way, the Gunslinger cannot use their ability to kill a player that supports an exile.</li></ul>`,
+        ability: 'Each day, after the 1st vote has been tallied, you may choose a player that voted: they die.',
+        flavor: '"It\'s time someone took matters into their own hands. That someone... is me."',
+        examples: `<p>The Imp has been nominated. There are ten players alive,
+        and five votes for the Imp, so the Imp is about to die.
+        The Gunslinger chooses a voting player to die. That player dies
+        but the day continues, with the Imp still about to die.</p><p>The players exile the Scapegoat. Then, the Butler is nominated for execution and gets one vote. This is the first nomination for execution, since the Scapegoat's exile does not count. The Gunslinger chooses to kill the single voting player. Later that
+        day, the Saint is nominated and six players vote. The Gunslinger cannot use their ability now because this is not the first vote for execution today.</p><p>The Empath voted, and their vote counted negatively due to the Thief. The Gunslinger kills the Empath.</p>`,
+        howToRun: `<p>Each day, immediately after the first vote for execution is tallied, the Gunslinger can declare that they wish to use their ability. If so, the Gunslinger points at any player who voted for this
+        execution. The chosen player <strong>dies</strong>.</p><p class="callout-box">If the Gunslinger is a new player, you may wish to remind them that they can use their ability.</p><p class="callout-box">When the Gunslinger wants to use their ability, you may need to ask all players who voted to raise their hand again, so the Gunslinger doesn't accidentally choose a player that didn't vote.</p>`,
+        group: "Traveller",
+        script: "tb"
+    },
+    {
+        name: "Scapegoat",
+        description: "The Scapegoat is executed instead of an ally.",
+        intro: `<ul><li>If the Scapegoat is evil, they might die instead of an evil player
+        dying. If the Scapegoat is good, they might die instead of a good player dying. When exactly this happens is up to the Storyteller. This can only happen due to an execution, not death by other means such as a Demon or Slayer.</li><li>The Scapegoat being killed still counts as an execution, so no more nominations occur today.</li><li>As always, players do not learn the alignment of the Scapegoat when they die.</li></ul>`,
+        ability: 'If a player of your alignment is executed, you might be executed instead.',
+        flavor: '"Good evening! Thank you for inviting me to the ball. I\'m not from around here, but you sure seem like a friendly bunch, by golly. I\'m sure we\'ll get along just dandy. What\'s all that rope for?"',
+        examples: `<p>The Fortune Teller is about to be executed, but the Storyteller chooses to execute the good Scapegoat instead. The Fortune Teller lives and the Scapegoat dies. That night, the Undertaker learns
+        that a Scapegoat was executed today.</p><p>The Poisoner is about to be executed, but the Storyteller chooses to execute the evil Scapegoat instead. The Storyteller could have let the Poisoner die as normal, but chose not to.</p><p>The Spy is about to be executed. The good Scapegoat dies instead, because the Spy is registering as good.</p>`,
+        howToRun: `<p>If a player of the same alignment as the Scapegoat would be
+        executed, you may choose that the Scapegoat is executed instead. The Scapegoat <strong>dies</strong>.</p><p class="callout-box">It is best to use the Scapegoat's ability before the final day, because a Scapegoat that remains alive on the final day will almost certainly be exiled. You should always use an evil Scapegoat's ability to prevent evil from losing the game.</p>`,
+        group: "Traveller",
+        script: "tb"
+    },
+    {
+        name: "Beggar",
+        description: "The Beggar cannot vote unless someone gives them a token.",
+        intro: `<ul><li>The Beggar cannot raise their hand to vote at all unless they
+        have a vote token.</li><li>When they do vote, they lose one vote token. If they have more than one, they may only use one at a time.</li><li>Only a dead player may give their vote token to the Beggar, after which that dead player cannot vote. Each dead player decides for themself whether to give the Beggar their vote token. No one, including the Beggar, may move a player's vote token on their behalf.</li><li>When a player gives their vote token to the Beggar, the Beggar learns whether that player is good or evil.</li><li>The Beggar can still nominate freely, and can still vote for an exile freely, because exiles are not affected by abilities.</li><li>If the Beggar dies, they gain one vote token to use while dead, just like any other character would. However, the Beggar loses all their previously acquired vote tokens.</li><li>If the Beggar would become drunk or poisoned, they do not.</li><li>The ability to donate vote tokens is unique to the Beggar ability. Players may not give their vote token to a player that is
+        not the Beggar, whether or not a Beggar is in play.</li></ul>`,
+        ability: 'You must use a vote token to vote. If a dead player gives you theirs, you learn their alignment. You are sober and healthy.',
+        flavor: '"Alms for the poor, good Sir? Spare a coin, Madam? Thank you. God bless! You\'re a right kind soul and no mistake! I\'ll have some swanky nosh tonight, I will!"',
+        examples: `<p>The Beggar cannot vote. On the fourth day, Sarah gives her vote token to the Beggar. The Beggar may now vote once and learns that Sarah is good. The Beggar is evil and tells the group that
+        Sarah is evil.</p><p>The good Beggar has three vote tokens. Doug gives the Beggar his vote token, and the Beggar learns that Doug is evil. That day, the Beggar dies and loses all their vote tokens except for one.</p>`,
+        howToRun: `<p>The Beggar cannot vote unless they have a vote token. They lose
+        one vote token each time they vote.</p><p>During the day, a dead player can declare that they give their vote token to the Beggar. Transfer the vote token to the Beggar and privately tell the Beggar the alignment of that player.</p>`,
         group: "Traveller",
         script: "tb"
     },
     {
         name: "Apprentice",
-        intro: "",
+        description: "The Apprentice has either a Townsfolk or a Minion ability.",
+        intro: `<ul><li>A good Apprentice gains a Townsfolk ability. An evil Apprentice gains a Minion ability. They have this ability until they die.</li><li>The Apprentice learns their ability on their first night,
+        and they may act that night if the character whose ability they gain would do so.</li><li>Only abilities listed on the character sheet may be gained.</li><li>If the Apprentice gains an ability that normally only functions on the first night of the game, such as the Grandmother's, it functions on the Apprentice's first night instead.</li><li>The Apprentice does not literally become the character whose ability they gain. They are the Apprentice, a Traveller, so they may be exiled but not executed, and they do not count toward the number of alive players to see if evil wins due to just two players being alive. Also, other characters' abilities that detect characters would detect the Apprentice as the Apprentice.</li></ul>`,
         ability: 'On your 1st night, you gain a Townsfolk ability (if good) or a Minion ability (if evil).',
         flavor: '"For years have I traveled, studying the ways of The Craft. Which craft, you ask? Simply that of the simple folk. Nothing to worry about. Not yet."',
+        examples: `<p>The evil Apprentice gains the Assassin ability. That night, they kill the Fool.</p><p>The good Apprentice gains the Fool ability. They are exiled and do not die. While the exile process itself cannot be affected by abilities, the Traveller dies after the exile is decided. In this case the Fool would die, but remains alive.</p><p>The good Apprentice gains the Chambermaid ability. From now on, they learn who wakes at night. Later, the Gambler guesses that the Apprentice is the Chambermaid. The Gambler dies, because the Apprentice is not the Chambermaid.</p>`,
+        howToRun: `<p>During the first night after the Apprentice enters play, wake the Apprentice. Show them the <strong>YOU ARE</strong> info token, then a Townsfolk or Minion token. In the Grimoire, replace
+        the Apprentice token with that character token, and mark them with the <strong>IS THE APPRENTICE</strong> reminder. That player remains the Apprentice but gains the ability of their character token.</p><p class="callout-box">You will almost certainly want to choose a not-in-play character ability, because there is only one of each character token and the Apprentice needs to use that token.</p>`,
         group: "Traveller",
         script: "bmr"
     },
     {
         name: "Matron",
-        intro: "",
+        description: "The Matron chooses where players sit.",
+        intro: `<ul><li>The Matron may swap two players' seating positions, up to three times per day. The new seating order is permanent, unless changed again by the Matron.</li><li>The same player may be moved multiple times.</li><li>Some players may find moving difficult due to a physical disability or impediment. In these cases, they are immune to the Matron's ability and can stay put.</li><li>With the Matron in play, players may not talk privately except with their immediate neighbors while sitting down.
+        Players may not leave their seat to whisper something to any player, and may not even talk about the game to each other when going to the bathroom, and so on. Players should self-police this.</li><li>If the Matron swaps just one or two sets of players, they may not swap another set of players later that day.</li></ul>`,
         ability: 'Each day, you may choose up to 3 sets of 2 players to swap seats. Players may not leave their seats to talk in private.',
         flavor: '"Miss Featherbottom, be quiet. Master Rutherford, a teacup needs just the four fingers, please. I know you are a father of nine, but age, or lack there-of as the case may be, is never an excuse for poor manners."',
-        group: "Traveller",
-        script: "bmr"
-    },
-    {
-        name: "Voudon",
-        intro: "",
-        ability: 'Only you & the dead can vote. They don\'t need a vote token to do so. A 50% majority isn\'t required.',
-        flavor: '"Bien venu. Sit down. Breathe deep. Enter the land of the dead. See with their eyes. Speak with their voice. Yon sel lang se janm ase."',
+        examples: `<p>The good Matron swaps the seating position of the player they think is the Demon, so that player is far away from the player they think is the Minion. They may not whisper to each other now.</p><p>The evil Matron swaps their seat with another player so the Matron is sitting next to the Tea Lady. This way, the two of them can whisper to each other, and the Tea Lady's ability does not work.</p>`,
+        howToRun: `<p>Players who leave their seats cannot talk about the game to other
+        players until they return.</p><p>Each day, the Matron may choose two players and declare that they swap seating positions. Ask them to do so. Swap their character tokens and any reminders they have in the Grimoire. The Matron may do this up to three times, but all swaps happen one after the other.</p>`,
         group: "Traveller",
         script: "bmr"
     },
     {
         name: "Judge",
-        intro: "",
+        description: "The Judge can determine whether an execution succeeds or not, regardless of who voted.",
+        intro: `<ul><li>The Judge can decide to pardon a player that they think is innocent, to condemn a player that they think is guilty, or vice versa.</li><li>If the nominee is pardoned, then they are not executed today, and none of the votes for them count. If the nominee is condemned, then they are executed immediately, regardless of how many votes they received, and regardless of whether another player was about to die by execution. Then the day ends, because there can normally only be one execution per day.</li><li>The Judge may use their ability during or after the votes are tallied. However, once a new player has been nominated, then the Judge may only use their ability on this new nominee. The Judge may only use their ability once, and only if a different player made a nomination.</li></ul>`,
         ability: 'Once per game, if another player nominated, you may choose to force the current execution to pass or fail.',
         flavor: '"I find the defendant guilty of the crimes of murder, fraud, arson, larceny, impersonating an officer of the law, practicing medicine without a license, slander, regicide, and littering."',
+        examples: `<p>The Slayer was about to die, but the Po is nominated and every alive player votes, so now the Po is about to die. The evil Judge decides that the Po's execution fails. So, as before, the Slayer is
+        about to die, and the nomination process continues.</p><p>The good Judge nominates the Professor. Nobody votes, but the Judge may not use their ability. Later, a Traveller is considered for exile. Once again, the Judge may not use their ability because abilities do not affect exiles. The Grandmother nominates the
+        Goon for execution. The Goon gets only one vote, but the Judge decides that the Goon is executed immediately.</p>`,
+        howToRun: `<p>At any time during a nomination for execution—from the moment that the nomination is declared to the moment before a new player is nominated for execution—the Judge can declare
+        that this execution succeeds or fails. If the Judge declares that it succeeds, the nominated player is executed and you may proceed to the night phase <i>(as there may only be one execution per day)</i>.
+        If the Judge declares that it fails, the nominated player is no longer about to die and they are treated as receiving zero votes for execution, and the nomination process continues. <strong>The Judge loses their ability</strong>—put the Judge's <strong>NO ABILITY</strong> reminder token by the Judge token.</p>`,
+        group: "Traveller",
+        script: "bmr"
+    },
+    {
+        name: "Voudon",
+        description: "The Voudon lets the dead vote as if they were alive, but prevents alive players from voting.",
+        intro: `<ul><li>The dead and the Voudon may vote as many times per day as they wish. They do not need a vote token to vote, and do not lose their vote token when they do so. Alive players cannot
+        vote. It is not the case that they may put their hand up but the votes don't count—their hands must stay down during voting.</li><li>The number of votes required to execute a player is no longer half or more of the alive players. The player with the most votes is executed each day, but even a single vote is enough to execute a player if no other player gets more votes.</li><li>The Voudon does not alter who can make nominations. As normal, alive players may make nominations, and dead players may not. Since Travellers are exiled, not executed, all players, alive or dead, may support exiling the Voudon or other Travellers.</li><li>If a player is about to die and then the Voudon is exiled, that player is still about to die and nominations continue, but alive players vote as normal. If a later nomination gets more votes and it tallies to half or more of the alive players, this new player is about to die instead.</li></ul>`,
+        ability: 'Only you & the dead can vote. They don\'t need a vote token to do so. A 50% majority isn\'t required.',
+        flavor: '"Bien venu. Sit down. Breathe deep. Enter the land of the dead. See with their eyes. Speak with their voice. Yon sel lang se janm ase."',
+        examples: `<p>There are twelve players alive and three dead. An alive Innkeeper nominates the Moonchild. Of the four players that can vote—the Voudon and the three dead players—three do. All other nominees today get fewer than three votes, so the Moonchild dies.</p><p>It is the first day. Only the Voudon can vote, but does not. The players call for the Voudon to be exiled. Five players support the exile, and seven oppose. The Voudon lives.</p><p>Two dead players vote for the Mastermind to be executed. Then the Voudon, the dead Fool, and the apparently dead Zombuul all vote for the Gossip. The Gossip is executed.</p>`,
+        howToRun: `<p>During votes for execution, only dead players and the Voudon may raise their hand to vote. The dead may vote even if they have no vote token, and voting does not use a vote token. If a nominee
+        gets at least one vote, they are about to die by execution until a different player gets more votes.</p>`,
         group: "Traveller",
         script: "bmr"
     },
     {
         name: "Bishop",
-        intro: "",
+        description: "The Bishop prevents players from nominating at all. Instead, the Storyteller does all nominating.",
+        intro: `<ul><li>The Storyteller makes nominations during the nomination process instead of the players, and the Storyteller may nominate as few or as many players as they wish. To make things fair, they must nominate at least one player whose alignment is opposite the Bishop's alignment each day.</li><li>The Bishop does not alter who can and cannot vote. Each player may do so normally.</li><li>Since Travellers are exiled, not executed, any player may call for the Bishop or another Traveller to be exiled.</li></ul>`,
         ability: 'Only the Storyteller can nominate. At least 1 opposing player must be nominated each day.',
         flavor: '"In nomine Patris, et Filii, et Spiritus Sancti… Nos mos Dei. Deus vult de nobis."',
+        examples: `<p>The Bishop is good. On the first day, the Storyteller nominates the Demon, a Minion, and two Townsfolk. On the second day, the Storyteller nominates a Minion and an Outsider.</p><p>The Bishop is evil. The Storyteller has nominated nobody. However, the Storyteller must nominate at least one good player today, so they choose the Minstrel. The next day, the Storyteller nominates four good players and the Demon. The Bishop is exiled that day, and now the players may continue the nomination process normally.</p>`,
+        howToRun: `<p>Each dawn, mark the good Bishop with their <strong>NOMINATE EVIL</strong>
+        reminder, or mark the evil Bishop with their <strong>NOMINATE GOOD</strong> reminder.</p><p>During the nomination process for execution, the players cannot make nominations, but you can. <i>(Voting happens as normal.)</i> When you nominate a player whose alignment is opposite the alignment of the Bishop, remove the Bishop's reminder. You cannot end the nomination process if the Bishop is marked with their reminder.</p><p class="callout-box">Usually, you'll want to nominate about three to five players each day, with at least one of them being evil. You do not have to nominate the Demon each day, but you should nominate all alive players on the final day. Which players you nominate is up to you, but it's best to nominate more evil players if the Bishop is good, and to nominate fewer evil players if the Bishop is evil.</p>`,
         group: "Traveller",
         script: "bmr"
     },
     {
-        name: "Butcher",
-        intro: "",
-        ability: 'Each day, after the 1st execution, you may nominate again.',
-        flavor: '"It tastes like chicken. More please."',
-        group: "Traveller",
-        script: "sv"
-    },
-    {
-        name: "Bone Collector",
-        intro: "",
-        ability: 'Once per game, at night*, choose a dead player: they regain their ability until dusk.',
-        flavor: '"I collect many things. Hair. Teeth. Clothes. Fragments of poems. The dreams of lost lovers. My secret arts are not for you to know but my fee is a mere pittance. Bring me the blood of a noblewoman who died of heartbreak under a full moon, and you shall have your answers."',
+        name: "Barista",
+        description: "The Barista either makes people sober and healthy, or allows them to act twice as much.",
+        intro: `<ul><li>The Storyteller chooses which player the Barista affects each night, and which one of the two Barista abilities is in effect. The Barista does not know who or what the Storyteller
+        chooses, but the affected player does.</li><li>If the affected player is acting twice, then they do so at the normal time. If they would normally wake at night, they act, go to sleep, then wake to act again. If they have already used a "once per game" ability, they may use that ability again. If they have a "once per game" ability but have not used it yet, they may use it twice before dusk.</li><li>If the Barista makes a player sober and healthy, their drunkenness and poisoning, if any, is removed, and they may not become drunk or poisoned until dusk. This player must get true information, even if a Vortox is in play.</li></ul>`,
+        ability: 'Each night, until dusk, 1) a player becomes sober, healthy & gets true info, or 2) their ability works twice. They learn which.',
+        flavor: '"There really is no cause to worry because when you think about it we are all capable and qualified and smart enough to grab the bull by the horns and sit down and figure this out like the reasonable adults we are by the way would you like another cup it really is the most amazing beverage they say it is from the east but anyway where were we ah yes going for a jog and really nutting out this demon business which we can do with just a little teensy mental boost and some logical thinking for example Senior Hu here is a regular customer and therefore quite trustworthy and would anyone like another cup?"',
+        examples: `<p>The Barista makes the Sage sober and healthy.</p><p>The Klutz acts twice. They die and must choose two players. If either is evil, evil wins. The next night, the Barista makes the Witch act twice. Two players are cursed.</p>`,
+        howToRun: `<p>Each night, remove previous reminders then put the Barista's <strong>SOBER AND HEALTHY</strong> reminder or their <strong>ACTS TWICE</strong> reminder by any character token. Wake that character's player and show them the <strong>THIS CHARACTER SELECTED YOU</strong> info token, the Barista token, then one finger <i>(to show they are sober and healthy)</i> or two fingers <i>(to show they act twice)</i>. Put that player to sleep.</p><p>A player marked <strong>SOBER AND HEALTHY</strong> is sober and healthy <i>(even if they're also marked <strong>DRUNK</strong> or <strong>POISONED</strong>)</i> and always gets true information <i>(even if an ability would make them drunk or poisoned)</i>.</p><p>A player marked <strong>ACTS TWICE</strong> acts twice at the appropriate time. <i>(If the ability is optional, they may use it twice. If it is mandatory, they must use it twice.)</i> Use the Barista's <strong>?</strong> reminders if needed, to substitute for the character's own reminders.</p><p class="callout-box">Some characters are better off knowing they are sober and healthy, as they gain no benefit from acting twice, such as the Flowergirl, Town Crier, or Oracle.</p><p class="callout-box">The Barista ensures players get true information even if an ability causes false information, such as a Fortune Teller, Spy, or Recluse.</p>`,
         group: "Traveller",
         script: "sv"
     },
     {
         name: "Harlot",
-        intro: "",
+        description: "The Harlot learns the character of whoever agrees to reveal it, but at great risk to them both.",
+        intro: `<ul><li>Each night, the Harlot chooses a player. That player has a decision to make: do they reveal their character to the Harlot? If they do, the Storyteller may decide that both this player and
+        the Harlot die tonight.</li><li>The Harlot only learns the character of the chosen player, not that player's alignment.</li><li>The Harlot may discuss during the day which character they would like to pick at night, and other players may offer to be picked, but they may go back on their word and choose differently when night comes.</li></ul>`,
         ability: 'Each night*, choose a living player: if they agree, you learn their character, but you both might die.',
         flavor: '"Enchanté, Sailor. You look like you need someone to really listen to your troubles. I\'m a good listener. Very, very good."',
+        examples: `<p>The good Harlot wakes and chooses the Philosopher, who chooses to reveal. The next night, the Harlot chooses the No Dashii, who chooses not to reveal. The next night, the Harlot chooses the
+        Mutant, who chooses to reveal. The Storyteller decides that the Harlot and Mutant die tonight.</p><p>The evil Harlot chooses the Sage, who reveals. The next day, the Harlot says the Sage is actually the Witch.</p>`,
+        howToRun: `<p>Each night, wake the Harlot. The Harlot points at any player. Put the Harlot to sleep. Wake the chosen player, show them the <strong>THIS  CHARACTER SELECTED YOU</strong> info token, then the Harlot token. That player either nods their head yes or shakes their head no. Put that player to sleep.</p><p>If they shook their head no, then nothing happens. Continue with the night phase.</p><p>If they nodded their head yes, wake the Harlot and show them the chosen player's character token. Put the Harlot to sleep. You may decide that both players <strong>die</strong>—mark them with <strong>DEAD</strong> reminders.</p><p class="callout-box">When choosing whether to kill players, do what you feel is the most
+        interesting and balanced. If the Demon reveals to the Harlot, you should not end the game by killing them.</p>`,
         group: "Traveller",
         script: "sv"
     },
     {
-        name: "Barista",
-        intro: "",
-        ability: 'Each night, until dusk, 1) a player becomes sober, healthy & gets true info, or 2) their ability works twice. They learn which.',
-        flavor: '"There really is no cause to worry because when you think about it we are all capable and qualified and smart enough to grab the bull by the horns and sit down and figure this out like the reasonable adults we are by the way would you like another cup it really is the most amazing beverage they say it is from the east but anyway where were we ah yes going for a jog and really nutting out this demon business which we can do with just a little teensy mental boost and some logical thinking for example Senior Hu here is a regular customer and therefore quite trustworthy and would anyone like another cup?"',
+        name: "Butcher",
+        description: "The Butcher allows a second execution to occur each day.",
+        intro: `<ul><li>After the first executed player has died, the Butcher may nominate a second player for execution. The Butcher may nominate a player that has already been nominated today, and the Butcher may make a nomination even if the Butcher already made a nomination earlier today.</li><li>If a player is executed, even if they do not die, then the Butcher may use their ability. The players may choose to vote or not to vote, so there is no guarantee that this extra nomination will cause an execution—it still needs to get enough votes—but this second nomination does not need to exceed the vote tally of the previous nominations.</li><li>If no execution occurs today, then the Butcher may not use their ability at all today.</li></ul>`,
+        ability: 'Each day, after the 1st execution, you may nominate again.',
+        flavor: '"It tastes like chicken. More please."',
+        examples: `<p>The Witch is executed and dies. The Butcher then nominates the Sage, who gets enough votes to be executed. The Sage dies too.</p><p>The Bone Collector is exiled, and then the Harlot is exiled.
+        There are no executions today. The Butcher does not get to nominate again, because exiles are not executions.</p><p>The Butcher nominates the Town Crier, but the Town Crier is not executed. The Mathematician gets more votes and is executed today. The game continues, and the Butcher nominates the Town Crier again. This time, enough hands are raised, and the Town Crier is executed.</p>`,
+        howToRun: `<p>Each day, immediately after a player is executed, the Butcher may nominate a player for execution. <i>(Remind them if needed.)</i> To succeed, this nomination must tally votes of at least half the alive players, as normal, but does not have to exceed the votes of the execution that prompted the Butcher ability. If this second execution succeeds, it does not allow the Butcher to nominate a third player.</p>`,
         group: "Traveller",
         script: "sv"
     },
     {
         name: "Deviant",
-        intro: "",
-        ability: 'If you were funny today, you can not be exiled.',
+        description: "The Deviant can avoid being exiled—as long as the Deviant was amusing today.",
+        intro: `<ul><li>The Deviant can amuse the group in any way they choose. Generally, verbal means such as jokes, funny stories, or witty remarks will suffice.</li><li>The Storyteller is the judge of whether the Deviant was funny or not.</li></ul>`,
+        ability: 'If you were funny today, you cannot die by exile.',
         flavor: '"Twas the lady\'s quip, forsooth."',
+        examples: `<p>The evil Deviant cracks a few jokes and gets a few laughs, but the players nevertheless decide to exile them. Even though there are enough votes, the Storyteller decides to keep the Deviant alive.</p><p>On the third day, the Deviant was slightly funny. The players exile the Deviant, but the Deviant does not die. On the fourth day, the Deviant was not very funny, is exiled, and dies.</p>`,
+        howToRun: `<p>If the Deviant would be exiled, you may declare that the Deviant
+        remains alive.</p><p class="callout-box">It is best to be forgiving and treat even a slightly funny Deviant as funny. It can be tough to be funny when one is expected to be, after all.</p><p class="callout-box">If the player would prefer, you may determine different criteria for whether the Deviant is exiled. If being "funny" is difficult, you may reward the Deviant who "creates a positive mood" or "is helpful to others" instead. The Deviant is not a serious character, and it is meant to encourage laughter, lightheartedness, and fun, so adjust the Deviant rules to your players' needs and talents.</p>`,
+        group: "Traveller",
+        script: "sv"
+    },
+    {
+        name: "Bone Collector",
+        description: "The Bone Collector gives dead players their ability back temporarily.",
+        intro: `<ul><li>The Bone Collector must choose a dead player. The chosen player remains dead, but they get their ability to use. If their ability was a "you start knowing" or a "once per game" ability—such as the Virgin, Slayer, Clockmaker, Seamstress, or Juggler—they may use it again, even if it was already used,
+        until dusk falls.</li><li>When the Bone Collector chooses a player, that player does not learn they were selected by the Bone Collector, although they find out soon enough when they are woken to use their ability.</li><li>If the Bone Collector dies, that player no longer has the ability they regained due to the Bone Collector.</li></ul>`,
+        ability: 'Once per game, at night*, choose a dead player: they regain their ability until dusk.',
+        flavor: '"I collect many things. Hair. Teeth. Clothes. Fragments of poems. The dreams of lost lovers. My secret arts are not for you to know but my fee is a mere pittance. Bring me the blood of a noblewoman who died of heartbreak under a full moon, and you shall have your answers."',
+        examples: `<p>The Bone Collector gives the dead Flowergirl her ability back. That night, the Flowergirl learns that the Demon did indeed vote today. The following night, the Flowergirl once again has no ability.</p><p>The Bone Collector chooses the dead Witch. The Witch wakes and curses the Clockmaker. The Clockmaker nominates the following day and dies.</p><p>At night, the Bone Collector chooses the dead Butcher. The following day, after a player is executed, the Storyteller says that the Butcher may make a nomination for execution.</p><p>During the day, the dead Juggler guesses five players' characters. That night, the Bone Collector gives the Juggler their ability back. The Juggler learns a "3".</p>`,
+        howToRun: `<p>Each night, wake the Bone Collector. They either shake their
+        head no or point at any dead player. Put the Bone Collector
+        to sleep.</p><p>If they pointed at a dead player, <strong>the chosen player regains their 
+        ability</strong>—mark their character token with the Bone Collector's <strong>HAS 
+        ABILITY</strong> reminder. <i>(They may need to be woken tonight to use their
+        ability.)</i> <strong>The Bone Collector loses their ability</strong>—mark them with
+        their <strong>NO ABILITY</strong> reminder. The next dusk, <strong>the chosen player 
+        loses their ability</strong>—remove the <strong>HAS ABILITY</strong> reminder.</p>`,
         group: "Traveller",
         script: "sv"
     },
     {
         name: "Gangster",
-        intro: "",
+        description: "The Gangster encourages their neighbors to kill each other.",
+        intro: `<ul><li>The Gangster may kill one of their two living neighbors. Their dead neighbors are skipped over, and do not count.</li><li>To use their ability, the Gangster and one of their living neighbors must agree to kill the other living neighbor. The Storyteller must hear and confirm this agreement. The Gangster cannot kill without the Storyteller present.</li><li>Each day, the Gangster may say whatever they want, and offer any encouraging words they want to either player. Once an agreement has been reached, then the Gangster may not use their ability again today, even if that player didn't die due to an ability protecting them.</li><li>The Gangster's two living neighbors are always one clockwise, and one counter-clockwise.</li><li>If both living neighbors want to kill the other, the Gangster decides who dies.</li></ul>`,
         ability: 'Once per day, you may choose to kill a living neighbor, if your other living neighbor agrees.',
         flavor: '"I like your shoes. It would be such a shame if you had a little accident, and they got ruined. Now that you mention it, I like your cufflinks too."',
+        examples: `<p>The Gangster neighbors the Saint and the Baron. The Gangster asks the Baron if they want to kill the Saint. The Baron agrees and the Saint dies.</p><p>The Gangster neighbors the Chambermaid and the Poppy Grower, but they are both dead. The Gangster's two living neighbors are the Amnesiac and the Po. The Gangster talks with the Po and offers to kill the Amnesiac. The Po declines. The Gangster talks with the Amnesiac and the Amnesiac asks the Gangster to kill the Po. The Gangster agrees, and the Po dies. Good wins.</p><p>The Gangster neighbors the Fool and the Sage. The Sage and the Gangster agree to kill the Fool, but the Fool doesn't die because of the Fool's ability. The Gangster may not use their ability again today.</p>`,
+        howToRun: `<p>Once per day, the Gangster can declare that they wish to use their ability. If so, ask if an alive neighbor agrees. If an alive neighbor agrees, the other alive neighbor <strong>dies</strong>. If both alive neighbors agree, the Gangster chooses which alive neighbor <strong>dies</strong>. If neither alive neighbor agrees, the Gangster may not use their ability today.</p>`,
         group: "Traveller",
         script: "exp"
     },

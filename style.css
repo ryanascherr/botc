@@ -61,10 +61,11 @@ ul {
     margin: 5px;
     padding: 5px;
     font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 
 .nav-bar a:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 /* END NAV */
@@ -258,7 +259,7 @@ ul {
 
 .all .token:hover {
     cursor: pointer;
-    transform: scale(1.1) rotate(15deg);
+    transform: scale(1.1);
 }
 
 #trouble-brewing, .trouble-brewing .inner-script-nav a {
