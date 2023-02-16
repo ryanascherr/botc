@@ -1568,29 +1568,43 @@ let characters = [
         script: "fabled"
     },
     {
-        name: "Storm Catcher",
-        intro: "",
-        ability: 'Name a good character. If in play, they can only die by execution, but evil players learn which player it is.',
-        flavor: '"At dawn, the temple\'s long shadow creeps to the fountain. At dusk, the obelisk blocks the red glare, cooling warm water under the archway. All lines converge here. A storm is coming, and this, this pebbled and lush and holy place between the apple trees, is the eye."',
+        name: "Spirit Of Ivory",
+        description: "Add the Spirit of Ivory to your script to keep the number of evil players fair and balanced.",
+        intro: `<ul><li>When creating character lists using the Script Tool, it is a good idea to include no more than one character that adds evil characters. If two or more players turn evil, then the evil team can win simply by revealing who they are and winning due to their voting majority. Adding the Spirit of Ivory prevents too many players turning evil, creating a more fun and fair game for the good players.</li><li>With a Spirit of Ivory in play, only one more player than normal can ever be evil. If a second player would become evil, they stay good instead.</li><li>The normal number of evil players is printed on the Traveller sheet and on the Setup sheet.</li></ul>`,
+        ability: 'There can\'t be more than 1 extra evil player.',
+        flavor: '"The Wasteland calls. Bones rise to flesh, then fall to dust. The great spirit grows. The great spirit watches. The great spirit guides. The human listens, or the human is no more."',
+        examples: `<p>The Fang Gu attacks an Outsider and creates an evil player. Later, the Devil's Advocate chooses the Goon at night. Normally, the Goon would turn evil, but the Goon remains good because there is already one more evil character than normal in play.</p><p>The Goon is evil. The Snake Charmer chooses the Demon. The evil Demon becomes the good Snake Charmer, and the good Snake Charmer becomes the evil Demon. Since the number of evil players is not increased, the Spirit of Ivory's ability does not trigger.</p>`,
+        howToRun: `<p>At the start of the game, declare that the Spirit of Ivory is in play. Add the Spirit of Ivory token and their reminder token to the Grimoire.</p><p>At all times, if there is an extra evil character in play, mark the Spirit of Ivory with the <strong>NO MORE EVIL</strong> reminder. <i>(If any character becomes good, remove the reminder.)</i></p><p>If a player would become evil and the Spirit of
+        Ivory is marked <strong>NO MORE EVIL</strong>, that player stays good.</p>`,
         group: "Fabled",
         script: "fabled"
     },
     {
-        name: "Spirit Of Ivory",
-        intro: "",
-        ability: 'There can\'t be more than 1 extra evil player.',
-        flavor: '"The Wasteland calls. Bones rise to flesh, then fall to dust. The great spirit grows. The great spirit watches. The great spirit guides. The human listens, or the human is no more."',
+        name: "Storm Catcher",
+        description: "Use the Storm Catcher to focus the game on a particular good character.",
+        intro: `<ul><li>If you want to construct a script based around the actions or information of one particular good character, if you want to have this character in every game <i>(or at least have an evil player bluffing as this character)</i>, you can use the Storm Catcher. Your chosen character will play a big part in the game, will be the focus of a lot of group discussion, and will probably live until the final day.</li><li>The Storyteller declares that one character can't die, unless by execution. This character may be in play, or not in play. If it is in play, this good player lives as long as the good players want them to, since evil players cannot kill them. If it is not in play, all evil players learn this, so any evil player can easily bluff as this character. <i>(They don't have to, but they can.)</i></li></ul>`,
+        ability: 'Name a good character. If in play, they can only die by execution, but evil players learn which player it is.',
+        flavor: '"At dawn, the temple\'s long shadow creeps to the fountain. At dusk, the obelisk blocks the red glare, cooling warm water under the archway. All lines converge here. A storm is coming, and this, this pebbled and lush and holy place between the apple trees, is the eye."',
+        examples: `<p>The Storyteller has built a script based on the General, so declares that "the Storm Catcher favours the General". The General is in play. At night, the Imp and the Godfather both attack the General, who does not die. After five days of information and discussion, the town decides to execute the General, who dies.</p><p>The Storyteller wants a game based around the Empath's information, so declares that "The Storm Catcher favours the Empath". There is no Empath in play. Because the evil players learn this, the Poisoner chooses to bluff as the Empath.</p>`,
+        howToRun: `<p>At the start of the game, declare that the Storm Catcher is in play. Add the Storm Catcher token to the Grimoire. Declare which good character is favoured by the Storm Catcher. If the favoured character is in play, mark them with the Storm Catcher's <strong>SAFE</strong> reminder.</p><p>During the first night, wake each evil player in turn. If a good character is marked with the Storm Catcher's <strong>SAFE</strong> reminder, show the evil player the <strong>THIS PLAYER IS</strong> info token, the good character token, point to the good player, then put the evil player to sleep. If no one is marked with the Storm Catcher's <strong>SAFE</strong> reminder, show the evil player the <strong>THESE CHARACTERS ARE NOT IN PLAY</strong> info token and the good character token, then put the evil player to sleep.</p><p>If the character marked with the Storm Catcher's <strong>SAFE</strong> reminder is executed, they <strong>die</strong>. If they would die by other means, they remain <strong>alive</strong>.</p>`,
         group: "Fabled",
         script: "fabled"
     },
     {
         name: "Djinn",
-        intro: "",
+        description: "Add the Djinn to all games with a jinx icon on the script. The Djinn resolves jinxes by creating a unique rule.",
+        intro: `<ul><li>When creating a character list using the Script Tool, some character combinations will be marked as unusual. These two characters are jinxed—they have abilities that clash or contradict each other in some way. The Djinn creates a special rule that allows these characters to work well together.
+        Some jinxed characters even work better with the Djinn in play!</li><li>The Djinn's special rule is described by the Script Tool online, and is printed out automatically when you create a script with
+        a character combination that is jinxed.</li><li>There are many different Djinn special rules. Each is tailored to a specific pair of jinxed characters.</li><li>If there are jinxed characters on the character sheet, even if there are no jinxed characters in play, the Storyteller tells all players what the Djinn's special rule is at the start of the game.</li><li>The Djinn may have several special rules at once. If there are multiple pairs of jinxed characters on the character sheet, the players learn all the Djinn's special rules.</li></ul>`,
         ability: 'Use the Djinn\'s special rule. All players know what it is.',
-        flavor: 'نحن لسنا هنا.<br><br> انت لست حقيقي<br><br>. كل شيء هو وهم.<br><br> أسئلتك هي جبل نار في يوم صافٍ.',
+        flavor: 'نحن لسنا هنا.<br>انت لست حقيقي<br>. كل شيء هو وهم.<br> أسئلتك هي جبل نار في يوم صافٍ.',
+        examples: `<p>The Pit-Hag and the Heretic are jinxed. At the start of the game, the Storyteller reads out the Djinn's special rule: "A Pit-Hag cannot create a Heretic." Later in the game, the Pit-Hag tries to
+        create a Heretic. The Storyteller shakes their head, and the Pit-Hag must choose another character to create.</p><p>The Spy and the Magician are jinxed. At the start of the game, the Storyteller reads out the Djinn's special rule: "When the Spy sees the Grimoire, the Demon and the Magician's character
+        tokens are removed." There is no Spy and no Magician in play, but the Storyteller reads this aloud anyway so that the good team doesn't know which Minion is in play.</p>`,
+        howToRun: `<p>At the start of the game, if there are jinxed characters on the character sheet, declare that the Djinn is in play and inform the group of all Djinn special rules for this game. <i>(Do this even if there are no jinxed characters in play.)</i></p><p>Follow the Djinn instructions as listed on the Script Tool printout.</p>`,
         group: "Fabled",
         script: "fabled"
-    },
+    }
 ];
 
 let isModalOpen;
