@@ -475,3 +475,7 @@ ul {
         transform: rotateY(0deg);
     }
 }
+
+.external-link:hover {
+    text-decoration: none;
+}
