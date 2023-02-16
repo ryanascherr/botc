@@ -414,6 +414,12 @@ ul {
     }
 }
 
+@media only screen and (max-width: 430px){
+    .nav-bar a {
+        font-size: 14px;
+    }
+}
+
 @media only screen and (max-width: 378px){
     .all .token {
         max-width: 75px;
