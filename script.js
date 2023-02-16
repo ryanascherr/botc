@@ -147,7 +147,7 @@ let characters = [
         description: "The Butler may only vote when their Master votes.",
         intro: "<ul><li>Each night, the Butler chooses a player to be their Master. This may be the same player as last night or a different one.</li><li>If the Master has their hand raised to vote, or if the Master's vote has already been counted, the Butler may raise their hand to vote.</li><li>If the Master has their hand down, signaling that they are not voting, or if the Master lowers their hand before their vote is tallied, the Butler must lower their hand too.</li><li>It is not the Storyteller's responsibility to monitor the Butler. They're responsible for their own voting. Deliberately voting when they shouldn't is considered cheating.</li><li>Because exiles are never affected by abilities, the Butler can vote freely for an exile.</li><li>Dead players may only raise their hand to vote if they have a vote token. If the Butler chooses a dead player as their Master, this still applies.</li><li>The Butler is never forced to vote.</li><li>The Butler's vote may be tallied by the Storyteller before or after their Master's. Seating position is not important.</li></ul>",
         ability: 'Each night, choose a player (not yourself): tomorrow, you may only vote if they are voting too.',
-        flavor: '"Yes, sir...<br><br>No, sir...<br><br>Certainly, sir."',
+        flavor: '"Yes, sir...<br>No, sir...<br>Certainly, sir."',
         examples: `<p>The Butler chooses Abdallah to be their Master. Tomorrow, if Abdallah raises his hand to vote on an execution, then the Butler may too. If not, the Butler may not raise their hand.</p><p>A nomination is in progress. The Butler and their Master both have their hands raised to vote. As the Storyteller is counting votes, the Master lowers their hand at the last second. The Butler must lower their hand immediately.</p><p>The Butler is dead. Because dead players have no ability, the Butler may vote with their vote token at any time.</p>`,
         howToRun: `<p>Each night, wake the Butler. They point at any player. Mark this player with the <strong>MASTER</strong> reminder token. Put the Butler to sleep.</p><p>During a nomination, the Butler may only have their hand raised to vote if the Master has their hand raised to vote or if the Master's vote has already been counted.</p><p class="callout-box">If the Butler accidentally votes illegally, tally the Butler's vote anyway. If you don't, the total will be less than it should be, and all players will know which player is the Butler, which is unfair for the evil team. Mistakes happen. Just play on and have a private chat later.</p>`,
         group: "Outsider",
@@ -840,7 +840,7 @@ let characters = [
         name: "Bounty Hunter",
         intro: "",
         ability: 'You start knowing 1 evil player. If the player you know dies, you learn another evil player tonight. [1 Townsfolk is evil]',
-        flavor: '"Alone, I walk these streets, paved with the sick stench of corruption. Its thickness worms its way into my nostrils, unbidden, burning with revulsion. And anticipation. The illness of this wretched place grows each night. And I... I am the cure. "',
+        flavor: '"Alone, I walk these streets, paved with the sick stench of corruption. Its thickness worms its way into my nostrils, unbidden, burning with revulsion. And anticipation. The illness of this wretched place grows each night. And I... I am the cure."',
         group: "Townsfolk",
         script: "exp"
     },
@@ -1434,57 +1434,136 @@ let characters = [
     },
     {
         name: "Doomsayer",
-        intro: "",
+        description: "Use the Doomsayer to make large games take less time.",
+        intro: `<ul><li>The Doomsayer allows players to sacrifice their allies in order to gain information, which shortens the game.</li><li>Only alive players may use the Doomsayer ability, and each may do so only once per game. It is their responsibility to remember to not use it again.</li><li>If a player says something like "I use the Doomsayer ability," then the Storyteller chooses which player to kill, but they must kill an alive player of the same alignment as the player who used the Doomsayer ability. So, if a good player uses the ability, then a good player dies. If an evil player uses the ability, then an evil player dies.</li><li>Once three players are left alive, the Doomsayer ability may no longer be used.</li></ul>`,
         ability: 'If 4 or more players live, each living player may publicly choose (once per game) that a player of their own alignment dies.',
         flavor: '"And on the Seventh Day, there shall be a great flood and a pestilence upon the People of the Village of the Ravens! The dead shall rise and the living shall repent! O Woe! O Unholy day! Only by great sacrifice shall they prevail! So sayeth the Sages of Nostros and so sayeth I."',
-        group: "Fabled",
-        script: "fabled"
-    },
-    {
-        name: "Angel",
-        intro: "",
-        ability: 'Something bad might happen to whoever is most responsible for the death of a new player.',
-        flavor: '"Let those who are without sin dare to raise their hand to my chosen, for I shall strike such fools down with the fury and righteousness of a thousand storms."',
-        group: "Fabled",
-        script: "fabled"
-    },
-    {
-        name: "Buddhist",
-        intro: "",
-        ability: 'For the first 2 minutes of each day, veteran players may not talk.',
-        flavor: '"You throw thorns. Falling in my silence, they become flowers."',
-        group: "Fabled",
-        script: "fabled"
-    },
-    {
-        name: "Hell's Librarian",
-        intro: "",
-        ability: 'Something bad might happen to whoever talks when the Storyteller has asked for silence.',
-        flavor: '"Shhhhhh. Please be quiet. It is best not to disturb the Librarian. I\'ve heard it has a temper."',
-        group: "Fabled",
-        script: "fabled"
-    },
-    {
-        name: "Revolutionary",
-        intro: "",
-        ability: '2 neighboring players are known to be the same alignment. Once per game, 1 of them registers falsely.',
-        flavor: '"United we feigned.<br><br>Divided, we stalled."',
-        group: "Fabled",
-        script: "fabled"
-    },
-    {
-        name: "Fiddler",
-        intro: "",
-        ability: 'Once per game, the Demon secretly chooses an opposing player: all players choose which of these 2 players win.',
-        flavor: '"I\'ll wager mi lyef ye cannae best me in a fiddle contest, ye boss-eyed snook! We\'ll go out on the lash, get the pub jammers an\' have a right craic. I\'ll be layin\' ma boots into ya come mornin\' ye rumbly muppet."',
+        examples: `<p>The Monk uses the Doomsayer ability, and the Washerwoman dies. Later that day, the Poisoner uses the Doomsayer ability, and the Baron dies.</p><p>An evil Thief uses the Doomsayer ability, and the Scarlet Woman dies. Later, the Spy uses the Doomsayer ability, and the good Gunslinger dies, because the Spy is registering as good. Later, the Demon uses the Doomsayer ability, and the Spy dies, because the Spy is registering as evil.</p>`,
+        howToRun: `<p>At any time, declare that the Doomsayer is in play. Add the Doomsayer token to the Grimoire.</p><p>At any time during the day, if four or more players are alive, a player can declare that they wish to use the Doomsayer ability. When this happens, choose one player of the same alignment. The chosen player <strong>dies</strong>.</p><p class="callout-box">You won't want to kill the Demon this way, unless the game can continue afterwards for some reason, such as if a Scarlet Woman is in play.</p>`,
         group: "Fabled",
         script: "fabled"
     },
     {
         name: "Toymaker",
-        intro: "",
+        description: "Use the Toymaker to make small games take more time.",
+        intro: `<ul><li>If you created a character list using the Teensyville option in the Script Tool, then you may want to use the Toymaker. Games set in Teensyville have only six Townsfolk, two Outsiders, two Minions, and one Demon on the list, and they specifically cater to five or six players.</li><li>With the Toymaker in play, the Demon learns three not-inplay characters at the start of the game, and the Minion(s)
+        and Demon learn who each other are. Once per game, the Demon must voluntarily choose to attack nobody tonight. If the Demon is about wake to attack a player and this would end the game, but the Demon has not yet chosen to attack nobody, then the Storyteller does not wake the Demon—they are forced to attack nobody tonight.</li><li>You may use the Toymaker in games of TROUBLE BREWING with five or six players, but it is not necessary.</li></ul>`,
         ability: 'The Demon may choose not to attack & must do this at least once per game. Evil players get normal starting info.',
         flavor: '"It buzzes! It walks down stairs! It keeps you warm at night! It tastes like sugar! The kiddies love it! Introducing... the brand new...Warm\'o-buzzy-wuzzy-walk\'a\'bot-thingy-contraption! Fun for all ages!"',
+        examples: `<p>On the second night, when five players are alive, the Imp chooses not to attack, which allows it to act during the final night. On the third night, when four players are alive, it attacks a player.</p><p>On the second night, the Imp attacks a player. On the third night, when just three players are alive, the Imp cannot attack because it is the final night.</p>`,
+        howToRun: `<p>At the start of the game, declare that the Toymaker is in play. Add the Toymaker token to the Grimoire, and mark the Demon with the Toymaker's <strong>FINAL NIGHT: NO ATTACK</strong> reminder.</p><p>On the first night, resolve the "Minion info" and "Demon info" steps on the night sheet even though there are fewer than seven players.</p><p>Each night the Demon wakes, they may choose not to attack by
+        shaking their head no. If they choose not to attack, remove the <strong>FINAL NIGHT: NO ATTACK</strong> reminder.</p><p>During any night, if the Demon would wake and their attack could end the game, but the Demon is marked <strong>FINAL NIGHT: NO ATTACK</strong>, the Demon does not wake or act tonight.</p>`,
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Angel",
+        description: "Use the Angel to help new players have fun when there are one or two new players in a group of veterans.",
+        intro: `<ul><li>Being the only new player in a group can be overwhelming. Being protected by the Angel encourages all players to keep new players alive for as long as possible, which means new players have more fun and contribute to the game more.</li><li>All players know who is protected by the Angel, but not
+        their alignment or character. Whoever is the single player most responsible for killing a protected player suffers some consequence. For example, if the Demon kills a protected player, the Demon suffers a penalty. If a protected player is executed, the player who suffers a penalty will probably be the one who nominated the protected player.</li></ul>`,
+        ability: 'Something bad might happen to whoever is most responsible for the death of a new player.',
+        flavor: '"Let those who are without sin dare to raise their hand to my chosen, for I shall strike such fools down with the fury and righteousness of a thousand storms."',
+        examples: `<p>The Angel protects Sarah. The Demon attacks and kills her. As a penalty, the Demon cannot attack on the next night.</p><p>Ben is the Demon and is protected by the Angel. The players do not execute him until the final day, at which point they may execute him without penalty.</p>`,
+        howToRun: `<p>At the start of the game, declare that the Angel is in play. Declare which player or players it is protecting, with their consent. Add the Angel token and their reminders to the Grimoire,
+        and mark each protected player with a <strong>PROTECTED</strong> reminder.</p><p>If a player marked <strong>PROTECTED</strong> dies, something bad happens to the player responsible for the death. You may need to mark their character token with the <strong>SOMETHING BAD</strong> reminder, to remind
+        you that they are now poisoned, or mad, or can't vote today, or simply as a reminder to decide on what to do later.</p><p>Remove the Angel at any time, declaring when you do so.</p><p class="callout-box">The Angel only protects a player if that player wants it to. Ask for their consent before the game begins.</p><p class="callout-box">The "something bad" that happens is up to you. However, it is recommended to either make the penalty that the player dies, that the player loses their ability for a day, or that the player may not vote for a day. A light penalty works much better than a severe one.</p><p class="callout-box">Remove the Angel on the final day, so that players feel free to execute players protected by the Angel.</p>`,
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Buddhist",
+        description: "Use the Buddhist to help new players have fun when there are one or two veterans in a group of new players.",
+        intro: `<ul><li>When experienced players find themselves in a game full of beginners, the veterans will often dominate the game due to their enthusiasm and knowledge.</li><li>Players affected by the Buddhist cannot talk at all for the first two minutes of each day. They may not whisper in private, and may not talk to each other. They simply listen.</li><li>This is <i>not</i> a punishment for being talkative. Being talkative is great! BLOOD ON THE CLOCKTOWER is a talking game, and the more, the merrier. That said, forcing the veterans to stay silent temporarily each day allows the new players to find their
+        own voices, to come up with their own theories, and to take action on their own. It is about fun for everybody.</li><li>It is common for a player to say "I am a Buddhist" or for the Storyteller to say to them "You are a Buddhist." This doesn't mean that their character is the Buddhist. It is a pleasant
+        shorthand for saying "You are affected by the Buddhist ability." This is similar to saying "You are a Revolutionary."</li></ul>`,
+        ability: 'For the first 2 minutes of each day, veteran players may not talk.',
+        flavor: '"You throw thorns. Falling in my silence, they become flowers."',
+        examples: `<p>Lachlan and Lewis are veterans in a game of mostly new players. To encourage the new players to talk, the Storyteller puts the Buddhist in play. Lachlan and Lewis may not talk for the first two minutes each day, after which they may talk freely.</p><p>Evin is affected by the Buddhist. He is a Minion and simply listens to what people are saying for the first two minutes, allowing him to bluff as a not-in-play character later on.</p>`,
+        howToRun: `<p>At the start of the game, declare that the Buddhist is in play. Add the Buddhist token to the Grimoire. Declare which players are Buddhists, with their consent. Those players must stay silent
+        for the first two minutes of each day.</p><p>Remove the Buddhist at any time, declaring when you do so.</p><p class="callout-box">If no device is available to set a two-minute timer, then use your best
+        judgment as to what is two minutes, and inform the veterans when you feel that the time is up.</p><p class="callout-box">Like the Angel and the Revolutionary, you'll want to ask for a player's consent before affecting them with the Buddhist. Something like this is best: "Do you mind if I make you a Buddhist for this game? You are really good at the game, and I want to give the new players a chance to figure things out for themselves. Is that okay?"</p>`,
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Revolutionary",
+        description: "Use the Revolutionary to help disadvantaged players participate.",
+        intro: `<ul><li>If a player has an intellectual disability, is unable to understand the rules of the game, is blind or deaf, or is unable to communicate or participate as normal, they may still play by
+        teaming up with a player that they trust.</li><li>These two players are the same alignment and sit next to each other so they can whisper or signal to each other throughout the game. The experienced player can help the disadvantaged player in whatever way is needed, talking on their behalf or suggesting what to do.</li><li>The Revolutionary is also useful for couples or good friends who wish to play, but are uncomfortable with lying to or mistrusting each other, even in a game.</li><li>Once per game, the Storyteller can make either player register as a different character, alignment, or both.</li><li>The Storyteller may wake both players at night, instead of just the player due to wake, if that helps understanding.</li><li>If an ability would change a Revolutionary's alignment, this ability has no effect or it changes both Revolutionaries' alignment, Storyteller's choice.</li></ul>`,
+        ability: '2 neighboring players are known to be the same alignment. Once per game, 1 of them registers falsely.',
+        flavor: '"United we feigned.<br>Divided, we stalled."',
+        examples: `<p>Matt is deaf. He teams up with Julian via the Revolutionary. Matt draws the Poisoner, and Julian is given the Imp. They can scheme in private using sign language, so that Matt can participate.</p><p>Hannah is twelve years old. She is keen to play but does not understand the intricacies of how the characters work. She gets the Monk and teams up with her father, who is the Empath.</p>`,
+        howToRun: `<p>When setting up the game, before giving the bag to the players, declare that the Revolutionary is in play and which two neighboring players are Revolutionaries. Add the Revolutionary
+        token to the Grimoire. Mark the Revolutionaries with the <strong>REGISTER FALSELY?</strong> reminder between their character tokens.</p><p>Give the bag to one Revolutionary. They draw a token. Look at
+        their token, choose a token of the same alignment from the bag, and give it to the other Revolutionary. Then, give the bag to the non-Revolutionary players to draw from.</p><p>Once per game, you can make one player marked <strong>REGISTER  FALSELY?</strong> register as a different character and alignment, then
+        remove the <strong>REGISTER FALSELY?</strong> reminder.</p><p></p>`,
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Hell's Librarian",
+        description: "Use the Hell's Librarian to help a soft-spoken Storyteller participate.",
+        intro: `<ul><li>As the Storyteller, you'll find the Hell's Librarian useful when it is difficult to get the group's attention. Maybe you need to explain a game rule? Or get attention for a crucial final-day
+        vote? It can also be used to prevent players from talking about their characters before the game begins or from narrating what they are doing at night. Players instinctively stay quieter during the pre-game period and at night, so you may never need it.</li><li>It is best to give the players fair warning before you bring the hammer down. Like the Angel, the threat of a mysterious penalty is more important than the actual penalty. The purpose of this character is to make games run smoothly, not to punish minor infringements.</li></ul>`,
+        ability: 'Something bad might happen to whoever talks when the Storyteller has asked for silence.',
+        flavor: '"Shhhhhh. Please be quiet. It is best not to disturb the Librarian. I\'ve heard it has a temper."',
+        examples: `<p>The Storyteller is attempting to explain the voting rules to a few new players. The group is loud and is not listening to the Storyteller's requests for silence, so the Storyteller declares that
+        the Hell's Librarian is in play. Two players continue to loudly talk, even though they know the possible penalty. The Storyteller decides that one dies and the other loses their vote for today. All players are silent while the rules are explained.</p>`,
+        howToRun: `<p>At any time, declare that the Hell's Librarian is in play. Add the Hell's Librarian token and their <strong>SOMETHING BAD</strong> reminder to the Grimoire.</p><p>At any time, you can ask the group for silence for a particular period of time. Remind them that the Hell's Librarian is in play
+        if needed. If a player talks or otherwise interrupts and makes your job difficult during that time, you can let them know that something bad happens to them. You may need to mark their character token with the <strong>SOMETHING BAD</strong> reminder, to remind you that they are now poisoned, or mad, or can't vote today, or simply as a reminder to decide on what to do later.</p><p class="callout-box">Like the Angel, the "something bad" that might happen is up to you. However, it is recommended to either make the penalty that the player dies, that the player loses their ability for a day, or that the player may not vote for a day. A light penalty works much better than a severe one.</p>`,
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Fiddler",
+        description: "Use the Fiddler to decide a winner if the game must end due to time constraints or a stalemate.",
+        intro: `<ul><li>Sometimes there won't be enough time to finish a game. Maybe the venue you are playing at needs to close. Maybe some players need to leave unexpectedly and the game cannot continue without them. Maybe the Townsfolk refuse to execute and the Demon refuses to kill.</li><li>The Storyteller can add and activate the Fiddler at any time. To do so, all players close their eyes while the Demon chooses a good player to challenge to a fiddle contest. Then, after a minute or two, all players will raise their hands to vote on which of these two players wins. The game ends, and the winning player's entire team wins too.</li><li>Like an exile, this group decision on who wins the game is not affected by abilities, and the dead may vote normally. The Thief cannot steal votes, the Voudon has no effect, and so on.</li><li>Players cannot use their abilities once the Fiddler has been activated. The Slayer cannot choose to slay a player, the Artist cannot ask their question, and so on.</li><li>If this fiddle contest is a tie, evil wins.</li></ul>`,
+        ability: 'Once per game, the Demon secretly chooses an opposing player: all players choose which of these 2 players win.',
+        flavor: '"I\'ll wager mi lyef ye cannae best me in a fiddle contest, ye boss-eyed snook! We\'ll go out on the lash, get the pub jammers an\' have a right craic. I\'ll be layin\' ma boots into ya come mornin\' ye rumbly muppet."',
+        examples: `<p>The game needs to end in thirty minutes due to a freak lightning storm approaching the neighborhood, so the Storyteller adds the Fiddler. After twenty-five minutes, the Fiddler activates. The
+        players choose the good player to win, so good wins.</p><p>There are just four players left alive. Each day, nobody nominates. Each night, the Demon chooses a dead player to kill. Since this could go on indefinitely, the Storyteller adds the Fiddler so that the game can end.</p>`,
+        howToRun: `<p>At any time, if you expect to run out of time, declare that the Fiddler is in play and declare the time when the game will end. Add the Fiddler token to the Grimoire.</p><p>When the game needs to end, declare that you are using the Fiddler ability. Put all players to sleep. Wake the Demon. They point at any good player. <i>(If the Demon is good, they must choose an evil player instead.)</i> Wake all players and declare that the Demon player and the chosen player are in a fiddle contest. <i>(Do not say what their characters are.)</i> After a minute or two, run a "vote" for each player in the fiddle contest. <i>(This is not an execution vote.)</i> All players may vote. The player with the most votes wins, their team wins, and the game ends. On a tie, the evil team wins.</p>`,
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Fibbin",
+        description: "Add the Fibbin if your script has too much information or no possibility of misinformation.",
+        intro: `<ul><li>If you create a character list and it has no characters that cause drunkenness, poisoning, or other ways for information to be false, then you may want to add the Fibbin. Whilst it is not necessary, even a minor chance of a good player's information being incorrect can drastically help the evil players bluff.</li><li>The Fibbin does not make an ability fail in the way that drunkenness and poisoning do. It only affects abilities that provide information from the Storyteller signaling to a player during the night or telling them something.</li><li>If the game ends before you have given a good player incorrect information, that's okay.</li><li>Some characters get false information due to their ability. The Fibbin can make this information true.</li></ul>`,
+        ability: 'Once per game, 1 good player might get incorrect information.',
+        flavor: '"Tee-hee-hee.<br><br>Tee. Hee. Hee."',
+        examples: `<p>On the first night, all players get correct information. On the second night, the Empath learns they are neighboring one evil player, even though both their neighbors are actually good, because of the Fibbin. For the rest of the game, all good players get correct information.</p><p>The Virgin is nominated by a Townsfolk. This Townsfolk is executed immediately—the Fibbin can't affect the Virgin's ability since it doesn't give information. Later, the Monk protects a player. Again, the Monk's ability cannot fail due to the Fibbin's ability. Later, the Ravenkeeper dies at night and gets false information, because information from an ability can be affected by the Fibbin's ability.</p><p>The Storyteller tells the Savant that Lachlan, Ben, or Sarah is the Lunatic, and that all players who didn't vote yesterday are
+        good. Both of these statements are true, even though the Savant is supposed to get one piece of true information and one piece of false information. The Fibbin's ability made the Savant's information incorrect, but also true.</p>`,
+        howToRun: `<p>At the start of the game, declare that the Fibbin is in play. Add the Fibbin token to the Grimoire.</p><p>Once per game, when a good player gains information from an ability, you can give them incorrect information. <strong>The Fibbin loses their ability</strong>—put their <strong>NO ABILITY</strong> reminder token by their token.</p>`,
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Duchess",
+        description: "Add the Duchess if your script has too little information or too much misinformation.",
+        intro: `<ul><li>Sometimes, you may want to create a character list using the Script Tool that has hardly any good characters that gain information directly. Whilst having an abundance of abilities and a lack of information can be fun for some players, other players like something more. The Duchess adds regular
+        information to such a game.</li><li>Each player that visits the Duchess learns how many visitors are evil, including themself. However, one visitor of the Storyteller's choice will get false information.</li><li>Players that visit the Duchess still get to use their ability normally. The Duchess does not make their ability give false information.</li><li>The players decide amongst themselves which players will be
+        the three players to visit. If exactly three visitors cannot be decided upon, then the Duchess does not act tonight.</li></ul>`,
+        ability: 'Each day, 3 players may choose to visit you. At night*, each visitor learns how many visitors are evil, but 1 gets false info.',
+        flavor: '"We shall entertain between the hours of 6 and 7 precisely. Tea at 6:15. Scones at 6:45. Do not be late. Formal wear applies, as always."',
+        examples: `<p>The Soldier, Pacifist, and Sage visit the Duchess. The Soldier and Pacifist learn a "0". The Sage learns a "1".</p><p>The Mutant, Butler, and Po visit the Duchess. The Mutant learns a "1", the Butler learns a "2", and the Po learns a "1".</p><p>The Mastermind, Imp, and Minstrel visit the Duchess. The Mastermind learns a "2", the Imp learns a "1", and the Minstrel learns a "2".</p>`,
+        howToRun: `<p>At the start of the game, declare that the Duchess is in play. Add the Duchess token and their reminders to the Grimoire.</p><p>Each day, any player may volunteer to visit the Duchess tonight.
+        If exactly three players volunteer to visit the Duchess tonight, then mark two of them with a <strong>VISITOR</strong> reminder and one of them with a <strong>FALSE INFO</strong> reminder. If more or less than three players volunteer to visit, do not add these reminders.</p><p>At night, wake each player marked <strong>VISITOR</strong> or <strong>FALSE INFO</strong> one at a time. Show the woken player the Duchess token. If the woken player is marked <strong>VISITOR</strong>, show them fingers <i>(0, 1, 2, or
+        3)</i> equaling the number of evil players who are marked either <strong>VISITOR</strong> or <strong>FALSE INFO</strong>. If the woken player is marked <strong>FALSE  INFO</strong>, show them any number of fingers except the correct number. Put the woken player to sleep.</p><p>Remove the Duchess at any time, declaring when you do so.</p>`,
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Sentinel",
+        description: "Add the Sentinel to your script to keep the number of Outsiders in play mysterious.",
+        intro: `<ul><li>The official character lists are carefully constructed so that the number of Outsiders is never completely known, which lets evil players safely bluff as Outsiders. Many of the games you create using the Script Tool will not have this luxury. If, for one reason or another, the number of Outsiders in a game will become certain, the Storyteller can add a Sentinel. This will confuse matters and help the evil team either bluff as Outsiders or make existing Outsiders look suspicious.</li><li>Games with a Sentinel in play might have one more Outsider than normal. They may have one less. They may have the
+        normal amount. It is up to the Storyteller.</li></ul>`,
+        ability: 'There might be 1 extra or 1 fewer Outsider in play.',
+        flavor: '"Name, please.<br>Papers, please.<br>Weapons, please."',
+        examples: `<p>There are seven players in this game. There are no characters on the character list that add Outsiders. The Demon bluffs as the Saint. A Sentinel is in play, so the good players are not sure if
+        there is actually a Saint or not.</p><p>There are nine players in this game. Even though a Baron is on
+        the character list, the good players know no Baron is in play because the Witch just killed a player, so there should be just two Outsiders in play. However, the Outsiders cannot be trusted because a Sentinel is in play. Indeed, there is one less Outsider than normal in this game, and the Witch is bluffing as the Butler.</p>`,
+        howToRun: `<p>At the start of the game, declare that the Sentinel is in play. Add the Sentinel token to the Grimoire.</p><p>While setting up the game, before putting character tokens in the bag, add an Outsider token and remove a Townsfolk token, remove an Outsider token and add a Townsfolk token, or do neither.</p>`,
         group: "Fabled",
         script: "fabled"
     },
@@ -1493,30 +1572,6 @@ let characters = [
         intro: "",
         ability: 'Name a good character. If in play, they can only die by execution, but evil players learn which player it is.',
         flavor: '"At dawn, the temple\'s long shadow creeps to the fountain. At dusk, the obelisk blocks the red glare, cooling warm water under the archway. All lines converge here. A storm is coming, and this, this pebbled and lush and holy place between the apple trees, is the eye."',
-        group: "Fabled",
-        script: "fabled"
-    },
-    {
-        name: "Fibbin",
-        intro: "",
-        ability: 'Once per game, 1 good player might get incorrect information.',
-        flavor: '"Tee-hee-hee.<br><br>Tee. Hee. Hee."',
-        group: "Fabled",
-        script: "fabled"
-    },
-    {
-        name: "Duchess",
-        intro: "",
-        ability: 'Each day, 3 players may choose to visit you. At night*, each visitor learns how many visitors are evil, but 1 gets false info.',
-        flavor: '"We shall entertain between the hours of 6 and 7 precisely. Tea at 6:15. Scones at 6:45. Do not be late. Formal wear applies, as always."',
-        group: "Fabled",
-        script: "fabled"
-    },
-    {
-        name: "Sentinel",
-        intro: "",
-        ability: 'There might be 1 extra or 1 fewer Outsider in play.',
-        flavor: '"Name, please.<br><br>Papers, please.<br><br>Weapons, please."',
         group: "Fabled",
         script: "fabled"
     },
