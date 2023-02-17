@@ -1,6 +1,6 @@
 # One Page Blood on the Clocktower Almanac
 
-This is an unofficial online tool that contains almanac entries for the characters of Blood on the Clocktower. The goal for this fan-made project was to allow storytellers and players to be able to quickyl and efficiently look up how each character works and how to run them.
+This is an unofficial online tool that contains almanac entries for the characters of Blood on the Clocktower. The goal for this fan-made project was to allow storytellers and players to be able to quickly and efficiently look up how each character works and how to run them.
 
 ## Acknowledgements and Copyrights
 
