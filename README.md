@@ -4,8 +4,8 @@ This is an unofficial online tool that contains almanac entries for the characte
 
 ##Acknowledgements and Copyrights
 
-*[Blood on the Clocktower] (https://bloodontheclocktower.com/) is a trademark of Steven Medway and [The Pandemonium Institute] (https://www.thepandemoniuminstitute.com/)
-*Iconography by [Font Awesome] (https://fontawesome.com/)
-*All other images and icons are copyright to their respective owners
+* [Blood on the Clocktower](https://bloodontheclocktower.com/) is a trademark of Steven Medway and [The Pandemonium Institute](https://www.thepandemoniuminstitute.com/)
+* Iconography by [Font Awesome](https://fontawesome.com/)
+* All other images and icons are copyright to their respective owners
 
 This project and its website are provided free of charge and not affiliated with The Pandemonium Institute in any way.
