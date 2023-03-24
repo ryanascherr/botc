@@ -1151,6 +1151,20 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Organ Grinder",
+        description: "The Organ Grinder makes voting secret.",
+        intro: `<ul><li>When a player is nominated, players vote with eyes closed.</li><li>The Storyteller does not count the votes out loud, and does not reveal how many players voted once voting is complete.</li><li>The Storyteller does not reveal which player is "about to die".</li><li>After nominations have closed, the Storyteller reveals which player is executed, as normal.</li><li>Dead players may vote once if they have a vote token. Their vote token is removed at the end of the day instead of after the vote.</li><li>If the Organ Grinder is nominated but does not vote for themselves, the vote is not successful and counts as "zero votes" for purposes of deciding which player is executed.</li><li>If the Organ Grinder is nominated and votes for themselves, their self-vote counts as a vote, as normal.</li></ul>`,
+        ability: 'All players keep their eyes closed when voting & the vote tally is secret. Votes for you only count if you vote.',
+        flavor: '"If you want people to beleive your lies, set them to music."',
+        examples: `<p>There are 8 players alive. The Noble is nominated. All players close eyes to vote and the Noble gets 5 votes. The Imp is nominated. All players close eyes to vote and the Imp gets 7
+        votes. The Pixie is nominated. All players close eyes to vote and the Pixie gets 4 votes. After nominates close, the Storyteller declares that Doug (the Imp) is executed and dies, and that good has won.</p><p>There are 5 players alive. 2 players have 3 votes each. The Organ Grinder has 4 votes, but did not vote for themselves. There is no execution today, because the vote was tied.</p>`,
+        howToRun: `<p>When a player is nominated, ask all players to close their eyes. If they ask why, tell them that an Organ Grinder is in play. When counting votes, do so silently. Afterwards, do not reveal how
+        many players voted, nor if the nominee is "about to die". If there were enough votes to execute the nominee, mark them with the <strong>ABOUT TO DIE</strong> reminder. Ask players to open their eyes, and if there are any more nominations.</p><p>If the Organ Grinder is nominated, follow the above process, but
+        do not place or move the <strong>ABOUT TO DIE</strong> reminder if the Organ Grinder didn't vote.</p><p>When nominations are closed, declare that the player marked <strong>ABOUT TO DIE</strong>, dies.</p><p class="callout-box">Players are not allowed to use other methods to determine who is voting, such as touch or sound. It is a secret.</p>`,
+        group: "Minion",
+        script: "exp"
+    },
+    {
         name: "Al-Hadikhia",
         description: "The Al-Hadikhia puts three players in a dilemma—who will choose to die, so that others can live?",
         intro: "<ul><li>The Al-Hadikhia chooses three players per night. Everyone learns which three were chosen. Each player makes their choice before the next player is revealed.</li><li>All players must be silent when the Al-Hadikhia acts at night. This period lasts from when the Storyteller first declares that a player has been chosen, until the Storyteller says that it ends.</li><li>At night, the Storyteller asks players out loud if they choose to live. If they nod their head, they live. If they shake their head, they die. Players may be brought back to life this way.</li><li>If all players choose to live, then they all die instead. If a player chose to die but did not die, they count as alive for this calculation.</li></ul>",
