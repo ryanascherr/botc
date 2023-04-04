@@ -829,18 +829,23 @@ let characters = [
     },
     {
         name: "Balloonist",
-        description: "",
+        description: "The Balloonist knows a Townsfolk, an Outsider, a Minion, and a Demon, but gets them confused.",
         intro: "",
         ability: 'Each night, you learn 1 player of each character type, until there are no more types to learn. [+1 Outsider]',
         flavor: '"More heat! Higher! Higher! Più alto! Ahhh... it is so beautiful from up here, don\'t you agree? Can you see the children fishing by the river, under the willow? Can you see the glint of the sun on the circus tent-poles? What\'s this? An old man, alone, passed out in the vineyard? Less heat! Lower! Lower! Vai più in basso!"',
+        examples: `<p>On the first night, the Balloonist learns Lewis (i.e. the Storyteller points to Lewis). On the second night, the Balloonist learns Doug. On the third night, the Balloonist learns Lachlan. On the fourth night, the Balloonist learns Marianna.</p><p>Ben is the Balloonist. On the first night, Ben learns Sarah. On the second night, Ben learns Abdallah. On the third night, Ben dies, so does not learn any more players. Sarah is claiming to be the Monk and Abdallah is claiming to be the Goblin. Ben assumes that he has learnt one Townsfolk player and one Minion player, but he is incorrect - Sarah is the Lunatic and Abdallah is the Leviathan. Ben has actually learnt an Outsider player and a Demon player.</p>`,
+        howToRun: `<p>When putting character tokens into the bag, remove a Townsfolk and add an Outsider instead. Each night including the first, wake the Balloonist and point to a single player (alive or dead) and place the corresponding <strong>SEEN TOWNSFOLK / OUTSIDER / MINION / DEMON</strong> reminder token next to them, ensuring not to repeat the same type as has been used before <i>(i.e. don't move reminder tokens once placed)</i>. Do not show them a character token or indicate which specific type this player is, just show them a player.</p><p>On each subsequent night, therefore, you will have fewer character types to show as you only have your remaining reminder tokens to place. It is legitimate to show the same player to the Balloonist more than once, if they either have different character types when shown or register as having a different character type. Unless you have a strong reason to, it's usually recommended to not show Travellers early, as this is essentially giving the Balloonist no information at all that night as all players know which players are Travellers without needing to use any abilities.</p><p>If there are no characters of a given type in play and you have shown the Balloonist all other types, stop waking the Balloonist. Note that even if a character of this missing type comes into play on a night after you've stopped waking the Balloonist, do not wake the Balloonist again on a later night to show them this player - the Balloonist ability was complete when you stopped waking them.</p>`,
         group: "Townsfolk",
         script: "exp"
     },
     {
         name: "Bounty Hunter",
+        description: `The Bounty Hunter learns all the evil players. One. Player. At. A. Time.`,
         intro: "",
         ability: 'You start knowing 1 evil player. If the player you know dies, you learn another evil player tonight. [1 Townsfolk is evil]',
         flavor: '"Alone, I walk these streets, paved with the sick stench of corruption. Its thickness worms its way into my nostrils, unbidden, burning with revulsion. And anticipation. The illness of this wretched place grows each night. And I... I am the cure."',
+        examples: `<p>On the first night, the Bounty Hunter learns that Edd is evil. Edd is the King who has been turned evil by the Bounty Hunter. The next day, the King dies. The following night, the Bounty Hunter learns that Abdallah is evil. Abdallah is the Goblin.</p><p>On the first night, the Bounty Hunter learns that Evin is evil. Three days later, Evin dies. That night, the Bounty Hunter learns Marianna is evil. Marianna is a Minion. Three nights later, the Demon kills Marianna and the Bounty Hunter learns that Alex is evil. Alex is the Demon. The Tea Lady, who was made evil by the Bounty Hunter, is still alive.</p>`,
+        howToRun: `<p>At the start of the first night, wake any player with a Townsfolk character and show them the <strong>YOU ARE</strong> card and the thumbs down hand signal to let them know they are evil. Rotate their token 180 degrees in the grimoire, mark them with an evil reminder in clocktower.online or turn their token red in the official app to remind you they are evil. They do not learn anything else other than their new alignment, they do not know who the Minions or Demon are and they continue to register as a Townsfolk to abilities, it's just their alignment that has changed.</p><p>When the Bounty Hunter wakes, point to an evil player. This can be a Minion, Demon, Traveller or the evil Townsfolk, anyone that is evil or registering as evil. If that player dies, regardless of whether they die at night or during the day, regardless of whether they're evil or not, wake the Bounty Hunter that night and show them a new evil player.</p><p>Note that the Bounty Hunter is quite late in the night order on the first night. This is the time to wake them to show them the player they are learning is evil. The player that started evil, however, should be told immediately on the first night that they are evil and you as Storyteller should also bear this in mind when doing other first night information - that player is already evil even though the Bounty Hunter has not woken yet.</p><p>If the Bounty Hunter is drunk or poisoned or in a Vortox game at any point when they would learn information, you may (must if Vortox) give them incorrect information and show a good player. If they later sober up, they do not learn any new information, even though they still think that a good player is evil. When the player they saw dies, they learn a new player that night.</p><p>If the "known" evil player turns good later, this doesn't affect the Bounty Hunter, that player still needs to die in order for the Bounty Hunter to get further information.</p><p>It's worth noting that, if you feel the Bounty Hunter has already gained a lot of information, it's possible to give a dead evil player or one they've already received. In the former case, if they're dead they cannot die again, so the Bounty Hunter will not get new information unless that player is resurrected and killed again.</p><p>For Travellers, both travelling away and being exiled result in their death - so if a Bounty Hunter has seen a Traveller, either situation would result in the Bounty Hunter getting more information that night.</p><p class="callout-box">Due to the Bounty Hunter adding an extra evil player, extreme caution should be taken when adding it to a script with any other potential alignment changers - as soon as more than one player can be turned evil it's very easy to get an evil voting majority and not even the evil players particularly enjoy that. The script with Goon, Mezepheles, Fang Gu, Politician and Cult Leader has been made before and it isn't fun...</p>`,
         group: "Townsfolk",
         script: "exp"
     },
@@ -868,9 +873,11 @@ let characters = [
     },
     {
         name: "Cult Leader",
+        description: "The Cult Leader convinces others to join their cult to end the game. But which team will win?",
         intro: "",
         ability: 'Each night, you become the alignment of an alive neighbour. If all good players choose to join your cult, your team wins.',
         flavor: '"Thinking themselves wise, they became fools."',
+        examples: `<p>The Cult Leader neighbours the Farmer and the Magician. On the first night, the Cult Leader remains good. The Magician is executed, and dies, and the Cult Leader's living neighbours are now the Farmer and the Marionette. The Storyteller decides to make the Cult Leader evil. The next night, even though the Cult Leader's living neighbours are still the Farmer and the Marionette, the Storyteller decides to make the Cult Leader good again.</p><p>The Cult Leader is evil. The Cult Leader requests that all players join their cult. All evil players put their hand up to join, but only half the good players put their hand up to join. Nothing happens. That night, the Cult Leader turns good. The following day, the Cult Leader requests that all players join their cult. No evil players put their hand up to join, but all the good players put their hand up to join. The game ends and good wins, because the Cult Leader is good.</p>`,
         group: "Townsfolk",
         script: "exp"
     },
@@ -898,9 +905,12 @@ let characters = [
     },
     {
         name: "Fisherman",
+        description: "Once per game, during the day, visit the Storyteller for some advice to help your team win.",
         intro: "",
         ability: 'Once per game, during the day, visit the Storyteller for some advice to help your team win.',
         flavor: '"This was my favourite part of the river… see how the sunlight makes a rainbow from the monastery to the market? This was the best place for big fish. And the older I get, the bigger they were.”',
+        examples: `<p>The Fisherman goes up to the Storyteller, and they are told "not to trust Ben", this is not because Ben is evil, but because his drunk information is leading the good team astray.</p><p>On the third day, the Fisherman learns "Keep the players claiming to be Outsiders alive". These players are secretly the Klutz and the Fearmonger. The Storyteller believes that keeping these players alive is more likely to end up with good executing the Demon.</p><p>It is the third day, and the Fisherman visits the Storyteller to ask for advice. They are told to "Execute Jeremy" because Jeremy is the Drunk, and the Undertaker would discover this if they were executed.</p><p>It is the last day, and the Fisherman visits the Storyteller to ask for advice. They are told "Don't ask Kevin too many questions" because Kevin is the Mutant, and his power activating would lose the game for good.</p>`,
+        howToRun: `<p>At any time during the day, the Fisherman can approach the Storyteller privately for some advice to help them win. The Storyteller's pieces of advice are not "facts". They are strategy tips that the Storyteller believes will help the Fisherman win if they are followed.</p><p>Generally, Fisherman advice should be able to be structured as "you should" or "you should not". It doesn't need to explicitly include those words but should always follow that concept of suggestions that can be followed, rather than information about what is like a Savant would get. So "kill player X" or "find out who is the Drunk" or "you should rethink which info you're trusting" or "trust player Y" are all great Fisherman advice, for example.</p>`,
         group: "Townsfolk",
         script: "exp"
     },
@@ -961,9 +971,12 @@ let characters = [
     },
     {
         name: "Nightwatchman",
+        description: `The Nightwatchman is known by one player.`,
         intro: "",
         ability: 'Once per game, at night, choose a player: they learn who you are.',
         flavor: '"The night is cold and lonely, but I have the moon, the stars, the crisp wind and the soft thud of leather boots on cobbled stone for company. Yonder, candlelight flickers behind a murky window..."',
+        examples: `<p>Lachlan is the Nightwatchman. He chooses Abdallah. Abdallah learns that Lachlan is the Nightwatchman.</p><p>Marianna is the drunk Nightwatchman. She chooses Amy. Amy does not wake, and does not learn that Marianna is the Nightwatchman, because the Nightwatchman has no ability.</p><p>Ben is the Nightwatchman and Vortox is in play. Ben chooses Sarah. Sarah learns that Lewis is the Nightwatchman. Even though the Nightwatchman has their ability, the information is false.</p>`,
+        howToRun: `<p>Each night, wake the Nightwatchman. If they shake their head, put them back to sleep. If they point at a player, put the Nightwatchman to sleep, wake the chosen player and show them the <strong>THIS CHARACTER SELECTED YOU</strong> info token and the Nightwatchman token, then point to the Nightwatchman player before putting them back to sleep. Mark the Nightwatchman with the <strong>NO ABILITY</strong> reminder token.</p><p>If the Nightwatchman is drunk or poisoned when they choose a player, put them back to sleep, do not wake the chosen player and mark that they have used their once per game ability.</p><p>If there is a Vortox in play, wake the player the Nightwatchman chose, then show that player the relevant tokens and point to any player except the Nightwatchman.</p>`,
         group: "Townsfolk",
         script: "exp"
     },
@@ -984,7 +997,7 @@ let characters = [
         intro: `<ul><li>On the first night, the Pixie learns an in-play Townsfolk. The Storyteller chooses which Townsfolk this is. The Pixie does not learn which player is this character.</li><li>If the Pixie player pretends that they are this Townsfolk, they gain the ability of this Townsfolk when the Townsfolk dies. They could have spoken loudly about being the character for one day, or pretended to be the character each day this game, or accused the Townsfolk of being a liar—the Storyteller is the judge of whether or not the player was convincing, by "being mad that they are this character".</li><li>When the Townsfolk player dies, the Pixie does not learn this, and is not told that they have gained a new ability. They may learn this has happened if they wake at night and start gaining information, or are prompted to choose players.</li><li>If the player the Pixie learns about changes character then dies, the Pixie becomes the Townsfolk the Pixie learnt about, not the new character.</li></ul>`,
         ability: 'You start knowing 1 in-play Townsfolk. If you were mad that you were this character, you gain their ability when they die.',
         flavor: '"Round and round the garden, go.<br>Little girls run to and fro.<br>Little boys climb up the tree.<br>Which of these should Pixie be?<br>Ladies smile and go to town.<br>Lords with axe chop forest down.<br>What\'s yours is mine. What\'s mine, divine.<br>Silly little Pixie, me."',
-        examples: `<p>Amy is the Pixie, and knows that the General is in play. For three days, Amy claims that the General player is lying, because she is the General. The General is executed. That night, Amy gains the General ability, and gains information each night from now on.</p><p>Doug is the drunk Pixie. He learns that the Lycanthrope is in play. There is no Lycanthrope in play, but the Fearmonger bluffs as the Lycanthrope. The Fearmonger dies. The Storyteller, pretending that Doug has the Lycanthrope ability, wakes Doug and Doug chooses a player to “attack” each night. They do not die because Doug does not have the Lycanthrope ability.</p><p>On the first day, the Pixie player claims to be the Soldier. The real Soldier also claims to be the Soldier. The Pixie player doesn't dispute this. When the Soldier dies, the Pixie player does not gain the Soldier ability, as the Storyteller feels that the Pixie did not convincingly pretend to be the Soldier.</p>`,
+        examples: `<p>Amy is the Pixie, and knows that the General is in play. For three days, Amy claims that the General player is lying, because she is the General. The General is executed. That night, Amy gains the General ability, and gains information each night from now on.</p><p>Doug is the drunk Pixie. He learns that the Lycanthrope is in play. There is no Lycanthrope in play, but the Fearmonger bluffs as the Lycanthrope. The Fearmonger dies. The Storyteller, pretending that Doug has the Lycanthrope ability, wakes Doug and Doug chooses a player to "attack" each night. They do not die because Doug does not have the Lycanthrope ability.</p><p>On the first day, the Pixie player claims to be the Soldier. The real Soldier also claims to be the Soldier. The Pixie player doesn't dispute this. When the Soldier dies, the Pixie player does not gain the Soldier ability, as the Storyteller feels that the Pixie did not convincingly pretend to be the Soldier.</p>`,
         howToRun: `<p>During the first night, mark a Townsfolk character token with the Pixie's <strong>MAD</strong> reminder. Wake the Pixie. Show the Pixie this Townsfolk character token. Put the Pixie to sleep.</p><p>If the Townsfolk marked <strong>MAD</strong> dies, and you feel that the Pixie player has been sufficiently <strong>mad</strong> that they were this character, replace the <strong>MAD</strong> reminder with the <strong>HAS ABILITY</strong> reminder. The Pixie now has this Townsfolk's ability, and will wake at night when this Townsfolk would normally wake.</p>`,
         group: "Townsfolk",
         script: "exp"
@@ -1002,17 +1015,22 @@ let characters = [
     },
     {
         name: "Preacher",
+        description: `The Preacher removes the Minion abilities of selected players.`,
         intro: "",
         ability: 'Each night, choose a player: a Minion, if chosen, learns this. All chosen Minions have no ability.',
         flavor: '"It is better to be rich and healthy than poor and sick."',
+        examples: `<p>Alex is the Preacher. On the first night, the Preacher chooses the Fearmonger. The Fearmonger loses their ability and learns that they have been chosen by the Preacher. On the second night, the Preacher chooses the Slayer. Nothing happens because the Slayer is not a Minion. On the third night, the Preacher chooses the Po. Nothing happens because the Po is not a Minion. On the fourth night, the Preacher chooses the Poisoner. The Poisoner loses their ability and learns that they have been chosen by the Preacher.</p><p>The Preacher has previously chosen the Spy, the Saint, the Drunk, and the Goblin. The Spy and the Goblin have no ability, so the Spy doesn't see the Grimoire each night, and the Goblin cannot win by being executed. The Preacher becomes drunk. The Spy and the Goblin regain their abilities. The Spy sees the Grimoire that night, and the Goblin will win if executed. The Preacher becomes sober, so once again the Spy and Goblin have no abilities. The Spy dies. The Preacher dies. The Goblin gets their ability back, but the Spy does not, because the Spy is dead.</p>`,
+        howToRun: `<p>Each night, wake the Preacher and have them choose a player. If they choose a Minion, put a <strong>PREACHED</strong> reminder token next to that Minion. Put the Preacher to sleep. If applicable, wake the Minion the Preacher chose tonight, show them the <strong>THIS CHARACTER SELECTED YOU</strong> card and the Preacher token. Put the Minion back to sleep.</p><p>From now on, that Minion has no ability. If they would normally wake at night to make a choice, take an action or learn information due to their ability, they no longer do so. If their ability would otherwise have an effect on the game while they are marked by the <strong>PREACHED</strong> token, it does not.</p><p>If the Preacher dies, remove all <strong>PREACHED</strong> tokens from affected Minions. The Minions regain their abilities. Minions with expended once-per-game abilities do not gain another use of that ability. Affected Minions are not told that the Preacher is dead, but may be able to figure it out when they start waking up again etc.</p><p>If a Preacher is made drunk or poisoned, Minions who have lost their abilities to the Preacher regain them, but lose them again when the Preacher becomes healthy and sober.</p><p>If a Minion who has been chosen by the Preacher later becomes a different type of character (ie not a Minion), they are no longer affected by the Preacher's ability. Remove the relevant <strong>PREACHED</strong> reminder token. Also, evil players are not affected by the Preacher ability just because they're evil, they need to be explicitly a Minion character in order to be affected.</p><p>In a similar vein, a non-Minion who later becomes a Minion is not affected by having been chosen by the Preacher before they became a Minion. If the Preacher chooses them after they become a Minion, the Preacher ability works as normal.</p><p>If a preached Minion dies and is resurrected they do not regain their ability, they are still preached provided the Preacher is still alive.</p>`,
         group: "Townsfolk",
         script: "exp"
     },
     {
         name: "Acrobat",
+        description: `The Acrobat dies if the people they neighbour are drunk or poisoned.`,
         intro: "",
         ability: 'Each night*, if either good living neighbour is drunk or poisoned, you die.',
         flavor: '"Welcome, one and all, to the greatest show on earth."',
+        examples: `<p>The Acrobat neighbours the Lycanthrope and the Amnesiac. The Lycanthrope has been poisoned by the Widow. On the first night, the Acrobat lives, because the Acrobat's ability doesn't apply on the first night. On the second night, the Acrobat dies.</p><p>The Acrobat neighbours the Moonchild and the Soldier. The Soldier is executed, and the Acrobat's living neighbours are now the Moonchild and the Boomdandy. The Moonchild dies at night, and the Acrobat's living neighbours are now the drunk Sailor and the Boomdandy. The Acrobat dies.</p><p>The Acrobat neighbours the Imp and the Dreamer. The Imp also neighbours the Clockmaker. The Acrobat does not die, because neither the Dreamer nor the Clockmaker are drunk or poisoned. (The Acrobat's ability ignores Evil players, so the Imp's status is not considered.) The Snake Charmer selects the Imp, turning the Imp's player into a good, poisoned Snake Charmer. The Acrobat dies.</p>`,
         group: "Outsider",
         script: "exp"
     },
@@ -1051,10 +1069,13 @@ let characters = [
     },
     {
         name: "Politician",
+        description: `The Politician changes teams if they are losing.`,
         intro: "",
         ability: 'If you were the player most responsible for your team losing, you change alignment & win, even if dead.',
         flavor: '"I\'m glad you asked that question. Truly, I am. But I think the REAL question here is…"',
         group: "Outsider",
+        examples: `<p>The Politician has been trying to execute the Demon all game, without success. With just three players alive, the Politician convinces the group to not execute, since someone is claiming to be the Mayor. There is no execution, and evil wins because a Minion was bluffing as the Mayor. The Politician wins too.</p><p>On the final day, the Politician votes for the Empath, and tells the group that the Empath is evil. The Saint is executed instead. The Storyteller judges that the good team lost due to their own actions as a group, not just the bad advice of the Politician. Good loses, and the Politician loses.</p><p>The Politician, believing that evil is winning, bluffs as the Atheist. The Storyteller is executed. Evil wins, and the Politician wins too.</p><p>On the final day, the Politician ties the vote, forcing no execution to occur. That night, the Demon kills a player, making evil win. The Politician wins too.</p>`,
+        howToRun: `<p>When the game ends, consider the influence the Politician had on the specific result of which team won. If the Politician was the major dominant force in making the opposing team win, they change alignment and win with that team. In all other situations, the Politician stays the same alignment and wins/loses accordingly.</p><p>Note that the Politician only changes alignment right at the end of the game, so even if they're playing for evil, they still register as good for any alignment-checking abilities.</p><p>If the Politician is drunk/poisoned during the game it doesn't matter, except if the game ends during that time. If so, they cannot change alignment in order to win, regardless of how significant their efforts for the opposing team might have been.</p>`,
         script: "exp"
     },
     {
@@ -1103,9 +1124,12 @@ let characters = [
     },
     {
         name: "Goblin",
+        description: `The Goblin takes revenge if the town knowingly executes them.`,
         intro: "",
         ability: 'If you publicly claim to be the Goblin when nominated & are executed that day, your team wins.',
         flavor: '"You don\'t want to insult the goblins. You really, really don\'t. On a completely different note… can I have another piece of cake?"',
+        examples: `<p>Abdallah is the Goblin. Alex nominates Abdallah, and Abdallah claims to be the Goblin. Votes are taken, and Abdallah is about to die. Other nominations occur later today, but Abdallah is executed. Evil wins.</p><p>Lewis is the Artist, and claims to be the Goblin when nominated. He is executed, and the game continues.</p><p>Doug is the Goblin. He claimed to be the Goblin yesterday and the day before, but not today. He is executed. The game continues.</p>`,
+        howToRun: `<p>When nominated, any player may claim to be the Goblin before voting starts. When any player does so, declare to the group that the player has claimed Goblin before starting the vote. If the Goblin does so and is then executed that day, their team wins.</p><p>This claim of Goblin can be as joking or as serious as the player likes, the simple point is that if they claim to be the Goblin in any way when nominated before votes start they have satisfied the ability requirements. This is why you should always confirm that a player has claimed Goblin to the whole group.</p><p>If a Goblin is executed without claiming Goblin when nominated, the game continues. The Goblin must claim Goblin the same day they are nominated and executed, claims on previous days are irrelevant.</p>`,
         group: "Minion",
         script: "exp"
     },
@@ -1144,9 +1168,12 @@ let characters = [
     },
     {
         name: "Widow",
+        description: `The Widow knows all characters and poisons the exact person they think is most useful.`,
         intro: "",
         ability: 'On your first night, look at the Grimoire & choose a player: they are poisoned. 1 good player knows a Widow is in play.',
         flavor: '"More wine? Château d\'Ergot \'07 is a very special vintage. My yes, very special indeed."',
+        examples: `<p>The Widow sees the Grimoire and points to the Sailor character token. The Sailor is poisoned this game. The Sailor is sober, but dies when executed.</p><p>On the third night, the Pit Hag turns themselves into the Widow. That night, the good Scapegoat learns that a Widow is in play.</p><p>On the first night the Widow looks at the Grimoire and poisons themself. The good player that would've learned a Widow is in play does not.</p>`,
+        howToRun: `<p>On their first night, wake the Widow and show them the Grimoire for as long as they need. The Widow points to a character token in the Grimoire, or a player. Mark that player with a <strong>POISONED</strong> reminder. Put the Widow to sleep. Wake any good player. Show them the Widow character token. Put that good player to sleep.</p><p>If the Widow dies or changes character, their poison ends. Likewise, their poison vanishes while the Widow is poisoned/drunk. When a Widow poisons a player, night 1 has already begun, so it does not prevent any [setup] abilities from taking effect.</p><p>If a Widow is created mid-game, execute the first paragraph of the how to run just like you would if they were in play on night 1 - it's the Widow's first night that matters for their ability, not how many nights into the whole game you are.</p><p>If the Widow chooses to poison themselves, no-one is informed that a Widow is in play.</p><p>Only the Preacher, Sailor and Poisoner can prevent the Widow from getting to poison on night 1 and in all of these cases, a good player would be told that the Widow is in play once the preaching/drunk/poison wears off. If Sailor drunked or Poisoner poisoned, the Widow can be shown a fake grimoire. Also, their poison choice has no effect for the rest of the game, even if they become sober/healthy later. If preached, the Widow is merely shown the Preacher in play and does not see the grimoire, even if the Preacher is dead/poisoned/drunk later in the game.</p><p>If the good player who knows the Widow is in play turns evil while the Widow is alive, wake a new good player and show them the Widow character token.</p>`,
         group: "Minion",
         script: "exp"
     },
@@ -1199,9 +1226,11 @@ let characters = [
     },
     {
         name: "Lil' Monsta",
+        description: `Lil' Monsta isn't a player, and is instead babysat by a Minion.`,
         intro: "",
         ability: 'Each night, Minions choose who babysits Lil\' Monsta\'s token & "is the Demon". A player dies each night*. [+1 Minion]',
         flavor: '"Step 1: Be cute. Step 2: World domination. Step 3: Bweakfast."',
+        examples: `<p>The Poisoner and the Widow wake. They point at each other, then point at themselves, then eventually both point at the Widow, who receives Lil' Monsta's token. The next night, they both choose that the Poisoner babysits Lil' Monsta instead.</p>`,
         group: "Demon",
         script: "exp"
     },
