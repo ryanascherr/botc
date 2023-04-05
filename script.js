@@ -1650,235 +1650,278 @@ let characters = [
     }
 ];
 
-let isModalOpen;
+let isModalOpen = false;
+let modal = document.getElementById("myModal");
+let closeBtn = document.getElementsByClassName("close")[0];
+let ability;
+let intro;
+let flavor;
+let examples;
+let howToRun;
+let group;
+let originalName;
+let altName;
+let name;
 
 initialize();
-
 function initialize() {
+    setHeaderHeight();
+    populateAll();
+}
+
+function setHeaderHeight() {
     let headerHeight = $("header").outerHeight();
     $("html").css({'scroll-padding-top':`${headerHeight}px`});
-    populateAll();
-    setModal();
 }
 
 function populateAll() {
 
     characters.forEach(character => {
-        let name;
-
-        getName();
-        function getName() {
-            originalName = character.name;
-            name = originalName.toLowerCase();
-            name = name.split(" ");
-            if (name[2]) {
-                name = name[0] + "-" + name[1] + "-" + name[2];
-                name = name.replace("'",'');
-            } else if (name[1]) {
-                name = name[0] + "-" + name[1];
-                name = name.replace("'",'');
-            }
-        }
+        let originalName = character.name;
+        let name = getName(originalName);
+        let group = character.group;
+        let script = character.script;
 
         if (character.script == "tb") {
-            populateTB();
+            populateTB(name, originalName, group);
         }
         if (character.script == "bmr") {
-            populatedBMR();
+            populatedBMR(name, originalName, group);
         }
         if (character.script == "sv") {
-            populateSV();
+            populateSV(name, originalName, group);
         }
         if (character.script == "exp") {
-            populateEXP();
+            populateEXP(name, originalName, group);
         }
         if (character.group == "Traveller") {
-            populateTraveller();
+            populateTraveller(name, originalName, script);
         }
         if (character.script == "fabled") {
-            populateFabled();
-        }
-
-        function populateTB() {
-            if (character.group == "Townsfolk") {
-                $(".tb-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
-            } else if (character.group == "Outsider") {
-                $(".tb-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
-            } else if (character.group == "Minion") {
-                $(".tb-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`)
-            } else if (character.group == "Demon") {
-                $(".tb-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
-            }
-        }
-
-        function populatedBMR() {
-            if (character.group == "Townsfolk") {
-                $(".bmr-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
-            } else if (character.group == "Outsider") {
-                $(".bmr-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
-            } else if (character.group == "Minion") {
-                $(".bmr-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`)
-            } else if (character.group == "Demon") {
-                $(".bmr-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
-            }
-        }
-
-        function populateSV() {
-            if (character.group == "Townsfolk") {
-                $(".sv-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
-            } else if (character.group == "Outsider") {
-                $(".sv-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
-            } else if (character.group == "Minion") {
-                $(".sv-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`)
-            } else if (character.group == "Demon") {
-                $(".sv-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
-            }
-        }
-
-        function populateEXP() {
-            if (character.group == "Townsfolk") {
-                $(".exp-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
-            } else if (character.group == "Outsider") {
-                $(".exp-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
-            } else if (character.group == "Minion") {
-                $(".exp-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`)
-            } else if (character.group == "Demon") {
-                $(".exp-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
-            }
-        }
-
-        function populateTraveller() {
-            if (character.script == "tb") {
-                $(".trav-tb").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
-            } else if (character.script == "bmr") {
-                $(".trav-bmr").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
-            } else if (character.script == "sv") {
-                $(".trav-sv").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
-            } else if (character.script == "exp") {
-                $(".trav-exp").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
-            }
-        }
-
-        function populateFabled() {
-            $(".fabled-all").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+            populateFabled(name, originalName);
         }
     })
 }
 
-function setModal() {
+function getName(originalName, name) {
+    name = originalName.toLowerCase();
+    name = name.split(" ");
+    if (name[2]) {
+        name = name[0] + "-" + name[1] + "-" + name[2];
+        name = name.replace("'",'');
+    } else if (name[1]) {
+        name = name[0] + "-" + name[1];
+        name = name.replace("'",'');
+    }
+    return(name);
+};
+
+function populateTB(name, originalName, group) {
+    if (group == "Townsfolk") {
+        $(".tb-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    } else if (group == "Outsider") {
+        $(".tb-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    } else if (group == "Minion") {
+        $(".tb-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`)
+    } else if (group == "Demon") {
+        $(".tb-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    }
+}
+
+function populatedBMR(name, originalName, group) {
+    if (group == "Townsfolk") {
+        $(".bmr-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    } else if (group == "Outsider") {
+        $(".bmr-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    } else if (group == "Minion") {
+        $(".bmr-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`)
+    } else if (group == "Demon") {
+        $(".bmr-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    }
+}
+
+function populateSV(name, originalName, group) {
+    if (group == "Townsfolk") {
+        $(".sv-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    } else if (group == "Outsider") {
+        $(".sv-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    } else if (group == "Minion") {
+        $(".sv-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`)
+    } else if (group == "Demon") {
+        $(".sv-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    }
+}
+
+function populateEXP(name, originalName, group) {
+    if (group == "Townsfolk") {
+        $(".exp-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    } else if (group == "Outsider") {
+        $(".exp-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    } else if (group == "Minion") {
+        $(".exp-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`)
+    } else if (group == "Demon") {
+        $(".exp-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    }
+}
+
+function populateTraveller(name, originalName, script) {
+    if (script == "tb") {
+        $(".trav-tb").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    } else if (script == "bmr") {
+        $(".trav-bmr").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    } else if (script == "sv") {
+        $(".trav-sv").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    } else if (script == "exp") {
+        $(".trav-exp").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    }
+}
+
+function populateFabled(name, originalName) {
+    $(".fabled-all").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+}
+
+$('.token').click(function(){
+    openModal();
+});
+
+function openModal() {
+    modal.style.display = "block";
+    isModalOpen = true;
+}
+
+$('.close').click(function(){
+    closeModal();
+});
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closeModal();
+    }
+};
+
+$(document).keyup(function(e) {
+    if (e.key === "Escape" && isModalOpen) {
+        closeModal();
+    }
+});
+
+function closeModal() {
+    modal.style.display = "none";
+    $("html").removeClass("modal-open");
     isModalOpen = false;
-    let modal = document.getElementById("myModal");
-    let span = document.getElementsByClassName("close")[0];
-
-    $('.token').click(function(){
-	    modal.style.display = "block";
-        isModalOpen = true;
-    });
-
-    span.onclick = function() {
-        modal.style.display = "none";
-        $("html").removeClass("modal-open");
-        isModalOpen = false;
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-            $("html").removeClass("modal-open");
-            isModalOpen = false;
-        }
-    }
-
-    $(document).keyup(function(e) {
-        if (e.key === "Escape" && isModalOpen) {
-            modal.style.display = "none";
-            $("html").removeClass("modal-open");
-            isModalOpen = false;
-        }
-    });
 }
 
 $(".all .token").click(function() {
 
     resetModal();
-    function resetModal() {
-        //resets modal position
-        setTimeout( () => {
-            let modal = document.querySelector("#myModal");
-            modal.scrollTop = 0;
-        }, 1);
 
-        //stops page scroll
-        $("html").addClass("modal-open");
+    originalName = $(this).attr("data-name");
+    altName = originalName;
+
+    getCharacterInformation(originalName);
+
+    updateName();
+
+    colorText(group);
+
+    populateModal(name, altName, intro, ability, flavor, examples, howToRun);
+});
+
+function resetModal() {
+    //resets modal position
+    setTimeout( () => {
+        modal.scrollTop = 0;
+    }, 1);
+
+    //stops page scroll
+    $("html").addClass("modal-open");
+}
+
+function getCharacterInformation(originalName) {
+    characters.forEach(character => {
+        if (character.name == originalName) {
+            ability = character.ability;
+            intro = character.intro;
+            flavor = character.flavor;
+            examples = character.examples;
+            howToRun = character.howToRun;
+            group = character.group;
+        }
+    });
+};
+
+function updateName() {
+    name = originalName.toLowerCase();
+    name = name.split(" ");
+    if (name[2]) {
+        name = name[0] + "-" + name[1] + "-" + name[2];
+        name = name.replace("'",'');
+    } else if (name[1]) {
+        name = name[0] + "-" + name[1];
+        name = name.replace("'",'');
     }
-    let ability;
-    let intro;
-    let flavor;
-    let examples;
-    let howToRun;
-    let group;
-    let orignalName = $(this).attr("data-name");
-    let altName = orignalName;
-    let name;
+}
 
-    getNameModal();
-    function getNameModal() {
-        characters.forEach(character => {
-            if (character.name == orignalName) {
-                ability = character.ability;
-                intro = character.intro;
-                flavor = character.flavor;
-                examples = character.examples;
-                howToRun = character.howToRun;
-                group = character.group;
-            }
-        });
-        name = orignalName.toLowerCase();
-        name = name.split(" ");
-        if (name[2]) {
-            name = name[0] + "-" + name[1] + "-" + name[2];
-            name = name.replace("'",'');
-        } else if (name[1]) {
-            name = name[0] + "-" + name[1];
-            name = name.replace("'",'');
-        }
+function colorText(group) {
+    if (group == "Townsfolk" || group == "Outsider") {
+        $(".modal-content h2, .modal-content h3").css({'color':'#0365AB'});
+    } else if (group == "Minion" || group == "Demon") {
+        $(".modal-content h2, .modal-content h3").css({'color':'darkred'});
+    } else {
+        $(".modal-content h2, .modal-content h3").css({'color':'black'});
     }
+}
 
-    colorText();
-    function colorText() {
-        if (group == "Townsfolk" || group == "Outsider") {
-            $(".modal-content h2").css({'color':'#0365AB'});
-            $(".modal-content h3").css({'color':'#0365AB'});
-        } else if (group == "Minion" || group == "Demon") {
-            $(".modal-content h2").css({'color':'darkred'});
-            $(".modal-content h3").css({'color':'darkred'});
-        } else {
-            $(".modal-content h2").css({'color':'black'});
-            $(".modal-content h3").css({'color':'black'});
-        }
+function populateModal(name, altName, intro, ability, flavor, examples, howToRun) {
+    setImage(name, altName);
+    setName(altName);
+    setIntro(intro);
+    setAbility(ability);
+    setFlavor(flavor);
+    setExamples(examples);
+    setHowToRun(howToRun);
+}
+
+function setImage(name, altName) {
+    $(".img-flavor-container .token").attr("src",`./img/${name}.png`);
+    $(".img-flavor-container .token").attr("alt",`The icon for the ${altName} character`);
+}
+
+function setName(altName) {
+    $(".name").html(`${altName}`);
+}
+
+function setAbility(ability) {
+    $(".ability").html(`${ability}`);
+}
+
+function setIntro(intro) {
+    if (intro) {
+        $(".intro").html(`${intro}`);
+    } else {
+        $(".intro").html(`Extra info coming soon...`);
     }
+}
 
-    populateModal();
-    function populateModal() {
-        $(".img-flavor-container .token").attr("src",`./img/${name}.png`);
-        $(".img-flavor-container .token").attr("alt",`The icon for the ${altName} character`);
-        $(".name").html(`${orignalName}`);
-        if (intro) {
-            $(".intro").html(`${intro}`);
-        } else {
-            $(".intro").html(`Extra info coming soon...`);
-        }
-        $(".ability").html(`${ability}`);
-        $(".flavor").html(`${flavor}`);
-        if (examples) {
-            $(".examples").html(`${examples}`);
-        } else {
-            $(".examples").html(`Examples coming soon...`);
-        }
-        if (howToRun) {
-            $(".how-to-run").html(`${howToRun}`);
-        } else {
-            $(".how-to-run").html(`How to Run coming soon...`);
-        }
-    } 
-})
+function setFlavor(flavor) {
+    $(".flavor").html(`${flavor}`);
+}
+
+function setExamples(examples) {
+    if (examples) {
+        $(".examples").html(`${examples}`);
+    } else {
+        $(".examples").html(`Examples coming soon...`);
+    }
+}
+
+function setHowToRun(howToRun) {
+    if (howToRun) {
+        $(".how-to-run").html(`${howToRun}`);
+    } else {
+        $(".how-to-run").html(`How to Run coming soon...`);
+    }
+}
+
+
+
