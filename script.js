@@ -1178,6 +1178,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Vizier",
+        description: `The Vizier executes players without the town's consent.`,
+        intro: "<ul><li>On the first day, all players learn that the Vizier is in play, and which player it is.</li><li>During the day, the Vizier can not die by any means.</li><li>After a vote is tallied, if the Vizier chooses to execute the nominee (and at least one good player voted), they are executed immediately. This counts as the 1 execution allowed each day.</li><li>After a vote is tallied, if the Vizier chooses to execute the nominee (and no good players voted), nothing happens.</li><li>Even if the vote tally is less than 50% of the living players, the Vizier may still execute. Even if another player has more votes than the current player, the Vizier may still execute.</li><li>The Vizier does not have to force an execution each day.</li></ul>",
+        ability: 'All players know who you are. You can not die during the day. If good voted, you may choose to execute immediately.',
+        flavor: 'Flavor text to be determined...',
+        examples: `<p>The King has been nominated. Five people vote, but the Vizier does not use their ability. The Boomdandy is nominated and eight people vote. The Vizier uses their ability and the Boomdandy is executed immediately.</p><p>The Demon has seven votes against them, and is "about to die". The Vizier nominates Bill, the Barber. Two evil players and one good player vote. The Vizier declares that Bill is executed. The Demon survives today. The Town nominates and executes the Vizier. The Vizier does not die. That night, The Demon kills the Vizier.</p>`,
+        howToRun: `<p>When the first night has ended, declare that the Vizier is in play, and which player it is.</p><p>f a vote has just been tallied, and one or more good players voted, and the Vizier declares that the nominee is executed, that player is executed and dies. No more nominations, votes, or executions occur today.</p>`,
+        group: "Minion",
+        script: "exp"
+    },
+    {
         name: "Organ Grinder",
         description: "The Organ Grinder makes voting secret.",
         intro: `<ul><li>When a player is nominated, players vote with eyes closed.</li><li>The Storyteller does not count the votes out loud, and does not reveal how many players voted once voting is complete.</li><li>The Storyteller does not reveal which player is "about to die".</li><li>After nominations have closed, the Storyteller reveals which player is executed, as normal.</li><li>Dead players may vote once if they have a vote token. Their vote token is removed at the end of the day instead of after the vote.</li><li>If the Organ Grinder is nominated but does not vote for themselves, the vote is not successful and counts as "zero votes" for purposes of deciding which player is executed.</li><li>If the Organ Grinder is nominated and votes for themselves, their self-vote counts as a vote, as normal.</li></ul>`,
