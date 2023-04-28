@@ -1178,6 +1178,20 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Organ Grinder",
+        description: "The Organ Grinder makes voting secret.",
+        intro: `<ul><li>When a player is nominated, players vote with eyes closed.</li><li>The Storyteller does not count the votes out loud, and does not reveal how many players voted once voting is complete.</li><li>The Storyteller does not reveal which player is "about to die".</li><li>After nominations have closed, the Storyteller reveals which player is executed, as normal.</li><li>Dead players may vote once if they have a vote token. Their vote token is removed at the end of the day instead of after the vote.</li><li>If the Organ Grinder is nominated but does not vote for themselves, the vote is not successful and counts as "zero votes" for purposes of deciding which player is executed.</li><li>If the Organ Grinder is nominated and votes for themselves, their self-vote counts as a vote, as normal.</li></ul>`,
+        ability: 'All players keep their eyes closed when voting & the vote tally is secret. Votes for you only count if you vote.',
+        flavor: '"If you want people to believe your lies, set them to music."',
+        examples: `<p>There are 8 players alive. The Noble is nominated. All players close eyes to vote and the Noble gets 5 votes. The Imp is nominated. All players close eyes to vote and the Imp gets 7
+        votes. The Pixie is nominated. All players close eyes to vote and the Pixie gets 4 votes. After nominates close, the Storyteller declares that Doug (the Imp) is executed and dies, and that good has won.</p><p>There are 5 players alive. 2 players have 3 votes each. The Organ Grinder has 4 votes, but did not vote for themselves. There is no execution today, because the vote was tied.</p>`,
+        howToRun: `<p>When a player is nominated, ask all players to close their eyes. If they ask why, tell them that an Organ Grinder is in play. When counting votes, do so silently. Afterwards, do not reveal how
+        many players voted, nor if the nominee is "about to die". If there were enough votes to execute the nominee, mark them with the <strong>ABOUT TO DIE</strong> reminder. Ask players to open their eyes, and if there are any more nominations.</p><p>If the Organ Grinder is nominated, follow the above process, but
+        do not place or move the <strong>ABOUT TO DIE</strong> reminder if the Organ Grinder didn't vote.</p><p>When nominations are closed, declare that the player marked <strong>ABOUT TO DIE</strong>, dies.</p><p class="callout-box">Players are not allowed to use other methods to determine who is voting, such as touch or sound. It is a secret.</p>`,
+        group: "Minion",
+        script: "exp"
+    },
+    {
         name: "Vizier",
         description: `The Vizier executes players without the town's consent.`,
         intro: "<ul><li>On the first day, all players learn that the Vizier is in play, and which player it is.</li><li>During the day, the Vizier can not die by any means.</li><li>After a vote is tallied, if the Vizier chooses to execute the nominee (and at least one good player voted), they are executed immediately. This counts as the 1 execution allowed each day.</li><li>After a vote is tallied, if the Vizier chooses to execute the nominee (and no good players voted), nothing happens.</li><li>Even if the vote tally is less than 50% of the living players, the Vizier may still execute. Even if another player has more votes than the current player, the Vizier may still execute.</li><li>The Vizier does not have to force an execution each day.</li></ul>",
@@ -1185,20 +1199,6 @@ let characters = [
         flavor: `"An excellent decision, as always, sire. Such a petty crime as bumping into the Bishop indeed deserves your 'justice' and 'mercy'. Take a stroll in the gardens. Visit the gallery and peruse the sculptures of Von Strauf. Relax, sire. Leave everything... to me."`,
         examples: `<p>The King has been nominated. Five people vote, but the Vizier does not use their ability. The Boomdandy is nominated and eight people vote. The Vizier uses their ability and the Boomdandy is executed immediately.</p><p>The Demon has seven votes against them, and is "about to die". The Vizier nominates Bill, the Barber. Two evil players and one good player vote. The Vizier declares that Bill is executed. The Demon survives today. The Town nominates and executes the Vizier. The Vizier does not die. That night, The Demon kills the Vizier.</p><p>The town nominates and executes the Vizier. The Vizier does not die. That night, The Demon kills the Vizier.</p>`,
         howToRun: `<p>When the first night has ended, declare that the Vizier is in play, and which player it is.</p><p>If a vote has just been tallied, and one or more good players voted, and the Vizier declares that the nominee is executed, that player is executed and dies. No more nominations, votes, or executions occur today.</p>`,
-        group: "Minion",
-        script: "exp"
-    },
-    {
-        name: "Organ Grinder",
-        description: "The Organ Grinder makes voting secret.",
-        intro: `<ul><li>When a player is nominated, players vote with eyes closed.</li><li>The Storyteller does not count the votes out loud, and does not reveal how many players voted once voting is complete.</li><li>The Storyteller does not reveal which player is "about to die".</li><li>After nominations have closed, the Storyteller reveals which player is executed, as normal.</li><li>Dead players may vote once if they have a vote token. Their vote token is removed at the end of the day instead of after the vote.</li><li>If the Organ Grinder is nominated but does not vote for themselves, the vote is not successful and counts as "zero votes" for purposes of deciding which player is executed.</li><li>If the Organ Grinder is nominated and votes for themselves, their self-vote counts as a vote, as normal.</li></ul>`,
-        ability: 'All players keep their eyes closed when voting & the vote tally is secret. Votes for you only count if you vote.',
-        flavor: '"If you want people to beleive your lies, set them to music."',
-        examples: `<p>There are 8 players alive. The Noble is nominated. All players close eyes to vote and the Noble gets 5 votes. The Imp is nominated. All players close eyes to vote and the Imp gets 7
-        votes. The Pixie is nominated. All players close eyes to vote and the Pixie gets 4 votes. After nominates close, the Storyteller declares that Doug (the Imp) is executed and dies, and that good has won.</p><p>There are 5 players alive. 2 players have 3 votes each. The Organ Grinder has 4 votes, but did not vote for themselves. There is no execution today, because the vote was tied.</p>`,
-        howToRun: `<p>When a player is nominated, ask all players to close their eyes. If they ask why, tell them that an Organ Grinder is in play. When counting votes, do so silently. Afterwards, do not reveal how
-        many players voted, nor if the nominee is "about to die". If there were enough votes to execute the nominee, mark them with the <strong>ABOUT TO DIE</strong> reminder. Ask players to open their eyes, and if there are any more nominations.</p><p>If the Organ Grinder is nominated, follow the above process, but
-        do not place or move the <strong>ABOUT TO DIE</strong> reminder if the Organ Grinder didn't vote.</p><p>When nominations are closed, declare that the player marked <strong>ABOUT TO DIE</strong>, dies.</p><p class="callout-box">Players are not allowed to use other methods to determine who is voting, such as touch or sound. It is a secret.</p>`,
         group: "Minion",
         script: "exp"
     },
@@ -1658,7 +1658,29 @@ let characters = [
         howToRun: `<p>At the start of the game, if there are jinxed characters on the character sheet, declare that the Djinn is in play and inform the group of all Djinn special rules for this game. <i>(Do this even if there are no jinxed characters in play.)</i></p><p>Follow the Djinn instructions as listed on the Script Tool printout.</p>`,
         group: "Fabled",
         script: "fabled"
-    }
+    },
+    {
+        name: "Gardener",
+        description: "",
+        intro: ``,
+        ability: "The Storyteller assigns 1 or more players' characters.",
+        flavor: '',
+        examples: ``,
+        howToRun: ``,
+        group: "Fabled",
+        script: "fabled"
+    },
+    {
+        name: "Bootlegger",
+        description: "",
+        intro: ``,
+        ability: 'This script has homebrew characters or rules.',
+        flavor: '',
+        examples: ``,
+        howToRun: ``,
+        group: "Fabled",
+        script: "fabled"
+    },
 ];
 
 let isModalOpen = false;
