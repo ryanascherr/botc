@@ -948,6 +948,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Knight",
+        description: "The Knight knows players that are not the Demon.",
+        intro: "<ul><li>On the first night, the Knight learns two players who are not the Demon.</li><li>On subsequent nights, they learn nothing more.</li><li>The Knight can learn Townsfolk, Outsiders or even Minions but does not learn which character type they are.</li></ul>",
+        ability: 'You start knowing 2 players that are not the Demon.',
+        flavor: '"When a man lies, he murders some part of the world."',
+        examples: `<p>Lewis is the Undertaker, Doug is the Imp and Ben is the Fortune Teller. The Knight learns Lewis and Ben.</p><p>Marianna is the Vortox and Abdallah is the Alchemist. The Knight learns Marianna and Abdallah. The Knight must learn Marianna and Abdallah because the Knight's information must be false due to the Vortox ability and therefore include the Demon.</p>`,
+        howToRun: `<p>During setup, mark two non-Demon players with the Knight's <strong>KNOW</strong> reminders. During the first night, wake the Knight. Point to the two players marked <strong>KNOW</strong>.</p>`,
+        group: "Townsfolk",
+        script: "exp"
+    },
+    {
         name: "Lycanthrope",
         description: "The Lycanthrope roams at night, killing the innocent, whilst the Demon cowers indoors.",
         intro: `<ul><li>The Lycanthrope must choose an alive player each night. If the Lycanthrope chooses a dead player, the Storyteller shakes their head no and prompts the Lycanthrope to choose a different player.</li><li>If the player that the Lycanthrope chooses is good, that player dies, and no other players can die tonight.</li><li>If the player the Lycanthrope attacks is evil, that player does not die, and other players may die tonight due to other characters' abilities, such as the Demon's.</li><li>If the Lycanthrope attacks a good player but that good player doesn't die, players can still die tonight due to other character's abilities.</li><li>Evil characters' abilities that don't kill still function normally.</li></ul>`,
@@ -1021,6 +1032,17 @@ let characters = [
         flavor: '"It is better to be rich and healthy than poor and sick."',
         examples: `<p>Alex is the Preacher. On the first night, the Preacher chooses the Fearmonger. The Fearmonger loses their ability and learns that they have been chosen by the Preacher. On the second night, the Preacher chooses the Slayer. Nothing happens because the Slayer is not a Minion. On the third night, the Preacher chooses the Po. Nothing happens because the Po is not a Minion. On the fourth night, the Preacher chooses the Poisoner. The Poisoner loses their ability and learns that they have been chosen by the Preacher.</p><p>The Preacher has previously chosen the Spy, the Saint, the Drunk, and the Goblin. The Spy and the Goblin have no ability, so the Spy doesn't see the Grimoire each night, and the Goblin cannot win by being executed. The Preacher becomes drunk. The Spy and the Goblin regain their abilities. The Spy sees the Grimoire that night, and the Goblin will win if executed. The Preacher becomes sober, so once again the Spy and Goblin have no abilities. The Spy dies. The Preacher dies. The Goblin gets their ability back, but the Spy does not, because the Spy is dead.</p>`,
         howToRun: `<p>Each night, wake the Preacher and have them choose a player. If they choose a Minion, put a <strong>PREACHED</strong> reminder token next to that Minion. Put the Preacher to sleep. If applicable, wake the Minion the Preacher chose tonight, show them the <strong>THIS CHARACTER SELECTED YOU</strong> card and the Preacher token. Put the Minion back to sleep.</p><p>From now on, that Minion has no ability. If they would normally wake at night to make a choice, take an action or learn information due to their ability, they no longer do so. If their ability would otherwise have an effect on the game while they are marked by the <strong>PREACHED</strong> token, it does not.</p><p>If the Preacher dies, remove all <strong>PREACHED</strong> tokens from affected Minions. The Minions regain their abilities. Minions with expended once-per-game abilities do not gain another use of that ability. Affected Minions are not told that the Preacher is dead, but may be able to figure it out when they start waking up again etc.</p><p>If a Preacher is made drunk or poisoned, Minions who have lost their abilities to the Preacher regain them, but lose them again when the Preacher becomes healthy and sober.</p><p>If a Minion who has been chosen by the Preacher later becomes a different type of character (ie not a Minion), they are no longer affected by the Preacher's ability. Remove the relevant <strong>PREACHED</strong> reminder token. Also, evil players are not affected by the Preacher ability just because they're evil, they need to be explicitly a Minion character in order to be affected.</p><p>In a similar vein, a non-Minion who later becomes a Minion is not affected by having been chosen by the Preacher before they became a Minion. If the Preacher chooses them after they become a Minion, the Preacher ability works as normal.</p><p>If a preached Minion dies and is resurrected they do not regain their ability, they are still preached provided the Preacher is still alive.</p>`,
+        group: "Townsfolk",
+        script: "exp"
+    },
+    {
+        name: "Steward",
+        description: `The Steward knows 1 good player.`,
+        intro: "<ul><li>The Steward learns a player, but not their character.</li><li>The Steward learns their information on the first night of the game.</li><li>If created mid-game, then the Steward learns their information that night instead.</li></ul>",
+        ability: 'You start knowing 1 good player.',
+        flavor: `"How DARE you accuse Her Ladyship of wrongdoing? I've known her my entire life! All nine years!"`,
+        examples: `<p>The Steward learns that Alex is good. Alex is the Undertaker. The Pit-Hag turns the Poppy Grower into the Steward. That night, the Steward learns that Abdallah is good. Abdallah is the Spy, and is registering as good.</p>`,
+        howToRun: `<p>While preparing the first night, put the <strong>KNOW</strong> reminder by any good character token. During the first night, wake the Steward. Point to the player marked <strong>KNOW</strong>. Put the Steward to sleep.</p>`,
         group: "Townsfolk",
         script: "exp"
     },
@@ -1156,28 +1178,6 @@ let characters = [
         script: "exp"
     },
     {
-        name: "Psychopath",
-        description: "The Psychopath kills in broad daylight.",
-        intro: `<ul><li>During the day, if the Psychopath declares that they are the Psychopath and publicly chooses a player, that player dies. This can only be done once per day, and only before the Storyteller has called for nominations.</li><li>The Psychopath does not need to use this ability if they don't want to.</li><li>The Psychopath can be nominated and voted for normally. If the Psychopath is executed, they might not die. They play Roshambo <i>(Paper-Rock-Scissors)</i> with the player that nominated them. The nominator needs to win for the Psychopath to die. Drawing or losing means the Psychopath lives.</li><li>If the Psychopath is executed, this still counts as the one execution for the day. No more players may be nominated or executed today.</li><li>If the Psychopath dies by other means, such as the Demon attacking them, they do not play Roshambo. They die.</li></ul>`,
-        ability: 'Each day, before nominations, you may publicly choose a player: they die. If executed, you only die if you lose roshambo.',
-        flavor: '"Surprise!"',
-        examples: `<p>On the first day, Amy declares that she is the Psychopath, and that she chooses Evin. Evin dies.</p><p>The Psychopath chooses to kill the Sailor. The Sailor is sober, so does not die. The Psychopath may not use their ability again today.</p><p>The Psychopath has been nominated by the Barber, and is executed. In Roshambo, the Barber has rock and the Psychopath has rock, so the Psychopath lives. The next day, the Saint nominates and executes the Psychopath. The Saint has paper and the Psychopath has scissors, so the Psychopath lives. The next day, the Barber nominates and executes the Psychopath again. The Barber has rock and the Psychopath has scissors, so the Psychopath dies.</p>`,
-        howToRun: `<p>Once per day, before you have called for nominations, the Psychopath may publicly choose a player. That player <strong>dies</strong>.</p><p>If the Psychopath is executed, the Psychopath and the nominator play a game of Roshambo. If the Psychopath loses, they <strong>die</strong>. If the Psychopath draws or wins, they live. Either way, the day ends, since there is only one execution per day.</p><p>If the Psychopath is executed due to a self-nomination, then the Psychopath plays Roshambo with you instead.</p>`,
-        group: "Minion",
-        script: "exp"
-    },
-    {
-        name: "Widow",
-        description: `The Widow knows all characters and poisons the exact person they think is most useful.`,
-        intro: "",
-        ability: 'On your first night, look at the Grimoire & choose a player: they are poisoned. 1 good player knows a Widow is in play.',
-        flavor: '"More wine? Château d\'Ergot \'07 is a very special vintage. My yes, very special indeed."',
-        examples: `<p>The Widow sees the Grimoire and points to the Sailor character token. The Sailor is poisoned this game. The Sailor is sober, but dies when executed.</p><p>On the third night, the Pit Hag turns themselves into the Widow. That night, the good Scapegoat learns that a Widow is in play.</p><p>On the first night the Widow looks at the Grimoire and poisons themself. The good player that would've learned a Widow is in play does not.</p>`,
-        howToRun: `<p>On their first night, wake the Widow and show them the Grimoire for as long as they need. The Widow points to a character token in the Grimoire, or a player. Mark that player with a <strong>POISONED</strong> reminder. Put the Widow to sleep. Wake any good player. Show them the Widow character token. Put that good player to sleep.</p><p>If the Widow dies or changes character, their poison ends. Likewise, their poison vanishes while the Widow is poisoned/drunk. When a Widow poisons a player, night 1 has already begun, so it does not prevent any [setup] abilities from taking effect.</p><p>If a Widow is created mid-game, execute the first paragraph of the how to run just like you would if they were in play on night 1 - it's the Widow's first night that matters for their ability, not how many nights into the whole game you are.</p><p>If the Widow chooses to poison themselves, no-one is informed that a Widow is in play.</p><p>Only the Preacher, Sailor and Poisoner can prevent the Widow from getting to poison on night 1 and in all of these cases, a good player would be told that the Widow is in play once the preaching/drunk/poison wears off. If Sailor drunked or Poisoner poisoned, the Widow can be shown a fake grimoire. Also, their poison choice has no effect for the rest of the game, even if they become sober/healthy later. If preached, the Widow is merely shown the Preacher in play and does not see the grimoire, even if the Preacher is dead/poisoned/drunk later in the game.</p><p>If the good player who knows the Widow is in play turns evil while the Widow is alive, wake a new good player and show them the Widow character token.</p>`,
-        group: "Minion",
-        script: "exp"
-    },
-    {
         name: "Organ Grinder",
         description: "The Organ Grinder makes voting secret.",
         intro: `<ul><li>When a player is nominated, players vote with eyes closed.</li><li>The Storyteller does not count the votes out loud, and does not reveal how many players voted once voting is complete.</li><li>The Storyteller does not reveal which player is "about to die".</li><li>After nominations have closed, the Storyteller reveals which player is executed, as normal.</li><li>Dead players may vote once if they have a vote token. Their vote token is removed at the end of the day instead of after the vote.</li><li>If the Organ Grinder is nominated but does not vote for themselves, the vote is not successful and counts as "zero votes" for purposes of deciding which player is executed.</li><li>If the Organ Grinder is nominated and votes for themselves, their self-vote counts as a vote, as normal.</li></ul>`,
@@ -1192,6 +1192,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Psychopath",
+        description: "The Psychopath kills in broad daylight.",
+        intro: `<ul><li>During the day, if the Psychopath declares that they are the Psychopath and publicly chooses a player, that player dies. This can only be done once per day, and only before the Storyteller has called for nominations.</li><li>The Psychopath does not need to use this ability if they don't want to.</li><li>The Psychopath can be nominated and voted for normally. If the Psychopath is executed, they might not die. They play Roshambo <i>(Paper-Rock-Scissors)</i> with the player that nominated them. The nominator needs to win for the Psychopath to die. Drawing or losing means the Psychopath lives.</li><li>If the Psychopath is executed, this still counts as the one execution for the day. No more players may be nominated or executed today.</li><li>If the Psychopath dies by other means, such as the Demon attacking them, they do not play Roshambo. They die.</li></ul>`,
+        ability: 'Each day, before nominations, you may publicly choose a player: they die. If executed, you only die if you lose roshambo.',
+        flavor: '"Surprise!"',
+        examples: `<p>On the first day, Amy declares that she is the Psychopath, and that she chooses Evin. Evin dies.</p><p>The Psychopath chooses to kill the Sailor. The Sailor is sober, so does not die. The Psychopath may not use their ability again today.</p><p>The Psychopath has been nominated by the Barber, and is executed. In Roshambo, the Barber has rock and the Psychopath has rock, so the Psychopath lives. The next day, the Saint nominates and executes the Psychopath. The Saint has paper and the Psychopath has scissors, so the Psychopath lives. The next day, the Barber nominates and executes the Psychopath again. The Barber has rock and the Psychopath has scissors, so the Psychopath dies.</p>`,
+        howToRun: `<p>Once per day, before you have called for nominations, the Psychopath may publicly choose a player. That player <strong>dies</strong>.</p><p>If the Psychopath is executed, the Psychopath and the nominator play a game of Roshambo. If the Psychopath loses, they <strong>die</strong>. If the Psychopath draws or wins, they live. Either way, the day ends, since there is only one execution per day.</p><p>If the Psychopath is executed due to a self-nomination, then the Psychopath plays Roshambo with you instead.</p>`,
+        group: "Minion",
+        script: "exp"
+    },
+    {
         name: "Vizier",
         description: `The Vizier executes players without the town's consent.`,
         intro: "<ul><li>On the first day, all players learn that the Vizier is in play, and which player it is.</li><li>During the day, the Vizier can not die by any means.</li><li>After a vote is tallied, if the Vizier chooses to execute the nominee (and at least one good player voted), they are executed immediately. This counts as the 1 execution allowed each day.</li><li>After a vote is tallied, if the Vizier chooses to execute the nominee (and no good players voted), nothing happens.</li><li>Even if the vote tally is less than 50% of the living players, the Vizier may still execute. Even if another player has more votes than the current player, the Vizier may still execute.</li><li>The Vizier does not have to force an execution each day.</li></ul>",
@@ -1199,6 +1210,17 @@ let characters = [
         flavor: `"An excellent decision, as always, sire. Such a petty crime as bumping into the Bishop indeed deserves your 'justice' and 'mercy'. Take a stroll in the gardens. Visit the gallery and peruse the sculptures of Von Strauf. Relax, sire. Leave everything... to me."`,
         examples: `<p>The King has been nominated. Five people vote, but the Vizier does not use their ability. The Boomdandy is nominated and eight people vote. The Vizier uses their ability and the Boomdandy is executed immediately.</p><p>The Demon has seven votes against them, and is "about to die". The Vizier nominates Bill, the Barber. Two evil players and one good player vote. The Vizier declares that Bill is executed. The Demon survives today. The Town nominates and executes the Vizier. The Vizier does not die. That night, The Demon kills the Vizier.</p><p>The town nominates and executes the Vizier. The Vizier does not die. That night, The Demon kills the Vizier.</p>`,
         howToRun: `<p>When the first night has ended, declare that the Vizier is in play, and which player it is.</p><p>If a vote has just been tallied, and one or more good players voted, and the Vizier declares that the nominee is executed, that player is executed and dies. No more nominations, votes, or executions occur today.</p>`,
+        group: "Minion",
+        script: "exp"
+    },
+    {
+        name: "Widow",
+        description: `The Widow knows all characters and poisons the exact person they think is most useful.`,
+        intro: "",
+        ability: 'On your first night, look at the Grimoire & choose a player: they are poisoned. 1 good player knows a Widow is in play.',
+        flavor: '"More wine? Château d\'Ergot \'07 is a very special vintage. My yes, very special indeed."',
+        examples: `<p>The Widow sees the Grimoire and points to the Sailor character token. The Sailor is poisoned this game. The Sailor is sober, but dies when executed.</p><p>On the third night, the Pit Hag turns themselves into the Widow. That night, the good Scapegoat learns that a Widow is in play.</p><p>On the first night the Widow looks at the Grimoire and poisons themself. The good player that would've learned a Widow is in play does not.</p>`,
+        howToRun: `<p>On their first night, wake the Widow and show them the Grimoire for as long as they need. The Widow points to a character token in the Grimoire, or a player. Mark that player with a <strong>POISONED</strong> reminder. Put the Widow to sleep. Wake any good player. Show them the Widow character token. Put that good player to sleep.</p><p>If the Widow dies or changes character, their poison ends. Likewise, their poison vanishes while the Widow is poisoned/drunk. When a Widow poisons a player, night 1 has already begun, so it does not prevent any [setup] abilities from taking effect.</p><p>If a Widow is created mid-game, execute the first paragraph of the how to run just like you would if they were in play on night 1 - it's the Widow's first night that matters for their ability, not how many nights into the whole game you are.</p><p>If the Widow chooses to poison themselves, no-one is informed that a Widow is in play.</p><p>Only the Preacher, Sailor and Poisoner can prevent the Widow from getting to poison on night 1 and in all of these cases, a good player would be told that the Widow is in play once the preaching/drunk/poison wears off. If Sailor drunked or Poisoner poisoned, the Widow can be shown a fake grimoire. Also, their poison choice has no effect for the rest of the game, even if they become sober/healthy later. If preached, the Widow is merely shown the Preacher in play and does not see the grimoire, even if the Preacher is dead/poisoned/drunk later in the game.</p><p>If the good player who knows the Widow is in play turns evil while the Widow is alive, wake a new good player and show them the Widow character token.</p>`,
         group: "Minion",
         script: "exp"
     },
