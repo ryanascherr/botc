@@ -926,6 +926,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "High Priestess",
+        description: "The High Priestess acts on intuition.",
+        intro: `<ul><li>The High Priestess can be shown the same player multiple times in a row, or a different player every night.</li><li>The shown player can be alive or dead.</li><li>The shown player can be good or evil.</li><li>There are no official criteria that determine which player the Storyteller must show to the High Priestess. It is up to the Storyteller's judgement as to what they think will most benefit the High Priestess and the good team in general. It could be because the player has important information that has not been revealed yet. Or because the player is evil and has a bluff that doesn't make sense. Or because the player is trustworthy and needs to be trusted more. Or because the player is good but on the wrong track and needs to be corrected. Or something new.</li></ul>`,
+        ability: 'Each night, learn which player the Storyteller believes you should talk to most.',
+        flavor: '"There is life behind the personality that uses personalities as masks. There are times when life puts off the mask and deep answers to deep."',
+        examples: `<p>On the first night, the High Priestess learns Julian. Julian is the Chef and has useful information to share. On the second night, the High Priestess is shown Marianna. Marianna is the Goblin and the Storyteller thinks that the High Priestess would benefit most from talking to Marianna to find this out as early as possible. On the third night, the High Priestess is shown Doug. Doug is the Drunk whose information is wrong and harming the good team.</p><p>For three nights in a row, the High Priestess learns Sarah. Sarah is the Saint and the good team are trying to execute her. On the last night, the High Priestess learns Lewis. Lewis is the Imp, and his story is clashing with several good players.</p>`,
+        howToRun: `<p>Each night, wake the High Priestess. Point to a player. Put the High Priestess to sleep.</p>`,
+        group: "Townsfolk",
+        script: "exp"
+    },
+    {
         name: "Huntsman",
         description: "The Huntsman saves the Damsel before the Minions find her...hopefully.",
         intro: `<ul><li>The Damsel can be in play without the Huntsman. During the setup phase, if the Huntsman is in play and the Damsel isn't, the Damsel is added. If a Damsel is already in play, the Huntsman doesn't add a second Damsel.</li><li>If the Huntsman correctly chooses the Damsel at night, the Damsel becomes a not-in-play Townsfolk immediately. The Storyteller chooses which Townsfolk character, and the Damsel learns which one.</li><li>When the Damsel becomes a Townsfolk, they gain that Townsfolk ability and lose the Damsel ability.</li><li>The Huntsman gets one guess, and makes it at night.</li><li>The Minions get one guess in total, and make it publicly during the day. If a Minion guesses who the Damsel is, evil wins. If a Minion incorrectly guesses who the Damsel is, the guess is used, and other Minions cannot win by correctly guessing the Damsel.</li><li>If the Damsel is drunk or poisoned but the Huntsman is sober and healthy, the Damsel can still become a Townsfolk.</li></ul>`,
