@@ -2073,6 +2073,11 @@ let jinxes = [
         rule: "Players that die by nomination register as being executed to the Devil's Advocate"
     },
     {
+        character1: "Riot",
+        character2: "Pit-Hag",
+        rule: "If the Pit-Hag creates Riot, all evil players become Riot. If the Pit-Hag creates Riot after Day 3, the game continues for one more day."
+    },
+    {
         character1: "Cannibal",
         character2: "Butler",
         rule: "If the Cannibal gains the Butler ability, the Cannibal learns this."
