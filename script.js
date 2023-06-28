@@ -1716,6 +1716,384 @@ let characters = [
     },
 ];
 
+let jinxes = [
+    {
+        character1: "Baron",
+        character2: "Heretic",
+        rule: "The Baron might only add 1 Outsider, not 2."
+    },
+    {
+        character1: "Cerenovus",
+        character2: "Goblin",
+        rule: "The Cerenovus may choose to make a player mad as the Goblin."
+    },
+    {
+        character1: "Godfather",
+        character2: "Heretic",
+        rule: "Only 1 jinxed character can be in play."
+    },
+    {
+        character1: "Organ Grinder",
+        character2: "Flowergirl",
+        rule: "If players' eyes were closed during nominations, the Flowergirl learns how many times the Demon voted."
+    },
+    {
+        character1: "Organ Grinder",
+        character2: "Minstrel",
+        rule: "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is."
+    },
+    {
+        character1: "Organ Grinder",
+        character2: "Preacher",
+        rule: "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is."
+    },
+    {
+        character1: "Organ Grinder",
+        character2: "Butler",
+        rule: "If players' eyes were closed during a vote, the Butler can vote, but their vote only counts if their master voted too."
+    },
+    {
+        character1: "Vizier",
+        character2: "Alchemist",
+        rule: "If the Alchemist has the Vizier ability, they may only choose to execute immediately if three or more players voted."
+    },
+    {
+        character1: "Vizier",
+        character2: "Courtier",
+        rule: "If the Vizier loses their ability, they learn this. If the Vizier is executed when they have their ability, their team wins."
+    },
+    {
+        character1: "Vizier",
+        character2: "Investigator",
+        rule: "If the Investigator learns that the Vizier is in play, the existence of the Vizier is not announced by the Storyteller."
+    },
+    {
+        character1: "Vizier",
+        character2: "Magician",
+        rule: "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is."
+    },
+    {
+        character1: "Vizier",
+        character2: "Preacher",
+        rule: "If the Vizier loses their ability, they learn this. If the Vizier is executed when they have their ability, their team wins."
+    },
+    {
+        character1: "Vizier",
+        character2: "Fearmonger",
+        rule: "The Vizier wakes with the Fearmonger, learns who they chose, and cannot choose to execute that player."
+    },
+    {
+        character1: "Pit-Hag",
+        character2: "Damsel",
+        rule: "If a Pit-Hag creates a damsel, the Storyteller chooses which player it is."
+    },
+    {
+        character1: "Pit-Hag",
+        character2: "Heretic",
+        rule: "A Pit-hag cannot create a Heretic."
+    },
+    {
+        character1: "Pit-Hag",
+        character2: "Politician",
+        rule: "A Pit-Hag cannot create an evil Politician."
+    },
+    {
+        character1: "Spy",
+        character2: "Alchemist",
+        rule: "The Alchemist cannot have the Spy ability."
+    },
+    {
+        character1: "Spy",
+        character2: "Magician",
+        rule: "When the Spy sees the Grimoire, the Demon and Magician tokens are removed."
+    },
+    {
+        character1: "Spy",
+        character2: "Poppy Grower",
+        rule: "If the Poppy Grower is in play, the Spy does not see the Grimoire until the Poppy Grower dies."
+    },
+    {
+        character1: "Spy",
+        character2: "Damsel",
+        rule: "Only 1 jinxed character can be in play."
+    },
+    {
+        character1: "Spy",
+        character2: "Heretic",
+        rule: "Only 1 jinxed character can be in play."
+    },
+    {
+        character1: "Widow",
+        character2: "Alchemist",
+        rule: "The Alchemist cannot have the Widow ability."
+    },
+    {
+        character1: "Widow",
+        character2: "Magician",
+        rule: "When the Widow sees the Grimoire, the Demon and Magician tokens are removed."
+    },
+    {
+        character1: "Widow",
+        character2: "Poppy Grower",
+        rule: "If the Poppy Grower is in play, the Widow does not see the Grimoire until the Poppy Grower dies."
+    },
+    {
+        character1: "Widow",
+        character2: "Damsel",
+        rule: "Only 1 jinxed character can be in play."
+    },
+    {
+        character1: "Widow",
+        character2: "Heretic",
+        rule: "Only 1 jinxed character can be in play."
+    },
+    {
+        character1: "Al-Hadikhia",
+        character2: "Mastermind",
+        rule: "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is."
+    },
+    {
+        character1: "Al-Hadikhia",
+        character2: "Scarlet Woman",
+        rule: "If there are two living Al-Hadikhias, the Scarlet Woman Al-Hadikhia becomes the Scarlet Woman again."
+    },
+    {
+        character1: "Fang Gu",
+        character2: "Scarlet Woman",
+        rule: "If the Fang Gu choose an Outsier and dies, the Scarlet Woman does not become the Fang Gu."
+    },
+    {
+        character1: "Legion",
+        character2: "Engineer",
+        rule: "Legion and the Engineer cannot both be in play at the start of the game. If the Engineer creates Legion, most players (including all Evil), become Evil Legion."
+    },
+    {
+        character1: "Legion",
+        character2: "Preacher",
+        rule: "Only 1 jinxed character can be in play."
+    },
+    {
+        character1: "Leviathan",
+        character2: "Farmer",
+        rule: "If Leviathan is in play and a Farmer dies by execution, a good player becomes a Farmer that night."
+    },
+    {
+        character1: "Leviathan",
+        character2: "Innkeeper",
+        rule: "If Leviathan nominates and executes a player the Innkeeper chose, that player does not die."
+    },
+    {
+        character1: "Leviathan",
+        character2: "Mayor",
+        rule: "If Leviathan is in play and no execution occurs on Day 5, good wins."
+    },
+    {
+        character1: "Leviathan",
+        character2: "Monk",
+        rule: "If Leviathan nominates and executes the player the Monk chose, that player does not die."
+    },
+    {
+        character1: "Leviathan",
+        character2: "Ravenkeeper",
+        rule: "If a Leviathan is in play and the Ravenkeeper dies by execution, they wake that night to use their ability."
+    },
+    {
+        character1: "Leviathan",
+        character2: "Sage",
+        rule: "If a Leviathan is in play and the Sage dies by execution, they wake that night to use their ability."
+    },
+    {
+        character1: "Leviathan",
+        character2: "Soldier",
+        rule: "If Leviathan nominates and executes the Soldier, the Soldier does not die."
+    },
+    {
+        character1: "Lil' Monsta",
+        character2: "Magician",
+        rule: "Only 1 jinxed character can be in play."
+    },
+    {
+        character1: "Lil' Monsta",
+        character2: "Poppy Grower",
+        rule: "If the Poppy Grower is in play, Minions don't wake together. They are woken one by one until one of them chooses to take the Lil' Monsta token."
+    },
+    {
+        character1: "Lil' Monsta",
+        character2: "Organ Grinder",
+        rule: "Votes for the Organ Grinder count if the Organ Grinder is babysitting Lil' Monsta."
+    },
+    {
+        character1: "Lil' Monsta",
+        character2: "Scarlet Woman",
+        rule: "If there are 5 or more players alive and the player holding the Lil' Monsta token dies, the Scarlet Woman is given the Lil' Monsta token tonight."
+    },
+    {
+        character1: "Lil' Monsta",
+        character2: "Vizier",
+        rule: "The Vizier can die by execution if they are babysitting Lil' Monsta."
+    },
+    {
+        character1: "Lleech",
+        character2: "Slayer",
+        rule: "If the Slayer slays the Lleech's host, the host dies."
+    },
+    {
+        character1: "Lleech",
+        character2: "Heretic",
+        rule: "If the Lleech has poisoned the Heretic and the Lleech dies, the Heretic remains poisoned."
+    },
+    {
+        character1: "Riot",
+        character2: "Cannibal",
+        rule: "Players that die by nomination register as being executed to the Cannibal."
+    },
+    {
+        character1: "Riot",
+        character2: "Clockmaker",
+        rule: "Riot registers as a Minion to the Clockmaker."
+    },
+    {
+        character1: "Riot",
+        character2: "Engineer",
+        rule: "Riot and the Engineer cannot both be in play at the start of the game. If the Engineer creates Riot, the Evil players become Riot."
+    },
+    {
+        character1: "Riot",
+        character2: "Exorcist",
+        rule: "Only 1 jinxed character can be in play."
+    },
+    {
+        character1: "Riot",
+        character2: "Farmer",
+        rule: "If a Riot player nominates and kills a Farmer, the Farmer uses their ability tonight."
+    },
+    {
+        character1: "Riot",
+        character2: "Flowergirl",
+        rule: "Only 1 jinxed character can be in play."
+    },
+    {
+        character1: "Riot",
+        character2: "Grandmother",
+        rule: "If a Riot player nominates and kills the grandchild, the Grandmother dies too."
+    },
+    {
+        character1: "Riot",
+        character2: "Innkeeper",
+        rule: "If a Riot player nominates an Innkeeper-protected player, that player does not die."
+    },
+    {
+        character1: "Riot",
+        character2: "Investigator",
+        rule: "Riot registers as a Minion to the Investigator."
+    },
+    {
+        character1: "Riot",
+        character2: "King",
+        rule: "If a Riot nominates and kills the King and the Choirboy is alive, the Choirboy uses their ability tonight."
+    },
+    {
+        character1: "Riot",
+        character2: "Mayor",
+        rule: "If the 3rd day begins with just 3 players alive, the players may choose as a group to to nominate at all. If so (and if a Mayor is alvie) then the Mayor's team wins."
+    },
+    {
+        character1: "Riot",
+        character2: "Minstrel",
+        rule: "Only 1 jinxed character can be in play."
+    },
+    {
+        character1: "Riot",
+        character2: "Monk",
+        rule: "If a Riot player nominates a Monk-protected player, that player does not die."
+    },
+    {
+        character1: "Riot",
+        character2: "Pacifist",
+        rule: "Players that die by nomination register as being executed to the Pacifist."
+    },
+    {
+        character1: "Riot",
+        character2: "Preacher",
+        rule: "Riot registers as a Minion to the Preacher."
+    },
+    {
+        character1: "Riot",
+        character2: "Ravenkeeper",
+        rule: "If a Riot nominates and kills the Ravenkeeper, the Ravenkeeper uses their ability tonight."
+    },
+    {
+        character1: "Riot",
+        character2: "Sage",
+        rule: "If a Riot nominates and kills the Ravenkeeper, the Ravenkeeper uses their ability tonight."
+    },
+    {
+        character1: "Riot",
+        character2: "Soldier",
+        rule: "If a Riot player nominates the Soldier, the Soldier does not die."
+    },
+    {
+        character1: "Riot",
+        character2: "Town Crier",
+        rule: "Riot registers as a Minion to the Town Crier."
+    },
+    {
+        character1: "Riot",
+        character2: "Undertaker",
+        rule: "Players that die by nomination register as executed to the Undertaker."
+    },
+    {
+        character1: "Riot",
+        character2: "Butler",
+        rule: "The Butler cannot nominate their master."
+    },
+    {
+        character1: "Riot",
+        character2: "Damsel",
+        rule: "Riot registers as a Minion to the Damsel."
+    },
+    {
+        character1: "Riot",
+        character2: "Golem",
+        rule: "If the Golem nominates Riot, the Riot player does not die."
+    },
+    {
+        character1: "Riot",
+        character2: "Saint",
+        rule: "If a good player nominates and kills the Saint, the Saint's team loses."
+    },
+    {
+        character1: "Riot",
+        character2: "Snitch",
+        rule: "If the Snitch is in play, each Riot player gets an extra 3 bluffs."
+    },
+    {
+        character1: "Riot",
+        character2: "Devil's Advocate",
+        rule: "Players that die by nomination register as being executed to the Devil's Advocate"
+    },
+    {
+        character1: "Cannibal",
+        character2: "Butler",
+        rule: "If the Cannibal gains the Butler ability, the Cannibal learns this."
+    },
+    {
+        character1: "Lycanthrope",
+        character2: "Gambler",
+        rule: "If the Lycanthrope is alive and the Gambler kills themself at night, no other players can die tonight."
+    },
+    {
+        character1: "Mathematician",
+        character2: "Chambermaid",
+        rule: "The Chambermaid learns if the Mathematician wakes tonight or not, even though the Chambermaid wakes first."
+    },
+    {
+        character1: "Mathematician",
+        character2: "Lunatic",
+        rule: "The Mathematician learns if the Lunatic attacks a different player(s) than the real Demon attacked."
+    }
+];
+
 let isModalOpen = false;
 let modal = document.getElementById("myModal");
 let closeBtn = document.getElementsByClassName("close")[0];
@@ -1890,7 +2268,7 @@ $(".all .token").click(function() {
 
     colorText(group);
 
-    populateModal(name, altName, intro, ability, flavor, examples, howToRun);
+    populateModal(name, altName, intro, ability, flavor, examples, howToRun, originalName);
 });
 
 function resetModal() {
@@ -1938,7 +2316,7 @@ function colorText(group) {
     }
 }
 
-function populateModal(name, altName, intro, ability, flavor, examples, howToRun) {
+function populateModal(name, altName, intro, ability, flavor, examples, howToRun, originalName) {
     setImage(name, altName);
     setName(altName);
     setIntro(intro);
@@ -1946,6 +2324,7 @@ function populateModal(name, altName, intro, ability, flavor, examples, howToRun
     setFlavor(flavor);
     setExamples(examples);
     setHowToRun(howToRun);
+    setJinxes(originalName, name);
 }
 
 function setImage(name, altName) {
@@ -1986,6 +2365,70 @@ function setHowToRun(howToRun) {
         $(".how-to-run").html(`${howToRun}`);
     } else {
         $(".how-to-run").html(`How to Run coming soon...`);
+    }
+}
+
+function setJinxes(originalName, name) {
+    $(".jinxes").empty();
+    let foundMatch = false;
+    let otherCharacter;
+    $(jinxes).each(function() {
+        if (this.character1 == originalName || this.character2 == originalName) {
+            if (this.character1 == originalName) {
+                otherCharacter = this.character2;
+            } else {
+                otherCharacter = this.character1;
+            }
+            foundMatch = true;
+            let formattedName = otherCharacter.toLowerCase();
+            formattedName = formattedName.split(" ");
+            if (formattedName[2]) {
+                formattedName = formattedName[0] + "-" + formattedName[1] + "-" + formattedName[2];
+                formattedName = formattedName.replace("'",'');
+            } else if (formattedName[1]) {
+                formattedName = formattedName[0] + "-" + formattedName[1];
+                formattedName = formattedName.replace("'",'');
+            }
+
+            $(".jinxes").append(`<div class="jinx" style="display: flex; align-items: center; margin: 15px"><img style="max-width: 75px; margin-right: 10px;" src="./img/${formattedName}.png"><p>${this.rule}</div>`);
+        }
+    })
+    if (originalName == "Djinn") {
+        $(".jinx-container span").removeClass("d-none");
+        foundMatch = true;
+        $(jinxes).each(function() {
+            let name1 = this.character1;
+            let name2 = this.character2;
+
+            name1 = name1.toLowerCase();
+            name1 = name1.split(" ");
+            if (name1[2]) {
+                name1 = name1[0] + "-" + name1[1] + "-" + name1[2];
+                name1 = name1.replace("'",'');
+            } else if (name1[1]) {
+                name1 = name1[0] + "-" + name1[1];
+                name1 = name1.replace("'",'');
+            }
+
+            name2 = name2.toLowerCase();
+            name2 = name2.split(" ");
+            if (name2[2]) {
+                name2 = name2[0] + "-" + name2[1] + "-" + name2[2];
+                name2 = name2.replace("'",'');
+            } else if (name2[1]) {
+                name2 = name2[0] + "-" + name2[1];
+                name2 = name2.replace("'",'');
+            }
+            console.log(name1);
+            console.log(name2);
+            $(".jinxes").append(`<div class="jinx" style="display: flex; align-items: center; margin: 15px"><img style="max-width: 75px; margin-right: 10px;" src="./img/${name1}.png"><img style="max-width: 75px; margin-right: 10px;" src="./img/${name2}.png"><p>${this.rule}</div>`);
+
+        })
+    }
+    if (foundMatch) {
+        $(".jinx-container").removeClass("d-none");
+    } else {
+        $(".jinx-container").addClass("d-none");
     }
 }
 

@@ -1,5 +1,9 @@
 /* START GLOBAL */
 
+.d-none {
+    display: none;
+}
+
 :root {
     --purple: #2F214B;
     --good-blue: #0365AB;
@@ -478,4 +482,23 @@ ul {
 
 .external-link:hover {
     text-decoration: none;
+}
+
+/* NEW */
+
+.jinxes {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 1000px){
+    .jinxes {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .jinx {
+        width: 45%;
+    }
 }
