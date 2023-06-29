@@ -1995,7 +1995,7 @@ let jinxes = [
     {
         character1: "Riot",
         character2: "Mayor",
-        rule: "If the 3rd day begins with just 3 players alive, the players may choose as a group to to nominate at all. If so (and if a Mayor is alvie) then the Mayor's team wins."
+        rule: "If the 3rd day begins with just 3 players alive, the players may choose as a group not to nominate at all. If so (and if a Mayor is alvie) then the Mayor's team wins."
     },
     {
         character1: "Riot",
