@@ -1167,6 +1167,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Harpy",
+        description: `The Harpy creates discord and distrust between good players.`,
+        intro: "<ul><li>At night, the Harpy player chooses one player at a time, not two at once.</li><li>A player chosen by the Harpy is affected by the ability until the next Harpy choice.</li><li>If the Storyteller decides to kill players with the Harpy ability, they must kill both. The Storyteller can not decide to kill only one.</li><li>The Harpy can choose a dead player. If so, the Storyteller can kill just the living player, since dead players can not die again.</li><li>The order of deaths due to the Harpy ability can be chosen by the Storyteller, should that be important.</li></ul>",
+        ability: 'Each night, choose 2 players: tomorrow, the 1st player is mad that the 2nd is evil, or both might die.',
+        flavor: '"So fair a day I never did see, nor so fowl a presence hanging over me."',
+        examples: `<p>The Harpy chooses the Monk and the Engineer. The Monk claims to be the Investigator who saw the Engineer and campaigns for them to be executed. When challenged, they are emphatic in their claims that the Engineer is most likely evil due to their information, and so avoid death.</p><p>The Harpy chooses the Oracle and the dead Alchemist. The Oracle claims that they trust the Alchemist because their Oracle information indicates that they were not evil. The Storyteller declares that the Oracle dies.</p><p>The Farmer is chosen by the Harpy. As they don't have any information themselves to claim in order to imply that the other player is evil, they make a concerted effort to find information that might clear each of the other living people, leaving their target as the remaining Demon candidate and therefore evil by implication.</p>`,
+        howToRun: `<p>Each night, wake the Harpy. The Harpy points to one player, then another player. Mark the first player with the <strong>MAD</strong> reminder and the second player with the <strong>2ND</strong> reminder. Put the Harpy to sleep. Wake the player marked <strong>MAD</strong>. Show the <strong>THIS CHARACTER SELECTED YOU</strong> info token then the Harpy token, then point to the player marked <strong>2ND</strong>. Put the player marked <strong>MAD</strong> to sleep.</p><p>Tomorrow, if the player marked <strong>MAD</strong> is not mad that the player marked <strong>2ND</strong> is evil, you may kill both players.</p>`,
+        group: "Minion",
+        script: "exp"
+    },
+    {
         name: "Marionette",
         description: "The Marionette doesn't know that they are a Minion.",
         intro: `<ul><li>The Marionette draws either a Townsfolk or an Outsider token from the bag, but is secretly the Marionette.</li><li>The Marionette neighbors the Demon. There are no players sitting in between the Marionette and the Demon.</li><li>The Demon knows which player is the Marionette.</li><li>On the first night, the Marionette does not wake to learn the other evil players, and the other Minions do not learn the Marionette.</li><li>The good ability that the Marionette thinks they have, doesn't work, but the Storyteller pretends it does. It is just as if this player is the Drunk.</li><li>The Marionette registers as evil, and as a Minion.</li></ul>`,
