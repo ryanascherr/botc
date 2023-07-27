@@ -1725,6 +1725,17 @@ let characters = [
         group: "Fabled",
         script: "fabled"
     },
+    {
+        name: "Ferryman",
+        description: "",
+        intro: ``,
+        ability: 'On the final day, all dead players regain their vote token.',
+        flavor: '"Flavor text will be added eventually..."',
+        examples: ``,
+        howToRun: ``,
+        group: "Fabled",
+        script: "fabled"
+    }
 ];
 
 let jinxes = [
