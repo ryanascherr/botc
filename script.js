@@ -1727,12 +1727,12 @@ let characters = [
     },
     {
         name: "Ferryman",
-        description: "",
-        intro: ``,
+        description: "Use the Ferryman to create a fun and inclusive climax to the game even if new players have used their vote tokens.",
+        intro: `<ul><li>If you are running a game for newer players who don't yet grasp the strategy of when to use their dead votes, or have used them when they forgot they were dead, you can add the Ferryman. This will ensure everyone gets a say in the final day's critical votes.</li><li>All dead players regain their vote tokens on the final day, regardless of alignment or when they voted.</li><li>If a dead player still has their vote token, they do not get a second one from the Ferryman.</li><li>The final day is the day that the Storyteller thinks is most likely to be the last day of the game - the day where, if the Demon is not executed, evil will win. This most likely means the day with only 3 living players remaining.</li><li>If vote tokens are used on the final day, they aren't returned.</li></ul>`,
         ability: 'On the final day, all dead players regain their vote token.',
-        flavor: '"Flavor text will be added eventually..."',
-        examples: ``,
-        howToRun: ``,
+        flavor: '"When righteous dreams come, they have the weight of truth."',
+        examples: `<p>Most of the group is new. Two players, Amy and Doug, forgot they were dead in the excitement of voting. The Storyteller puts the Ferryman in play. Later in the game, when there are three players left alive, the Storyteller declares that it is the final day. Amy and Doug regain their vote tokens.</p><p>It is the start of the final day. 17 players are dead and three players are alive. 10 dead players have used their vote tokens. In order to create a more fun and engaging final day, the Storyteller adds the Ferryman and those dead players regain their vote tokens. After a riotously entertaining final day, the Storyteller is celebrated for maximizing the players' enjoyment.</p>`,
+        howToRun: `<p>During the game, when you notice that it would be a good idea to add it, declare that the Ferryman is in play. Add the Ferryman token to the Grimoire.</p><p>At the start of the final day, ask the players to return vote tokens to any dead players that do not have one in the Town Square.</p>`,
         group: "Fabled",
         script: "fabled"
     }
