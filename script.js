@@ -1101,6 +1101,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Plague Doctor",
+        description: "The Plague Doctor brings an extra Minion ability into play.",
+        intro: `<ul><li>The Storyteller chooses which Minion ability is gained.</li><li>This ability is in effect for the rest of the game.</li><li>Nothing else changes for the Storyteller - they don't become evil, they don't become a player, they are not a legitimate player to be targeted by other abilities, and they cannot vote or nominate.</li><li>If all Minions are in play, the Storyteller can gain an in-play Minion ability.</li><li>If the Plague Doctor is drunk or poisoned when they die, the Storyteller doesn't gain a Minion ability, even when the Plague Doctor becomes sober and healthy.</li></ul>`,
+        ability: 'If you die, the Storyteller gains a not-in-play Minion ability.',
+        flavor: '"Pleauze shtay shtill. Thinks nid tiime for hillink. Myrhh-myrhh."',
+        examples: `<p>The Plague Doctor dies. The Storyteller gains the Poisoner ability and chooses a player to poison each night for the rest of the game.</p><p>The Plague Doctor is executed and the Storyteller gains the Cerenovus ability. That night, the Pit-Hag turns the Witch into the Cerenovus. There are now two Cerenovus abilities in play - the Storyteller's and the new Cerenovus'.</p><p>The Plague Doctor has died and the Storyteller has had the Organ Grinder ability for two days. The Plague Doctor is made drunk by the Minstrel. The Storyteller still has the Organ Grinder ability as they gained it when the Plague Doctor died and the Plague Doctor now being drunk does not affect that.</p>`,
+        howToRun: `<p>When the Plague Doctor dies, place a not-in-play Minion character token in the centre of the left side of Grimoire. Mark this with the Plague Doctor's <strong>STORYTELLER ABILITY</strong> reminder. If applicable, add a night token to the night sheet.</p>When this Minion would normally act, the relevant choices are made by the Storyteller.<p></p>`,
+        group: "Outsider",
+        script: "exp"
+    },
+    {
         name: "Politician",
         description: `The Politician changes teams if they are losing.`,
         intro: "",
@@ -2118,6 +2129,46 @@ let jinxes = [
         character1: "Mathematician",
         character2: "Lunatic",
         rule: "The Mathematician learns if the Lunatic attacks a different player(s) than the real Demon attacked."
+    },
+    {
+        character1: "Plague Doctor",
+        character2: "Baron",
+        rule: "If the Storyteller gains the Baron ability, up to two players become out-of-play Outsiders."
+    },
+    {
+        character1: "Plague Doctor",
+        character2: "Boomdandy",
+        rule: "If the Plague Doctor is executed and the Storyteller would gain the Boomdandy ability, the Boomdandy ability triggers immediately."
+    },
+    {
+        character1: "Plague Doctor",
+        character2: "Evil Twin",
+        rule: "The Storyteller cannot gain the Evil Twin ability if the Plague Doctor dies."
+    },
+    {
+        character1: "Plague Doctor",
+        character2: "Fearmonger",
+        rule: "If the Plague Doctor dies, a living Minion gains the Fearmonger ability in addition to their own ability, and learns this."
+    },
+    {
+        character1: "Plague Doctor",
+        character2: "Goblin",
+        rule: "If the Plague Doctor dies, a living Minion gains the Goblin ability in addition to their own ability, and learns this."
+    },
+    {
+        character1: "Plague Doctor",
+        character2: "Marionette",
+        rule: "If the Demon has a neighbour who is alive and a Townsfolk or Outsider when the Plague Doctor dies, that player becomes an evil Marionette. If there is already an extra evil player, this does not happen."
+    },
+    {
+        character1: "Plague Doctor",
+        character2: "Scarlet Woman",
+        rule: "If the Plague Doctor dies, a living Minion gains the Scarlet Woman ability in addition to their own ability, and learns this."
+    },
+    {
+        character1: "Plague Doctor",
+        character2: "Spy",
+        rule: "If the Plague Doctor dies, a living Minion gains the Spy ability in addition to their own ability, and learns this."
     }
 ];
 
