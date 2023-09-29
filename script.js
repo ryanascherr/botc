@@ -1047,6 +1047,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Shugenja",
+        description: `The Shugenja trusts players to their left, or to their right.`,
+        intro: "<ul><li>The closest evil player is the player with the smallest number of steps from the Shugenja to the evil player.</li><li>If the evil players are 'equidistant', that means that the closest evil player clockwise is the same number of steps away from the Shugenja as the closest evil player anti-clockwise.</li><li>If the evil players are equidistant, the storyteller gives 'arbitrary' information to the Shugenja. This means that the Storyteller chooses whether to tell the Shugenja that the closest evil player is clockwise or anti-clockwise.</li><li>The Shugenja doesn't know whether their information is arbitrary or not.</li><li>The Shugenja does not learn how many steps away the evil player is.</li><li>If a Shugenja is created mid-game, the Shugenja wakes that night to receive their information.</li><li>The Storyteller communicates with the Shugenja by pointing a finger in the appropriate direction, but may use other methods if they wish.</li></ul>",
+        ability: 'You start knowing if your closest evil player is clockwise or anti-clockwise. If equidistant, this info is arbitrary.',
+        flavor: `これは夢。それも夢。すべて夢です。`,
+        examples: `<p>The Organ Grinder is 2 steps away from the Shugenja in a clockwise direction. The Fearmonger is 3 steps away from the Shugenja in an anti-clockwise direction. The Shugenja wakes and learns that the closest evil player is in a clockwise direction.</p><p>The Marionette is 1 step away from the Shugenja in a clockwise direction. The Widow is 1 step away from the Shugenja in an anti-clockwise direction. The Shugenja wakes and the Storyteller chooses to tell the Shugenja that the closest evil player is in a clockwise direction.</p>`,
+        howToRun: `<p>During the first night, wake the Shugenja. If the closest evil player is in a clockwise direction, point your finger horizontally in that direction. If the closest evil player is in an anti-clockwise direction, point your finger horizontally in that direction. If the two closest evil players are equidistant, point your finger horizontally in either direction. Put the Shugenja to sleep.</p>`,
+        group: "Townsfolk",
+        script: "exp"
+    },
+    {
         name: "Steward",
         description: `The Steward knows 1 good player.`,
         intro: "<ul><li>The Steward learns a player, but not their character.</li><li>The Steward learns their information on the first night of the game.</li><li>If created mid-game, then the Steward learns their information that night instead.</li></ul>",
