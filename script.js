@@ -1323,6 +1323,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Ojo",
+        description: "The Ojo chooses specifically which character dies.",
+        intro: `<ul><li>Unlike other Demons, the Ojo must choose a character, not a player. The Storyteller may need to remind the player of this. We recommend that all players have their character sheet handy during the night phase.</li><li>The Ojo can kill evil characters, if they wish.</li><li>If there are multiple copies of a particular character in play, and the Ojo chooses that character to die, only one of those characters dies.</li><li>If the Ojo chooses a character that is not in play, the Storyteller will almost always kill a living good player. It is possible, but uncommon, for the Storyteller to choose a dead player or an evil player to die.</li></ul>`,
+        ability: 'Each night*, choose a character: they die. If they are not in play, the Storyteller chooses who dies.',
+        flavor: '"Like a bonfire on a moonless night… I see you, mortal."',
+        examples: `<p>The Ojo chooses the Plague Doctor. The Plague Doctor dies. The next night, the Ojo chooses the Poppy Grower. The Poppy Grower dies. The next night, the Ojo chooses the Empath. There is no Empath in play, so the Storyteller chooses that the Shugenja dies instead.</p>`,
+        howToRun: `<p>Each night except the first, wake the Ojo. The Ojo player points to a character icon on their character sheet. If that character is in play, that player dies—mark them with the <strong>DEAD</strong> reminder. If that character is not in play, choose any player. That player dies—mark them with the <strong>DEAD</strong> reminder. Put the Ojo to sleep.</p><p class="callout-box">If the Ojo is on a script with a Demon that kills multiple times per night, such as the Shabaloth, and the Ojo chooses a not-in-play character, you may choose more than one player to kill that night. This helps the Ojo player pretend that a different Demon is in play.</p>`,
+        group: "Demon",
+        script: "exp"
+    },
+    {
         name: "Riot",
         description: "Riot kills everybody in a panic.",
         intro: `<ul><li>Each player that is nominated dies immediately. Even though they are dead, they may nominate again today. This may happen multiple times per day.</li><li>The player that was nominated must nominate again immediately or lose their chance to do so. The Storyteller counts down "3... 2... 1..." to let the player know how long they have to nominate, should they wish to. If they don't, no more nominations are allowed today.</li><li>The good team wins if all Riot players are dead. If the last Riot dies and only two players are alive, they do not nominate, and the good team wins.</li><li>On the third day, each nominated player must nominate again. If they do not, the Storyteller will nominate on their behalf, or declare that that player's team loses.</li><li>If just three players are alive when the third day nominations begin, the group chooses which player nominates first. If no one nominates, the day ends and evil wins.</li></ul>`,
