@@ -2202,6 +2202,26 @@ let jinxes = [
         character1: "Plague Doctor",
         character2: "Spy",
         rule: "If the Plague Doctor dies, a living Minion gains the Spy ability in addition to their own ability, and learns this."
+    },
+    {
+        character1: "Hatter",
+        character2: "Legion",
+        rule: "If the Hatter dies and Legion is in play, nothing happens. If the Hatter dies and an evil player chooses Legion, all current evil players become Legion."
+    },
+    {
+        character1: "Hatter",
+        character2: "Leviathan",
+        rule: "If the Hatter dies on or after day 5, the Demon cannot choose Leviathan."
+    },
+    {
+        character1: "Hatter",
+        character2: "Lil' Monsta",
+        rule: "If a Demon chooses Lil' Monsta, they also choose a Minion to become and babysit Lil' Monsta tonight."
+    },
+    {
+        character1: "Hatter",
+        character2: "Riot",
+        rule: "If the Hatter dies, Riot is in play, and a Riot chooses a different Demon, a normal evil team is created from the Riot players. If the Hatter dies and the Demon chooses Riot, Minions become Riot too."
     }
 ];
 
