@@ -1101,6 +1101,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Hatter",
+        description: "The Hatter allows the evil players to change characters.",
+        intro: `<ul><li>Each evil player may choose to become any character of the same type as their current character.</li><li>They may choose not to change characters.</li><li>If a player becomes a new character, they gain the new ability, even if it was a "you start knowing" ability or a once per game ability that had already been used.</li><li>Once a player has changed character, their previous character ability has no further effect on the game.</li><li>If a player dies then becomes the Hatter, the evil players do not change characters tonight.</li><li>Once a character has been chosen, a second player cannot choose the same character. If it is already in play, the player with that character must choose a new character.</li></ul>`,
+        ability: 'If you died today or tonight, the Minion & Demon players may choose new Minion & Demon characters to be.',
+        flavor: '"One Hat. Too Hat. Three Hat. Tea Hat. Fore Hat. Thrive Hat. Six Hat. Sticks Hat."',
+        examples: `<p>The Hatter dies. The Ojo chooses to become the No Dashii and the Devil's Advocate chooses to become the Scarlet Woman.</p><p>The Vigormortis has killed their Pit-Hag, then later kills the Hatter. Both players choose to stay the same characters, so that they don't lose the effects of the Vigormortis.</p><p>The Assassin kills a player. The Hatter is executed. That night, the Assassin becomes the Mastermind and the Mastermind shakes their head no to stay the Mastermind. The Storyteller shakes their head no because the Mastermind character has been chosen already, and gestures for the Mastermind player to choose again, so they choose Assassin. The new Assassin then uses their new ability to kill a player.</p>`,
+        howToRun: `<p>If the Hatter dies, mark them with the “Tea Party Tonight” reminder.</p><p>During that night, wake the Minions and Demon. Show them the “This Character Selected You” info token, then the Hatter token. Each player either shakes their head no or points to another character of the same type as their current character. If a second player would end up with the same character as another player, shake your head no and gesture for them to choose again. Put them to sleep. Remove the “Tea Party Tonight” reminder. Change each player to the character they chose.</p><p class="callout-box">Optional rule: if the Hatter dies, allow the Demon to become a Minion, and a Minion to become a Demon. This may cause some chaos among the evil team as they try to communicate silently at night about who wants to be the Demon.</p>`,
+        group: "Outsider",
+        script: "exp"
+    },
+    {
         name: "Heretic",
         description: "The Heretic turns a win into a loss, and a loss into a win.",
         intro: `<ul><li>If the game ends due to the good team winning, then all good players lose, and all evil players win.</li><li>If the game ends due to the evil team winning, then all evil players lose, and all good players win.</li><li>This Heretic's ability applies to all victory conditions, including the game ending due to just two players being alive, the Demon dying, or an ability ending the game.</li><li>The Heretic's ability functions even when the Heretic is dead, but not when the Heretic is drunk or poisoned.</li></ul>`,
