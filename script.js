@@ -1291,6 +1291,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Kazali",
+        description: `The Kazali chooses their own Minions.`,
+        intro: "<ul><li>If a Kazali is created mid game, the Kazali does not choose new Minion players.</li><li>The Storyteller can give the Minions' original good characters as bluffs to the Demon, since they are not in play.</li><li>The Kazali acts at a time that is technically both during setup and during the first night.</li><li>The Storyteller may keep the Kazali awake, or put the Kazali to sleep, when waking the Minions to tell them which Minion that they are.</li><li>Only Minions that are on the script may be chosen. Duplicate Minion characters are not allowed.</li></ul>",
+        ability: 'Each night*, choose a player: they die. [You choose which players are which Minions. -? to +? Outsiders]',
+        flavor: '"Gon(z)a7les6. Take cau8tun. The mech4an4ion is iNvert10d. E99ors insy6tum. Reco{7}fig."',
+        examples: `<p>There are 15 players and no Minions in play yet. The Kazali wakes and chooses that Doug becomes the evil Organ Grinder, that Amy becomes the evil Vizier, and that Lewis becomes the evil Goblin.</p>`,
+        howToRun: `<p>While setting up the game, remove all Minion tokens and add Townsfolk or Outsider tokens.</p><p>During the first night, wake the Kazali. The Kazali points at a player and a Minion on the character sheet. Replace their old character token with the Minion token, show them the “You Are” info token then the Minion character token, and give a thumbs down. Repeat until the normal number of Minions exist. Put the Kazali to sleep.</p><p>Each night except the first, wake the Kazali. They point at any player. That player dies.</p><p class="callout-box">Depending on the script, adding more than one Outsider can put the good team at a significant disadvantage.</p>`,
+        group: "Demon",
+        script: "exp"
+    },
+    {
         name: "Legion",
         description: "Legion is many Demons.",
         intro: `<ul><li>The recommended number of good and evil players is the reverse of the normal. For example, for a ten player game, there are roughly seven Legion and three good players.</li><li>The players that are not Legion may be Townsfolk or Outsiders, in any combination.</li><li>If at least one good player voted for the nomination, and that player is "about to die", then the execution happens as normal. If only evil players vote for a nomination, the vote tally for that nominee is zero.</li><li>Each Legion registers as a Minion as well as a Demon.</li><li>The Storyteller chooses which player dies at night.</li><li>If only one good player remains alive, the Storyteller may declare that evil wins, since good cannot win.</li><li>The Storyteller can decide not to give Legion players bluffs.</li></ul>`,
@@ -2222,6 +2233,31 @@ let jinxes = [
         character1: "Hatter",
         character2: "Riot",
         rule: "If the Hatter dies, Riot is in play, and a Riot chooses a different Demon, a normal evil team is created from the Riot players. If the Hatter dies and the Demon chooses Riot, Minions become Riot too."
+    },
+    {
+        character1: "Kazali",
+        character2: "Bounty Hunter",
+        rule: "An evil Townsfolk is only created if the Bounty Hunter is still in play after the Kazali acts."
+    },
+    {
+        character1: "Kazali",
+        character2: "Choirboy",
+        rule: "The Kazali can not choose the King to become a Minion if a Choirboy is in play."
+    },
+    {
+        character1: "Kazali",
+        character2: "Goon",
+        rule: "If the Kazali chooses the Goon to become a Minion, remaining Minion choices are decided by the Storyteller."
+    },
+    {
+        character1: "Kazali",
+        character2: "Damsel",
+        rule: "If the Kazali chooses the Damsel to become a Minion, and a Huntsman is in play, a good player becomes the Damsel."
+    },
+    {
+        character1: "Kazali",
+        character2: "Marionette",
+        rule: "If the Kazali chooses to create a Marionette, they must choose one of their neighbours."
     }
 ];
 
