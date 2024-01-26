@@ -1069,6 +1069,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Village Idiot",
+        description: `The Village Idiots are a group that learn players' alignments.`,
+        intro: "<ul><li>The Village Idiot that is drunk is chosen by the Storyteller during the game setup.</li><li>There may be one, two, or three Village Idiots in play, irrespective of the number of players.</li><li>If there is only one Village Idiot in play, they are sober.</li><li>The drunk Village Idiot may get true information.</li><li>When Village Idiots are added to the game during setup, they replace other Townsfolk.</li><li>If a Village Idiot is created mid-game, only one is created.</li><li>Village Idiots act one at a time, not all together.</li><li>If all sober Village Idiots exit play, the remaining drunk Village Idiot remains drunk.</li><li>If a sober Village Idiot becomes drunk or poisoned by other means, the drunk Village Idiot remains drunk.</li></ul>",
+        ability: 'Each night, choose a player: you learn their alignment. [+0 to +2 Village Idiots. 1 of the extras is drunk]',
+        flavor: `"Roses are blue, and violets are red, Please reverse what I just said."`,
+        examples: `<p>Doug, Lewis, and Amy are all Village Idiots. Doug is drunk. At night, they all choose Evin, the Kazali. Doug learns that Evin is good. Lewis and Amy learn that Evin is evil.</p><p>Ben and Marianna are Village Idiots. Marianna is drunk. Sarah is evil, and bluffing as the Village Idiot. Ben chooses Sarah and learns that she is evil. Marianna chooses the Heretic player and learns that they are good. Sarah claims to have chosen Ben and learnt that he is evil.</p>`,
+        howToRun: `<p>While setting up the game, before putting the character tokens in the bag, replace zero, one or two Townsfolk tokens with Village Idiot tokens. While preparing the first night, mark one Village Idiot with the <strong>DRUNK</strong> reminder.</p><p>During each night, wake any Village Idiot. They point to a player. Give a thumbs up or a thumbs down. Put that Village Idiot to sleep. Repeat until all Village Idiots have acted.</p>`,
+        group: "Townsfolk",
+        script: "exp"
+    },
+    {
         name: "Acrobat",
         description: `The Acrobat dies if the people they neighbour are drunk or poisoned.`,
         intro: "",
@@ -2258,6 +2269,11 @@ let jinxes = [
         character1: "Kazali",
         character2: "Marionette",
         rule: "If the Kazali chooses to create a Marionette, they must choose one of their neighbours."
+    },
+    {
+        character1: "Village Idiot",
+        character2: "Pit-Hag",
+        rule: "If there is a spare token, the Pit-Hag can create a new Village Idiot. If they do, the drunk one might change."
     }
 ];
 
