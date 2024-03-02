@@ -1378,6 +1378,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Yaggababble",
+        description: "The Yaggababble kills by talking.",
+        intro: `<ul><li>The phrase that the Yaggababble says can be any length, but is usually 2 to 5 words long.</li><li>If the Yaggababble says this phrase, the Storyteller may kill a player any time afterwards, until dawn.</li><li>The Yaggababble may say this phrase as a standalone sentence, or part of another sentence.</li><li>The Yaggababble may say this phrase multiple times per day. If so, the Storyteller may kill multiple players.</li><li>The Storyteller chooses which players die.</li><li>The Storyteller may choose to kill fewer players than the number of times the phrase was said.</li><li>If the Yaggababble is drunk or poisoned, players cannot die, even if the Yaggababble was sober and healthy when they said their phrase. If the Yaggababble is sober and healthy, players might die, even if the Yaggababble was drunk or poisoned when they said their phrase.</li><li>It is rare for the Yaggababble to kill during the day.</li></ul>`,
+        ability: 'You start knowing a secret phrase. For each time you said it publicly today, a player might die.',
+        flavor: '"Murders inside the Rue Morge? Фальшивые новости! Hounds on the Baskerville moor? Фальшивые новости! Death while sailing the Nile? Фальшивые новости!"',
+        examples: `<p>The Yaggababble's phrase is "that sounds fishy". The Yaggabble says this once during the first day. That night, a player dies. The next day, the Yaggababble says "that sounds fishy" three times. That night, three players die.</p><p>The Yaggababble has said their phrase twice today. A Witch is in play. When the Heretic nominates, the Heretic dies, even though they were not cursed by the Witch. The Golem nominates the Demon, and the Golem dies. Both players died due to the Yaggababble's ability.</p>`,
+        howToRun: `<p>During setup, write a phrase on a piece of paper, or on a phone.</p><p>During the first night, wake the Demon. Show this phrase, then put them to sleep.</p><p>Each time Demon says the secret phrase, put a <strong>DEAD</strong> reminder in the centre of the left side of the Grimoire, as a reminder to yourself to place it tonight.</p><p>Each night, you may mark players with these <strong>DEAD</strong> reminders, and add a shroud to each marked player. These players die.</p>`,
+        group: "Demon",
+        script: "exp"
+    },
+    {
         name: "Thief",
         description: "The thief steals votes from a player, making their vote count negatively.",
         intro: `<ul><li>When a player chosen by the Thief votes, the vote tally goes down by one instead of up by one. This happens every time that player votes that day</li><li>The player with the negative vote changes back to having a positive vote immediately if the Thief dies, including if the Thief is exiled, because the Thief loses their ability.</li><li>Exiles are never affected by abilities, so the player with the negative vote can support exiles unaffected by the Thief's ability.</li><li>Since the Storyteller counts the number of votes out loud as they move their hand around the circle, all players will know which player the Thief chose.</li></ul>`,
@@ -2274,6 +2285,11 @@ let jinxes = [
         character1: "Village Idiot",
         character2: "Pit-Hag",
         rule: "If there is a spare token, the Pit-Hag can create a new Village Idiot. If they do, the drunk one might change."
+    },
+    {
+        character1: "Yaggababble",
+        character2: "Exorcist",
+        rule: "If the Exorcist chooses the Yaggababble, the Yaggababble ability does not kill tonight."
     }
 ];
 
@@ -2602,8 +2618,6 @@ function setJinxes(originalName, name) {
                 name2 = name2[0] + "-" + name2[1];
                 name2 = name2.replace("'",'');
             }
-            console.log(name1);
-            console.log(name2);
             $(".jinxes").append(`<div class="jinx" style="display: flex; align-items: center; margin: 15px"><img style="max-width: 75px; margin-right: 10px;" src="./img/${name1}.png"><img style="max-width: 75px; margin-right: 10px;" src="./img/${name2}.png"><p>${this.rule}</div>`);
 
         })
