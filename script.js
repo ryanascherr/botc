@@ -1269,6 +1269,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Summoner",
+        description: "The Summoner creates a Demon.",
+        intro: `<ul><li>The Summoner may choose any player to become the Demon, even themselves.</li><li>The new Demon does not learn which players are Minions, or vice versa. The evil players will need to talk amongst themselves to figure this out.</li><li>Even though there is no Demon in play for two days, the game does not end. However, if the Summoner becomes unable to create a Demon (due to dying, becoming drunk on night 3 etc.) good wins.</li><li>The newly created Demon acts on the same night that it is created.</li></ul>`,
+        ability: 'Each day, before nominations, you may publicly choose a player: they die. If executed, you only die if you lose roshambo.',
+        flavor: '"Hail the guardians of the north; by my intellect, thou art cut. Hail the guardians of the east; by my will, thou art dominated. Hail the guardians of the south; by that which lies beyond, the mystery is revealed. Hail the guardians of the west; a shield in the darkness."',
+        examples: `<p>On the third night, the Summoner chooses the Snitch player, and the Lleech. The Snitch becomes the evil Lleech, and chooses a player to poison, and a player to kill.</p><p>On the first day, the Summoner is executed. Good wins.</p><p>On the third night, the Summoner turns the Alchemist into the Leviathan. At dawn, all players learn that Leviathan is in play, and that it is day three of five.</p>`,
+        howToRun: `<p>During the setup phase, remove the Demon and add a Townsfolk.</p><p>When preparing the first night, put the Summoner's <strong>NIGHT 1</strong> reminder by the Summoner. When preparing the second night, put the Summoner's <strong>NIGHT 2</strong> reminder by the Summoner.</p><p>When preparing the third night, put the Summoner's <strong>NIGHT 3</strong> reminder by the Summoner.</p><p>During the first night, show the Summoner 3 not-in-play characters as bluffs.</p><p>During the night, if the Summoner has a <strong>NIGHT 3</strong> reminder, wake the Summoner. They point at a player, and to a Demon icon on the character sheet. Put the Summoner to sleep. Wake the chosen player. Show the <strong>YOU ARE</strong> info token, then the Demon token. Show the <strong>YOU ARE</strong> info token, then give a thumbs down. Replace their character token with the Demon token and put the new Demon to sleep.</p>`,
+        group: "Minion",
+        script: "exp"
+    },
+    {
         name: "Vizier",
         description: `The Vizier executes players without the town's consent.`,
         intro: "<ul><li>On the first day, all players learn that the Vizier is in play, and which player it is.</li><li>During the day, the Vizier can not die by any means.</li><li>After a vote is tallied, if the Vizier chooses to execute the nominee (and at least one good player voted), they are executed immediately. This counts as the 1 execution allowed each day.</li><li>After a vote is tallied, if the Vizier chooses to execute the nominee (and no good players voted), nothing happens.</li><li>Even if the vote tally is less than 50% of the living players, the Vizier may still execute. Even if another player has more votes than the current player, the Vizier may still execute.</li><li>The Vizier does not have to force an execution each day.</li></ul>",
@@ -2290,6 +2301,41 @@ let jinxes = [
         character1: "Yaggababble",
         character2: "Exorcist",
         rule: "If the Exorcist chooses the Yaggababble, the Yaggababble ability does not kill tonight."
+    },
+    {
+        character1: "Summoner",
+        character2: "Alchemist",
+        rule: "If there is an Alchemist-Summoner in play, the game starts with a Demon in play, as normal. If the Alchemist-Summoner chooses a player, they make that player a Demon but do not change their alignment."
+    },
+    {
+        character1: "Summoner",
+        character2: "Clockmaker",
+        rule: "If the Summoner is in play, the Clockmaker does not receive their information until a Demon is created."
+    },
+    {
+        character1: "Summoner",
+        character2: "Kazali",
+        rule: "The Kazali can not choose to create a Summoner."
+    },
+    {
+        character1: "Summoner",
+        character2: "Legion",
+        rule: "If the Summoner creates Legion, most players (including all evil players) become evil Legion."
+    },
+    {
+        character1: "Summoner",
+        character2: "Marionette",
+        rule: "The Marionette neighbours the Summoner. The Summoner knows who the Marionette is."
+    },
+    {
+        character1: "Summoner",
+        character2: "Poppy Grower",
+        rule: "If the Poppy Grower is alive when the Summoner acts, the Summoner chooses which Demon, but the Storyteller chooses which player."
+    },
+    {
+        character1: "Summoner",
+        character2: "Riot",
+        rule: "If the Summoner creates Riot, the chosen player and all evil players become Riot. The chosen player must be one of the Summoner's living good neighbours."
     }
 ];
 
