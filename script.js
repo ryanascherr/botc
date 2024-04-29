@@ -839,6 +839,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Banshee",
+        description: "The Banshee becomes more powerful when dead – nominating and voting twice as much.",
+        intro: "<ul><li>When alive, the Banshee nominates and votes like a regular player.</li><li>When dead, they may nominate twice per day, even though dead players may <strong>normally</strong> not nominate at all.</li><li>When dead, they may vote for any nomination they wish and do not need a vote token to do so. They may vote twice for the same nomination.</li><li>The Banshee only gains these powers if they were killed by the Demon. Dying by execution or to a non-Demon ability does not count.</li><li>To vote twice, the Banshee player raises both hands when votes are counted. If the player is unable to do this due to a physical disability, the Storyteller can count their normal vote twice.</li></ul>",
+        ability: 'If the Demon kills you, all players learn this. From now on, you may nominate twice per day and vote twice per nomination.',
+        flavor: `"Dearg d'fhalt, is gorm do shùil, gheibh thu bàs ro na bha thu an dùil."`,
+        examples: `<p>The Kazali kills the Banshee. All players learn that the Banshee has died. Tomorrow, the Banshee nominates the Village Idiot and votes twice, then nominates the Fearmonger and votes twice, then votes twice when the Shugenja is nominated. The next day, the Banshee doesn't nominate at all, but votes twice for the Kazali.</p><p>The Banshee is poisoned. The Ojo kills the Banshee. Nobody learns that the Banshee has died, and for the rest of the game, the Banshee may not nominate, and has just one vote.</p><p>The Lycanthrope kills the Banshee. The Banshee does not gain their additional powers and is not announced.</p>`,
+        howToRun: `<p>If the Banshee is killed by the Demon, place the <strong>HAS ABILITY</strong> reminder token next to the Banshee and say <strong>THE BANSHEE HAS AWOKEN</strong> or something similarly dramatic. The Banshee may nominate twice per day, but it is the player's responsibility to remember how many times they have nominated. The Banshee may raise two hands when voting. When counting the votes, count each hand as a vote.</p><p>If the Banshee is killed by the Demon but does not have their ability at that time (due to being drunk or poisoned etc.) or is killed by a non-Demon ability, then do not tell the group that the Banshee ability has been triggered. The Banshee may not nominate, and needs a vote token to vote, like a regular dead player.</p><p class="callout-box">If all good players are dead, the game continues. Good can still win due to the Banshee being able to nominate.</p>`,
+        group: "Townsfolk",
+        script: "exp"
+    },
+    {
         name: "Bounty Hunter",
         description: `The Bounty Hunter learns all the evil players. One. Player. At. A. Time.`,
         intro: "",
@@ -2336,6 +2347,21 @@ let jinxes = [
         character1: "Summoner",
         character2: "Riot",
         rule: "If the Summoner creates Riot, the chosen player and all evil players become Riot. The chosen player must be one of the Summoner's living good neighbours."
+    },
+    {
+        character1: "Banshee",
+        character2: "Leviathan",
+        rule: "If Leviathan is in play, and the Banshee dies by execution, all players learn that the Banshee has died, and the Banshee gains their ability."
+    },
+    {
+        character1: "Banshee",
+        character2: "Riot",
+        rule: "If Riot nominates and kills the Banshee, all players learn that the Banshee has died, and the Banshee may nominate two players immediately."
+    },
+    {
+        character1: "Banshee",
+        character2: "Vortox",
+        rule: "If the Vortox is in play and the Demon kills the Banshee, the players still learn that the Banshee has died."
     }
 ];
 
@@ -2407,66 +2433,66 @@ function getName(originalName, name) {
 
 function populateTB(name, originalName, group) {
     if (group == "Townsfolk") {
-        $(".tb-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+        $(".tb-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     } else if (group == "Outsider") {
-        $(".tb-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+        $(".tb-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     } else if (group == "Minion") {
-        $(".tb-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`)
+        $(".tb-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`)
     } else if (group == "Demon") {
-        $(".tb-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+        $(".tb-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     }
 }
 
 function populatedBMR(name, originalName, group) {
     if (group == "Townsfolk") {
-        $(".bmr-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+        $(".bmr-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     } else if (group == "Outsider") {
-        $(".bmr-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+        $(".bmr-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     } else if (group == "Minion") {
-        $(".bmr-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`)
+        $(".bmr-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`)
     } else if (group == "Demon") {
-        $(".bmr-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+        $(".bmr-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     }
 }
 
 function populateSV(name, originalName, group) {
     if (group == "Townsfolk") {
-        $(".sv-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+        $(".sv-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     } else if (group == "Outsider") {
-        $(".sv-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+        $(".sv-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     } else if (group == "Minion") {
-        $(".sv-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`)
+        $(".sv-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`)
     } else if (group == "Demon") {
-        $(".sv-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+        $(".sv-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     }
 }
 
 function populateEXP(name, originalName, group) {
     if (group == "Townsfolk") {
-        $(".exp-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+        $(".exp-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     } else if (group == "Outsider") {
-        $(".exp-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+        $(".exp-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     } else if (group == "Minion") {
-        $(".exp-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`)
+        $(".exp-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`)
     } else if (group == "Demon") {
-        $(".exp-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+        $(".exp-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     }
 }
 
 function populateTraveller(name, originalName, script) {
     if (script == "tb") {
-        $(".trav-tb").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+        $(".trav-tb").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     } else if (script == "bmr") {
-        $(".trav-bmr").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+        $(".trav-bmr").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     } else if (script == "sv") {
-        $(".trav-sv").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+        $(".trav-sv").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     } else if (script == "exp") {
-        $(".trav-exp").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+        $(".trav-exp").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     }
 }
 
 function populateFabled(name, originalName) {
-    $(".fabled-all").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="The icon for the ${originalName} character">`);
+    $(".fabled-all").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
 }
 
 $('.token').click(function(){
