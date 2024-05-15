@@ -961,11 +961,11 @@ let characters = [
     {
         name: "King",
         description: "The King learns which characters are still alive.",
-        intro: "<ul><li>The King only gains this ability after a few nights have passed—once the dead players outnumber the living.</li><li>At the start of the game, the Demon learns who the King is. If a King is created mid-game, the Demon learns who the King is that night.</li><li>The King may not survive long enough to use their ability. Once the number of dead players is greater than the number of alive players, the King learns one alive character each night.</li><li>The King may learn good or evil characters, and may even learn the same character more than once.</li><li>There may not be a Choirboy in play. But if there is, and they are still alive when the Demon kills the King, the Choirboy learns who the Demon is.</li></ul>",
-        ability: 'Each night, if the dead outnumber the living, you learn 1 alive character. The Demon knows who you are.',
+        intro: "<ul><li>The King only gains this ability after a few nights have passed—once the dead players equal or outnumber the living.</li><li>At the start of the game, the Demon learns who the King is. If a King is created mid-game, the Demon learns who the King is that night.</li><li>The King may not survive long enough to use their ability. Once the number of dead players is greater than or equal to the number of alive players, the King learns one alive character each night.</li><li>The King may learn good or evil characters, and may even learn the same character more than once.</li><li>There may not be a Choirboy in play. But if there is, and they are still alive when the Demon kills the King, the Choirboy learns who the Demon is.</li></ul>",
+        ability: 'Each night, if the dead equal or outnumber the living, you learn 1 alive character. The Demon knows who you are.',
         flavor: '"Betwixt the unknown strains of mortal strife<br>And morbid night, sweet with mystery and woe<br>Lies unfettered joys of fate\'s long and colored life<br>Who\'s garden blooms with each painted face to show."',
         examples: `<p>Amy is the King. There are twelve players alive, and one dead player. On the second night, she learns nothing. On the third night, she learns nothing. On the fourth day, there are seven dead players and six alive players. On the fourth night, Amy learns that the Snitch is alive. On the fifth night, she learns that the Witch is still alive.</p><p>The Demon knows that Abdallah is the King. Evin is claiming to be the Choirboy, but is the Butler. The Demon takes a risk and kills Abdallah. If Evin was actually the Choirboy, Evin would have learnt which player was the Demon.</p>`,
-        howToRun: `<p>During the first night, wake the Demon. Show them the <strong>THIS PLAYER IS</strong> info token, then the King token, then point at the King player. Put the Demon to sleep.</p><p>When the number of dead players exceeds the number of alive players, add a night token to the King's entry on the night sheet.</p><p>Each night, if the King has a night token on the night sheet, wake the King. Show one alive character token. Put the King to sleep.</p><p class="callout-box">Think carefully about what character tokens to show the King. Don't be afraid to give great information. Most Kings will die before the final day. A King that lives to the final day will usually win, and that's ok.</p><p class="callout-box">Optional rule: the King learns an alive character once the dead <strong>equal or outnumber</strong> the living. (This makes the King more fun to play in games with an even number of players.)</p>`,
+        howToRun: `<p>During the first night, wake the Demon. Show them the <strong>THIS PLAYER IS</strong> info token, then the King token, then point at the King player. Put the Demon to sleep.</p><p>When the number of dead players equals or exceeds the number of alive players, add a night token to the King's entry on the night sheet.</p><p>Each night, if the King has a night token on the night sheet, wake the King. Show one alive character token. Put the King to sleep.</p><p class="callout-box">Think carefully about what character tokens to show the King. Don't be afraid to give great information. Most Kings will die before the final day. A King that lives to the final day will usually win, and that's ok.</p>`,
         group: "Townsfolk",
         script: "exp"
     },
@@ -1213,11 +1213,11 @@ let characters = [
     {
         name: "Goblin",
         description: `The Goblin takes revenge if the town knowingly executes them.`,
-        intro: "",
+        intro: "<ul><li>If the Goblin is executed, evil wins.</li><li>...but for this to happen the Goblin needs to tell the group that they are the Goblin when they are nominated, but before votes happen, and to do so in a way that everyone hears. The good players need to know the risk.</li><li>If the Goblin is executed without telling the group that they are the Goblin when nominated, the Goblin dies and the game continues as normal.</li><li>The Goblin must have claimed to be the Goblin today for their ability to work. Telling the group yesterday, or even every previous day, doesn't count.</li><li>Any player may claim to be the Goblin when nominated.</li></ul>",
         ability: 'If you publicly claim to be the Goblin when nominated & are executed that day, your team wins.',
         flavor: '"You don\'t want to insult the goblins. You really, really don\'t. On a completely different note… can I have another piece of cake?"',
         examples: `<p>Abdallah is the Goblin. Alex nominates Abdallah, and Abdallah claims to be the Goblin. Votes are taken, and Abdallah is about to die. Other nominations occur later today, but Abdallah is executed. Evil wins.</p><p>Lewis is the Artist, and claims to be the Goblin when nominated. He is executed, and the game continues.</p><p>Doug is the Goblin. He claimed to be the Goblin yesterday and the day before, but not today. He is executed. The game continues.</p>`,
-        howToRun: `<p>When nominated, any player may claim to be the Goblin before voting starts. When any player does so, declare to the group that the player has claimed Goblin before starting the vote. If the Goblin does so and is then executed that day, their team wins.</p><p>This claim of Goblin can be as joking or as serious as the player likes, the simple point is that if they claim to be the Goblin in any way when nominated before votes start they have satisfied the ability requirements. This is why you should always confirm that a player has claimed Goblin to the whole group.</p><p>If a Goblin is executed without claiming Goblin when nominated, the game continues. The Goblin must claim Goblin the same day they are nominated and executed, claims on previous days are irrelevant.</p>`,
+        howToRun: `<p>If the Goblin claims to be the Goblin when nominated (and before voting begins), declare that this player has claimed to be the Goblin, so that all the group hears. Put the <strong>CLAIMED</strong> reminder by the Goblin token.</p><p>If the Goblin is executed, and they are marked <strong>CLAIMED</strong>, then declare that evil wins.</p><p class="callout-box">If a non-Goblin player claims to be the Goblin when nominated, act as if they are the Goblin. Delcare to the group that they have claimed to be the Goblin and pretend to move a reminder token in the Grimoire.</p>`,
         group: "Minion",
         script: "exp"
     },
@@ -1905,8 +1905,18 @@ let jinxes = [
     },
     {
         character1: "Pit-Hag",
+        character2: "Cult Leader",
+        rule: "If the Pit-Hag turns an evil player into the Cult Leader, they can't turn good due to their own ability."
+    },
+    {
+        character1: "Pit-Hag",
         character2: "Damsel",
         rule: "If a Pit-Hag creates a damsel, the Storyteller chooses which player it is."
+    },
+    {
+        character1: "Pit-Hag",
+        character2: "Goon",
+        rule: "If the Pit-Hag turns an evil player into the Goon, they can't turn good due to their own ability."
     },
     {
         character1: "Pit-Hag",
@@ -1916,7 +1926,7 @@ let jinxes = [
     {
         character1: "Pit-Hag",
         character2: "Politician",
-        rule: "A Pit-Hag cannot create an evil Politician."
+        rule: "If the Pit-Hag turns an evil player into the Politician, they can't turn good due to their own ability."
     },
     {
         character1: "Spy",
@@ -1936,7 +1946,7 @@ let jinxes = [
     {
         character1: "Spy",
         character2: "Damsel",
-        rule: "Only 1 jinxed character can be in play."
+        rule: "If the Spy is (or has been) in play, the Damsel is poisoned."
     },
     {
         character1: "Spy",
@@ -1961,7 +1971,7 @@ let jinxes = [
     {
         character1: "Widow",
         character2: "Damsel",
-        rule: "Only 1 jinxed character can be in play."
+        rule: "If the Widow is (or has been) in play, the Damsel is poisoned."
     },
     {
         character1: "Widow",
@@ -2325,11 +2335,6 @@ let jinxes = [
     },
     {
         character1: "Summoner",
-        character2: "Kazali",
-        rule: "The Kazali can not choose to create a Summoner."
-    },
-    {
-        character1: "Summoner",
         character2: "Legion",
         rule: "If the Summoner creates Legion, most players (including all evil players) become evil Legion."
     },
@@ -2362,7 +2367,52 @@ let jinxes = [
         character1: "Banshee",
         character2: "Vortox",
         rule: "If the Vortox is in play and the Demon kills the Banshee, the players still learn that the Banshee has died."
-    }
+    },
+    {
+        character1: "Summoner",
+        character2: "Courtier",
+        rule: "If the Summoner is drunk on the 3rd night, the Summoner chooses which Demon, but the Storyteller chooses which player."
+    },
+    {
+        character1: "Summoner",
+        character2: "Engineer",
+        rule: "If the Engineer removes a Summoner from play before that Summoner uses their ability, the Summoner uses their ability immmediately."
+    },
+    {
+        character1: "Summoner",
+        character2: "Hatter",
+        rule: "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+    },
+    {
+        character1: "Summoner",
+        character2: "Kazali",
+        rule: "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+    },
+    {
+        character1: "Summoner",
+        character2: "Pit-Hag",
+        rule: "he Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+    },
+    {
+        character1: "Summoner",
+        character2: "Pukka",
+        rule: "The Summoner may choose a player to become the Pukka on the 2nd night."
+    },
+    {
+        character1: "Summoner",
+        character2: "Riot",
+        rule: "If the Summoner creates Riot, all Minions become Riot."
+    },
+    {
+        character1: "Summoner",
+        character2: "Zombuul",
+        rule: "If the Summoner turns a dead player into the Zombuul, the Storyteller treats that player as a Zombuul that has died once."
+    },
+    {
+        character1: "Politician",
+        character2: "Vizier",
+        rule: "The Politician might register as evil to the Vizier."
+    },
 ];
 
 let isModalOpen = false;
