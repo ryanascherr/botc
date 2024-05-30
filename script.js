@@ -1145,6 +1145,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Ogre",
+        description: "The Ogre is someone's best friend.",
+        intro: `<ul><li>The Ogre's chosen player does not change, even if the Ogre is drunk or poisoned when they chose.</li><li>The Ogre becomes the same alignment as their chosen player immediately on the first night, even if the Ogre is drunk or poisoned.</li><li>The Ogre is not told their alignment at the beginning of the game.</li><li>If the Ogre changes alignment by other means, the Ogre learns their new alignment, as normal.</li><li>If an Ogre is created mid-game, the Ogre chooses a player that night, and becomes their alignment.</li></ul>`,
+        ability: "On your 1st night, choose a player (not yourself): you become their alignment (you don't know which) even if drunk or poisoned.",
+        flavor: '"*grunt* *grin* *grunt*"',
+        examples: `<p>On the first night, the Ogre chooses the Summoner. The Ogre becomes evil, and stays evil for the rest of the game.</p><p>On the first night, the Ogre chooses the Banshee. The Ogre stays good. On the third night, the Mezepheles turns the Banshee evil. The Ogre remains good.</p>`,
+        howToRun: `<p>During the first night, wake the Ogre. The Ogre points to a player. Put the Ogre to sleep. If the Ogre pointed to an evil player, flip the Ogre's character token upside down to represent that the Ogre is evil.</p>`,
+        group: "Outsider",
+        script: "exp"
+    },
+    {
         name: "Plague Doctor",
         description: "The Plague Doctor brings an extra Minion ability into play.",
         intro: `<ul><li>The Storyteller chooses which Minion ability is gained.</li><li>This ability is in effect for the rest of the game.</li><li>Nothing else changes for the Storyteller - they don't become evil, they don't become a player, they are not a legitimate player to be targeted by other abilities, and they cannot vote or nominate.</li><li>If all Minions are in play, the Storyteller can gain an in-play Minion ability.</li><li>If the Plague Doctor is drunk or poisoned when they die, the Storyteller doesn't gain a Minion ability, even when the Plague Doctor becomes sober and healthy.</li></ul>`,
@@ -1891,7 +1902,7 @@ let jinxes = [
     {
         character1: "Vizier",
         character2: "Magician",
-        rule: "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is."
+        rule: "If the Vizier and Magician are both in play, the Demon does not learn the Minions."
     },
     {
         character1: "Vizier",
@@ -1929,6 +1940,11 @@ let jinxes = [
         rule: "If the Pit-Hag turns an evil player into the Politician, they can't turn good due to their own ability."
     },
     {
+        character1: "Pit-Hag",
+        character2: "Ogre",
+        rule: "If the Pit-Hag turns an evil player into the Ogre, they can't turn good due to their own ability."
+    },
+    {
         character1: "Spy",
         character2: "Alchemist",
         rule: "The Alchemist cannot have the Spy ability."
@@ -1952,6 +1968,11 @@ let jinxes = [
         character1: "Spy",
         character2: "Heretic",
         rule: "Only 1 jinxed character can be in play."
+    },
+    {
+        character1: "Spy",
+        character2: "Ogre",
+        rule: "The Spy registers as evil to the Ogre."
     },
     {
         character1: "Widow",
@@ -2214,6 +2235,11 @@ let jinxes = [
         rule: "If the Cannibal gains the Butler ability, the Cannibal learns this."
     },
     {
+        character1: "Cannibal",
+        character2: "Juggler",
+        rule: "If the Juggler guesses on their first day and dies by execution, tonight the living Cannibal learns how many guesses the Juggler got correct."
+    },
+    {
         character1: "Lycanthrope",
         character2: "Gambler",
         rule: "If the Lycanthrope is alive and the Gambler kills themself at night, no other players can die tonight."
@@ -2412,6 +2438,11 @@ let jinxes = [
         character1: "Politician",
         character2: "Vizier",
         rule: "The Politician might register as evil to the Vizier."
+    },
+    {
+        character1: "Ogre",
+        character2: "Recluse",
+        rule: "If the Recluse registers as evil to the Ogre, the Ogre learns that they are evil."
     },
 ];
 
