@@ -1867,7 +1867,7 @@ let jinxes = [
     {
         character1: "Organ Grinder",
         character2: "Flowergirl",
-        rule: "If players' eyes were closed during nominations, the Flowergirl learns how many times the Demon voted."
+        rule: "If the Organ Grinder is causing eyes-closed voting, the Flowergirl wakes tonight to choose a player: they learn if that player voted today. (instead of their normal ability)"
     },
     {
         character1: "Organ Grinder",
@@ -2443,6 +2443,11 @@ let jinxes = [
         character1: "Ogre",
         character2: "Recluse",
         rule: "If the Recluse registers as evil to the Ogre, the Ogre learns that they are evil."
+    },
+    {
+        character1: "Philosopher",
+        character2: "Bounty Hunter",
+        rule: "If the Philosopher gains the Bounty Hunter ability, a Townsfolk might turn evil."
     },
 ];
 
