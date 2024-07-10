@@ -801,7 +801,18 @@ let characters = [
         ability: 'You have a not-in-play Minion ability.',
         flavor: '"Visit the interior of the Earth. By rectification thou shalt find the hidden stone. Above the gold, lieth the red. Kether in Malkuth."',
         examples: `<p>The Alchemist has the Poisoner's ability. Each night, the Alchemist wakes and chooses a player to poison.</p><p>The Alchemist has the Scarlet Woman's ability. The Imp kills themselves at night, and the Alchemist becomes the good Imp.</p><p>The Alchemist has the Assassin's ability. The Dreamer chooses the Alchemist. The Alchemist registers as the Alchemist, so the Dreamer learns that they are either the Alchemist or the Assassin.</p>`,
-        howToRun: `<p>During the first night, wake the Alchemist. Show the <strong>YOU ARE</strong> info token then the character token of a not-in-play Minion. Put the Alchemist to sleep. Mark the Alchemist with the <strong>IS THE ALCHEMIST</strong> reminder. Swap the Alchemist token with this Minion token. Turn the Minion token upside-down. <i>(This shows they are still good.)</i></p><p>The Alchemist has this Minion ability. They use it as if they were a Minion, and wake at night when that Minion would normally wake to use their ability.</p><p class-"callout-box">Think carefully about which Minion ability you want to give to the Alchemist. This decision can dramatically influence the game.</p>`,
+        howToRun: `<p>During the first night, wake the Alchemist. Show the <strong>YOU ARE</strong> info token then the character token of a not-in-play Minion. Put the Alchemist to sleep. Mark the Alchemist with the <strong>IS THE ALCHEMIST</strong> reminder. Swap the Alchemist token with this Minion token. Turn the Minion token upside-down. <i>(This shows they are still good.)</i></p><p>The Alchemist has this Minion ability. They use it as if they were a Minion, and wake at night when that Minion would normally wake to use their ability.</p><p class="callout-box">Think carefully about which Minion ability you want to give to the Alchemist. This decision can dramatically influence the game.</p>`,
+        group: "Townsfolk",
+        script: "exp"
+    },
+    {
+        name: "Alsaahir",
+        description: "The Alsaahir guesses the entire evil team.",
+        intro: "<ul><li>The Alsaahir's guesses need to be public, and they need to be during the day. They don't have to guess every day.</li><li>Other players may pretend to be the Alsaahir and make a guess. Like the Juggler or the Gossip, the Storyteller will briefly pretend that player is the Alsaahir.</li><li>If the Alsaahir guesses the Demon player as the Demon, and the Minion players as Minions, the game ends immediately. The Alsaahir must guess all Demon and Minion players.</li><li>The Alsaahir doesn't need to guess specific minion characters, nor demon characters.</li><li>If there is more than one Demon in play, all Demons must be guessed.</li><li>If a player is a Minion and a Demon, such as Legion, the Alsaahir must guess this player as a Demon.</li><li>Once a guess is made, the Alsaahir cannot change their mind later that day and guess again.</li><li>The Alsaahir needs to guess Minions and Demons, even if they are good, but need not guess which Travellers are evil.</li><li>If the evil team has changed during the game, the Alsaahir must guess the current evil team, not the starting evil team.</li></ul>",
+        ability: 'Once per day, if you publicly guess which players are Minion(s) and which are Demon(s), good wins.',
+        flavor: '"I am here because of you, and you are here because of me."',
+        examples: `<p>The Alsaahir guesses four good players. Nothing happens.</p><p>The Alsaahir guesses that Doug is the Demon, and Ben and Sarah are Minions. Doug is the Demon, and Ben and Sarah are Minions. Good wins immediately.</p><p>The drunk Alsaahir guesses that Doug is the Demon, and Ben and Sarah are Minions. Doug is the Demon, and Ben and Sarah are Minions. Nothing happens and the game continues. The next day, the sober Alsaahir guesses that Ben is the Demon and Doug and Sarah are Minions. Nothing happens and the game continues.</p>`,
+        howToRun: `<p>Each day, once only, if the Alsaahir declares that they wish to use their ability, prompt them to guess which player is the Demon, and which player(s) are Minions. If incorrect, nothing happens, and the game continues. If correct, declare that good wins.</p><p class="callout-box">Optional rule: like the Juggler and the Gossip, the Storyteller may limit the number of players that make an Alsaahir guess to three players per day. Only use this optional rule if so many players are bluffing as the Alsaahir that the game slows down and ceases to be fun.</p>`,
         group: "Townsfolk",
         script: "exp"
     },
@@ -831,7 +842,7 @@ let characters = [
         name: "Balloonist",
         description: "The Balloonist knows a Townsfolk, an Outsider, a Minion, and a Demon, but gets them confused.",
         intro: "",
-        ability: 'Each night, you learn 1 player of each character type, until there are no more types to learn. [+1 Outsider]',
+        ability: 'Each night, you learn a player of a different character type than last night. [+0 or +1 Outsider]',
         flavor: '"More heat! Higher! Higher! Più alto! Ahhh... it is so beautiful from up here, don\'t you agree? Can you see the children fishing by the river, under the willow? Can you see the glint of the sun on the circus tent-poles? What\'s this? An old man, alone, passed out in the vineyard? Less heat! Lower! Lower! Vai più in basso!"',
         examples: `<p>On the first night, the Balloonist learns Lewis (i.e. the Storyteller points to Lewis). On the second night, the Balloonist learns Doug. On the third night, the Balloonist learns Lachlan. On the fourth night, the Balloonist learns Marianna.</p><p>Ben is the Balloonist. On the first night, Ben learns Sarah. On the second night, Ben learns Abdallah. On the third night, Ben dies, so does not learn any more players. Sarah is claiming to be the Monk and Abdallah is claiming to be the Goblin. Ben assumes that he has learnt one Townsfolk player and one Minion player, but he is incorrect - Sarah is the Lunatic and Abdallah is the Leviathan. Ben has actually learnt an Outsider player and a Demon player.</p>`,
         howToRun: `<p>When putting character tokens into the bag, remove a Townsfolk and add an Outsider instead. Each night including the first, wake the Balloonist and point to a single player (alive or dead) and place the corresponding <strong>SEEN TOWNSFOLK / OUTSIDER / MINION / DEMON</strong> reminder token next to them, ensuring not to repeat the same type as has been used before <i>(i.e. don't move reminder tokens once placed)</i>. Do not show them a character token or indicate which specific type this player is, just show them a player.</p><p>On each subsequent night, therefore, you will have fewer character types to show as you only have your remaining reminder tokens to place. It is legitimate to show the same player to the Balloonist more than once, if they either have different character types when shown or register as having a different character type. Unless you have a strong reason to, it's usually recommended to not show Travellers early, as this is essentially giving the Balloonist no information at all that night as all players know which players are Travellers without needing to use any abilities.</p><p>If there are no characters of a given type in play and you have shown the Balloonist all other types, stop waking the Balloonist. Note that even if a character of this missing type comes into play on a night after you've stopped waking the Balloonist, do not wake the Balloonist again on a later night to show them this player - the Balloonist ability was complete when you stopped waking them.</p>`,
@@ -1159,7 +1170,7 @@ let characters = [
         name: "Plague Doctor",
         description: "The Plague Doctor brings an extra Minion ability into play.",
         intro: `<ul><li>The Storyteller chooses which Minion ability is gained.</li><li>This ability is in effect for the rest of the game.</li><li>Nothing else changes for the Storyteller - they don't become evil, they don't become a player, they are not a legitimate player to be targeted by other abilities, and they cannot vote or nominate.</li><li>If all Minions are in play, the Storyteller can gain an in-play Minion ability.</li><li>If the Plague Doctor is drunk or poisoned when they die, the Storyteller doesn't gain a Minion ability, even when the Plague Doctor becomes sober and healthy.</li></ul>`,
-        ability: 'If you die, the Storyteller gains a not-in-play Minion ability.',
+        ability: 'If you die, the Storyteller gains a Minion ability.',
         flavor: '"Pleauze shtay shtill. Thinks nid tiime for hillink. Myrhh-myrhh."',
         examples: `<p>The Plague Doctor dies. The Storyteller gains the Poisoner ability and chooses a player to poison each night for the rest of the game.</p><p>The Plague Doctor is executed and the Storyteller gains the Cerenovus ability. That night, the Pit-Hag turns the Witch into the Cerenovus. There are now two Cerenovus abilities in play - the Storyteller's and the new Cerenovus'.</p><p>The Plague Doctor has died and the Storyteller has had the Organ Grinder ability for two days. The Plague Doctor is made drunk by the Minstrel. The Storyteller still has the Organ Grinder ability as they gained it when the Plague Doctor died and the Plague Doctor now being drunk does not affect that.</p>`,
         howToRun: `<p>When the Plague Doctor dies, place a not-in-play Minion character token in the centre of the left side of Grimoire. Mark this with the Plague Doctor's <strong>STORYTELLER ABILITY</strong> reminder. If applicable, add a night token to the night sheet.</p>When this Minion would normally act, the relevant choices are made by the Storyteller.<p></p>`,
@@ -1236,7 +1247,7 @@ let characters = [
         name: "Harpy",
         description: `The Harpy creates discord and distrust between good players.`,
         intro: "<ul><li>At night, the Harpy player chooses one player at a time, not two at once.</li><li>A player chosen by the Harpy is affected by the ability until the next Harpy choice.</li><li>If the Storyteller decides to kill players with the Harpy ability, they must kill both. The Storyteller can not decide to kill only one.</li><li>The Harpy can choose a dead player. If so, the Storyteller can kill just the living player, since dead players can not die again.</li><li>The order of deaths due to the Harpy ability can be chosen by the Storyteller, should that be important.</li></ul>",
-        ability: 'Each night, choose 2 players: tomorrow, the 1st player is mad that the 2nd is evil, or both might die.',
+        ability: 'Each night, choose 2 players: tomorrow, the 1st player is mad that the 2nd is evil, or one or both might die.',
         flavor: '"So fair a day I never did see, nor so fowl a presence hanging over me."',
         examples: `<p>The Harpy chooses the Monk and the Engineer. The Monk claims to be the Investigator who saw the Engineer and campaigns for them to be executed. When challenged, they are emphatic in their claims that the Engineer is most likely evil due to their information, and so avoid death.</p><p>The Harpy chooses the Oracle and the dead Alchemist. The Oracle claims that they trust the Alchemist because their Oracle information indicates that they were not evil. The Storyteller declares that the Oracle dies.</p><p>The Farmer is chosen by the Harpy. As they don't have any information themselves to claim in order to imply that the other player is evil, they make a concerted effort to find information that might clear each of the other living people, leaving their target as the remaining Demon candidate and therefore evil by implication.</p>`,
         howToRun: `<p>Each night, wake the Harpy. The Harpy points to one player, then another player. Mark the first player with the <strong>MAD</strong> reminder and the second player with the <strong>2ND</strong> reminder. Put the Harpy to sleep. Wake the player marked <strong>MAD</strong>. Show the <strong>THIS CHARACTER SELECTED YOU</strong> info token then the Harpy token, then point to the player marked <strong>2ND</strong>. Put the player marked <strong>MAD</strong> to sleep.</p><p>Tomorrow, if the player marked <strong>MAD</strong> is not mad that the player marked <strong>2ND</strong> is evil, you may kill both players.</p>`,
@@ -1371,7 +1382,7 @@ let characters = [
         name: "Lil' Monsta",
         description: `Lil' Monsta isn't a player, and is instead babysat by a Minion.`,
         intro: "",
-        ability: 'Each night, Minions choose who babysits Lil\' Monsta\'s token & "is the Demon". A player dies each night*. [+1 Minion]',
+        ability: "Each night, Minions choose who babysits Lil' Monsta & 'is the Demon'. Each night*, a player might die. [+1 Minion]",
         flavor: '"Step 1: Be cute. Step 2: World domination. Step 3: Bweakfast."',
         examples: `<p>The Poisoner and the Widow wake. They point at each other, then point at themselves, then eventually both point at the Widow, who receives Lil' Monsta's token. The next night, they both choose that the Poisoner babysits Lil' Monsta instead.</p>`,
         group: "Demon",
@@ -2448,6 +2459,26 @@ let jinxes = [
         character1: "Philosopher",
         character2: "Bounty Hunter",
         rule: "If the Philosopher gains the Bounty Hunter ability, a Townsfolk might turn evil."
+    },
+    {
+        character1: "Kazali",
+        character2: "Soldier",
+        rule: "If the Kazali turns the Soldier into a Minion, the Soldier chooses which not-in-play Minion to become."
+    },
+    {
+        character1: "Legion",
+        character2: "Minstrel",
+        rule: "If Legion died by execution today, Legion keeps their ability, but the Minstrel might learn they are Legion."
+    },
+    {
+        character1: "Summoner",
+        character2: "Preacher",
+        rule: "If the Preacher chose the Summoner on or before the 3rd night, the Summoner chooses which Demon, but the Storyteller chooses which player."
+    },
+    {
+        character1: "Alsaahir",
+        character2: "Vizier",
+        rule: "If the Vizier is in play, the Alsaahir must also guess which Demon(s) are in play."
     },
 ];
 
