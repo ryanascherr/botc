@@ -1210,17 +1210,17 @@ let characters = [
         group: "Outsider",
         script: "exp"
     },
-    // {
-    //     name: "Zealot",
-    //     description: "The Zealot votes.",
-    //     intro: `<ul><li>If there are 5 or more players alive, the Zealot must vote for every nomination. If there are 4 or fewer players alive, the Zealot can choose whether they vote or not.</li><li>Travellers count as alive players.</li><li>The Zealot can vote like a normal dead player when dead.</li><li>The Zealot does not need to vote for exiles.</li><li>A Zealot must vote even if they think they might be drunk or poisoned.</li><li>It is not the Storyteller's responsibility to monitor the Zealot. They're responsible for their own voting. Deliberately not voting when they should is considered cheating.</li></ul>`,
-    //     ability: 'If there are 5 or more players alive, you must vote for every nomination.',
-    //     flavor: '"I enjoy talking to you. Your mind appeals to me. It resembles my own mind except that you happen to be insane."',
-    //     examples: `<p>There are 7 players alive. The Zealot votes for the Alsaahir, the Summoner, Ogre, and the Banshee. The next day, there are 5 players alive. The Zealot votes for the Yaggababble, and the High Priestess. The next day, there are 3 players alive. The Zealot votes for the Yaggababble, but chooses not to vote for the High Priestess.</p><p>There are 9 players alive. The Zealot is dead. The Zealot doesn't vote for 3 days, and uses their vote token when just 3 players are alive to vote for the Farmer.</p>`,
-    //     howToRun: `<p>During each nomination, if there are 5 or more players alive, the Zealot must raise their hand to vote.</p><p class="modal__callout-box">If the Zealot accidentally forgets to vote, do not tally the Zealot's vote. If you do tally the vote, the total will be more than it should be, and all players will know which player is the Zealot, which is unfair for the evil team. Mistakes happen. Just play on and have a private chat later.</p>`,
-    //     group: "Outsider",
-    //     script: "exp"
-    // },
+    {
+        name: "Zealot",
+        description: "The Zealot votes.",
+        intro: `<ul><li>If there are 5 or more players alive, the Zealot must vote for every nomination. If there are 4 or fewer players alive, the Zealot can choose whether they vote or not.</li><li>Travellers count as alive players.</li><li>The Zealot can vote like a normal dead player when dead.</li><li>The Zealot does not need to vote for exiles.</li><li>A Zealot must vote even if they think they might be drunk or poisoned.</li><li>It is not the Storyteller's responsibility to monitor the Zealot. They're responsible for their own voting. Deliberately not voting when they should is considered cheating.</li></ul>`,
+        ability: 'If there are 5 or more players alive, you must vote for every nomination.',
+        flavor: '"I enjoy talking to you. Your mind appeals to me. It resembles my own mind except that you happen to be insane."',
+        examples: `<p>There are 7 players alive. The Zealot votes for the Alsaahir, the Summoner, Ogre, and the Banshee. The next day, there are 5 players alive. The Zealot votes for the Yaggababble, and the High Priestess. The next day, there are 3 players alive. The Zealot votes for the Yaggababble, but chooses not to vote for the High Priestess.</p><p>There are 9 players alive. The Zealot is dead. The Zealot doesn't vote for 3 days, and uses their vote token when just 3 players are alive to vote for the Farmer.</p>`,
+        howToRun: `<p>During each nomination, if there are 5 or more players alive, the Zealot must raise their hand to vote.</p><p class="modal__callout-box">If the Zealot accidentally forgets to vote, do not tally the Zealot's vote. If you do tally the vote, the total will be more than it should be, and all players will know which player is the Zealot, which is unfair for the evil team. Mistakes happen. Just play on and have a private chat later.</p>`,
+        group: "Outsider",
+        script: "exp"
+    },
     {
         name: "Boomdandy",
         description: "The Boomdandy explodes when executed, killing most other players.",
@@ -1407,6 +1407,17 @@ let characters = [
         flavor: '"Tasty, tasty, tasty, tasty, tasty, tasty, tasty, tasty brai- I mean pie! Yes. Tasty pie. That\'s what I meant to say."',
         examples: `<p>The Lleech poisons the Noble. The Noble learns three good players instead of one evil and two good players. The Lleech is executed, but does not die. The next day, the Noble is executed. The Noble and the Lleech die. Good wins.</p><p>The Lleech poisons the Farmer. The Courtier poisons the Lleech. The Psychopath kills the Farmer, but the Lleech doesn't die because the Lleech has no ability. The Lleech is executed, and dies.</p>`,
         howToRun: `<p>During the first night, wake the Lleech. They point at any player. That player is <strong>poisoned</strong>—mark them with the <strong>POISONED</strong> reminder. Put the Lleech to sleep.</p><p>Each night except the first, wake the Lleech. They point at any player. That player <strong>dies</strong>—mark them with the <strong>DEAD</strong> reminder. Put the Lleech to sleep.</p><p>If the Lleech would die but the player marked with the Lleech's <strong>POISONED</strong> reminder is alive, the Lleech does not die. If the player marked with the Lleech's <strong>POISONED</strong> reminder <strong>is dead</strong>, the Lleech <strong>dies</strong> and the good team wins.</p><p class="modal__callout-box">When giving false information to a good player poisoned by the Lleech, make sure this information seems true. If the good player believes it to be false, they will quickly execute themselves and win the game.</p>`,
+        group: "Demon",
+        script: "exp"
+    },
+    {
+        name: "Lord of Typhon",
+        description: "The Lord Of Typhon is surrounded by Minions.",
+        intro: `<ul><li>All evil characters sit next to each other in a continuous line. All evil characters (including Travellers and evil Townsfolk) must be in the line at setup.</li><li>If Lord Of Typhon is on the script, the Storyteller decides where Travellers sit, even if the Lord of Typhon is not in play.</li><li>The Lord Of Typhon must have an evil character on both sides. They cannot sit at the end of the line of evil characters.</li><li>The evil team starts with one additional Minion.</li><li>Any number of Outsiders might be in play.</li><li>Like the Marionette, the Storyteller decides which players are Minions during setup. The Storyteller also decides which player is which Minion.</li><li>If a Lord Of Typhon is created mid game, the Lord Of Typhon does not need to sit in a line with the evil characters.</li></ul>`,
+        ability: 'Each night*, choose a player: they die. [Evil characters are in a line. You are in the middle. +1 Minion. -? to +? Outsiders]',
+        flavor: '"In the shadowed and forgotten corners of the cosmos, where the stars whisper secrets to the void, lies a truth so profound that the merest glimpse of it unravels the sanity of mortal minds."',
+        examples: `<p>There are two Minions: the Organ Grinder and the Mezepheles. In between them, neighboring them both, sits the Lord Of Typhon. The number of Outsiders is normal.</p><p>The Vizier neighbors the Harpy, who neighbors the Lord Of Typhon, who neighbors the Goblin. There are ten players, and two Outsiders in play, due to the Lord Of Typhon ability.</p><p>The Fearmonger neighbors the Boomdandy, who neighbors the Lord Of Typhon, who neighbors the Poisoner, who neighbors the Mastermind. There are 15 players, but zero Outsiders in play, since the Lord Of Typhon removed one Outsider, and the Puzzlemaster became the Boomdandy during the first night.</p>`,
+        howToRun: `<p>While setting up the game, remove all Minion tokens and add Townsfolk or Outsider tokens.</p><p>During the first night, wake the appropriate number of players directly clockwise and counter-clockwise from the Lord Of Typhon. Show each of these players a unique Minion token, and give a thumbs down. Replace these players' good character tokens with these Minion tokens and put these players to sleep. Then, do the Minion Info and Demon Info steps as normal.</p><p>Each night except the first, wake the Lord Of Typhon. They point at any player. That player <strong>dies</strong> — mark them with the <strong>DEAD</strong> reminder. Put the Lord Of Typhon to sleep.</p>`,
         group: "Demon",
         script: "exp"
     },
@@ -2490,6 +2501,36 @@ let jinxes = [
         character1: "Alsaahir",
         character2: "Vizier",
         rule: "If the Vizier is in play, the Alsaahir must also guess which Demon(s) are in play."
+    },
+    {
+        character1: "Zealot",
+        character2: "Cannibal",
+        rule: "If the Cannibal gains the Zealot ability, the Cannibal learns this."
+    },
+    {
+        character1: "Zealot",
+        character2: "Vizier",
+        rule: "The Zealot might register as evil to the Vizier."
+    },
+    {
+        character1: "Zealot",
+        character2: "Legion",
+        rule: "The Zealot might register as evil to Legion's ability."
+    },
+    {
+        character1: "Zealot",
+        character2: "Riot",
+        rule: "If you are nominated, you must nominate again, even if dead."
+    },
+    {
+        character1: "Lord of Typhon",
+        character2: "Summoner",
+        rule: "If the Summoner creates a Lord Of Typhon, the Lord Of Typhon must neighbor a Minion. The other neighbor becomes a not-in-play evil Minion."
+    },
+    {
+        character1: "Marionette",
+        character2: "Balloonist",
+        rule: "If the Marionette thinks that they are the Balloonist, +1 Outsider might have been added."
     },
 ];
 
