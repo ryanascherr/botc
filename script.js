@@ -1222,6 +1222,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Boffin",
+        description: "The Boffin replicates a good ability.",
+        intro: `<ul><li>While the Boffin is alive, the Demon has a single Townsfolk ability or Outsider ability.</li><li>If the Demon is drunk or poisoned, the Demon keeps this good ability. If the Boffin is drunk or poisoned, the Demon temporarily loses this good ability.</li><li>If the Demon dies and has an ability that functions while dead, such as the Sweetheart, the Demon keeps this ability.</li><li>If a new Demon is created, such as via a Scarlet Woman or a Barber, this new Demon has an ability from the Boffin. This ability may be different to the previous Demon's ability.</li><li>If there are multiple Demons alive, only one alive Demon has an ability from the Boffin.</li><li>If the Demon has an ability that modifies the setup, such as a Choirboy, these changes are made during setup, as normal.</li><li>Both the Demon and the Boffin learn which good ability the Demon has. The Storyteller may wake these players independently, or together.</li><li>The not-in-play character may be 1 of the Demon's 3 bluffs.</li><li>The Demon also wakes at night at the time that the <strong>good</strong> character would normally wake.</li></ul>`,
+        ability: "The Demon (even if drunk or poisoned) has a not-in-play good character's ability. You both know which.",
+        flavor: '"Stellar hydrogen, vast, inert; carbon, oxygen, neon gases, all ruined. Molecular chaos, entropy, yields new cosmic phenomena, rebirth from atomic chaos, dense matter collapsing. All in a teeny little bottle."',
+        examples: `<p>The Imp has the Virgin ability. The Alsaahir nominates the Imp, and is immediately executed.</p><p>The Lord of Typhon has the Chambermaid ability. Each night, the Lord of Typhon wakes, chooses two players, and learns how many woke tonight. On the 4th night, the Boffin is drunk, so the Demon has no Chambermaid ability, so does not wake.</p><p>The Kazali has the Banshee ability. The Kazali dies at night, and the Scarlet Woman becomes the Kazali. The dead Kazali may nominate and vote twice per day.</p>`,
+        howToRun: `<p>While setting up the game, before putting character tokens in the bag, make any changes that are indicated in brackets on the Demon's two character abilities. Afterwards, place this second character token by the Demon character token.</p><p>During the 1st night, wake the Boffin and the Demon. Show the <strong>THIS CHARACTER SELECTED YOU</strong> info token, then the Boffin token, then the good character token. Place this second character token by the Demon character token.</p><p>Treat the Demon player as if they had this character ability, as well as their own Demon ability.</p><p class="modal__callout-box">Good abilities that would drunk/poison themselves, such as the Sailor, only drunk/poison the Demon's good ability.</p>`,
+        group: "Minion",
+        script: "exp"
+    },
+    {
         name: "Boomdandy",
         description: "The Boomdandy explodes when executed, killing most other players.",
         intro: `<ul><li>If the Boomdandy is executed, the Storyteller kills other players, one at a time, until only three are left alive.</li><li>The Demon will be one of the remaining three players <i>(otherwise, the game would be over)</i>.</li><li>The players have one minute to decide who to kill next. There is no further nomination or execution today. Instead, all players point at the player they want to die. When one minute is up, the Storyteller counts the number of fingers pointed at each player. If it is a tie, then night falls <i>(and evil probably wins due to the Demon killing that night)</i>.</li><li>Even dead players who have no vote token may point.</li><li>Players may change who they are pointing at up until the minute ends, at which point their decision is final.</li><li>The Boomdandy only explodes due to an execution. Deaths by other means, such as via a Golem or a Psychopath, don't count. If the Boomdandy is executed but doesn't die <i>(due to a Devil's Advocate etc.)</i>, they still explode.</li><li>If a character can't die, such as the Fool or the Sailor, the Storyteller may rule that four players remain alive after a Boomdandy explosion.</li></ul>`,
@@ -2531,6 +2542,46 @@ let jinxes = [
         character1: "Marionette",
         character2: "Balloonist",
         rule: "If the Marionette thinks that they are the Balloonist, +1 Outsider might have been added."
+    },
+    {
+        character1: "Boffin",
+        character2: "Alchemist",
+        rule: "If the Alchemist has the Boffin ability, the Alchemist does not learn what ability the Demon has."
+    },
+    {
+        character1: "Boffin",
+        character2: "Cult Leader",
+        rule: "If the Demon has the Cult Leader ability, they can't turn good due to this ability."
+    },
+    {
+        character1: "Boffin",
+        character2: "Drunk",
+        rule: "If the Demon would have the Drunk ability, the Boffin chooses a Townsfolk player to have this ability instead."
+    },
+    {
+        character1: "Boffin",
+        character2: "Goon",
+        rule: "If the Demon has the Goon ability, they can't turn good due to this ability."
+    },
+    {
+        character1: "Boffin",
+        character2: "Heretic",
+        rule: "The Demon cannot have the Heretic ability."
+    },
+    {
+        character1: "Boffin",
+        character2: "Ogre",
+        rule: "The Demon cannot have the Ogre ability."
+    },
+    {
+        character1: "Boffin",
+        character2: "Politician",
+        rule: "The Demon cannot have the Politician ability."
+    },
+    {
+        character1: "Boffin",
+        character2: "Village Idiot",
+        rule: "If there is a spare token, the Boffin can give the Demon the Village Idiot ability."
     },
 ];
 
