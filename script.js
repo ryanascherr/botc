@@ -794,6 +794,17 @@ let characters = [
         group: "Demon",
         script: "sv"
     },
+        {
+        name: "Acrobat",
+        description: `The Acrobat dies if the people they choose are drunk or poisoned.`,
+        intro: "",
+        ability: 'Each night*, choose a player: if they are or become drunk or poisoned tonight, you die.',
+        flavor: '"Welcome, one and all, to the greatest show on earth."',
+        examples: ``,
+        howToRun: "<p>Each night except the first, wake the Acrobat. The Acrobat points at a player. Put the Acrobat to sleep. Mark the chosen player with the <strong>CHOSEN</strong> reminder token.</p><p>If the chosen player is drunk or poisoned at any point during the night phase, the Acrobat dies—put the Acrobat <strong>DEAD</strong> by the Acrobat's character token in the Grimoire and put a shroud on it.</p><p class='modal__callout-box'>For the purpose of the Acrobat's ability, the Drunk registers as drunk.</p>",
+        group: "Townsfolk",
+        script: "exp"
+    },
     {
         name: "Alchemist",
         description: "The Alchemist has a Minion ability.",
@@ -1102,16 +1113,6 @@ let characters = [
         script: "exp"
     },
     {
-        name: "Acrobat",
-        description: `The Acrobat dies if the people they neighbour are drunk or poisoned.`,
-        intro: "",
-        ability: 'Each night*, if either good living neighbour is drunk or poisoned, you die.',
-        flavor: '"Welcome, one and all, to the greatest show on earth."',
-        examples: `<p>The Acrobat neighbours the Lycanthrope and the Amnesiac. The Lycanthrope has been poisoned by the Widow. On the first night, the Acrobat lives, because the Acrobat's ability doesn't apply on the first night. On the second night, the Acrobat dies.</p><p>The Acrobat neighbours the Moonchild and the Soldier. The Soldier is executed, and the Acrobat's living neighbours are now the Moonchild and the Boomdandy. The Moonchild dies at night, and the Acrobat's living neighbours are now the drunk Sailor and the Boomdandy. The Acrobat dies.</p><p>The Acrobat neighbours the Imp and the Dreamer. The Imp also neighbours the Clockmaker. The Acrobat does not die, because neither the Dreamer nor the Clockmaker are drunk or poisoned. (The Acrobat's ability ignores Evil players, so the Imp's status is not considered.) The Snake Charmer selects the Imp, turning the Imp's player into a good, poisoned Snake Charmer. The Acrobat dies.</p>`,
-        group: "Outsider",
-        script: "exp"
-    },
-    {
         name: "Damsel",
         description: "The Damsel needs to avoid being found by the Minions.",
         intro: `<ul><li>If a Minion guesses that you are the Damsel, and does so publicly <i>(so that all players know that they are a Minion)</i>, evil wins.</li><li>No matter how many Minions are in play, they only get one guess, total. If a Minion makes a guess and is wrong, future guesses by this Minion or by other Minions don't count.</li><li>If the Demon pretends to be a Minion making a guess, that doesn't count as a guess. Minions may still make a guess and win.</li><li>Minions may make a guess at any time.</li><li>If the Damsel dies, they are no longer at risk of being guessed by a Minion, since the Damsel loses their ability when dead.</li><li>There may not be a Huntsman in play. But if there is, and the Huntsman chooses the Damsel at night, the Damsel becomes a not-in-play Townsfolk, and is no longer the Damsel. The Damsel learns which Townsfolk and has that Townsfolk ability from then on.</li></ul>`,
@@ -1301,14 +1302,11 @@ let characters = [
     {
         name: "Organ Grinder",
         description: "The Organ Grinder makes voting secret.",
-        intro: `<ul><li>When a player is nominated, players vote with eyes closed.</li><li>The Storyteller does not count the votes out loud, and does not reveal how many players voted once voting is complete.</li><li>The Storyteller does not reveal which player is "about to die".</li><li>After nominations have closed, the Storyteller reveals which player is executed, as normal.</li><li>Dead players may vote once if they have a vote token. Their vote token is removed at the end of the day instead of after the vote.</li><li>If the Organ Grinder is nominated but does not vote for themselves, the vote is not successful and counts as "zero votes" for purposes of deciding which player is executed.</li><li>If the Organ Grinder is nominated and votes for themselves, their self-vote counts as a vote, as normal.</li></ul>`,
-        ability: 'All players keep their eyes closed when voting & the vote tally is secret. Votes for you only count if you vote.',
-        flavor: '"If you want people to believe your lies, set them to music."',
-        examples: `<p>There are 8 players alive. The Noble is nominated. All players close eyes to vote and the Noble gets 5 votes. The Imp is nominated. All players close eyes to vote and the Imp gets 7
-        votes. The Pixie is nominated. All players close eyes to vote and the Pixie gets 4 votes. After nominates close, the Storyteller declares that Doug (the Imp) is executed and dies, and that good has won.</p><p>There are 5 players alive. 2 players have 3 votes each. The Organ Grinder has 4 votes, but did not vote for themselves. There is no execution today, because the vote was tied.</p>`,
-        howToRun: `<p>When a player is nominated, ask all players to close their eyes. If they ask why, tell them that an Organ Grinder is in play. When counting votes, do so silently. Afterwards, do not reveal how
-        many players voted, nor if the nominee is "about to die". If there were enough votes to execute the nominee, mark them with the <strong>ABOUT TO DIE</strong> reminder. Ask players to open their eyes, and if there are any more nominations.</p><p>If the Organ Grinder is nominated, follow the above process, but
-        do not place or move the <strong>ABOUT TO DIE</strong> reminder if the Organ Grinder didn't vote.</p><p>When nominations are closed, declare that the player marked <strong>ABOUT TO DIE</strong>, dies.</p><p class="modal__callout-box">Players are not allowed to use other methods to determine who is voting, such as touch or sound. It is a secret.</p>`,
+        intro: `<ul><li>When a player is nominated, players vote with eyes closed.</li><li>The Storyteller does not count the votes out loud, and does not reveal how many players voted once voting is complete.</li><li>The Storyteller does not reveal which player is "about to die".</li><li>After nominations have closed, the Storyteller reveals which player is executed, as normal.</li><li>Dead players may vote once if they have a vote token. Their vote token is removed at the end of the day instead of after the vote.</li></ul>`,
+        ability: 'All players keep their eyes closed when voting and the vote tally is secret. Each night, choose if you are drunk or not.',
+        flavor: '"Round and round the handles go. The more you dance the less you know."',
+        examples: `<p>There are 8 players alive. The Noble is nominated. All players close eyes to vote and the Noble gets 5 votes. The Imp is nominated. All players close eyes to vote and the Imp gets 7 votes. The Pixie is nominated. All players close eyes to vote and the Pixie gets 4 votes. After nominates close, the Storyteller declares that Doug (the Imp) is executed and dies, and that good has won.</p>`,
+        howToRun: `<p>Each night, wake the Organ Grinder. The Organ Grinder either nods their head yes to be drunk, or shakes their head no to be sober. Put the Organ Grinder to sleep.</p><p>If they nod their head, mark them with the <strong>DRUNK</strong> reminder token. If they shake their head, remove the <strong>DRUNK</strong> reminder token.</p><p>When a player is nominated, if the Organ Grinder is sober, ask all players to close their eyes. If they ask why, tell them that an Organ Grinder is in play. When counting votes, do so silently. Afterwards, do not reveal how many players voted, nor if the nominee is “about to die”. If there were enough votes to execute the nominee, mark them with the <strong>ABOUT TO DIE</strong> reminder. Ask players to open their eyes, and if there are any more nominations.</p><p>When nominations are closed, declare that the player marked <strong>ABOUT TO DIE</strong>, <strong>dies</strong>.</p><p class="modal__callout-box">Players are not allowed to use other methods to determine who is voting, such as touch or sound. It is a secret.</p>`,
         group: "Minion",
         script: "exp"
     },
@@ -1915,16 +1913,6 @@ let jinxes = [
     },
     {
         character1: "Organ Grinder",
-        character2: "Minstrel",
-        rule: "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is."
-    },
-    {
-        character1: "Organ Grinder",
-        character2: "Preacher",
-        rule: "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is."
-    },
-    {
-        character1: "Organ Grinder",
         character2: "Butler",
         rule: "If players' eyes were closed during a vote, the Butler can vote, but their vote only counts if their master voted too."
     },
@@ -2371,7 +2359,7 @@ let jinxes = [
     {
         character1: "Kazali",
         character2: "Goon",
-        rule: "If the Kazali chooses the Goon to become a Minion, remaining Minion choices are decided by the Storyteller."
+        rule: "The Kazali can choose that the Goon player is one of their evil Minions."
     },
     {
         character1: "Kazali",
@@ -2496,7 +2484,7 @@ let jinxes = [
     {
         character1: "Kazali",
         character2: "Soldier",
-        rule: "If the Kazali turns the Soldier into a Minion, the Soldier chooses which not-in-play Minion to become."
+        rule: "The Kazali can choose that the Soldier player is one of their evil Minions."
     },
     {
         character1: "Legion",
