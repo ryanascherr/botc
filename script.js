@@ -1157,6 +1157,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Hermit",
+        description: "The Hermit isn't really here.",
+        intro: `<ul><li>The Hermit has the abilities of all the other Outsiders on the Script, all at once. They do not have the abilities of Outsiders that are not on the script.</li><li>If a custom script has more than 4 Outsiders, the Hermit has all these Outsider abilities.</li><li>If one of the Outsider abilities continues after death, such as the Recluse's, the Hermit keeps that ability when they die, but does not keep their other Outsider abilities.</li><li>A Hermit with the Drunk ability does not know that they are the Hermit, and their other Outsider abilities function as normal. A Hermit with the Recluse ability can register as a different character etc.</li><li>If an Outsider has a jinx, that jinx applies to the Hermit too.</li><li>The Hermit may remove the Hermit from play during setup, resulting in one less Outsider than normal. If this happens, the Hermit may still be a bluff given to the Demon.</li></ul>`,
+        ability: 'You have all Outsider abilities. [-0 or -1 Outsiders]',
+        flavor: '"In the lost and forgotten places of the earth, the soul\'s light beckons."',
+        examples: `<p>Marianna is the Hermit, and has the Klutz, Butler, and Recluse abilities. Each night, she chooses a player as her master due to the Butler ability. The Ravenkeeper dies and learns that she is the Lord of Typhon, due to the Recluse ability. Marianna is executed, and chooses a player due to the Klutz ability. She chooses the Wizard. Good loses.</p><p>Lewis is the Hermit and has the Drunk, Mutant, and Sweetheart abilities. Thinking that he is the Exorcist, he chooses a player each night. Lewis says that he thinks he might be the Drunk, so the Storyteller executes him due to the Mutant ability. Due to the Sweetheart ability, the Alchemist is now drunk.</p>`,
+        howToRun: `<p>During setup, you may remove an Outsider token and add a Townsfolk token.</p><p>Whenever appropriate, treat the Hermit as if they are the other Outsiders, including waking them at night, and using other Outsiders' reminder tokens. If the Hermit duplicates an in-play Outsider, use the Hermit's <strong>1</strong>, <strong>2</strong> and <strong>3</strong> reminders instead.</p><p class="modal__callout-box">If Outsider abilities clash, make up a rule to fix the clash, and tell the group. For example, for a Hermit-Butler-Zealot, you may declare that the Hermit must vote when their master votes.</p>`,
+        group: "Outsider",
+        script: "exp"
+    },
+    {
         name: "Ogre",
         description: "The Ogre is someone's best friend.",
         intro: `<ul><li>The Ogre's chosen player does not change, even if the Ogre is drunk or poisoned when they chose.</li><li>The Ogre becomes the same alignment as their chosen player immediately on the first night, even if the Ogre is drunk or poisoned.</li><li>The Ogre is not told their alignment at the beginning of the game.</li><li>If the Ogre changes alignment by other means, the Ogre learns their new alignment, as normal.</li><li>If an Ogre is created mid-game, the Ogre chooses a player that night, and becomes their alignment.</li></ul>`,
