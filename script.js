@@ -796,12 +796,12 @@ let characters = [
     },
         {
         name: "Acrobat",
-        description: `The Acrobat dies if the people they choose are drunk or poisoned.`,
-        intro: "",
+        description: `The Acrobat dies when they find a drunk or poisoned player.`,
+        intro: "<ul><li>Each night except the first, the Acrobat chooses a player. If the chosen player is sober and healthy, nothing happens. If the player is drunk or poisoned, the Acrobat dies.</li><li>If the Acrobat is drunk or poisoned, they cannot die to their own ability.</li><li>The Acrobat may choose any player, dead or alive, even themself.</li><li>If the chosen player is sober and healthy at the time the Acrobat picks, but becomes drunk or poisoned later in the night, the Acrobat dies.</li><li>The Acrobat does not learn if the player they selected was drunk, or poisoned, or both.</li></ul>",
         ability: 'Each night*, choose a player: if they are or become drunk or poisoned tonight, you die.',
-        flavor: '"Welcome, one and all, to the greatest show on earth."',
-        examples: ``,
-        howToRun: "<p>Each night except the first, wake the Acrobat. The Acrobat points at a player. Put the Acrobat to sleep. Mark the chosen player with the <strong>CHOSEN</strong> reminder token.</p><p>If the chosen player is drunk or poisoned at any point during the night phase, the Acrobat dies—put the Acrobat <strong>DEAD</strong> by the Acrobat's character token in the Grimoire and put a shroud on it.</p><p class='modal__callout-box'>For the purpose of the Acrobat's ability, the Drunk registers as drunk.</p>",
+        flavor: '"Ladies and gentlemen, hold fast to your hats, for I shall defy the very laws of gravity and dance upon the air, a marvel of agility and daring, all for your delight and wonder!"',
+        examples: `<p>The Sailor chooses the Assassin, and the Storyteller makes the Sailor drunk. The Acrobat chooses the Sailor, and dies because the Sailor is drunk.</p><p>The Acrobat chooses the Tinker, who is sober and healthy. Nothing happens.</p><p>The Acrobat chooses the Preacher. Later that night, the Pukka poisons the Preacher. The Acrobat dies, because the Preacher is no longer healthy.</p>`,
+        howToRun: "<p>Each night except the first, wake the Acrobat. They point to a player. Put the Acrobat to sleep.</p><p>If the player the Acrobat pointed to is drunk or poisoned, or becomes drunk or poisoned at any time tonight, the Acrobat <strong>dies</strong>.</p>",
         group: "Townsfolk",
         script: "exp"
     },
@@ -2546,6 +2546,16 @@ let jinxes = [
         character1: "Boffin",
         character2: "Village Idiot",
         rule: "If there is a spare token, the Boffin can give the Demon the Village Idiot ability."
+    },
+    {
+        character1: "Princess",
+        character2: "Cannibal",
+        rule: "If the Cannibal nominated, executed, & killed the Princess today, the Demon doesn't kill tonight."
+    },
+    {
+        character1: "Princess",
+        character2: "Al-Hadikhia",
+        rule: "If the Princess nominated & executed a player on their 1st day, no one dies to the Al-Hadikhia ability tonight."
     },
 ];
 
