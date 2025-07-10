@@ -1388,6 +1388,17 @@ let characters = [
         script: "exp"
     },
     {
+        name: "Wraith",
+        description: `The Wraith knows and shares what happens at night.`,
+        intro: "<ul><li>The Wraith may open their eyes at any point during the night, for as long or as short a time as they wish.</li><li>They may open their eyes fully, or just peek.</li><li>The Storyteller wakes the Wraith when other evil players also wake, such as when the Demon kills a player, an evil Traveller uses their ability, or a Cult Leader learns that they are evil.</li><li>When several players have their eyes open at once, they may communicate if they wish.</li><li>If a good player catches the Wraith with their eyes open, there is no mechanical effect.</li><li>A dead Wraith may not open their eyes at night. A drunk or poisoned Wraith is told by the Storyteller that they may not open their eyes that night.</li></ul>",
+        ability: 'You may choose to open your eyes at night. You wake when other evil players do.',
+        flavor: '"Ra\'āb ina pān ṣilli ša dāri. Rigim qallu ina šūri, šītu ša šunātīka iredde, u napšutka idlul ina pān maṣṣartī dāriti."',
+        examples: `<p>During the first night the Wraith peeks at other players, and notices which good players wake and which do not. During the second night, the Wraith opens their eyes more fully and notices that Doug was woken and pointed to two players tonight. During the 3rd night, when both the Wraith and the Demon wake together, the Wraith uses body language and points to the character sheet to communicate to the Demon to kill Doug, whom the Wraith believes is the Fortune Teller.</p>`,
+        howToRun: `<p>Each time you wake an evil player at night, first wake the Wraith. When you put that evil player to sleep, put the Wraith to sleep.</p><p>If the Wraith loses their ability while alive, privately tell the Wraith that they may not choose to open their eyes tonight, and do not wake them when other evil players wake.</p><p class="modal__callout-box">Optional rule: Once per game, a player that is mad that you are the Wraith, dies.</p>`,
+        group: "Minion",
+        script: "exp"
+    },
+    {
         name: "Xaan",
         description: `The Xaan poisons all Townsfolk.`,
         intro: "<ul><li>The Xaan poisons all Townsfolk players for one night then one day. The night that this happens equals the number of Outsiders in play. For example, if there are 2 Outsiders, the Xaan poisons on night 2.</li><li>There can be any number of Outsiders in play, but usually 1 to 4. This can be the normal number of Outsiders if the Xaan was not in play, or something different. This overrides other characters that add or remove Outsiders, such as the Baron.</li><li>If the number of Outsiders changes during the game, the Xaan poisons on the night corresponding to the number of Outsiders during setup.</li><li>The Xaan needs to be alive in order to poison.</li></ul>",
@@ -2556,6 +2567,26 @@ let jinxes = [
         character1: "Princess",
         character2: "Al-Hadikhia",
         rule: "If the Princess nominated & executed a player on their 1st day, no one dies to the Al-Hadikhia ability tonight."
+    },
+    {
+        character1: "Wraith",
+        character2: "Alchemist",
+        rule: "If the Alchemist has the Wraith ability, they do not, and a Wraith is in play. Each day, after the execution phase, the living Alchemist may publicly guess a living player as the Wraith: if correct, the Demon must choose the Wraith tonight."
+    },
+    {
+        character1: "Wraith",
+        character2: "Magician",
+        rule: "Each day, after the execution phase, the living Magician may publicly guess a living player as the Wraith: if correct, the Demon must choose the Wraith tonight."
+    },
+    {
+        character1: "Wraith",
+        character2: "Plague Doctor",
+        rule: "If the Plague Doctor dies, a living Minion gains the Wraith ability in addition to their own ability, and learns this."
+    },
+    {
+        character1: "Wraith",
+        character2: "Marionette",
+        rule: "The Wraith does not wake with the Marionette."
     },
 ];
 
